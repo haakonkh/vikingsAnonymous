@@ -32,10 +32,16 @@ namespace YWWACP
             btnHealthPlan= FindViewById<Button>(Resource.Id.btnHealthPlan);
             btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
 
-            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
 
             btnDiary.Click += DiaryButton_Click;
             btnCommunity.Click += BtnCommunity_Click;
+            btnRecipes.Click += BtnRecipes_Click;
+        }
+
+        private void BtnRecipes_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(RecipesActivity));
+            StartActivity(intent);
         }
 
         // When Community button is clicked

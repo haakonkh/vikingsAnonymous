@@ -53,6 +53,7 @@
     <Compile Include="dialog_calendar.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="RecipesActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,6 +68,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Community.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Recipes.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
