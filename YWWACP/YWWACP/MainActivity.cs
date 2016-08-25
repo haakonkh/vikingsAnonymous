@@ -15,7 +15,7 @@ namespace YWWACP
         private Button btnProfile;
         private Button btnRecipes;
         private Button btnHealthPlan;
-
+        private Button btnCommunity;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -30,13 +30,23 @@ namespace YWWACP
             btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
             btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan= FindViewById<Button>(Resource.Id.btnHealthPlan);
-
+            btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
 
             //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
 
             btnDiary.Click += DiaryButton_Click;
+            btnCommunity.Click += BtnCommunity_Click;
         }
 
+        // When Community button is clicked
+        private void BtnCommunity_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(CommunityActivity));
+            StartActivity(intent);
+        }
+
+
+        //When Diary Button is clicked
         private void DiaryButton_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(DiaryActivity));

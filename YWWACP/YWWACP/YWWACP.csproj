@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommunityActivity.cs" />
     <Compile Include="dialog_calendar.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -63,6 +64,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Dialog_calendar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Community.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -87,6 +91,12 @@
     <AndroidResource Include="Resources\drawable\ButtonSignUpStyle.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrow_left.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrow_right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,19 +13,21 @@
         android:id="@+id/dayPicker"
         android:background="@android:color/holo_blue_light">
         <Button
-            android:text="0x3c"
+            android:text=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnYesterday"/>
+            android:id="@+id/btnYesterday"
+            android:drawableStart="@drawable/arrow_left" />
         <Button
             android:text="Today"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnToday" />
         <Button
-            android:text="&gt;"
+            android:text=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnTomorrow" />
+            android:id="@+id/btnTomorrow"
+            android:drawableStart="@drawable/arrow_right" />
     </ActionMenuView>
 </LinearLayout>
