@@ -20,7 +20,7 @@ namespace YWWACP
 
             // Needs to be changed to the acutally dialog window.
             // Not created
-            var view = inflater.Inflate(Resource.Layout.Diary, container, false);
+            var view = inflater.Inflate(Resource.Layout.Dialog_calendar, container, false);
 
             return view;
 
