@@ -13,23 +13,30 @@ using Android.Widget;
 namespace YWWACP
 {
     [Activity(Label = "dialog_new_thread")]
-    public class dialog_new_thread : DialogFragment
+    class dialog_new_thread : DialogFragment
     {
+        private Button mBtnCancelThread;
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
-            // Needs to be changed to the acutally dialog window.
-            // Not created
+            
             var view = inflater.Inflate(Resource.Layout.Dialog_New_Thread, container, false);
+
+            view.FindViewById<Button>(Resource.Id.btnCancelThread).Click += (sender, args) => Dismiss();
 
             return view;
 
         }
+
+        
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             Dialog.Window.RequestFeature(WindowFeatures.NoTitle); // Sets the titlebar to invisible
             base.OnActivityCreated(savedInstanceState);
+
+        
         }
 
     }

@@ -19,7 +19,9 @@
         android:layout_height="0dp"
         android:layout_weight="50"
         android:hint="Start your question here"
-        android:id="@+id/editTxtQuestion" />
+        android:id="@+id/editTxtQuestion"
+        android:minHeight="150dp"
+        android:maxWidth="100dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
