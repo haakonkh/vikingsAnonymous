@@ -11,7 +11,11 @@ namespace YWWACP
     [Activity(Label = "YWWACP", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
+        private Button btnDiary;
+        private Button btnProfile;
+        private Button btnRecipes;
+        private Button btnHealthPlan;
+
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -22,9 +26,22 @@ namespace YWWACP
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            btnDiary = FindViewById<Button>(Resource.Id.btnDiary);
+            btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
+            btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
+            btnHealthPlan= FindViewById<Button>(Resource.Id.btnHealthPlan);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+
+            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+
+            btnDiary.Click += DiaryButton_Click;
+        }
+
+        private void DiaryButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(DiaryActivity));
+            StartActivity(intent);
+
         }
     }
 }
