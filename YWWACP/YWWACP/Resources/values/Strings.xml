@@ -6,5 +6,12 @@
     <string name="Health_Plan">Health Plan</string>
     <string name="Recipes">Recipes</string>
     <string name="Community">Community</string>
-  
+    <string name="Today">Today</string>
+    <string name="New_Thread">New Thread</string>
+    <string name="My_Threads">My Threads</string>
+    <string name="Your_Question">Your Question</string>
+    <string name="Title">Title</string>
+    <string name="cancelThread">Cancel</string>
+    <string name="submitThread">Submit</string>
+
 </resources>

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CommunityActivity.cs" />
     <Compile Include="dialog_calendar.cs" />
+    <Compile Include="dialog_new_thread.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="RecipesActivity.cs" />
@@ -71,6 +72,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Recipes.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dialog_New_Thread.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
