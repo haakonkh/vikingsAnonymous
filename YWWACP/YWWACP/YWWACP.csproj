@@ -71,10 +71,10 @@
     <AndroidResource Include="Resources\layout\Community.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Recipes.axml">
+    <AndroidResource Include="Resources\layout\Dialog_New_Thread.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Dialog_New_Thread.axml">
+    <AndroidResource Include="Resources\layout\Recipes.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

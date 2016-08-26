@@ -14,4 +14,14 @@
     <string name="cancelThread">Cancel</string>
     <string name="submitThread">Submit</string>
 
+  <string name="category_prompt">Categories</string>
+  <string-array name="categories_array">
+    <item>Food</item>
+    <item>Exercise</item>
+    <item>Running</item>
+    <item>Weight lifting</item>
+    <item>Chit Chat</item>
+    <item>Random</item>
+  </string-array>
+
 </resources>
