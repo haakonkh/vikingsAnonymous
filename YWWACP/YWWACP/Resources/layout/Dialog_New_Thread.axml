@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="550dip"
+    android:minWidth="500dip">
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
@@ -11,7 +13,8 @@
         android:hint="Title"
         android:id="@+id/editTxtTitle"
         android:textStyle="bold"
-        android:textSize="30dip"
+        android:textSize="25dip"
+        android:gravity="bottom|left"
         android:textColor="@android:color/white" />
     <TextView
         android:layout_width="fill_parent"
@@ -31,7 +34,8 @@
         android:hint="Start your question here"
         android:id="@+id/editTxtQuestion"
         android:minHeight="150dp"
-        android:maxWidth="100dp" />
+        android:maxWidth="100dp"
+        android:gravity="top|left" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

@@ -26,9 +26,11 @@ namespace YWWACP
             // Cancels the new thread
             view.FindViewById<Button>(Resource.Id.btnCancelThread).Click += (sender, args) => Dismiss();
 
+            // Categories dropdown connected with view
             dropdown = view.FindViewById<Spinner>(Resource.Id.spinnerCategories);
             dropdown.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
 
+            // Create spinner-dropdown
             var adapter = ArrayAdapter.CreateFromResource(Activity, Resource.Array.categories_array, Android.Resource.Layout.SimpleSpinnerItem);
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             dropdown.Adapter = adapter;
