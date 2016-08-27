@@ -67,13 +67,16 @@ namespace YWWACP
 			public const int arrow_right = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ButtonSignUpStyle = 2130837506;
+			public const int border = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int edit_text_style = 2130837507;
+			public const int ButtonSignUpStyle = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int Icon = 2130837508;
+			public const int edit_text_style = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int Icon = 2130837509;
 			
 			static Drawable()
 			{
@@ -88,17 +91,17 @@ namespace YWWACP
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060007
-			public const int btnCancelThread = 2131099655;
+			// aapt resource value: 0x7f060008
+			public const int btnCancelThread = 2131099656;
+			
+			// aapt resource value: 0x7f060015
+			public const int btnCommunity = 2131099669;
 			
 			// aapt resource value: 0x7f060011
-			public const int btnCommunity = 2131099665;
+			public const int btnDiary = 2131099665;
 			
-			// aapt resource value: 0x7f06000d
-			public const int btnDiary = 2131099661;
-			
-			// aapt resource value: 0x7f06000e
-			public const int btnHealthPlan = 2131099662;
+			// aapt resource value: 0x7f060012
+			public const int btnHealthPlan = 2131099666;
 			
 			// aapt resource value: 0x7f060002
 			public const int btnMyThreads = 2131099650;
@@ -106,41 +109,53 @@ namespace YWWACP
 			// aapt resource value: 0x7f060001
 			public const int btnNewThread = 2131099649;
 			
-			// aapt resource value: 0x7f06000f
-			public const int btnProfile = 2131099663;
+			// aapt resource value: 0x7f060013
+			public const int btnProfile = 2131099667;
 			
-			// aapt resource value: 0x7f060010
-			public const int btnRecipes = 2131099664;
-			
-			// aapt resource value: 0x7f060008
-			public const int btnSubmitThread = 2131099656;
-			
-			// aapt resource value: 0x7f06000b
-			public const int btnToday = 2131099659;
-			
-			// aapt resource value: 0x7f06000c
-			public const int btnTomorrow = 2131099660;
-			
-			// aapt resource value: 0x7f06000a
-			public const int btnYesterday = 2131099658;
-			
-			// aapt resource value: 0x7f060003
-			public const int calendarView1 = 2131099651;
+			// aapt resource value: 0x7f060014
+			public const int btnRecipes = 2131099668;
 			
 			// aapt resource value: 0x7f060009
-			public const int dayPicker = 2131099657;
+			public const int btnSubmitThread = 2131099657;
 			
-			// aapt resource value: 0x7f060006
-			public const int editTxtQuestion = 2131099654;
+			// aapt resource value: 0x7f06000c
+			public const int btnToday = 2131099660;
+			
+			// aapt resource value: 0x7f06000d
+			public const int btnTomorrow = 2131099661;
+			
+			// aapt resource value: 0x7f06000b
+			public const int btnYesterday = 2131099659;
 			
 			// aapt resource value: 0x7f060004
-			public const int editTxtTitle = 2131099652;
+			public const int calendarView1 = 2131099652;
+			
+			// aapt resource value: 0x7f06000a
+			public const int dayPicker = 2131099658;
+			
+			// aapt resource value: 0x7f060007
+			public const int editTxtQuestion = 2131099655;
+			
+			// aapt resource value: 0x7f060005
+			public const int editTxtTitle = 2131099653;
 			
 			// aapt resource value: 0x7f060000
 			public const int linearLayoutWrapTopButtons = 2131099648;
 			
-			// aapt resource value: 0x7f060005
-			public const int spinnerCategories = 2131099653;
+			// aapt resource value: 0x7f060003
+			public const int listViewCommunity = 2131099651;
+			
+			// aapt resource value: 0x7f060006
+			public const int spinnerCategories = 2131099654;
+			
+			// aapt resource value: 0x7f06000f
+			public const int txtViewCategory = 2131099663;
+			
+			// aapt resource value: 0x7f060010
+			public const int txtViewContent = 2131099664;
+			
+			// aapt resource value: 0x7f06000e
+			public const int txtViewTitle = 2131099662;
 			
 			static Id()
 			{
@@ -168,10 +183,13 @@ namespace YWWACP
 			public const int Diary = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Main = 2130903044;
+			public const int ListView_Row = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Recipes = 2130903045;
+			public const int Main = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int Recipes = 2130903046;
 			
 			static Layout()
 			{
