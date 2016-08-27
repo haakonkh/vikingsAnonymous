@@ -93,7 +93,7 @@ namespace YWWACP
         // If something is to be submitted
         private void MSubmit_Click(object sender, EventArgs e)
         {
-            mOnSubmit.Invoke(this, new OnSubmitArgs(mTitle.Text, dropdown.SelectedItem.ToString(), mContent.Text));
+            mOnSubmit.Invoke(this, new OnSubmitArgs(mTitle.Text,"Category: " + dropdown.SelectedItem.ToString(), mContent.Text));
             this.Dismiss();
         }
 
