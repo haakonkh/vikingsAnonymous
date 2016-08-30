@@ -34,9 +34,9 @@ namespace YWWACP
 
 			FragmentTransaction transaction = FragmentManager.BeginTransaction();
 
-			RecipeDialog newRecepieDialog = new RecipeDialog();
+			RecepieDialog newRecipeDialog = new RecepieDialog();
 
-			newRecepieDialog.Show(transaction, "dialog fragment");
+			newRecipeDialog.Show(transaction, "dialog fragment");
 
 		}
     }
