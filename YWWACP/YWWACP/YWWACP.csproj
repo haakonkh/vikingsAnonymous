@@ -59,6 +59,8 @@
     <Compile Include="RecipesActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GridAdapter.cs" />
+    <Compile Include="RecipeDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -82,6 +84,9 @@
     <AndroidResource Include="Resources\layout\ListView_Row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\recipeDialogView.axml" />
+    <AndroidResource Include="Resources\layout\RecipeMain.axml" />
+    <AndroidResource Include="Resources\drawable\recipeIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

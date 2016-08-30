@@ -19,8 +19,25 @@ namespace YWWACP
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.Recipes);
-            // Create your application here
+			SetContentView(Resource.Layout.RecipeMain);
+
+			var gridview = FindViewById<GridView>(Resource.Id.grid);
+
+			gridview.Adapter = new GridAdapter(this);
+
+			gridview.ItemClick += recipe_Click;
         }
+
+		private void recipe_Click(object sender, EventArgs e)
+		{
+			Console.WriteLine(e);
+
+			FragmentTransaction transaction = FragmentManager.BeginTransaction();
+
+			RecipeDialog newRecepieDialog = new RecipeDialog();
+
+			newRecepieDialog.Show(transaction, "dialog fragment");
+
+		}
     }
 }
