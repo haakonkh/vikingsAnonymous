@@ -129,6 +129,9 @@ namespace YWWACP
 			// aapt resource value: 0x7f020008
 			public const int splash = 2130837512;
 			
+			// aapt resource value: 0x7f020009
+			public const int ywwacpSplash = 2130837513;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -154,14 +157,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f04000a
 			public const int btnCancelThread = 2130968586;
 			
-			// aapt resource value: 0x7f040017
-			public const int btnCommunity = 2130968599;
-			
-			// aapt resource value: 0x7f040013
-			public const int btnDiary = 2130968595;
-			
 			// aapt resource value: 0x7f040014
-			public const int btnHealthPlan = 2130968596;
+			public const int btnCommunity = 2130968596;
+			
+			// aapt resource value: 0x7f040010
+			public const int btnDiary = 2130968592;
+			
+			// aapt resource value: 0x7f040011
+			public const int btnHealthPlan = 2130968593;
 			
 			// aapt resource value: 0x7f040004
 			public const int btnMyThreads = 2130968580;
@@ -169,11 +172,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f040003
 			public const int btnNewThread = 2130968579;
 			
-			// aapt resource value: 0x7f040015
-			public const int btnProfile = 2130968597;
+			// aapt resource value: 0x7f040012
+			public const int btnProfile = 2130968594;
 			
-			// aapt resource value: 0x7f040016
-			public const int btnRecipes = 2130968598;
+			// aapt resource value: 0x7f040013
+			public const int btnRecipes = 2130968595;
 			
 			// aapt resource value: 0x7f04000b
 			public const int btnSubmitThread = 2130968587;
@@ -244,14 +247,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f04001b
 			public const int textView5 = 2130968603;
 			
-			// aapt resource value: 0x7f040011
-			public const int txtViewCategory = 2130968593;
+			// aapt resource value: 0x7f040016
+			public const int txtViewCategory = 2130968598;
 			
-			// aapt resource value: 0x7f040012
-			public const int txtViewContent = 2130968594;
+			// aapt resource value: 0x7f040017
+			public const int txtViewContent = 2130968599;
 			
-			// aapt resource value: 0x7f040010
-			public const int txtViewTitle = 2130968592;
+			// aapt resource value: 0x7f040015
+			public const int txtViewTitle = 2130968597;
 			
 			// aapt resource value: 0x7f04001d
 			public const int userInfo = 2130968605;
@@ -288,22 +291,19 @@ namespace YWWACP
 			public const int ListView_Row = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Main = 2130903046;
+			public const int Profile = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int Profile = 2130903047;
+			public const int recipeDialogView = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int recipeDialogView = 2130903048;
+			public const int RecipeMain = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int RecipeMain = 2130903049;
+			public const int Recipes = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int Recipes = 2130903050;
-			
-			// aapt resource value: 0x7f03000b
-			public const int SplashScreen = 2130903051;
+			public const int SplashScreen = 2130903050;
 			
 			static Layout()
 			{

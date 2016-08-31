@@ -94,7 +94,6 @@
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="ListViewAdapter.cs" />
-    <Compile Include="MainActivity.cs" />
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="ProfileActivity.cs" />
     <Compile Include="RecipesActivity.cs" />
@@ -137,11 +136,6 @@
     <AndroidResource Include="Resources\layout\FirstView.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +173,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\drawable\ywwacpSplash.jpe" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

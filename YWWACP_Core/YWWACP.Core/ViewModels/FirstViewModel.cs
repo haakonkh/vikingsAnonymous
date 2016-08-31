@@ -5,7 +5,7 @@ namespace YWWACP.Core.ViewModels
     public class FirstViewModel 
         : MvxViewModel
     {
-        private string _hello = "Hello MvvmCross";
+        private string _hello = "Hello MvvmCross MoNO";
         public string Hello
         { 
             get { return _hello; }
