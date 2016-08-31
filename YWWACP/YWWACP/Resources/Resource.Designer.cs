@@ -51,7 +51,13 @@ namespace YWWACP
 			public const int edit_text_style = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int gProfilePicture = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Icon = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int ProfilePicture = 2130837508;
 			
 			static Drawable()
 			{
@@ -90,8 +96,32 @@ namespace YWWACP
 			// aapt resource value: 0x7f050005
 			public const int btnYesterday = 2131034117;
 			
+			// aapt resource value: 0x7f050012
+			public const int buttonSaveText = 2131034130;
+			
 			// aapt resource value: 0x7f050004
 			public const int dayPicker = 2131034116;
+			
+			// aapt resource value: 0x7f05000e
+			public const int imageView1 = 2131034126;
+			
+			// aapt resource value: 0x7f05000c
+			public const int tableLayout1 = 2131034124;
+			
+			// aapt resource value: 0x7f05000d
+			public const int tableRow1 = 2131034125;
+			
+			// aapt resource value: 0x7f050010
+			public const int tableRow2 = 2131034128;
+			
+			// aapt resource value: 0x7f050013
+			public const int tableRow3 = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int tableRow4 = 2131034132;
+			
+			// aapt resource value: 0x7f05000f
+			public const int textView5 = 2131034127;
 			
 			// aapt resource value: 0x7f050001
 			public const int txtEmail = 2131034113;
@@ -101,6 +131,9 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f050002
 			public const int txtPassword = 2131034114;
+			
+			// aapt resource value: 0x7f050011
+			public const int userInfo = 2131034129;
 			
 			static Id()
 			{
@@ -123,6 +156,9 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f030002
 			public const int Main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Profile = 2130903043;
 			
 			static Layout()
 			{

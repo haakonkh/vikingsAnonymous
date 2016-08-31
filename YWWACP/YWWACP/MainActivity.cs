@@ -24,6 +24,12 @@ namespace YWWACP
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+          
+
+          
+
+
+
             // Get our button from the layout resource,
             // and attach an event to it
             btnDiary = FindViewById<Button>(Resource.Id.btnDiary);
@@ -35,6 +41,13 @@ namespace YWWACP
             //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
 
             btnDiary.Click += DiaryButton_Click;
+            btnProfile.Click += BtnProfile_Click;
+        }
+
+        private void BtnProfile_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(ProfileActivity));
+            StartActivity(intent);
         }
 
         private void DiaryButton_Click(object sender, EventArgs e)
