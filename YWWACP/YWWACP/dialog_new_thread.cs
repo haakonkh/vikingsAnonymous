@@ -50,7 +50,7 @@ namespace YWWACP
     [Activity(Label = "dialog_new_thread")]
     class dialog_new_thread : DialogFragment
     {
-        private Spinner dropdown;
+        private Spinner mDropdwon;
         private Button mSubmit;
         private EditText mTitle;
         private EditText mContent;
@@ -76,7 +76,7 @@ namespace YWWACP
             mContent = view.FindViewById<EditText>(Resource.Id.editTxtQuestion);
             
             // Categories dropdown connected with view
-            dropdown = view.FindViewById<Spinner>(Resource.Id.spinnerCategories);
+            mDropdwon = view.FindViewById<Spinner>(Resource.Id.spinnerCategories);
             
             // prompts the user which category that are selected... 
             //dropdown.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
@@ -84,7 +84,7 @@ namespace YWWACP
             // Create spinner-dropdown
             var adapter = ArrayAdapter.CreateFromResource(Activity, Resource.Array.categories_array, Android.Resource.Layout.SimpleSpinnerItem);
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-            dropdown.Adapter = adapter;
+            mDropdwon.Adapter = adapter;
        
             return view;
 
@@ -93,7 +93,7 @@ namespace YWWACP
         // If something is to be submitted
         private void MSubmit_Click(object sender, EventArgs e)
         {
-            mOnSubmit.Invoke(this, new OnSubmitArgs(mTitle.Text,"Category: " + dropdown.SelectedItem.ToString(), mContent.Text));
+            mOnSubmit.Invoke(this, new OnSubmitArgs(mTitle.Text,"Category: " + mDropdwon.SelectedItem.ToString(), mContent.Text));
             this.Dismiss();
         }
 
@@ -104,7 +104,6 @@ namespace YWWACP
             Spinner spinner = (Spinner)sender;
             string toast = string.Format("The category is {0}", spinner.GetItemAtPosition(e.Position));
             Toast.MakeText(Activity, toast, ToastLength.Long).Show();
-
         }
 
         
