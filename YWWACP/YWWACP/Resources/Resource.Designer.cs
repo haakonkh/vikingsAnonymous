@@ -28,11 +28,36 @@ namespace YWWACP
 		{
 		}
 		
+		public partial class Animation
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int slide_right = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int slide_up = 2130968577;
+			
+			static Animation()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Animation()
+			{
+			}
+		}
+		
 		public partial class Array
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int categories_array = 2131034112;
+			// aapt resource value: 0x7f060001
+			public const int categories_activities = 2131099649;
+			
+			// aapt resource value: 0x7f060000
+			public const int categories_array = 2131099648;
+			
+			// aapt resource value: 0x7f060002
+			public const int categories_food = 2131099650;
 			
 			static Array()
 			{
@@ -91,71 +116,188 @@ namespace YWWACP
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060008
-			public const int btnCancelThread = 2131099656;
+			// aapt resource value: 0x7f080010
+			public const int btnAddPlan = 2131230736;
 			
-			// aapt resource value: 0x7f060015
-			public const int btnCommunity = 2131099669;
+			// aapt resource value: 0x7f08000a
+			public const int btnCancelThread = 2131230730;
 			
-			// aapt resource value: 0x7f060011
-			public const int btnDiary = 2131099665;
+			// aapt resource value: 0x7f080018
+			public const int btnCommunity = 2131230744;
 			
-			// aapt resource value: 0x7f060012
-			public const int btnHealthPlan = 2131099666;
+			// aapt resource value: 0x7f080014
+			public const int btnDiary = 2131230740;
 			
-			// aapt resource value: 0x7f060002
-			public const int btnMyThreads = 2131099650;
+			// aapt resource value: 0x7f08003c
+			public const int btnDone = 2131230780;
 			
-			// aapt resource value: 0x7f060001
-			public const int btnNewThread = 2131099649;
+			// aapt resource value: 0x7f080006
+			public const int btnExisting = 2131230726;
 			
-			// aapt resource value: 0x7f060013
-			public const int btnProfile = 2131099667;
+			// aapt resource value: 0x7f080015
+			public const int btnHealthPlan = 2131230741;
 			
-			// aapt resource value: 0x7f060014
-			public const int btnRecipes = 2131099668;
+			// aapt resource value: 0x7f080002
+			public const int btnMyThreads = 2131230722;
 			
-			// aapt resource value: 0x7f060009
-			public const int btnSubmitThread = 2131099657;
+			// aapt resource value: 0x7f080005
+			public const int btnNew = 2131230725;
 			
-			// aapt resource value: 0x7f06000c
-			public const int btnToday = 2131099660;
+			// aapt resource value: 0x7f080001
+			public const int btnNewThread = 2131230721;
 			
-			// aapt resource value: 0x7f06000d
-			public const int btnTomorrow = 2131099661;
+			// aapt resource value: 0x7f080016
+			public const int btnProfile = 2131230742;
 			
-			// aapt resource value: 0x7f06000b
-			public const int btnYesterday = 2131099659;
+			// aapt resource value: 0x7f080017
+			public const int btnRecipes = 2131230743;
 			
-			// aapt resource value: 0x7f060004
-			public const int calendarView1 = 2131099652;
+			// aapt resource value: 0x7f08000b
+			public const int btnSubmitThread = 2131230731;
 			
-			// aapt resource value: 0x7f06000a
-			public const int dayPicker = 2131099658;
+			// aapt resource value: 0x7f08000e
+			public const int btnToday = 2131230734;
 			
-			// aapt resource value: 0x7f060007
-			public const int editTxtQuestion = 2131099655;
+			// aapt resource value: 0x7f08000f
+			public const int btnTomorrow = 2131230735;
 			
-			// aapt resource value: 0x7f060005
-			public const int editTxtTitle = 2131099653;
+			// aapt resource value: 0x7f08000d
+			public const int btnYesterday = 2131230733;
 			
-			// aapt resource value: 0x7f060000
-			public const int linearLayoutWrapTopButtons = 2131099648;
+			// aapt resource value: 0x7f080004
+			public const int calendarView1 = 2131230724;
 			
-			// aapt resource value: 0x7f060003
-			public const int listViewCommunity = 2131099651;
+			// aapt resource value: 0x7f08000c
+			public const int dayPicker = 2131230732;
 			
-			// aapt resource value: 0x7f060006
-			public const int spinnerCategories = 2131099654;
+			// aapt resource value: 0x7f080009
+			public const int editTxtQuestion = 2131230729;
 			
-			// aapt resource value: 0x7f06000f
-			public const int txtViewCategory = 2131099663;
+			// aapt resource value: 0x7f080007
+			public const int editTxtTitle = 2131230727;
 			
-			// aapt resource value: 0x7f060010
-			public const int txtViewContent = 2131099664;
+			// aapt resource value: 0x7f080000
+			public const int linearLayoutWrapTopButtons = 2131230720;
 			
-			// aapt resource value: 0x7f06000e
-			public const int txtViewTitle = 2131099662;
+			// aapt resource value: 0x7f080003
+			public const int listViewCommunity = 2131230723;
+			
+			// aapt resource value: 0x7f08002f
+			public const int spinnerActivitiesFriday = 2131230767;
+			
+			// aapt resource value: 0x7f08001b
+			public const int spinnerActivitiesMonday = 2131230747;
+			
+			// aapt resource value: 0x7f080034
+			public const int spinnerActivitiesSaturday = 2131230772;
+			
+			// aapt resource value: 0x7f080039
+			public const int spinnerActivitiesSunday = 2131230777;
+			
+			// aapt resource value: 0x7f08002a
+			public const int spinnerActivitiesThursday = 2131230762;
+			
+			// aapt resource value: 0x7f080020
+			public const int spinnerActivitiesTuesday = 2131230752;
+			
+			// aapt resource value: 0x7f080025
+			public const int spinnerActivitiesWednesday = 2131230757;
+			
+			// aapt resource value: 0x7f080008
+			public const int spinnerCategories = 2131230728;
+			
+			// aapt resource value: 0x7f080031
+			public const int spinnerFoodFriday = 2131230769;
+			
+			// aapt resource value: 0x7f08001d
+			public const int spinnerFoodMonday = 2131230749;
+			
+			// aapt resource value: 0x7f080036
+			public const int spinnerFoodSaturday = 2131230774;
+			
+			// aapt resource value: 0x7f08003b
+			public const int spinnerFoodSunday = 2131230779;
+			
+			// aapt resource value: 0x7f08002c
+			public const int spinnerFoodThursday = 2131230764;
+			
+			// aapt resource value: 0x7f080022
+			public const int spinnerFoodTuesday = 2131230754;
+			
+			// aapt resource value: 0x7f080027
+			public const int spinnerFoodWednesday = 2131230759;
+			
+			// aapt resource value: 0x7f080019
+			public const int textView1 = 2131230745;
+			
+			// aapt resource value: 0x7f080028
+			public const int textView10 = 2131230760;
+			
+			// aapt resource value: 0x7f080029
+			public const int textView11 = 2131230761;
+			
+			// aapt resource value: 0x7f08002b
+			public const int textView12 = 2131230763;
+			
+			// aapt resource value: 0x7f08002d
+			public const int textView13 = 2131230765;
+			
+			// aapt resource value: 0x7f08002e
+			public const int textView14 = 2131230766;
+			
+			// aapt resource value: 0x7f080030
+			public const int textView15 = 2131230768;
+			
+			// aapt resource value: 0x7f080032
+			public const int textView16 = 2131230770;
+			
+			// aapt resource value: 0x7f080033
+			public const int textView17 = 2131230771;
+			
+			// aapt resource value: 0x7f080035
+			public const int textView18 = 2131230773;
+			
+			// aapt resource value: 0x7f080037
+			public const int textView19 = 2131230775;
+			
+			// aapt resource value: 0x7f08001a
+			public const int textView2 = 2131230746;
+			
+			// aapt resource value: 0x7f080038
+			public const int textView20 = 2131230776;
+			
+			// aapt resource value: 0x7f08003a
+			public const int textView21 = 2131230778;
+			
+			// aapt resource value: 0x7f08001c
+			public const int textView3 = 2131230748;
+			
+			// aapt resource value: 0x7f08001e
+			public const int textView4 = 2131230750;
+			
+			// aapt resource value: 0x7f08001f
+			public const int textView5 = 2131230751;
+			
+			// aapt resource value: 0x7f080021
+			public const int textView6 = 2131230753;
+			
+			// aapt resource value: 0x7f080023
+			public const int textView7 = 2131230755;
+			
+			// aapt resource value: 0x7f080024
+			public const int textView8 = 2131230756;
+			
+			// aapt resource value: 0x7f080026
+			public const int textView9 = 2131230758;
+			
+			// aapt resource value: 0x7f080012
+			public const int txtViewCategory = 2131230738;
+			
+			// aapt resource value: 0x7f080013
+			public const int txtViewContent = 2131230739;
+			
+			// aapt resource value: 0x7f080011
+			public const int txtViewTitle = 2131230737;
 			
 			static Id()
 			{
@@ -177,19 +319,28 @@ namespace YWWACP
 			public const int Dialog_calendar = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Dialog_New_Thread = 2130903042;
+			public const int Dialog_ChooseHealthPlan = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Diary = 2130903043;
+			public const int Dialog_New_Thread = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int ListView_Row = 2130903044;
+			public const int Diary = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Main = 2130903045;
+			public const int HealthPlan = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Recipes = 2130903046;
+			public const int ListView_Row = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int Main = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int NewHealthPlan = 2130903048;
+			
+			// aapt resource value: 0x7f030009
+			public const int Recipes = 2130903049;
 			
 			static Layout()
 			{
@@ -204,47 +355,47 @@ namespace YWWACP
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int ApplicationName = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int ApplicationName = 2131034112;
 			
-			// aapt resource value: 0x7f040005
-			public const int Community = 2130968581;
+			// aapt resource value: 0x7f050005
+			public const int Community = 2131034117;
 			
-			// aapt resource value: 0x7f040001
-			public const int Diary = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int Diary = 2131034113;
 			
-			// aapt resource value: 0x7f040003
-			public const int Health_Plan = 2130968579;
+			// aapt resource value: 0x7f050003
+			public const int Health_Plan = 2131034115;
 			
-			// aapt resource value: 0x7f040008
-			public const int My_Threads = 2130968584;
+			// aapt resource value: 0x7f050008
+			public const int My_Threads = 2131034120;
 			
-			// aapt resource value: 0x7f040007
-			public const int New_Thread = 2130968583;
+			// aapt resource value: 0x7f050007
+			public const int New_Thread = 2131034119;
 			
-			// aapt resource value: 0x7f040002
-			public const int Profile = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int Profile = 2131034114;
 			
-			// aapt resource value: 0x7f040004
-			public const int Recipes = 2130968580;
+			// aapt resource value: 0x7f050004
+			public const int Recipes = 2131034116;
 			
-			// aapt resource value: 0x7f04000a
-			public const int Title = 2130968586;
+			// aapt resource value: 0x7f05000a
+			public const int Title = 2131034122;
 			
-			// aapt resource value: 0x7f040006
-			public const int Today = 2130968582;
+			// aapt resource value: 0x7f050006
+			public const int Today = 2131034118;
 			
-			// aapt resource value: 0x7f040009
-			public const int Your_Question = 2130968585;
+			// aapt resource value: 0x7f050009
+			public const int Your_Question = 2131034121;
 			
-			// aapt resource value: 0x7f04000b
-			public const int cancelThread = 2130968587;
+			// aapt resource value: 0x7f05000b
+			public const int cancelThread = 2131034123;
 			
-			// aapt resource value: 0x7f04000d
-			public const int category_prompt = 2130968589;
+			// aapt resource value: 0x7f05000d
+			public const int category_prompt = 2131034125;
 			
-			// aapt resource value: 0x7f04000c
-			public const int submitThread = 2130968588;
+			// aapt resource value: 0x7f05000c
+			public const int submitThread = 2131034124;
 			
 			static String()
 			{
@@ -252,6 +403,22 @@ namespace YWWACP
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f070000
+			public const int dialog_animation = 2131165184;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}
