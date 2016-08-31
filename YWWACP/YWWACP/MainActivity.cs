@@ -36,6 +36,13 @@ namespace YWWACP
             btnDiary.Click += DiaryButton_Click;
             btnCommunity.Click += BtnCommunity_Click;
             btnRecipes.Click += BtnRecipes_Click;
+            btnProfile.Click += BtnProfile_Click;
+        }
+
+        private void BtnProfile_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(ProfileActivity));
+            StartActivity(intent);
         }
 
         private void BtnRecipes_Click(object sender, EventArgs e)
@@ -50,7 +57,6 @@ namespace YWWACP
             var intent = new Intent(this, typeof(CommunityActivity));
             StartActivity(intent);
         }
-
 
         //When Diary Button is clicked
         private void DiaryButton_Click(object sender, EventArgs e)
