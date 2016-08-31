@@ -56,7 +56,7 @@ namespace YWWACP
 
         private void NewThreadDialog_mOnSubmit(object sender, OnSubmitArgs e)
         {
-            mItems.Insert(0, new NewDiscussionThread() { Title = e.Title, Category = e.Category, Content = e.Content });
+            mItems.Insert(0, new NewDiscussionThread{ Title = e.Title, Category = e.Category, Content = e.Content });
          }
     }
 }
