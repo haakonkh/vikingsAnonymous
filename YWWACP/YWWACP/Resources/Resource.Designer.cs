@@ -26,13 +26,34 @@ namespace YWWACP
 		
 		public static void UpdateIdValues()
 		{
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::YWWACP.Resource.Attribute.MvxBind;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::YWWACP.Resource.Attribute.MvxDropDownItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::YWWACP.Resource.Attribute.MvxGroupItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::YWWACP.Resource.Attribute.MvxItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::YWWACP.Resource.Attribute.MvxLang;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::YWWACP.Resource.Attribute.MvxSource;
+			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::YWWACP.Resource.Attribute.MvxTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::YWWACP.Resource.Id.MvvmCrossTagId;
+			global::MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::YWWACP.Resource.Id.MvxBindingTagUnique;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::YWWACP.Resource.Styleable.MvxBinding;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::YWWACP.Resource.Styleable.MvxBinding_MvxBind;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::YWWACP.Resource.Styleable.MvxBinding_MvxLang;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::YWWACP.Resource.Styleable.MvxControl;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::YWWACP.Resource.Styleable.MvxControl_MvxTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::YWWACP.Resource.Styleable.MvxExpandableListView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::YWWACP.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::YWWACP.Resource.Styleable.MvxImageView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::YWWACP.Resource.Styleable.MvxImageView_MvxSource;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::YWWACP.Resource.Styleable.MvxListView;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::YWWACP.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::YWWACP.Resource.Styleable.MvxListView_MvxItemTemplate;
 		}
 		
 		public partial class Array
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int categories_array = 2131034112;
+			// aapt resource value: 0x7f070000
+			public const int categories_array = 2131165184;
 			
 			static Array()
 			{
@@ -46,6 +67,27 @@ namespace YWWACP
 		
 		public partial class Attribute
 		{
+			
+			// aapt resource value: 0x7f010000
+			public const int MvxBind = 2130771968;
+			
+			// aapt resource value: 0x7f010004
+			public const int MvxDropDownItemTemplate = 2130771972;
+			
+			// aapt resource value: 0x7f010005
+			public const int MvxGroupItemTemplate = 2130771973;
+			
+			// aapt resource value: 0x7f010003
+			public const int MvxItemTemplate = 2130771971;
+			
+			// aapt resource value: 0x7f010001
+			public const int MvxLang = 2130771969;
+			
+			// aapt resource value: 0x7f010006
+			public const int MvxSource = 2130771974;
+			
+			// aapt resource value: 0x7f010002
+			public const int MvxTemplate = 2130771970;
 			
 			static Attribute()
 			{
@@ -84,6 +126,9 @@ namespace YWWACP
 			// aapt resource value: 0x7f020007
 			public const int recipeIcon = 2130837511;
 			
+			// aapt resource value: 0x7f020008
+			public const int splash = 2130837512;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -97,113 +142,119 @@ namespace YWWACP
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060022
-			public const int addBtn = 2131099682;
+			// aapt resource value: 0x7f040000
+			public const int MvvmCrossTagId = 2130968576;
 			
-			// aapt resource value: 0x7f060008
-			public const int btnCancelThread = 2131099656;
+			// aapt resource value: 0x7f040001
+			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f060015
-			public const int btnCommunity = 2131099669;
+			// aapt resource value: 0x7f040024
+			public const int addBtn = 2130968612;
 			
-			// aapt resource value: 0x7f060011
-			public const int btnDiary = 2131099665;
+			// aapt resource value: 0x7f04000a
+			public const int btnCancelThread = 2130968586;
 			
-			// aapt resource value: 0x7f060012
-			public const int btnHealthPlan = 2131099666;
+			// aapt resource value: 0x7f040017
+			public const int btnCommunity = 2130968599;
 			
-			// aapt resource value: 0x7f060002
-			public const int btnMyThreads = 2131099650;
+			// aapt resource value: 0x7f040013
+			public const int btnDiary = 2130968595;
 			
-			// aapt resource value: 0x7f060001
-			public const int btnNewThread = 2131099649;
+			// aapt resource value: 0x7f040014
+			public const int btnHealthPlan = 2130968596;
 			
-			// aapt resource value: 0x7f060013
-			public const int btnProfile = 2131099667;
+			// aapt resource value: 0x7f040004
+			public const int btnMyThreads = 2130968580;
 			
-			// aapt resource value: 0x7f060014
-			public const int btnRecipes = 2131099668;
+			// aapt resource value: 0x7f040003
+			public const int btnNewThread = 2130968579;
 			
-			// aapt resource value: 0x7f060009
-			public const int btnSubmitThread = 2131099657;
+			// aapt resource value: 0x7f040015
+			public const int btnProfile = 2130968597;
 			
-			// aapt resource value: 0x7f06000c
-			public const int btnToday = 2131099660;
+			// aapt resource value: 0x7f040016
+			public const int btnRecipes = 2130968598;
 			
-			// aapt resource value: 0x7f06000d
-			public const int btnTomorrow = 2131099661;
+			// aapt resource value: 0x7f04000b
+			public const int btnSubmitThread = 2130968587;
 			
-			// aapt resource value: 0x7f06000b
-			public const int btnYesterday = 2131099659;
+			// aapt resource value: 0x7f04000e
+			public const int btnToday = 2130968590;
 			
-			// aapt resource value: 0x7f06001c
-			public const int buttonSaveText = 2131099676;
+			// aapt resource value: 0x7f04000f
+			public const int btnTomorrow = 2130968591;
 			
-			// aapt resource value: 0x7f060004
-			public const int calendarView1 = 2131099652;
+			// aapt resource value: 0x7f04000d
+			public const int btnYesterday = 2130968589;
 			
-			// aapt resource value: 0x7f060021
-			public const int cancelBtn = 2131099681;
+			// aapt resource value: 0x7f04001e
+			public const int buttonSaveText = 2130968606;
 			
-			// aapt resource value: 0x7f06000a
-			public const int dayPicker = 2131099658;
+			// aapt resource value: 0x7f040006
+			public const int calendarView1 = 2130968582;
 			
-			// aapt resource value: 0x7f060007
-			public const int editTxtQuestion = 2131099655;
+			// aapt resource value: 0x7f040023
+			public const int cancelBtn = 2130968611;
 			
-			// aapt resource value: 0x7f060005
-			public const int editTxtTitle = 2131099653;
+			// aapt resource value: 0x7f04000c
+			public const int dayPicker = 2130968588;
 			
-			// aapt resource value: 0x7f060023
-			public const int grid = 2131099683;
+			// aapt resource value: 0x7f040009
+			public const int editTxtQuestion = 2130968585;
 			
-			// aapt resource value: 0x7f060018
-			public const int imageView1 = 2131099672;
+			// aapt resource value: 0x7f040007
+			public const int editTxtTitle = 2130968583;
 			
-			// aapt resource value: 0x7f060000
-			public const int linearLayoutWrapTopButtons = 2131099648;
+			// aapt resource value: 0x7f040025
+			public const int grid = 2130968613;
 			
-			// aapt resource value: 0x7f060003
-			public const int listViewCommunity = 2131099651;
+			// aapt resource value: 0x7f04001a
+			public const int imageView1 = 2130968602;
 			
-			// aapt resource value: 0x7f06001f
-			public const int recepieImage = 2131099679;
+			// aapt resource value: 0x7f040002
+			public const int linearLayoutWrapTopButtons = 2130968578;
 			
-			// aapt resource value: 0x7f060020
-			public const int recepieText = 2131099680;
+			// aapt resource value: 0x7f040005
+			public const int listViewCommunity = 2130968581;
 			
-			// aapt resource value: 0x7f060006
-			public const int spinnerCategories = 2131099654;
+			// aapt resource value: 0x7f040021
+			public const int recepieImage = 2130968609;
 			
-			// aapt resource value: 0x7f060016
-			public const int tableLayout1 = 2131099670;
+			// aapt resource value: 0x7f040022
+			public const int recepieText = 2130968610;
 			
-			// aapt resource value: 0x7f060017
-			public const int tableRow1 = 2131099671;
+			// aapt resource value: 0x7f040008
+			public const int spinnerCategories = 2130968584;
 			
-			// aapt resource value: 0x7f06001a
-			public const int tableRow2 = 2131099674;
+			// aapt resource value: 0x7f040018
+			public const int tableLayout1 = 2130968600;
 			
-			// aapt resource value: 0x7f06001d
-			public const int tableRow3 = 2131099677;
+			// aapt resource value: 0x7f040019
+			public const int tableRow1 = 2130968601;
 			
-			// aapt resource value: 0x7f06001e
-			public const int tableRow4 = 2131099678;
+			// aapt resource value: 0x7f04001c
+			public const int tableRow2 = 2130968604;
 			
-			// aapt resource value: 0x7f060019
-			public const int textView5 = 2131099673;
+			// aapt resource value: 0x7f04001f
+			public const int tableRow3 = 2130968607;
 			
-			// aapt resource value: 0x7f06000f
-			public const int txtViewCategory = 2131099663;
+			// aapt resource value: 0x7f040020
+			public const int tableRow4 = 2130968608;
 			
-			// aapt resource value: 0x7f060010
-			public const int txtViewContent = 2131099664;
+			// aapt resource value: 0x7f04001b
+			public const int textView5 = 2130968603;
 			
-			// aapt resource value: 0x7f06000e
-			public const int txtViewTitle = 2131099662;
+			// aapt resource value: 0x7f040011
+			public const int txtViewCategory = 2130968593;
 			
-			// aapt resource value: 0x7f06001b
-			public const int userInfo = 2131099675;
+			// aapt resource value: 0x7f040012
+			public const int txtViewContent = 2130968594;
+			
+			// aapt resource value: 0x7f040010
+			public const int txtViewTitle = 2130968592;
+			
+			// aapt resource value: 0x7f04001d
+			public const int userInfo = 2130968605;
 			
 			static Id()
 			{
@@ -231,22 +282,28 @@ namespace YWWACP
 			public const int Diary = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int ListView_Row = 2130903044;
+			public const int FirstView = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Main = 2130903045;
+			public const int ListView_Row = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Profile = 2130903046;
+			public const int Main = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int recipeDialogView = 2130903047;
+			public const int Profile = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int RecipeMain = 2130903048;
+			public const int recipeDialogView = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Recipes = 2130903049;
+			public const int RecipeMain = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int Recipes = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int SplashScreen = 2130903051;
 			
 			static Layout()
 			{
@@ -261,47 +318,47 @@ namespace YWWACP
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int ApplicationName = 2130968576;
+			// aapt resource value: 0x7f060000
+			public const int ApplicationName = 2131099648;
 			
-			// aapt resource value: 0x7f040005
-			public const int Community = 2130968581;
+			// aapt resource value: 0x7f060005
+			public const int Community = 2131099653;
 			
-			// aapt resource value: 0x7f040001
-			public const int Diary = 2130968577;
+			// aapt resource value: 0x7f060001
+			public const int Diary = 2131099649;
 			
-			// aapt resource value: 0x7f040003
-			public const int Health_Plan = 2130968579;
+			// aapt resource value: 0x7f060003
+			public const int Health_Plan = 2131099651;
 			
-			// aapt resource value: 0x7f040008
-			public const int My_Threads = 2130968584;
+			// aapt resource value: 0x7f060008
+			public const int My_Threads = 2131099656;
 			
-			// aapt resource value: 0x7f040007
-			public const int New_Thread = 2130968583;
+			// aapt resource value: 0x7f060007
+			public const int New_Thread = 2131099655;
 			
-			// aapt resource value: 0x7f040002
-			public const int Profile = 2130968578;
+			// aapt resource value: 0x7f060002
+			public const int Profile = 2131099650;
 			
-			// aapt resource value: 0x7f040004
-			public const int Recipes = 2130968580;
+			// aapt resource value: 0x7f060004
+			public const int Recipes = 2131099652;
 			
-			// aapt resource value: 0x7f04000a
-			public const int Title = 2130968586;
+			// aapt resource value: 0x7f06000a
+			public const int Title = 2131099658;
 			
-			// aapt resource value: 0x7f040006
-			public const int Today = 2130968582;
+			// aapt resource value: 0x7f060006
+			public const int Today = 2131099654;
 			
-			// aapt resource value: 0x7f040009
-			public const int Your_Question = 2130968585;
+			// aapt resource value: 0x7f060009
+			public const int Your_Question = 2131099657;
 			
-			// aapt resource value: 0x7f04000b
-			public const int cancelThread = 2130968587;
+			// aapt resource value: 0x7f06000b
+			public const int cancelThread = 2131099659;
 			
-			// aapt resource value: 0x7f04000d
-			public const int category_prompt = 2130968589;
+			// aapt resource value: 0x7f06000d
+			public const int category_prompt = 2131099661;
 			
-			// aapt resource value: 0x7f04000c
-			public const int submitThread = 2130968588;
+			// aapt resource value: 0x7f06000c
+			public const int submitThread = 2131099660;
 			
 			static String()
 			{
@@ -309,6 +366,73 @@ namespace YWWACP
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int Theme_Splash = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
+			{
+			}
+		}
+		
+		public partial class Styleable
+		{
+			
+			public static int[] MvxBinding = new int[] {
+					2130771968,
+					2130771969};
+			
+			// aapt resource value: 0
+			public const int MvxBinding_MvxBind = 0;
+			
+			// aapt resource value: 1
+			public const int MvxBinding_MvxLang = 1;
+			
+			public static int[] MvxControl = new int[] {
+					2130771970};
+			
+			// aapt resource value: 0
+			public const int MvxControl_MvxTemplate = 0;
+			
+			public static int[] MvxExpandableListView = new int[] {
+					2130771973};
+			
+			// aapt resource value: 0
+			public const int MvxExpandableListView_MvxGroupItemTemplate = 0;
+			
+			public static int[] MvxImageView = new int[] {
+					2130771974};
+			
+			// aapt resource value: 0
+			public const int MvxImageView_MvxSource = 0;
+			
+			public static int[] MvxListView = new int[] {
+					2130771971,
+					2130771972};
+			
+			// aapt resource value: 1
+			public const int MvxListView_MvxDropDownItemTemplate = 1;
+			
+			// aapt resource value: 0
+			public const int MvxListView_MvxItemTemplate = 0;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Styleable()
 			{
 			}
 		}
