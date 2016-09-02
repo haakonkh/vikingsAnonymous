@@ -90,12 +90,15 @@
     <Compile Include="CommunityActivity.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="dialog_calendar.cs" />
+    <Compile Include="dialog_ChooseHealthPlan.cs" />
     <Compile Include="dialog_new_thread.cs" />
     <Compile Include="DiaryActivity.cs" />
+    <Compile Include="HealthPlanActivity.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NewDiscussionThread.cs" />
+    <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="ProfileActivity.cs" />
     <Compile Include="RecipesActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -135,6 +138,9 @@
     <AndroidResource Include="Resources\layout\Profile.axml" />
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
     <AndroidResource Include="Resources\layout\FirstView.axml" />
+    <AndroidResource Include="Resources\layout\Dialog_ChooseHealthPlan.axml" />
+    <AndroidResource Include="Resources\layout\HealthPlan.axml" />
+    <AndroidResource Include="Resources\layout\NewHealthPlan.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -179,6 +185,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\anim\slide_right.xml" />
+    <AndroidResource Include="Resources\anim\slide_up.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

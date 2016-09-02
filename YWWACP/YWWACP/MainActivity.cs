@@ -31,7 +31,7 @@ namespace YWWACP
             btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan= FindViewById<Button>(Resource.Id.btnHealthPlan);
             btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
-
+            btnHealthPlan.Click += BtnHealthPlan_Click;
 
             btnDiary.Click += DiaryButton_Click;
             btnCommunity.Click += BtnCommunity_Click;
@@ -64,6 +64,11 @@ namespace YWWACP
             var intent = new Intent(this, typeof(DiaryActivity));
             StartActivity(intent);
 
+        }
+        private void BtnHealthPlan_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(HealthPlanActivity));
+            StartActivity(intent);
         }
     }
 }
