@@ -87,10 +87,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommunityActivity.cs" />
+    <Compile Include="Views\CommunityActivity.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="dialog_calendar.cs" />
-    <Compile Include="dialog_new_thread.cs" />
+    <Compile Include="Views\Dialog_NewThread.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="ListViewAdapter.cs" />

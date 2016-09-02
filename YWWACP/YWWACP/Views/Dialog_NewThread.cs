@@ -9,53 +9,23 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.Windows.Input;
+using YWWACP.Core.ViewModels;
 
 namespace YWWACP
 {
-    public class OnSubmitArgs : EventArgs
+
+    [Activity(Label = "Dialog_NewThread")]
+    public class Dialog_NewThread : DialogFragment
     {
-        private string mTitle;
-        //private Spinner mDropdown; // categories, cannot make this work
-        private string mCategory;
-        private string mContent;
+         private Spinner mDropdwon;
+         //private Button mSubmit;
+         /* private EditText mTitle;
+          private EditText mContent;
 
-        public string Title
-        {
-            get { return mTitle; }
-            set { mTitle = value;  }    
-        }
-
-        public string Category
-        {
-            get { return mCategory; }
-            set { mCategory = value;  }
-
-        }
-
-        public string Content
-        {
-            get { return mContent; }
-            set { mContent = value; }
-        }
-
-        public OnSubmitArgs(string title, string category, string content) : base()
-        {
-            Title = title;
-            Category = category;
-            Content = content;
-        }
-        
-    }
-
-    [Activity(Label = "dialog_new_thread")]
-    class dialog_new_thread : DialogFragment
-    {
-        private Spinner mDropdwon;
-        private Button mSubmit;
-        private EditText mTitle;
-        private EditText mContent;
-
-        public event EventHandler<OnSubmitArgs> mOnSubmit;
+          public ICommand submitCommand { get; set; }
+          */
+        //public event EventHandler<OnSubmitThread> mOnSubmit;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -67,13 +37,13 @@ namespace YWWACP
             view.FindViewById<Button>(Resource.Id.btnCancelThread).Click += (sender, args) => Dismiss();
 
             // Submit button 
-            mSubmit = view.FindViewById<Button>(Resource.Id.btnSubmitThread);
-            mSubmit.Click += MSubmit_Click;
+          //  mSubmit = view.FindViewById<Button>(Resource.Id.btnSubmitThread);
+          //  mSubmit.Click += MSubmit_Click;
 
             // Text typed in by users, Title and Content
             // Edit text fields
-            mTitle = view.FindViewById<EditText>(Resource.Id.editTxtTitle);
-            mContent = view.FindViewById<EditText>(Resource.Id.editTxtQuestion);
+           // mTitle = view.FindViewById<EditText>(Resource.Id.editTxtTitle);
+           // mContent = view.FindViewById<EditText>(Resource.Id.editTxtQuestion);
             
             // Categories dropdown connected with view
             mDropdwon = view.FindViewById<Spinner>(Resource.Id.spinnerCategories);
@@ -93,9 +63,11 @@ namespace YWWACP
         // If something is to be submitted
         private void MSubmit_Click(object sender, EventArgs e)
         {
-            mOnSubmit.Invoke(this, new OnSubmitArgs(mTitle.Text,"Category: " + mDropdwon.SelectedItem.ToString(), mContent.Text));
+            // mOnSubmit.Invoke(this, new OnSubmitThread(mTitle.Text,"Category: " + mDropdwon.SelectedItem.ToString(), mContent.Text));
+            //mOnSubmit.Invoke(this, new Core.ViewModels.TestThread(mTitle.Text, "Category: " + mDropdwon.SelectedItem.ToString(), mContent.Text));
             this.Dismiss();
         }
+        
 
         // Prompts the user which category that's seleceted
         // I do not think this is necessary

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,13 +23,15 @@
             android:textStyle="bold"
             android:textSize="25dip"
             android:paddingLeft="5dp"
-            android:paddingTop="2dp" />
+            android:paddingTop="2dp" 
+            local:MvxBind="Text Title"/>
         <TextView
             android:text="Category"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:id="@+id/txtViewCategory" />
+            android:id="@+id/txtViewCategory" 
+            local:MvxBind="Text Category"/>
     </LinearLayout>
     <TextView
         android:text="Content"
@@ -37,5 +40,6 @@
         android:layout_weight="80"
         android:id="@+id/txtViewContent"
         android:paddingTop="10dp"
-        android:paddingLeft="15dp" />
+        android:paddingLeft="15dp" 
+        local:MvxBind="Text Content" />
 </LinearLayout>

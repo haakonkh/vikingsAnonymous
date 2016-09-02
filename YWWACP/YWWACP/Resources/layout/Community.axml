@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,20 +17,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:id="@+id/btnNewThread" />
+            android:id="@+id/btnNewThread"
+            local:MvxBind="Click NewThreadCommand" />
         <Button
             android:text="@string/My_Threads"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:id="@+id/btnMyThreads" />
+            android:id="@+id/btnMyThreads"
+            local:MvxBind="Click MyThreadCommand" />
     </LinearLayout>
-  
-    <ListView
+    <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="90"
-        android:id="@+id/listViewCommunity">
-      
-   </ListView>
+        android:id="@+id/listViewCommunity"
+        local:MvxItemTemplate="@layout/listview_row"
+        local:MvxBind="ItemSource Threads; ItemClick SelectThreadCommand" />
 </LinearLayout>
