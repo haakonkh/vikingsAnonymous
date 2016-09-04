@@ -96,7 +96,6 @@
     <Compile Include="HealthPlanActivity.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="ListViewAdapter.cs" />
-    <Compile Include="MainActivity.cs" />
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="ProfileActivity.cs" />
@@ -141,11 +140,6 @@
     <AndroidResource Include="Resources\layout\Dialog_ChooseHealthPlan.axml" />
     <AndroidResource Include="Resources\layout\HealthPlan.axml" />
     <AndroidResource Include="Resources\layout\NewHealthPlan.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

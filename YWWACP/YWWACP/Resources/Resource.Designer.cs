@@ -176,17 +176,17 @@ namespace YWWACP
 			// aapt resource value: 0x7f05004a
 			public const int addBtn = 2131034186;
 			
-			// aapt resource value: 0x7f050012
-			public const int btnAddPlan = 2131034130;
+			// aapt resource value: 0x7f050017
+			public const int btnAddPlan = 2131034135;
 			
 			// aapt resource value: 0x7f05000c
 			public const int btnCancelThread = 2131034124;
 			
-			// aapt resource value: 0x7f05001a
-			public const int btnCommunity = 2131034138;
-			
 			// aapt resource value: 0x7f050016
-			public const int btnDiary = 2131034134;
+			public const int btnCommunity = 2131034134;
+			
+			// aapt resource value: 0x7f050012
+			public const int btnDiary = 2131034130;
 			
 			// aapt resource value: 0x7f05003e
 			public const int btnDone = 2131034174;
@@ -194,8 +194,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f050008
 			public const int btnExisting = 2131034120;
 			
-			// aapt resource value: 0x7f050017
-			public const int btnHealthPlan = 2131034135;
+			// aapt resource value: 0x7f050013
+			public const int btnHealthPlan = 2131034131;
 			
 			// aapt resource value: 0x7f050004
 			public const int btnMyThreads = 2131034116;
@@ -206,11 +206,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f050003
 			public const int btnNewThread = 2131034115;
 			
-			// aapt resource value: 0x7f050018
-			public const int btnProfile = 2131034136;
+			// aapt resource value: 0x7f050014
+			public const int btnProfile = 2131034132;
 			
-			// aapt resource value: 0x7f050019
-			public const int btnRecipes = 2131034137;
+			// aapt resource value: 0x7f050015
+			public const int btnRecipes = 2131034133;
 			
 			// aapt resource value: 0x7f05000d
 			public const int btnSubmitThread = 2131034125;
@@ -383,14 +383,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f050028
 			public const int textView9 = 2131034152;
 			
-			// aapt resource value: 0x7f050014
-			public const int txtViewCategory = 2131034132;
+			// aapt resource value: 0x7f050019
+			public const int txtViewCategory = 2131034137;
 			
-			// aapt resource value: 0x7f050015
-			public const int txtViewContent = 2131034133;
+			// aapt resource value: 0x7f05001a
+			public const int txtViewContent = 2131034138;
 			
-			// aapt resource value: 0x7f050013
-			public const int txtViewTitle = 2131034131;
+			// aapt resource value: 0x7f050018
+			public const int txtViewTitle = 2131034136;
 			
 			// aapt resource value: 0x7f050043
 			public const int userInfo = 2131034179;
@@ -433,25 +433,22 @@ namespace YWWACP
 			public const int ListView_Row = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int Main = 2130903048;
+			public const int NewHealthPlan = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int NewHealthPlan = 2130903049;
+			public const int Profile = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int Profile = 2130903050;
+			public const int recipeDialogView = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int recipeDialogView = 2130903051;
+			public const int RecipeMain = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int RecipeMain = 2130903052;
+			public const int Recipes = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int Recipes = 2130903053;
-			
-			// aapt resource value: 0x7f03000e
-			public const int SplashScreen = 2130903054;
+			public const int SplashScreen = 2130903053;
 			
 			static Layout()
 			{
