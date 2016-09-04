@@ -12,7 +12,8 @@ using Android.Widget;
 
 namespace YWWACP
 {
-    class dialog_ChooseHealthPlan: DialogFragment
+    //Author: Student 9792538, Student Eirik Baug
+    class dialog_ChooseHealthPlan : DialogFragment
     {
         private Button addNew;
         private Button addExisting;
@@ -33,6 +34,7 @@ namespace YWWACP
 
         private void AddNew_Click(object sender, EventArgs e)
         {
+            //Add new health plan
             var intent = new Intent(Context, typeof(NewHealthPlanActivity));
             StartActivity(intent);
         }

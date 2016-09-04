@@ -12,9 +12,13 @@ using Android.Widget;
 
 namespace YWWACP
 {
+    //Author: Student 9792538, Student Eirik Baug
+
     [Activity(Label = "Add new health plan")]
     public class NewHealthPlanActivity: Activity
     {
+        //Define all the spinner buttons, 2 for each day: 1 for food and 1 for activity. In the future will probably
+        //switch to using buttons and scroll thorough the available database entries.
         private Spinner MondayActivities;
         private Spinner MondayFood;
 
@@ -45,6 +49,7 @@ namespace YWWACP
             // Set the view from the "new health plan" layout
             SetContentView(Resource.Layout.NewHealthPlan);
 
+            //Get the Ids
             MondayActivities = FindViewById<Spinner>(Resource.Id.spinnerActivitiesMonday);
             MondayFood = FindViewById<Spinner>(Resource.Id.spinnerFoodMonday);
 
@@ -66,6 +71,7 @@ namespace YWWACP
             SundayActivities = FindViewById<Spinner>(Resource.Id.spinnerActivitiesSunday);
             SundayFood = FindViewById<Spinner>(Resource.Id.spinnerFoodSunday);
 
+            //Add to arrays for easier implementation with for loop down below
             Spinner[] actSpinners =
             {
                 MondayActivities,TuesdayActivities,WednesdayActivities,ThursdayActivities,FridayActivities
@@ -93,8 +99,10 @@ namespace YWWACP
 
         }
 
+        
         private void Done_Click(object sender, EventArgs e)
         {
+            //Add to database
             throw new NotImplementedException();
         }
     }

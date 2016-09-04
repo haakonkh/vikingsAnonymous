@@ -5,6 +5,7 @@ using Android.Widget;
 
 namespace YWWACP
 {
+    //Author: Student 9792538, Student Eirik Baug
     [Activity(Label = "Health Plan")]
     internal class HealthPlanActivity: Activity
     {
@@ -27,7 +28,7 @@ namespace YWWACP
 
         private void btnAddPlan_Click(object sender, EventArgs e)
         {
-            //pull up dialog
+            //Pull up dialog
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             dialog_ChooseHealthPlan dialog = new dialog_ChooseHealthPlan();
             dialog.Show(transaction,"dialog fragment");
