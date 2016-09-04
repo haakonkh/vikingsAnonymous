@@ -12,6 +12,7 @@ using Android.Widget;
 
 namespace YWWACP
 {
+    //Author: Student 9805061, Student Andreas Norstein
     class NewDiscussionThread
     {
 
