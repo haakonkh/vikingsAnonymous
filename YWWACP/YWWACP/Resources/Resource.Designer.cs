@@ -137,7 +137,10 @@ namespace YWWACP
 			public const int my_purple = 2131099649;
 			
 			// aapt resource value: 0x7f060003
-			public const int theme_devicedefault_background = 2131099651;
+			public const int theme_custom_background = 2131099651;
+			
+			// aapt resource value: 0x7f060004
+			public const int theme_devicedefault_background = 2131099652;
 			
 			static Color()
 			{
