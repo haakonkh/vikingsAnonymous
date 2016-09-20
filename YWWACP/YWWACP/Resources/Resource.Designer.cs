@@ -71,14 +71,14 @@ namespace YWWACP
 		public partial class Array
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int categories_activities = 2131230721;
+			// aapt resource value: 0x7f090001
+			public const int categories_activities = 2131296257;
 			
-			// aapt resource value: 0x7f080000
-			public const int categories_array = 2131230720;
+			// aapt resource value: 0x7f090000
+			public const int categories_array = 2131296256;
 			
-			// aapt resource value: 0x7f080002
-			public const int categories_food = 2131230722;
+			// aapt resource value: 0x7f090002
+			public const int categories_food = 2131296258;
 			
 			static Array()
 			{
@@ -120,6 +120,31 @@ namespace YWWACP
 			}
 			
 			private Attribute()
+			{
+			}
+		}
+		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int my_darkPink = 2131099648;
+			
+			// aapt resource value: 0x7f060002
+			public const int my_peach = 2131099650;
+			
+			// aapt resource value: 0x7f060001
+			public const int my_purple = 2131099649;
+			
+			// aapt resource value: 0x7f060003
+			public const int theme_devicedefault_background = 2131099651;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
 			{
 			}
 		}
@@ -463,47 +488,47 @@ namespace YWWACP
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int ApplicationName = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int ApplicationName = 2131230720;
 			
-			// aapt resource value: 0x7f070005
-			public const int Community = 2131165189;
+			// aapt resource value: 0x7f080005
+			public const int Community = 2131230725;
 			
-			// aapt resource value: 0x7f070001
-			public const int Diary = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int Diary = 2131230721;
 			
-			// aapt resource value: 0x7f070003
-			public const int Health_Plan = 2131165187;
+			// aapt resource value: 0x7f080003
+			public const int Health_Plan = 2131230723;
 			
-			// aapt resource value: 0x7f070008
-			public const int My_Threads = 2131165192;
+			// aapt resource value: 0x7f080008
+			public const int My_Threads = 2131230728;
 			
-			// aapt resource value: 0x7f070007
-			public const int New_Thread = 2131165191;
+			// aapt resource value: 0x7f080007
+			public const int New_Thread = 2131230727;
 			
-			// aapt resource value: 0x7f070002
-			public const int Profile = 2131165186;
+			// aapt resource value: 0x7f080002
+			public const int Profile = 2131230722;
 			
-			// aapt resource value: 0x7f070004
-			public const int Recipes = 2131165188;
+			// aapt resource value: 0x7f080004
+			public const int Recipes = 2131230724;
 			
-			// aapt resource value: 0x7f07000a
-			public const int Title = 2131165194;
+			// aapt resource value: 0x7f08000a
+			public const int Title = 2131230730;
 			
-			// aapt resource value: 0x7f070006
-			public const int Today = 2131165190;
+			// aapt resource value: 0x7f080006
+			public const int Today = 2131230726;
 			
-			// aapt resource value: 0x7f070009
-			public const int Your_Question = 2131165193;
+			// aapt resource value: 0x7f080009
+			public const int Your_Question = 2131230729;
 			
-			// aapt resource value: 0x7f07000b
-			public const int cancelThread = 2131165195;
+			// aapt resource value: 0x7f08000b
+			public const int cancelThread = 2131230731;
 			
-			// aapt resource value: 0x7f07000d
-			public const int category_prompt = 2131165197;
+			// aapt resource value: 0x7f08000d
+			public const int category_prompt = 2131230733;
 			
-			// aapt resource value: 0x7f07000c
-			public const int submitThread = 2131165196;
+			// aapt resource value: 0x7f08000c
+			public const int submitThread = 2131230732;
 			
 			static String()
 			{
@@ -518,11 +543,17 @@ namespace YWWACP
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int Theme_Splash = 2131099648;
+			// aapt resource value: 0x7f070001
+			public const int MainTheme = 2131165185;
 			
-			// aapt resource value: 0x7f060001
-			public const int dialog_animation = 2131099649;
+			// aapt resource value: 0x7f070003
+			public const int Theme_Custom = 2131165187;
+			
+			// aapt resource value: 0x7f070000
+			public const int Theme_Splash = 2131165184;
+			
+			// aapt resource value: 0x7f070002
+			public const int dialog_animation = 2131165186;
 			
 			static Style()
 			{
