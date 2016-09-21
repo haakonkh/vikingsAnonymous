@@ -6,7 +6,7 @@ using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-
+////, Theme="@style/MyTheme"
 namespace YWWACP.Views
 {
     [Activity(Label = "YWWACP")]
@@ -17,6 +17,7 @@ namespace YWWACP.Views
         private Button btnRecipes;
         private Button btnHealthPlan;
         private Button btnCommunity;
+        private Button btnExercise;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -30,13 +31,19 @@ namespace YWWACP.Views
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
             btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
             btnHealthPlan.Click += BtnHealthPlan_Click;
+            btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
 
             btnDiary.Click += DiaryButton_Click;
             btnCommunity.Click += BtnCommunity_Click;
             btnRecipes.Click += BtnRecipes_Click;
             btnProfile.Click += BtnProfile_Click;
+            btnExercise.Click += BtnExercise_Click;
         }
-
+        private void BtnExercise_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(ExerciseActivity));
+            StartActivity(intent);
+        }
         private void BtnProfile_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(ProfileActivity));
