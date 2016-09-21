@@ -47,6 +47,8 @@ namespace YWWACP
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::YWWACP.Resource.Styleable.MvxListView;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::YWWACP.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::YWWACP.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::YWWACP.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::YWWACP.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -153,21 +155,6 @@ namespace YWWACP
 			// aapt resource value: 0x7f01005d
 			public const int actionBarPopupTheme = 2130772061;
 			
-			// aapt resource value: 0x7f060001
-			public const int my_lightPink = 2131099649;
-			
-			// aapt resource value: 0x7f060003
-			public const int my_peach = 2131099651;
-			
-			// aapt resource value: 0x7f060002
-			public const int my_purple = 2131099650;
-			
-			// aapt resource value: 0x7f060004
-			public const int theme_custom_background = 2131099652;
-			
-			// aapt resource value: 0x7f060005
-			public const int theme_devicedefault_background = 2131099653;
-
 			// aapt resource value: 0x7f010062
 			public const int actionBarSize = 2130772066;
 			
@@ -176,7 +163,6 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f01005e
 			public const int actionBarStyle = 2130772062;
-
 			
 			// aapt resource value: 0x7f010059
 			public const int actionBarTabBarStyle = 2130772057;
@@ -828,32 +814,32 @@ namespace YWWACP
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a003e
-			public const int abc_background_cache_hint_selector_material_dark = 2131361854;
-			
-			// aapt resource value: 0x7f0a003f
-			public const int abc_background_cache_hint_selector_material_light = 2131361855;
-			
 			// aapt resource value: 0x7f0a0040
-			public const int abc_color_highlight_material = 2131361856;
+			public const int abc_background_cache_hint_selector_material_dark = 2131361856;
+			
+			// aapt resource value: 0x7f0a0041
+			public const int abc_background_cache_hint_selector_material_light = 2131361857;
+			
+			// aapt resource value: 0x7f0a0042
+			public const int abc_color_highlight_material = 2131361858;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int abc_input_method_navigation_guard = 2131361792;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int abc_primary_text_disable_only_material_dark = 2131361857;
-			
-			// aapt resource value: 0x7f0a0042
-			public const int abc_primary_text_disable_only_material_light = 2131361858;
-			
 			// aapt resource value: 0x7f0a0043
-			public const int abc_primary_text_material_dark = 2131361859;
+			public const int abc_primary_text_disable_only_material_dark = 2131361859;
 			
 			// aapt resource value: 0x7f0a0044
-			public const int abc_primary_text_material_light = 2131361860;
+			public const int abc_primary_text_disable_only_material_light = 2131361860;
 			
 			// aapt resource value: 0x7f0a0045
-			public const int abc_search_url_text = 2131361861;
+			public const int abc_primary_text_material_dark = 2131361861;
+			
+			// aapt resource value: 0x7f0a0046
+			public const int abc_primary_text_material_light = 2131361862;
+			
+			// aapt resource value: 0x7f0a0047
+			public const int abc_search_url_text = 2131361863;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int abc_search_url_text_normal = 2131361793;
@@ -864,11 +850,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f0a0003
 			public const int abc_search_url_text_selected = 2131361795;
 			
-			// aapt resource value: 0x7f0a0046
-			public const int abc_secondary_text_material_dark = 2131361862;
+			// aapt resource value: 0x7f0a0048
+			public const int abc_secondary_text_material_dark = 2131361864;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int abc_secondary_text_material_light = 2131361863;
+			// aapt resource value: 0x7f0a0049
+			public const int abc_secondary_text_material_light = 2131361865;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int accent_material_dark = 2131361796;
@@ -981,11 +967,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f0a003a
 			public const int my_darkPink = 2131361850;
 			
-			// aapt resource value: 0x7f0a003c
-			public const int my_peach = 2131361852;
-			
 			// aapt resource value: 0x7f0a003b
-			public const int my_purple = 2131361851;
+			public const int my_lightPink = 2131361851;
+			
+			// aapt resource value: 0x7f0a003d
+			public const int my_peach = 2131361853;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int my_purple = 2131361852;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int primary_dark_material_dark = 2131361832;
@@ -1035,11 +1024,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f0a0037
 			public const int switch_thumb_disabled_material_light = 2131361847;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int switch_thumb_material_dark = 2131361864;
+			// aapt resource value: 0x7f0a004a
+			public const int switch_thumb_material_dark = 2131361866;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int switch_thumb_material_light = 2131361865;
+			// aapt resource value: 0x7f0a004b
+			public const int switch_thumb_material_light = 2131361867;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int switch_thumb_normal_material_dark = 2131361848;
@@ -1047,8 +1036,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f0a0039
 			public const int switch_thumb_normal_material_light = 2131361849;
 			
-			// aapt resource value: 0x7f0a003d
-			public const int theme_devicedefault_background = 2131361853;
+			// aapt resource value: 0x7f0a003e
+			public const int theme_custom_background = 2131361854;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int theme_devicedefault_background = 2131361855;
 			
 			static Color()
 			{
@@ -1538,8 +1530,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f02004e
 			public const int Icon = 2130837582;
 			
-			// aapt resource value: 0x7f020053
-			public const int notification_template_icon_bg = 2130837587;
+			// aapt resource value: 0x7f020054
+			public const int notification_template_icon_bg = 2130837588;
 			
 			// aapt resource value: 0x7f02004f
 			public const int ProfilePicture = 2130837583;
@@ -1552,6 +1544,9 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f020052
 			public const int splash = 2130837586;
+			
+			// aapt resource value: 0x7f020053
+			public const int splashOld = 2130837587;
 			
 			static Drawable()
 			{
@@ -2292,41 +2287,44 @@ namespace YWWACP
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050014
-			public const int ApplicationName = 2131034132;
-			
-			// aapt resource value: 0x7f05001a
-			public const int Community = 2131034138;
-			
 			// aapt resource value: 0x7f050015
-			public const int Diary = 2131034133;
-			
-			// aapt resource value: 0x7f050019
-			public const int Exercises = 2131034137;
-			
-			// aapt resource value: 0x7f050017
-			public const int Health_Plan = 2131034135;
-			
-			// aapt resource value: 0x7f05001d
-			public const int My_Threads = 2131034141;
-			
-			// aapt resource value: 0x7f05001c
-			public const int New_Thread = 2131034140;
-			
-			// aapt resource value: 0x7f050016
-			public const int Profile = 2131034134;
-			
-			// aapt resource value: 0x7f050018
-			public const int Recipes = 2131034136;
-			
-			// aapt resource value: 0x7f05001f
-			public const int Title = 2131034143;
+			public const int ApplicationName = 2131034133;
 			
 			// aapt resource value: 0x7f05001b
-			public const int Today = 2131034139;
+			public const int Community = 2131034139;
+			
+			// aapt resource value: 0x7f050016
+			public const int Diary = 2131034134;
+			
+			// aapt resource value: 0x7f05001a
+			public const int Exercises = 2131034138;
+			
+			// aapt resource value: 0x7f050018
+			public const int Health_Plan = 2131034136;
+			
+			// aapt resource value: 0x7f050014
+			public const int Hello = 2131034132;
 			
 			// aapt resource value: 0x7f05001e
-			public const int Your_Question = 2131034142;
+			public const int My_Threads = 2131034142;
+			
+			// aapt resource value: 0x7f05001d
+			public const int New_Thread = 2131034141;
+			
+			// aapt resource value: 0x7f050017
+			public const int Profile = 2131034135;
+			
+			// aapt resource value: 0x7f050019
+			public const int Recipes = 2131034137;
+			
+			// aapt resource value: 0x7f050020
+			public const int Title = 2131034144;
+			
+			// aapt resource value: 0x7f05001c
+			public const int Today = 2131034140;
+			
+			// aapt resource value: 0x7f05001f
+			public const int Your_Question = 2131034143;
 			
 			// aapt resource value: 0x7f050000
 			public const int abc_action_bar_home_description = 2131034112;
@@ -2385,17 +2383,17 @@ namespace YWWACP
 			// aapt resource value: 0x7f050012
 			public const int abc_toolbar_collapse_description = 2131034130;
 			
-			// aapt resource value: 0x7f050020
-			public const int cancelThread = 2131034144;
+			// aapt resource value: 0x7f050021
+			public const int cancelThread = 2131034145;
 			
-			// aapt resource value: 0x7f050022
-			public const int category_prompt = 2131034146;
+			// aapt resource value: 0x7f050023
+			public const int category_prompt = 2131034147;
 			
 			// aapt resource value: 0x7f050013
 			public const int status_bar_notification_info_overflow = 2131034131;
 			
-			// aapt resource value: 0x7f050021
-			public const int submitThread = 2131034145;
+			// aapt resource value: 0x7f050022
+			public const int submitThread = 2131034146;
 			
 			static String()
 			{
