@@ -6,7 +6,7 @@
     <item name="android:colorPrimary">@color/my_darkPink</item>
     <item name="android:colorAccent">@color/my_purple</item>
     <item name="android:colorPrimaryDark">@color/my_purple</item>
-    <item name="android:colorButtonNormal">@color/my_darkPink</item>
+    <item name="android:colorButtonNormal">@color/my_lightPink</item>
     <item name="android:colorBackground">@color/my_peach</item>
     <item name="android:textColorPrimary">@color/my_purple</item>
     <item name="android:textColorSecondary">@color/my_purple</item>
