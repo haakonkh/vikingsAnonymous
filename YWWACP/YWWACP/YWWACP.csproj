@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommunityActivity.cs" />
+    <Compile Include="Database\AzureDatabase.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="dialog_calendar.cs" />
     <Compile Include="dialog_ChooseHealthPlan.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="RecipeDialog.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Database\SqliteDroid.cs" />
     <Compile Include="Views\FirstView.cs" />
   </ItemGroup>
   <ItemGroup>

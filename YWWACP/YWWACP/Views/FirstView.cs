@@ -6,6 +6,7 @@ using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Microsoft.WindowsAzure.MobileServices;
 ////, Theme="@style/MyTheme"
 namespace YWWACP.Views
 {
@@ -18,6 +19,11 @@ namespace YWWACP.Views
         private Button btnHealthPlan;
         private Button btnCommunity;
         private Button btnExercise;
+
+        public static MobileServiceClient MobileService =
+    new MobileServiceClient(
+    "https://vikinganonymous.azurewebsites.net"
+);
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
