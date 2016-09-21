@@ -13,8 +13,7 @@
         android:id="@+id/editTxtTitle"
         android:textStyle="bold"
         android:textSize="25dip"
-        android:gravity="bottom|left"
-        android:textColor="@android:color/white" />
+        android:gravity="bottom|left" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

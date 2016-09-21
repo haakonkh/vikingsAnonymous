@@ -1530,8 +1530,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f02004e
 			public const int Icon = 2130837582;
 			
-			// aapt resource value: 0x7f020054
-			public const int notification_template_icon_bg = 2130837588;
+			// aapt resource value: 0x7f020053
+			public const int notification_template_icon_bg = 2130837587;
 			
 			// aapt resource value: 0x7f02004f
 			public const int ProfilePicture = 2130837583;
@@ -1544,9 +1544,6 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f020052
 			public const int splash = 2130837586;
-			
-			// aapt resource value: 0x7f020053
-			public const int splashOld = 2130837587;
 			
 			static Drawable()
 			{
@@ -3113,8 +3110,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0800e9
 			public const int Theme_AppCompat_NoActionBar = 2131230953;
 			
-			// aapt resource value: 0x7f080136
-			public const int Theme_Custom = 2131231030;
+			// aapt resource value: 0x7f080137
+			public const int Theme_Custom = 2131231031;
 			
 			// aapt resource value: 0x7f080133
 			public const int Theme_Splash = 2131231027;
@@ -3338,8 +3335,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f080132
 			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131231026;
 			
+			// aapt resource value: 0x7f080136
+			public const int dialog_animation = 2131231030;
+			
 			// aapt resource value: 0x7f080135
-			public const int dialog_animation = 2131231029;
+			public const int textViewTheme = 2131231029;
 			
 			static Style()
 			{

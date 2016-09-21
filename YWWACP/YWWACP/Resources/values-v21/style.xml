@@ -12,9 +12,11 @@
     <item name="android:textColorSecondary">@color/my_purple</item>
 
     <item name="android:fontFamily">"sans-serif-condensed"</item>
-    
-    
-    
-    
+  </style>
+
+  <style name="textViewTheme" parent="android:Theme.Material.Light">
+    <!-- Override the color of UI controls -->
+    <item name="android:background">@color/my_peach</item>
+    <item name="android:textColorPrimary">@color/my_purple</item>    
   </style>
 </resources>
