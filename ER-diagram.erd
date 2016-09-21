@@ -94,7 +94,7 @@
 <diamond id="25" is_weak="false" name="" x="444" y="210">
 <attributes/>
 </diamond>
-<diamond id="28" is_weak="false" name="" x="435" y="420">
+<diamond id="28" is_weak="false" name="" x="435" y="419">
 <attributes/>
 </diamond>
 <diamond id="31" is_weak="false" name="" x="577" y="283">
@@ -160,11 +160,11 @@
 </line>
 <line cardinality_string="(0,n)" has_u="false" id="29" is_weak="false" role="" style="0" turned="false">
 <connection connection_side="3" direction="1" object_id="7" relation_point_x="452" relation_point_y="383"/>
-<connection connection_side="1" direction="1" object_id="28" relation_point_x="451" relation_point_y="420"/>
+<connection connection_side="1" direction="1" object_id="28" relation_point_x="451" relation_point_y="419"/>
 </line>
 <line cardinality_string="(1,1)" has_u="false" id="30" is_weak="false" role="" style="0" turned="false">
 <connection connection_side="1" direction="1" object_id="8" relation_point_x="465" relation_point_y="527"/>
-<connection connection_side="3" direction="1" object_id="28" relation_point_x="451" relation_point_y="452"/>
+<connection connection_side="3" direction="1" object_id="28" relation_point_x="451" relation_point_y="451"/>
 </line>
 <line cardinality_string="(0,n)" has_u="false" id="32" is_weak="false" role="" style="0" turned="false">
 <connection connection_side="0" direction="0" object_id="4" relation_point_x="725" relation_point_y="57"/>
