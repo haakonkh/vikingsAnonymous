@@ -178,9 +178,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\DayController.cs" />
+    <Compile Include="Controllers\DiaryController.cs" />
+    <Compile Include="Controllers\ExerciseController.cs" />
+    <Compile Include="Controllers\HealthPlanController.cs" />
+    <Compile Include="Controllers\MealController.cs" />
+    <Compile Include="Controllers\ThreadsController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DataObjects\Database.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\vikinganonymousContext.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

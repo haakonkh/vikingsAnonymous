@@ -38,7 +38,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Database\Database.cs" />
-    <Compile Include="DataObjects\TodoItem.cs" />
     <Compile Include="Interfaces\IAzureDatabase.cs" />
     <Compile Include="Interfaces\ISqlite.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
