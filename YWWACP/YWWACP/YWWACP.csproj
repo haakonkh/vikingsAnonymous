@@ -131,7 +131,7 @@
     <Compile Include="DebugTrace.cs" />
     <Compile Include="dialog_calendar.cs" />
     <Compile Include="dialog_ChooseHealthPlan.cs" />
-    <Compile Include="dialog_new_thread.cs" />
+    <Compile Include="CreateNewThreadView.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="ExerciseActivity.cs" />
     <Compile Include="ExerciseDialog.cs" />
@@ -173,7 +173,7 @@
     <AndroidResource Include="Resources\layout\Recipes.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ListView_Row.axml">
+    <AndroidResource Include="Resources\layout\CommunityListViewRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\recipeDialogView.axml" />

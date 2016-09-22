@@ -17,7 +17,7 @@ namespace YWWACP.Views
         private Button btnProfile;
         private Button btnRecipes;
         private Button btnHealthPlan;
-        private Button btnCommunity;
+      //  private Button btnCommunity;
         private Button btnExercise;
 
         public static MobileServiceClient MobileService =
@@ -35,12 +35,12 @@ namespace YWWACP.Views
             btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
             btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
-            btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
+           // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
             btnHealthPlan.Click += BtnHealthPlan_Click;
             btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
 
             btnDiary.Click += DiaryButton_Click;
-            btnCommunity.Click += BtnCommunity_Click;
+          //  btnCommunity.Click += BtnCommunity_Click;
             btnRecipes.Click += BtnRecipes_Click;
             btnProfile.Click += BtnProfile_Click;
             btnExercise.Click += BtnExercise_Click;
@@ -63,11 +63,11 @@ namespace YWWACP.Views
         }
 
         // When Community button is clicked
-        private void BtnCommunity_Click(object sender, EventArgs e)
-        {
-            var intent = new Intent(this, typeof(CommunityActivity));
-            StartActivity(intent);
-        }
+        //private void BtnCommunity_Click(object sender, EventArgs e)
+        //{
+        //    var intent = new Intent(this, typeof(CommunityActivity));
+        //    StartActivity(intent);
+        //}
 
         //When Diary Button is clicked
         private void DiaryButton_Click(object sender, EventArgs e)

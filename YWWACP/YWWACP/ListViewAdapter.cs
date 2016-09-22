@@ -44,7 +44,7 @@ namespace YWWACP
             View row = convertView;
             if(row == null)
             {
-                row = LayoutInflater.From(mContext).Inflate(Resource.Layout.ListView_Row, null, false);
+                row = LayoutInflater.From(mContext).Inflate(Resource.Layout.CommunityListViewRow, null, false);
             }
 
             TextView txtTitle = row.FindViewById<TextView>(Resource.Id.txtViewTitle);
