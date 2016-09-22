@@ -15,6 +15,33 @@ using YWWACP.Core.ViewModels;
 namespace YWWACP
 {
 
+    //Author: Student 9805061, Student Andreas Norstein
+    public class OnSubmitArgs : EventArgs
+    {
+        private string mTitle;
+        //private Spinner mDropdown; // categories, cannot make this work
+        private string mCategory;
+        private string mContent;
+
+        public string Title
+        {
+            get { return mTitle; }
+            set { mTitle = value;  }
+        }
+
+        public string Category
+        {
+            get { return mCategory; }
+            set { mCategory = value;  }
+
+        }
+
+        public string Content
+        {
+            get { return mContent; }
+            set { mContent = value; }
+        }
+
     [Activity(Label = "Dialog_NewThread")]
     public class Dialog_NewThread : DialogFragment
     {
@@ -36,7 +63,7 @@ namespace YWWACP
             // Cancels the new thread
             view.FindViewById<Button>(Resource.Id.btnCancelThread).Click += (sender, args) => Dismiss();
 
-            // Submit button 
+            // Submit button
           //  mSubmit = view.FindViewById<Button>(Resource.Id.btnSubmitThread);
           //  mSubmit.Click += MSubmit_Click;
 
@@ -44,22 +71,22 @@ namespace YWWACP
             // Edit text fields
            // mTitle = view.FindViewById<EditText>(Resource.Id.editTxtTitle);
            // mContent = view.FindViewById<EditText>(Resource.Id.editTxtQuestion);
-            
+
             // Categories dropdown connected with view
             mDropdwon = view.FindViewById<Spinner>(Resource.Id.spinnerCategories);
-            
-            // prompts the user which category that are selected... 
+
+            // prompts the user which category that are selected...
             //dropdown.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
 
             // Create spinner-dropdown
             var adapter = ArrayAdapter.CreateFromResource(Activity, Resource.Array.categories_array, Android.Resource.Layout.SimpleSpinnerItem);
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             mDropdwon.Adapter = adapter;
-       
+
             return view;
 
         }
-        
+
         // If something is to be submitted
         private void MSubmit_Click(object sender, EventArgs e)
         {
@@ -67,7 +94,7 @@ namespace YWWACP
             //mOnSubmit.Invoke(this, new Core.ViewModels.TestThread(mTitle.Text, "Category: " + mDropdwon.SelectedItem.ToString(), mContent.Text));
             this.Dismiss();
         }
-        
+
 
         // Prompts the user which category that's seleceted
         // I do not think this is necessary
@@ -78,12 +105,12 @@ namespace YWWACP
             Toast.MakeText(Activity, toast, ToastLength.Long).Show();
         }
 
-        
+
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             Dialog.Window.RequestFeature(WindowFeatures.SwipeToDismiss);
             base.OnActivityCreated(savedInstanceState);
-                   
+
         }
 
     }

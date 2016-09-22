@@ -34,4 +34,5 @@
         android:id="@+id/listViewCommunity"
         local:MvxItemTemplate="@layout/listview_row"
         local:MvxBind="ItemSource Threads; ItemClick SelectThreadCommand" />
+
 </LinearLayout>

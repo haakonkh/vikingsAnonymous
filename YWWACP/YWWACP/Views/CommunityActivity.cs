@@ -25,7 +25,7 @@ namespace YWWACP
        // private Button mMyThreads;
        //private ListView mListView;
        // private ListViewAdapter mAdapter;
-        
+
         //private List<NewDiscussionThread> mItems;
         public ICommand NewThreadCommand { get; set; }
 
@@ -45,7 +45,7 @@ namespace YWWACP
             // Connecting buttons to view
             mMyThreads = FindViewById<Button>(Resource.Id.btnMyThreads);
 
-          
+
 
             mListView = FindViewById<ListView>(Resource.Id.listViewCommunity);
             mItems = new List<NewDiscussionThread>();
@@ -58,7 +58,7 @@ namespace YWWACP
     */
         }
 
-        // When clicked, new thread will be created and and placed 
+        // When clicked, new thread will be created and and placed
         // below the buttons
 
             /*
@@ -71,7 +71,7 @@ namespace YWWACP
            // newThreadDialog.mOnSubmit += NewThreadDialog_mOnSubmit;
         }
 
-        
+
         /*
         private void NewThreadDialog_mOnSubmit(object sender, OnSubmitThread e)
         {

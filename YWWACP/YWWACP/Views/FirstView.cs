@@ -1,13 +1,23 @@
 using Android.App;
 using Android.OS;
 using MvvmCross.Droid.Views;
+<<<<<<< HEAD
 using Android.Widget;
 using Android.Content;
 using System;
 
+=======
+using System;
+using Android.Content;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Microsoft.WindowsAzure.MobileServices;
+////, Theme="@style/MyTheme"
+>>>>>>> master
 namespace YWWACP.Views
 {
-    [Activity(Label = "View for FirstViewModel")]
+    [Activity(Label = "YWWACP")]
     public class FirstView : MvxActivity
     {
         private Button btnDiary;
@@ -16,15 +26,28 @@ namespace YWWACP.Views
         private Button btnHealthPlan;
         private Button btnCommunity;
 
+        private Button btnExercise;
+
+        // Ikke tenk på dette
+        public static MobileServiceClient MobileService =
+    new MobileServiceClient(
+    "https://vikinganonymous.azurewebsites.net"
+);
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FirstView);
+
+            // Get our button from the layout resource,
+            // and attach an event to it
             btnDiary = FindViewById<Button>(Resource.Id.btnDiary);
             btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
             btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
             btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
+
+            btnHealthPlan.Click += BtnHealthPlan_Click;
+            btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
 
             btnDiary.Click += DiaryButton_Click;
             btnCommunity.Click += BtnCommunity_Click;
@@ -32,6 +55,13 @@ namespace YWWACP.Views
             btnProfile.Click += BtnProfile_Click;
         }
 
+            btnExercise.Click += BtnExercise_Click;
+        }
+        private void BtnExercise_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(ExerciseActivity));
+            StartActivity(intent);
+        }
         private void BtnProfile_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(ProfileActivity));
@@ -58,5 +88,11 @@ namespace YWWACP.Views
             StartActivity(intent);
 
         }
+        private void BtnHealthPlan_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(HealthPlanActivity));
+            StartActivity(intent);
+        }
     }
+
 }

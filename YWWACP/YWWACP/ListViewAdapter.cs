@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+//Author: Student 9805061, Student Andreas Norstein
 
 namespace YWWACP
 {

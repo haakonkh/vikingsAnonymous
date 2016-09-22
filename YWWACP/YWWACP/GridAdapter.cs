@@ -3,6 +3,8 @@ using Android.Views;
 using Android.Widget;
 using Java.Lang;
 
+//Author: Student n9808205, Student Ingrid Skar
+
 namespace YWWACP
 {
 	public class GridAdapter : BaseAdapter

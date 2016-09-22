@@ -5,6 +5,8 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 
+//Author: Student n9808205, Student Ingrid Skar
+
 namespace YWWACP
 {
 	[Activity(Label = "RecepieDialog")]

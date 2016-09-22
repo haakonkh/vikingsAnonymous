@@ -4,6 +4,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+  <!-- <android.support.v7.widget.Toolbar
+
+    android:id="@id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:backround="?attr/colorPrimary"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.Actionbar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+
+  -->
     <Button
         android:id="@+id/btnDiary"
         android:layout_width="match_parent"
@@ -29,4 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Community" />
+
+    <Button
+      android:id="@+id/btnExercise"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/Exercises" />
 </LinearLayout>
