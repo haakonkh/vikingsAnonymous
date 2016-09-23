@@ -1,0 +1,12 @@
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\YWWACP.Core.dll
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\YWWACP.Core.pdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\MvvmCross.Binding.dll
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\MvvmCross.Core.dll
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\MvvmCross.Localization.dll
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\MvvmCross.Platform.dll
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.dll
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.pdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\SQLite.Net.dll
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.csprojResolveAssemblyReference.cache
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.dll.mdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\YWWACP.Core.dll.mdb

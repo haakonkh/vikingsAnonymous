@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xuni.Forms.FlexPie</name>
+    </assembly>
+    <members>
+        <member name="T:Xuni.Forms.FlexPie.FlexPieTooltip">
+            <summary>
+            Tooltip of <see cref="T:Xuni.Forms.FlexPie.FlexPie"/>.
+            </summary>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.FlexPieTooltip.#ctor">
+            <summary>
+            Initializes a new instance of FlexPieTooltip class.
+            </summary>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.FlexPieTooltip.#ctor(Xuni.Forms.FlexPie.FlexPie)">
+            <summary>
+            Initializes a new instance of FlexPieTooltip class.
+            </summary>
+            <param name="flexPie">The FlexPie object that owns this tooltip</param>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.FlexPieTooltip.Hide">
+            <summary>
+            Hides the tooltip.
+            </summary>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.FlexPieTooltip.Show">
+            <summary>
+            Shows the tooltip.
+            </summary>
+        </member>
+        <member name="T:Xuni.Forms.FlexPie.PieDataLabel">
+            <summary>
+            The point data label for FlexPie.
+            </summary>
+        </member>
+        <member name="F:Xuni.Forms.FlexPie.PieDataLabel.PositionProperty">
+            <summary>
+            Identifies the Position bindable property.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.PieDataLabel.Position">
+            <summary>
+            Gets or sets the position of the data labels.
+            </summary>
+        </member>
+        <member name="T:Xuni.Forms.FlexPie.FlexPie">
+            <summary>
+             The <see cref="T:Xuni.Forms.FlexPie.FlexPie"/> control provides pie and doughnut charts with selectable slices.
+            </summary>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.FlexPie.HitTest(Xamarin.Forms.Point)">
+            <summary>
+            ​Get the pie element at the specified point.
+            </summary>
+            <param name="pt">point to simulate a touch at.</param>
+            <returns>HitTestInfo</returns>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.FlexPie.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:Xuni.Forms.FlexPie.FlexPie"/> control.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.SelectAnimation">
+            <summary>
+            Gets or sets the animation used when a pie slice is selected.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.SliceBorderWidth">
+            <summary>
+            Gets or sets the border width of the pie slices.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.Reversed">
+            <summary>
+            Gets or sets whether the chart renders clockwise or counter clockwise from the start angle property.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.SelectedItemOffset">
+            <summary>
+            Gets or sets the offset of the selected slice from the pie center.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.SelectedItemPosition">
+            <summary>
+            Gets or sets the position of the selected slice.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.StartAngle">
+            <summary>
+            Gets or sets the starting angle for the pie slices, in degrees.
+            Angles are measured clockwise, starting at the 9 o'clock position.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.Offset">
+            <summary>
+            Gets or sets the offset of the slices from the pie center.The offset is measured as a fraction of the pie radius.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.InnerRadius">
+            <summary>
+            Gets or sets the size of the pie's inner radius.
+            The inner radius is measured as a fraction of the pie radius.         
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.BindingName">
+            <summary>
+            Gets or sets the name of the property that contains the name of the data item.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.FlexPie.DataLabel">
+            <summary>
+            Gets or sets the point data label. 
+            </summary>
+        </member>
+        <member name="E:Xuni.Forms.FlexPie.FlexPie.SelectionChanged">
+            <summary>
+            ​Occurs when the selection changes.
+            </summary>
+        </member>
+        <member name="T:Xuni.Forms.FlexPie.PieLabelPosition">
+            <summary>
+            Specifies the position of data labels on the pie chart.
+            </summary>
+        </member>
+        <member name="F:Xuni.Forms.FlexPie.PieLabelPosition.None">
+            <summary>
+            No data labels.
+            </summary>
+        </member>
+        <member name="F:Xuni.Forms.FlexPie.PieLabelPosition.Inside">
+            <summary>
+            The label appears inside the pie slice.
+            </summary>
+        </member>
+        <member name="F:Xuni.Forms.FlexPie.PieLabelPosition.Center">
+            <summary>
+            The item appears at the center of the pie slice.
+            </summary>
+        </member>
+        <member name="F:Xuni.Forms.FlexPie.PieLabelPosition.Outside">
+            <summary>
+            The item appears outside the pie slice.
+            </summary>
+        </member>
+        <member name="T:Xuni.Forms.FlexPie.PieDataPoint">
+            <summary>
+            The data point for FlexPie
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.PieDataPoint.Name">
+            <summary>
+            Gets the name as it appears in the legend.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.PieDataPoint.Percentage">
+            <summary>
+            Gets the percent of this slice in the series
+            </summary>
+        </member>
+        <member name="T:Xuni.Forms.FlexPie.PieHitTestInfo">
+            <summary>
+            Contains all the information of a hit test.
+            </summary>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.PieHitTestInfo.#ctor(Xuni.Forms.FlexPie.FlexPie,Xamarin.Forms.Point)">
+            <summary>
+            Internal constructor, customer should not need to initialize this object.
+            </summary>
+            <param name="flexPie">The flex pie object the hit test occured inside.</param>
+            <param name="point">coordinate of the hit test / touch event.</param>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.PieHitTestInfo.#ctor">
+            <summary>
+            Internal constructor, customer should not need to initialize this object.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.PieHitTestInfo.FlexPie">
+            <summary>
+            The flex pie object the hit test occured inside.
+            </summary>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.PieHitTestInfo.DataPoint">
+            <summary>
+            Get the data point of current HitTestInfo.
+            </summary>
+        </member>
+        <member name="T:Xuni.Forms.FlexPie.PieSelectionChangedEventArgs">
+            <summary>
+            Argument passed when a selection change event has triggered.
+            </summary>
+        </member>
+        <member name="M:Xuni.Forms.FlexPie.PieSelectionChangedEventArgs.#ctor(Xuni.Forms.FlexPie.PieHitTestInfo)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="hitTestInfo"></param>
+        </member>
+        <member name="P:Xuni.Forms.FlexPie.PieSelectionChangedEventArgs.HitTestInfo">
+            <summary>
+            Hit test information regarding the selection.
+            </summary>
+        </member>
+    </members>
+</doc>

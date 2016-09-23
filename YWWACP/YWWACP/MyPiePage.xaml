@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xuni="clr-namespace:Xuni.Forms.FlexPipe;assembly=Xuni.Forms.FlexPie" 
+             x:Class="YWWACP.MyPiePage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ContentPage.Content>
+    <xuni:FlexPie x:Name="pieChart" Binding="Value" BindingName="Name" /> 
+   </ContentPage.Content>
+</ContentPage>
