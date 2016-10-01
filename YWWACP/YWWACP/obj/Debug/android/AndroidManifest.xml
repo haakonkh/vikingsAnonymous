@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="YWWACP.droid" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.READ_CALENDAR" />
+  <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <application android:label="YWWACP" android:theme="@style/MainTheme" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="ChartActivity" android:name="md571ace0a4b16b292ac22f62155d888856.ChartMainPageActivity" />
+    <activity android:label="CommunityActivity" android:name="md571ace0a4b16b292ac22f62155d888856.CommunityActivity" />
+    <activity android:label="DiaryActivity" android:name="md571ace0a4b16b292ac22f62155d888856.DiaryActivity" />
+    <activity android:label="ExerciseActivity" android:name="md571ace0a4b16b292ac22f62155d888856.ExerciseActivity" />
+    <activity android:label="Health Plan" android:name="md571ace0a4b16b292ac22f62155d888856.HealthPlanActivity" />
+    <activity android:label="Add new health plan" android:name="md571ace0a4b16b292ac22f62155d888856.NewHealthPlanActivity" />
+    <activity android:label="ProfileActivity" android:name="md571ace0a4b16b292ac22f62155d888856.ProfileActivity" />
+    <activity android:label="RecipesActivity" android:name="md571ace0a4b16b292ac22f62155d888856.RecipesActivity" />
+    <activity android:label="YWWACP" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="md571ace0a4b16b292ac22f62155d888856.SplashScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="YWWACP" android:name="md53d0a907759989744df270529c70798a1.FirstView" />
+    <activity android:label="Web Authenticator" android:name="md59ad6b75bc832b296b6784609cfbe7e98.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md59ad6b75bc832b296b6784609cfbe7e98.WebAuthenticatorActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="YWWACP.droid.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.YWWACP.droid" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <ManifestDocuments>
+    <ManifestDocument>obj\Debug\__library_projects__\Syncfusion.SfChart.Android\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Xuni.Android.ChartCore\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Xuni.Android.Core\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Xuni.Android.FlexPie\library_project_imports\AndroidManifest.xml</ManifestDocument>
+  </ManifestDocuments>
+  <NativeLibraries />
+  <Jars>
+    <Jar>obj\Debug\__library_projects__\FormsViewGroup\library_project_imports\formsviewgroup.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Syncfusion.SfChart.Android\library_project_imports\bin\SfChart.Android.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Xuni.Android.ChartCore\library_project_imports\bin\chartcore.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Xuni.Android.Core\library_project_imports\bin\core.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Xuni.Android.FlexPie\library_project_imports\bin\flexpie.jar</Jar>
+  </Jars>
+</Paths>

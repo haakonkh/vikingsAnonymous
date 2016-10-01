@@ -25,45 +25,17 @@ public final class R {
         public static final int design_fab_out=0x7f04000d;
         public static final int design_snackbar_in=0x7f04000e;
         public static final int design_snackbar_out=0x7f04000f;
-        public static final int slide_right=0x7f040010;
-        public static final int slide_up=0x7f040011;
+        public static final int fadein=0x7f040010;
+        public static final int fadeout=0x7f040011;
+        public static final int scale_in=0x7f040012;
+        public static final int scale_out=0x7f040013;
+        public static final int slide_right=0x7f040014;
+        public static final int slide_up=0x7f040015;
     }
     public static final class array {
-        public static final int categories_activities=0x7f0d0012;
-        public static final int categories_array=0x7f0d0011;
-        public static final int categories_food=0x7f0d0013;
-        public static final int flexPieCerulanPalette=0x7f0d000f;
-        public static final int flexPieCocoaPalette=0x7f0d0001;
-        public static final int flexPieCoralPalette=0x7f0d0002;
-        public static final int flexPieCyborgPalette=0x7f0d000b;
-        public static final int flexPieDarkPalette=0x7f0d0003;
-        public static final int flexPieDarklyPalette=0x7f0d000e;
-        /**   All color get from theme.
-    <color name="defaultFlexPieHeaderFontColor" format="color" type="color">#000000</color>
-    <color name="defaultFlexPieFooterFontColor" format="color" type="color">#000000</color>
-    <color name="defaultFlexPieBackgroundColor" format="color" type="color">#FFFFFF</color>
-    <color name="defaultFlexPieBorderColor" format="color" type="color">#FFFFFF</color>
-    <color name="defaultFlexPiePlotAreabackgroundColor" format="color" type="color">@android:color/transparent</color>
-    <color name="defaultFlexPieSelectedBorderColor" format="color" type="color">@android:color/transparent</color>
-    <color name="defaultFlexPieLegend_backgroundColor" format="color" type="color">@android:color/transparent</color>
-    <color name="defaultFlexPieLegend_borderColor" format="color" type="color">#FFFFFF</color>
-    <color name="defaultFlexPieLegend_FontColor" format="color" type="color">#000000</color>
-    <color name="defaultFlexPieDatalabel_backgroundColor" format="color" type="color">@android:color/transparent</color>
-    <color name="defaultFlexPieDatalabel_borderColor" format="color" type="color">#000000</color>
-    <color name="defaultFlexPieDatalabel_FontColor" format="color" type="color">#000000</color>
-
-         */
-        public static final int flexPieDefaultflexPiePalette=0x7f0d0000;
-        public static final int flexPieFlatlyPalette=0x7f0d000d;
-        public static final int flexPieHighConstrastPalette=0x7f0d0004;
-        public static final int flexPieLightPalette=0x7f0d0005;
-        public static final int flexPieMaterialPalette=0x7f0d0010;
-        public static final int flexPieMidnightPalette=0x7f0d0006;
-        public static final int flexPieMinimalPalette=0x7f0d0007;
-        public static final int flexPieModernPalette=0x7f0d0008;
-        public static final int flexPieOrganicPalette=0x7f0d0009;
-        public static final int flexPieSlatePalette=0x7f0d000a;
-        public static final int flexPieSuperheroPalette=0x7f0d000c;
+        public static final int categories_activities=0x7f0d0001;
+        public static final int categories_array=0x7f0d0000;
+        public static final int categories_food=0x7f0d0002;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -77,7 +49,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int MvxBind=0x7f010172;
+        public static final int MvxBind=0x7f01013c;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -85,7 +57,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int MvxDropDownItemTemplate=0x7f010176;
+        public static final int MvxDropDownItemTemplate=0x7f010140;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -93,7 +65,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int MvxGroupItemTemplate=0x7f010177;
+        public static final int MvxGroupItemTemplate=0x7f010141;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -101,7 +73,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int MvxItemTemplate=0x7f010175;
+        public static final int MvxItemTemplate=0x7f01013f;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -109,7 +81,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int MvxLang=0x7f010173;
+        public static final int MvxLang=0x7f01013d;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -117,7 +89,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int MvxSource=0x7f010178;
+        public static final int MvxSource=0x7f010142;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -125,7 +97,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int MvxTemplate=0x7f010174;
+        public static final int MvxTemplate=0x7f01013e;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1038,503 +1010,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 </table>
          */
         public static final int fabSize=0x7f010115;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_animated=0x7f010160;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_backgroundColor=0x7f01014a;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_binding=0x7f01015e;
-        /**  END duplicate fields for FlexChartCore 
-         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_bindingName=0x7f01015d;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_borderColor=0x7f01014b;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_borderWidth=0x7f01014c;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_datalabel_FontColor=0x7f010159;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_datalabel_FontSize=0x7f01015a;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_datalabel_FontTypeface=0x7f01015b;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_datalabel_FontWeight=0x7f01015c;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_datalabel_backgroundColor=0x7f010156;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_datalabel_borderColor=0x7f010157;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_datalabel_borderWidth=0x7f010158;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>CENTER</code></td><td>1</td><td></td></tr>
-<tr><td><code>INSIDE</code></td><td>2</td><td></td></tr>
-<tr><td><code>OUTSIDE</code></td><td>3</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_datalabel_position=0x7f010171;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_footer=0x7f010146;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_footerFontColor=0x7f010149;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>LEFT</code></td><td>3</td><td></td></tr>
-<tr><td><code>CENTER_HORIZONTAL</code></td><td>1</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>5</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_footerFontGravity=0x7f01013f;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_footerFontSize=0x7f010147;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_footerFontTypeface=0x7f010148;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NORMAL</code></td><td>0</td><td></td></tr>
-<tr><td><code>BOLD</code></td><td>1</td><td></td></tr>
-<tr><td><code>ITALIC</code></td><td>2</td><td></td></tr>
-<tr><td><code>BOLD_ITALIC</code></td><td>3</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_footerFontWeight=0x7f01013e;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_header=0x7f010142;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_headerFontColor=0x7f010145;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>LEFT</code></td><td>3</td><td></td></tr>
-<tr><td><code>CENTER_HORIZONTAL</code></td><td>1</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>5</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_headerFontGravity=0x7f01013d;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_headerFontSize=0x7f010143;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_headerFontTypeface=0x7f010144;
-        /**  BEGIN duplicate fields for FlexChartCore 
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NORMAL</code></td><td>0</td><td></td></tr>
-<tr><td><code>BOLD</code></td><td>1</td><td></td></tr>
-<tr><td><code>ITALIC</code></td><td>2</td><td></td></tr>
-<tr><td><code>BOLD_ITALIC</code></td><td>3</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_headerFontWeight=0x7f01013c;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_innerRadius=0x7f01015f;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_legend_FontColor=0x7f010153;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_legend_FontSize=0x7f010154;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_legend_FontTypeface=0x7f010155;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NORMAL</code></td><td>0</td><td></td></tr>
-<tr><td><code>BOLD</code></td><td>1</td><td></td></tr>
-<tr><td><code>ITALIC</code></td><td>2</td><td></td></tr>
-<tr><td><code>BOLD_ITALIC</code></td><td>3</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_legend_FontWeight=0x7f010140;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_legend_backgroundColor=0x7f010150;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_legend_borderColor=0x7f010151;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_legend_borderWidth=0x7f010152;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>AUTO</code></td><td>0</td><td></td></tr>
-<tr><td><code>HORIZONTAL</code></td><td>1</td><td></td></tr>
-<tr><td><code>VERTICAL</code></td><td>2</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_legend_orientation=0x7f010168;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>LEFT</code></td><td>1</td><td></td></tr>
-<tr><td><code>TOP</code></td><td>2</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>3</td><td></td></tr>
-<tr><td><code>BOTTOM</code></td><td>4</td><td></td></tr>
-<tr><td><code>AUTO</code></td><td>5</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_legend_position=0x7f010169;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_loadAnimation_duration=0x7f01016b;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>ALL</code></td><td>0</td><td></td></tr>
-<tr><td><code>POINT</code></td><td>1</td><td></td></tr>
-<tr><td><code>SERIES</code></td><td>2</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_loadAnimation_loadAnimationMode=0x7f01016a;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_loadAnimation_startDelay=0x7f01016c;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_offset=0x7f010163;
-        /**  BEGIN duplicate fields for FlexChartCore 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int flexPie_palette=0x7f010141;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_plotAreabackgroundColor=0x7f01014d;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_reversed=0x7f010164;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_selectAnimation_duration=0x7f01016f;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_selectAnimation_startDelay=0x7f010170;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_selectedBorderColor=0x7f01014e;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_selectedBorderWidth=0x7f01014f;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_selectedItemOffset=0x7f010165;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>LEFT</code></td><td>1</td><td></td></tr>
-<tr><td><code>TOP</code></td><td>2</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>3</td><td></td></tr>
-<tr><td><code>BOTTOM</code></td><td>4</td><td></td></tr>
-<tr><td><code>AUTO</code></td><td>5</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_selectedItemPosition=0x7f010166;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>SERIES</code></td><td>1</td><td></td></tr>
-<tr><td><code>POINT</code></td><td>2</td><td></td></tr>
-</table>
-         */
-        public static final int flexPie_selectionMode=0x7f010167;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_sliceBorderWidth=0x7f010161;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_startAngle=0x7f010162;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_updateAnimation_duration=0x7f01016d;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int flexPie_updateAnimation_startDelay=0x7f01016e;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -3077,353 +2552,356 @@ containing a value of this type.
         public static final int barbell_standing=0x7f02004e;
         public static final int border=0x7f02004f;
         public static final int buttonsignupstyle=0x7f020050;
-        public static final int dct=0x7f020051;
-        public static final int design_fab_background=0x7f020052;
-        public static final int design_snackbar_background=0x7f020053;
-        public static final int dumbbell_exercises_front_raise=0x7f020054;
-        public static final int edit_text_style=0x7f020055;
-        public static final int gprofilepicture=0x7f020056;
-        public static final int ic_audiotrack=0x7f020057;
-        public static final int ic_audiotrack_light=0x7f020058;
-        public static final int ic_bluetooth_grey=0x7f020059;
-        public static final int ic_bluetooth_white=0x7f02005a;
-        public static final int ic_cast_dark=0x7f02005b;
-        public static final int ic_cast_disabled_light=0x7f02005c;
-        public static final int ic_cast_grey=0x7f02005d;
-        public static final int ic_cast_light=0x7f02005e;
-        public static final int ic_cast_off_light=0x7f02005f;
-        public static final int ic_cast_on_0_light=0x7f020060;
-        public static final int ic_cast_on_1_light=0x7f020061;
-        public static final int ic_cast_on_2_light=0x7f020062;
-        public static final int ic_cast_on_light=0x7f020063;
-        public static final int ic_cast_white=0x7f020064;
-        public static final int ic_close_dark=0x7f020065;
-        public static final int ic_close_light=0x7f020066;
-        public static final int ic_collapse=0x7f020067;
-        public static final int ic_collapse_00000=0x7f020068;
-        public static final int ic_collapse_00001=0x7f020069;
-        public static final int ic_collapse_00002=0x7f02006a;
-        public static final int ic_collapse_00003=0x7f02006b;
-        public static final int ic_collapse_00004=0x7f02006c;
-        public static final int ic_collapse_00005=0x7f02006d;
-        public static final int ic_collapse_00006=0x7f02006e;
-        public static final int ic_collapse_00007=0x7f02006f;
-        public static final int ic_collapse_00008=0x7f020070;
-        public static final int ic_collapse_00009=0x7f020071;
-        public static final int ic_collapse_00010=0x7f020072;
-        public static final int ic_collapse_00011=0x7f020073;
-        public static final int ic_collapse_00012=0x7f020074;
-        public static final int ic_collapse_00013=0x7f020075;
-        public static final int ic_collapse_00014=0x7f020076;
-        public static final int ic_collapse_00015=0x7f020077;
-        public static final int ic_expand=0x7f020078;
-        public static final int ic_expand_00000=0x7f020079;
-        public static final int ic_expand_00001=0x7f02007a;
-        public static final int ic_expand_00002=0x7f02007b;
-        public static final int ic_expand_00003=0x7f02007c;
-        public static final int ic_expand_00004=0x7f02007d;
-        public static final int ic_expand_00005=0x7f02007e;
-        public static final int ic_expand_00006=0x7f02007f;
-        public static final int ic_expand_00007=0x7f020080;
-        public static final int ic_expand_00008=0x7f020081;
-        public static final int ic_expand_00009=0x7f020082;
-        public static final int ic_expand_00010=0x7f020083;
-        public static final int ic_expand_00011=0x7f020084;
-        public static final int ic_expand_00012=0x7f020085;
-        public static final int ic_expand_00013=0x7f020086;
-        public static final int ic_expand_00014=0x7f020087;
-        public static final int ic_expand_00015=0x7f020088;
-        public static final int ic_media_pause=0x7f020089;
-        public static final int ic_media_play=0x7f02008a;
-        public static final int ic_media_route_disabled_mono_dark=0x7f02008b;
-        public static final int ic_media_route_off_mono_dark=0x7f02008c;
-        public static final int ic_media_route_on_0_mono_dark=0x7f02008d;
-        public static final int ic_media_route_on_1_mono_dark=0x7f02008e;
-        public static final int ic_media_route_on_2_mono_dark=0x7f02008f;
-        public static final int ic_media_route_on_mono_dark=0x7f020090;
-        public static final int ic_pause_dark=0x7f020091;
-        public static final int ic_pause_light=0x7f020092;
-        public static final int ic_play_dark=0x7f020093;
-        public static final int ic_play_light=0x7f020094;
-        public static final int ic_speaker_dark=0x7f020095;
-        public static final int ic_speaker_group_dark=0x7f020096;
-        public static final int ic_speaker_group_light=0x7f020097;
-        public static final int ic_speaker_light=0x7f020098;
-        public static final int ic_tv_dark=0x7f020099;
-        public static final int ic_tv_light=0x7f02009a;
-        public static final int icon=0x7f02009b;
-        public static final int mr_dialog_material_background_dark=0x7f02009c;
-        public static final int mr_dialog_material_background_light=0x7f02009d;
-        public static final int mr_ic_audiotrack_light=0x7f02009e;
-        public static final int mr_ic_cast_dark=0x7f02009f;
-        public static final int mr_ic_cast_light=0x7f0200a0;
-        public static final int mr_ic_close_dark=0x7f0200a1;
-        public static final int mr_ic_close_light=0x7f0200a2;
-        public static final int mr_ic_media_route_connecting_mono_dark=0x7f0200a3;
-        public static final int mr_ic_media_route_connecting_mono_light=0x7f0200a4;
-        public static final int mr_ic_media_route_mono_dark=0x7f0200a5;
-        public static final int mr_ic_media_route_mono_light=0x7f0200a6;
-        public static final int mr_ic_pause_dark=0x7f0200a7;
-        public static final int mr_ic_pause_light=0x7f0200a8;
-        public static final int mr_ic_play_dark=0x7f0200a9;
-        public static final int mr_ic_play_light=0x7f0200aa;
-        public static final int notification_template_icon_bg=0x7f0200af;
-        public static final int profilepicture=0x7f0200ab;
-        public static final int recipe=0x7f0200ac;
-        public static final int recipeicon=0x7f0200ad;
-        public static final int splash=0x7f0200ae;
+        public static final int design_fab_background=0x7f020051;
+        public static final int design_snackbar_background=0x7f020052;
+        public static final int dumbbell_exercises_front_raise=0x7f020053;
+        public static final int edit_text_style=0x7f020054;
+        public static final int firstviewframe=0x7f020055;
+        public static final int firstviewrect=0x7f020056;
+        public static final int gprofilepicture=0x7f020057;
+        public static final int ic_audiotrack=0x7f020058;
+        public static final int ic_audiotrack_light=0x7f020059;
+        public static final int ic_bluetooth_grey=0x7f02005a;
+        public static final int ic_bluetooth_white=0x7f02005b;
+        public static final int ic_cast_dark=0x7f02005c;
+        public static final int ic_cast_disabled_light=0x7f02005d;
+        public static final int ic_cast_grey=0x7f02005e;
+        public static final int ic_cast_light=0x7f02005f;
+        public static final int ic_cast_off_light=0x7f020060;
+        public static final int ic_cast_on_0_light=0x7f020061;
+        public static final int ic_cast_on_1_light=0x7f020062;
+        public static final int ic_cast_on_2_light=0x7f020063;
+        public static final int ic_cast_on_light=0x7f020064;
+        public static final int ic_cast_white=0x7f020065;
+        public static final int ic_close_dark=0x7f020066;
+        public static final int ic_close_light=0x7f020067;
+        public static final int ic_collapse=0x7f020068;
+        public static final int ic_collapse_00000=0x7f020069;
+        public static final int ic_collapse_00001=0x7f02006a;
+        public static final int ic_collapse_00002=0x7f02006b;
+        public static final int ic_collapse_00003=0x7f02006c;
+        public static final int ic_collapse_00004=0x7f02006d;
+        public static final int ic_collapse_00005=0x7f02006e;
+        public static final int ic_collapse_00006=0x7f02006f;
+        public static final int ic_collapse_00007=0x7f020070;
+        public static final int ic_collapse_00008=0x7f020071;
+        public static final int ic_collapse_00009=0x7f020072;
+        public static final int ic_collapse_00010=0x7f020073;
+        public static final int ic_collapse_00011=0x7f020074;
+        public static final int ic_collapse_00012=0x7f020075;
+        public static final int ic_collapse_00013=0x7f020076;
+        public static final int ic_collapse_00014=0x7f020077;
+        public static final int ic_collapse_00015=0x7f020078;
+        public static final int ic_expand=0x7f020079;
+        public static final int ic_expand_00000=0x7f02007a;
+        public static final int ic_expand_00001=0x7f02007b;
+        public static final int ic_expand_00002=0x7f02007c;
+        public static final int ic_expand_00003=0x7f02007d;
+        public static final int ic_expand_00004=0x7f02007e;
+        public static final int ic_expand_00005=0x7f02007f;
+        public static final int ic_expand_00006=0x7f020080;
+        public static final int ic_expand_00007=0x7f020081;
+        public static final int ic_expand_00008=0x7f020082;
+        public static final int ic_expand_00009=0x7f020083;
+        public static final int ic_expand_00010=0x7f020084;
+        public static final int ic_expand_00011=0x7f020085;
+        public static final int ic_expand_00012=0x7f020086;
+        public static final int ic_expand_00013=0x7f020087;
+        public static final int ic_expand_00014=0x7f020088;
+        public static final int ic_expand_00015=0x7f020089;
+        public static final int ic_media_pause=0x7f02008a;
+        public static final int ic_media_play=0x7f02008b;
+        public static final int ic_media_route_disabled_mono_dark=0x7f02008c;
+        public static final int ic_media_route_off_mono_dark=0x7f02008d;
+        public static final int ic_media_route_on_0_mono_dark=0x7f02008e;
+        public static final int ic_media_route_on_1_mono_dark=0x7f02008f;
+        public static final int ic_media_route_on_2_mono_dark=0x7f020090;
+        public static final int ic_media_route_on_mono_dark=0x7f020091;
+        public static final int ic_pause_dark=0x7f020092;
+        public static final int ic_pause_light=0x7f020093;
+        public static final int ic_play_dark=0x7f020094;
+        public static final int ic_play_light=0x7f020095;
+        public static final int ic_speaker_dark=0x7f020096;
+        public static final int ic_speaker_group_dark=0x7f020097;
+        public static final int ic_speaker_group_light=0x7f020098;
+        public static final int ic_speaker_light=0x7f020099;
+        public static final int ic_tv_dark=0x7f02009a;
+        public static final int ic_tv_light=0x7f02009b;
+        public static final int icon=0x7f02009c;
+        public static final int mr_dialog_material_background_dark=0x7f02009d;
+        public static final int mr_dialog_material_background_light=0x7f02009e;
+        public static final int mr_ic_audiotrack_light=0x7f02009f;
+        public static final int mr_ic_cast_dark=0x7f0200a0;
+        public static final int mr_ic_cast_light=0x7f0200a1;
+        public static final int mr_ic_close_dark=0x7f0200a2;
+        public static final int mr_ic_close_light=0x7f0200a3;
+        public static final int mr_ic_media_route_connecting_mono_dark=0x7f0200a4;
+        public static final int mr_ic_media_route_connecting_mono_light=0x7f0200a5;
+        public static final int mr_ic_media_route_mono_dark=0x7f0200a6;
+        public static final int mr_ic_media_route_mono_light=0x7f0200a7;
+        public static final int mr_ic_pause_dark=0x7f0200a8;
+        public static final int mr_ic_pause_light=0x7f0200a9;
+        public static final int mr_ic_play_dark=0x7f0200aa;
+        public static final int mr_ic_play_light=0x7f0200ab;
+        public static final int notification_template_icon_bg=0x7f0200b0;
+        public static final int profilepicture=0x7f0200ac;
+        public static final int recipe=0x7f0200ad;
+        public static final int recipeicon=0x7f0200ae;
+        public static final int splash=0x7f0200af;
     }
     public static final class id {
-        public static final int ALL=0x7f07004b;
-        public static final int AUTO=0x7f070043;
-        public static final int BOLD=0x7f07003c;
-        public static final int BOLD_ITALIC=0x7f07003d;
-        public static final int BOTTOM=0x7f070044;
-        public static final int CENTER=0x7f07004c;
-        public static final int CENTER_HORIZONTAL=0x7f070040;
-        public static final int HORIZONTAL=0x7f070049;
-        public static final int INSIDE=0x7f07004d;
-        public static final int ITALIC=0x7f07003e;
-        public static final int LEFT=0x7f070041;
         public static final int MvvmCrossTagId=0x7f07000b;
         public static final int MvxBindingTagUnique=0x7f07000c;
-        public static final int NONE=0x7f070045;
-        public static final int NORMAL=0x7f07003f;
-        public static final int OUTSIDE=0x7f07004e;
-        public static final int POINT=0x7f070047;
-        public static final int RIGHT=0x7f070042;
-        public static final int SERIES=0x7f070048;
-        public static final int TOP=0x7f070046;
-        public static final int VERTICAL=0x7f07004a;
-        public static final int action0=0x7f0700e4;
-        public static final int action_bar=0x7f07006f;
+        public static final int action0=0x7f0700e3;
+        public static final int action_bar=0x7f07005c;
         public static final int action_bar_activity_content=0x7f070001;
-        public static final int action_bar_container=0x7f07006e;
-        public static final int action_bar_root=0x7f07006a;
+        public static final int action_bar_container=0x7f07005b;
+        public static final int action_bar_root=0x7f070057;
         public static final int action_bar_spinner=0x7f070002;
-        public static final int action_bar_subtitle=0x7f070050;
-        public static final int action_bar_title=0x7f07004f;
-        public static final int action_context_bar=0x7f070070;
-        public static final int action_divider=0x7f0700e8;
+        public static final int action_bar_subtitle=0x7f07003d;
+        public static final int action_bar_title=0x7f07003c;
+        public static final int action_context_bar=0x7f07005d;
+        public static final int action_divider=0x7f0700e7;
         public static final int action_menu_divider=0x7f070003;
         public static final int action_menu_presenter=0x7f070004;
-        public static final int action_mode_bar=0x7f07006c;
-        public static final int action_mode_bar_stub=0x7f07006b;
-        public static final int action_mode_close_button=0x7f070051;
-        public static final int activity_chooser_view_content=0x7f070052;
-        public static final int addBtn=0x7f07009a;
-        public static final int alertTitle=0x7f07005e;
+        public static final int action_mode_bar=0x7f070059;
+        public static final int action_mode_bar_stub=0x7f070058;
+        public static final int action_mode_close_button=0x7f07003e;
+        public static final int activity_chooser_view_content=0x7f07003f;
+        public static final int addBtn=0x7f070096;
+        public static final int alertTitle=0x7f07004b;
         public static final int always=0x7f070020;
+        public static final int axisLayout=0x7f070073;
         public static final int beginning=0x7f07001d;
         public static final int bottom=0x7f07002c;
-        public static final int btnAddPlan=0x7f0700a3;
-        public static final int btnCancelThread=0x7f070091;
-        public static final int btnCommunity=0x7f0700a0;
-        public static final int btnDiary=0x7f07009c;
-        public static final int btnDone=0x7f0700e3;
-        public static final int btnExercise=0x7f0700a1;
-        public static final int btnExisting=0x7f07008d;
-        public static final int btnHealthPlan=0x7f07009d;
-        public static final int btnMyThreads=0x7f070080;
-        public static final int btnNew=0x7f07008c;
-        public static final int btnNewThread=0x7f07007f;
-        public static final int btnProfile=0x7f07009e;
-        public static final int btnRecipes=0x7f07009f;
-        public static final int btnSubmitThread=0x7f070092;
-        public static final int btnToday=0x7f070095;
-        public static final int btnTomorrow=0x7f070096;
-        public static final int btnYesterday=0x7f070094;
-        public static final int buttonPanel=0x7f070059;
-        public static final int buttonSaveText=0x7f0700f6;
-        public static final int calendarView1=0x7f07008b;
-        public static final int cancelBtn=0x7f070099;
-        public static final int cancel_action=0x7f0700e5;
+        public static final int bottom_labels=0x7f0700f9;
+        public static final int btnAddPlan=0x7f0700a2;
+        public static final int btnCancelThread=0x7f07008d;
+        public static final int btnCommunity=0x7f07009c;
+        public static final int btnDiary=0x7f070098;
+        public static final int btnDone=0x7f0700e2;
+        public static final int btnExercise=0x7f07009d;
+        public static final int btnExisting=0x7f070089;
+        public static final int btnGraph=0x7f07009e;
+        public static final int btnHealthPlan=0x7f070099;
+        public static final int btnMyThreads=0x7f07007c;
+        public static final int btnNew=0x7f070088;
+        public static final int btnNewThread=0x7f07007b;
+        public static final int btnProfile=0x7f07009a;
+        public static final int btnRecipes=0x7f07009b;
+        public static final int btnSubmitThread=0x7f07008e;
+        public static final int btnToday=0x7f070091;
+        public static final int btnTomorrow=0x7f070092;
+        public static final int btnYesterday=0x7f070090;
+        public static final int buttonPanel=0x7f070046;
+        public static final int buttonSaveText=0x7f0700f5;
+        public static final int calendarView1=0x7f070087;
+        public static final int cancelBtn=0x7f070095;
+        public static final int cancel_action=0x7f0700e4;
         public static final int center=0x7f07002d;
         public static final int center_horizontal=0x7f07002e;
         public static final int center_vertical=0x7f07002f;
-        public static final int checkbox=0x7f070067;
-        public static final int chronometer=0x7f0700eb;
+        public static final int chartAreaLayout=0x7f07006d;
+        public static final int chartTitle=0x7f07006c;
+        public static final int checkbox=0x7f070054;
+        public static final int chronometer=0x7f0700ea;
         public static final int clip_horizontal=0x7f070035;
         public static final int clip_vertical=0x7f070036;
         public static final int collapseActionView=0x7f070021;
-        public static final int contentPanel=0x7f07005f;
-        public static final int custom=0x7f070065;
-        public static final int customPanel=0x7f070064;
-        public static final int dayPicker=0x7f070093;
-        public static final int decor_content_parent=0x7f07006d;
-        public static final int default_activity_button=0x7f070055;
-        public static final int design_bottom_sheet=0x7f070083;
-        public static final int design_menu_item_action_area=0x7f07008a;
-        public static final int design_menu_item_action_area_stub=0x7f070089;
-        public static final int design_menu_item_text=0x7f070088;
-        public static final int design_navigation_view=0x7f070087;
+        public static final int content=0x7f0700fa;
+        public static final int contentPanel=0x7f07004c;
+        public static final int custom=0x7f070052;
+        public static final int customPanel=0x7f070051;
+        public static final int dataMarkerLayout=0x7f070071;
+        public static final int dayPicker=0x7f07008f;
+        public static final int decor_content_parent=0x7f07005a;
+        public static final int default_activity_button=0x7f070042;
+        public static final int design_bottom_sheet=0x7f07007f;
+        public static final int design_menu_item_action_area=0x7f070086;
+        public static final int design_menu_item_action_area_stub=0x7f070085;
+        public static final int design_menu_item_text=0x7f070084;
+        public static final int design_navigation_view=0x7f070083;
         public static final int disableHome=0x7f070010;
-        public static final int editTxtQuestion=0x7f070090;
-        public static final int editTxtTitle=0x7f07008e;
-        public static final int edit_query=0x7f070071;
+        public static final int editTxtQuestion=0x7f07008c;
+        public static final int editTxtTitle=0x7f07008a;
+        public static final int edit_query=0x7f07005e;
         public static final int end=0x7f07001e;
-        public static final int end_padder=0x7f0700f0;
+        public static final int end_padder=0x7f0700ef;
         public static final int enterAlways=0x7f070025;
         public static final int enterAlwaysCollapsed=0x7f070026;
-        public static final int exerciseImage=0x7f070097;
+        public static final int exerciseImage=0x7f070093;
         public static final int exitUntilCollapsed=0x7f070027;
-        public static final int expand_activities_button=0x7f070053;
-        public static final int expanded_menu=0x7f070066;
+        public static final int expand_activities_button=0x7f070040;
+        public static final int expanded_menu=0x7f070053;
         public static final int fill=0x7f070037;
         public static final int fill_horizontal=0x7f070038;
         public static final int fill_vertical=0x7f070030;
         public static final int fixed=0x7f07003a;
-        public static final int grid=0x7f07009b;
+        public static final int grid=0x7f070097;
+        public static final int gridLineLayout=0x7f07006e;
+        public static final int gridLinesLayout=0x7f0700fb;
         public static final int home=0x7f070005;
         public static final int homeAsUp=0x7f070011;
-        public static final int icon=0x7f070057;
+        public static final int icon=0x7f070044;
+        public static final int iconView=0x7f070078;
         public static final int ifRoom=0x7f070022;
-        public static final int image=0x7f070054;
-        public static final int imageView1=0x7f0700f3;
-        public static final int info=0x7f0700ef;
+        public static final int image=0x7f070041;
+        public static final int imageView1=0x7f0700f2;
+        public static final int info=0x7f0700ee;
         public static final int item_touch_helper_previous_elevation=0x7f070000;
+        public static final int label=0x7f070079;
         public static final int left=0x7f070031;
-        public static final int line1=0x7f0700e9;
-        public static final int line3=0x7f0700ed;
-        public static final int linearLayoutWrapTopButtons=0x7f07007e;
+        public static final int legendHeader=0x7f070075;
+        public static final int legendItemsLayout=0x7f070077;
+        public static final int legendScrollView=0x7f070076;
+        public static final int legendViewGroup=0x7f070074;
+        public static final int line1=0x7f0700e8;
+        public static final int line3=0x7f0700ec;
+        public static final int linearLayoutWrapTopButtons=0x7f07007a;
         public static final int listMode=0x7f07000d;
-        public static final int listView1=0x7f0700a2;
-        public static final int listViewCommunity=0x7f070081;
-        public static final int list_item=0x7f070056;
-        public static final int media_actions=0x7f0700e7;
+        public static final int listViewCommunity=0x7f07007d;
+        public static final int list_item=0x7f070043;
+        public static final int media_actions=0x7f0700e6;
         public static final int middle=0x7f07001f;
         public static final int mini=0x7f070039;
-        public static final int mr_art=0x7f0700b2;
-        public static final int mr_chooser_list=0x7f0700a7;
-        public static final int mr_chooser_route_desc=0x7f0700aa;
-        public static final int mr_chooser_route_icon=0x7f0700a8;
-        public static final int mr_chooser_route_name=0x7f0700a9;
-        public static final int mr_close=0x7f0700af;
-        public static final int mr_control_divider=0x7f0700b5;
-        public static final int mr_control_play_pause=0x7f0700bb;
-        public static final int mr_control_subtitle=0x7f0700be;
-        public static final int mr_control_title=0x7f0700bd;
-        public static final int mr_control_title_container=0x7f0700bc;
-        public static final int mr_custom_control=0x7f0700b0;
-        public static final int mr_default_control=0x7f0700b1;
-        public static final int mr_dialog_area=0x7f0700ac;
-        public static final int mr_expandable_area=0x7f0700ab;
-        public static final int mr_group_expand_collapse=0x7f0700bf;
-        public static final int mr_media_main_control=0x7f0700b3;
-        public static final int mr_name=0x7f0700ae;
-        public static final int mr_playback_control=0x7f0700b4;
-        public static final int mr_title_bar=0x7f0700ad;
-        public static final int mr_volume_control=0x7f0700b6;
-        public static final int mr_volume_group_list=0x7f0700b7;
-        public static final int mr_volume_item_icon=0x7f0700b9;
-        public static final int mr_volume_slider=0x7f0700ba;
+        public static final int mr_art=0x7f0700b1;
+        public static final int mr_chooser_list=0x7f0700a6;
+        public static final int mr_chooser_route_desc=0x7f0700a9;
+        public static final int mr_chooser_route_icon=0x7f0700a7;
+        public static final int mr_chooser_route_name=0x7f0700a8;
+        public static final int mr_close=0x7f0700ae;
+        public static final int mr_control_divider=0x7f0700b4;
+        public static final int mr_control_play_pause=0x7f0700ba;
+        public static final int mr_control_subtitle=0x7f0700bd;
+        public static final int mr_control_title=0x7f0700bc;
+        public static final int mr_control_title_container=0x7f0700bb;
+        public static final int mr_custom_control=0x7f0700af;
+        public static final int mr_default_control=0x7f0700b0;
+        public static final int mr_dialog_area=0x7f0700ab;
+        public static final int mr_expandable_area=0x7f0700aa;
+        public static final int mr_group_expand_collapse=0x7f0700be;
+        public static final int mr_media_main_control=0x7f0700b2;
+        public static final int mr_name=0x7f0700ad;
+        public static final int mr_playback_control=0x7f0700b3;
+        public static final int mr_title_bar=0x7f0700ac;
+        public static final int mr_volume_control=0x7f0700b5;
+        public static final int mr_volume_group_list=0x7f0700b6;
+        public static final int mr_volume_item_icon=0x7f0700b8;
+        public static final int mr_volume_slider=0x7f0700b9;
         public static final int multiply=0x7f070018;
-        public static final int navigation_header_container=0x7f070086;
+        public static final int navigation_header_container=0x7f070082;
         public static final int never=0x7f070023;
         public static final int none=0x7f070012;
         public static final int normal=0x7f07000e;
         public static final int parallax=0x7f07002a;
-        public static final int parentPanel=0x7f07005b;
+        public static final int parentPanel=0x7f070048;
         public static final int pin=0x7f07002b;
         public static final int progress_circular=0x7f070006;
         public static final int progress_horizontal=0x7f070007;
-        public static final int radio=0x7f070069;
-        public static final int recepieImage=0x7f0700f9;
-        public static final int recepieText=0x7f070098;
+        public static final int radio=0x7f070056;
+        public static final int recepieImage=0x7f0700fd;
+        public static final int recepieText=0x7f070094;
         public static final int right=0x7f070032;
+        public static final int rootLayout=0x7f07006b;
         public static final int screen=0x7f070019;
         public static final int scroll=0x7f070028;
-        public static final int scrollIndicatorDown=0x7f070063;
-        public static final int scrollIndicatorUp=0x7f070060;
-        public static final int scrollView=0x7f070061;
+        public static final int scrollIndicatorDown=0x7f070050;
+        public static final int scrollIndicatorUp=0x7f07004d;
+        public static final int scrollView=0x7f07004e;
         public static final int scrollable=0x7f07003b;
-        public static final int search_badge=0x7f070073;
-        public static final int search_bar=0x7f070072;
-        public static final int search_button=0x7f070074;
-        public static final int search_close_btn=0x7f070079;
-        public static final int search_edit_frame=0x7f070075;
-        public static final int search_go_btn=0x7f07007b;
-        public static final int search_mag_icon=0x7f070076;
-        public static final int search_plate=0x7f070077;
-        public static final int search_src_text=0x7f070078;
-        public static final int search_voice_btn=0x7f07007c;
-        public static final int select_dialog_listview=0x7f07007d;
-        public static final int shortcut=0x7f070068;
+        public static final int search_badge=0x7f070060;
+        public static final int search_bar=0x7f07005f;
+        public static final int search_button=0x7f070061;
+        public static final int search_close_btn=0x7f070066;
+        public static final int search_edit_frame=0x7f070062;
+        public static final int search_go_btn=0x7f070068;
+        public static final int search_mag_icon=0x7f070063;
+        public static final int search_plate=0x7f070064;
+        public static final int search_src_text=0x7f070065;
+        public static final int search_voice_btn=0x7f070069;
+        public static final int select_dialog_listview=0x7f07006a;
+        public static final int seriesLayout=0x7f070070;
+        public static final int shortcut=0x7f070055;
         public static final int showCustom=0x7f070013;
         public static final int showHome=0x7f070014;
         public static final int showTitle=0x7f070015;
-        public static final int snackbar_action=0x7f070085;
-        public static final int snackbar_text=0x7f070084;
+        public static final int snackbar_action=0x7f070081;
+        public static final int snackbar_text=0x7f070080;
         public static final int snap=0x7f070029;
-        public static final int spacer=0x7f07005a;
-        public static final int spinnerActivitiesFriday=0x7f0700d6;
-        public static final int spinnerActivitiesMonday=0x7f0700c2;
-        public static final int spinnerActivitiesSaturday=0x7f0700db;
-        public static final int spinnerActivitiesSunday=0x7f0700e0;
-        public static final int spinnerActivitiesThursday=0x7f0700d1;
-        public static final int spinnerActivitiesTuesday=0x7f0700c7;
-        public static final int spinnerActivitiesWednesday=0x7f0700cc;
-        public static final int spinnerCategories=0x7f07008f;
-        public static final int spinnerFoodFriday=0x7f0700d8;
-        public static final int spinnerFoodMonday=0x7f0700c4;
-        public static final int spinnerFoodSaturday=0x7f0700dd;
-        public static final int spinnerFoodSunday=0x7f0700e2;
-        public static final int spinnerFoodThursday=0x7f0700d3;
-        public static final int spinnerFoodTuesday=0x7f0700c9;
-        public static final int spinnerFoodWednesday=0x7f0700ce;
+        public static final int spacer=0x7f070047;
+        public static final int spinnerActivitiesFriday=0x7f0700d5;
+        public static final int spinnerActivitiesMonday=0x7f0700c1;
+        public static final int spinnerActivitiesSaturday=0x7f0700da;
+        public static final int spinnerActivitiesSunday=0x7f0700df;
+        public static final int spinnerActivitiesThursday=0x7f0700d0;
+        public static final int spinnerActivitiesTuesday=0x7f0700c6;
+        public static final int spinnerActivitiesWednesday=0x7f0700cb;
+        public static final int spinnerCategories=0x7f07008b;
+        public static final int spinnerFoodFriday=0x7f0700d7;
+        public static final int spinnerFoodMonday=0x7f0700c3;
+        public static final int spinnerFoodSaturday=0x7f0700dc;
+        public static final int spinnerFoodSunday=0x7f0700e1;
+        public static final int spinnerFoodThursday=0x7f0700d2;
+        public static final int spinnerFoodTuesday=0x7f0700c8;
+        public static final int spinnerFoodWednesday=0x7f0700cd;
         public static final int split_action_bar=0x7f070008;
         public static final int src_atop=0x7f07001a;
         public static final int src_in=0x7f07001b;
         public static final int src_over=0x7f07001c;
         public static final int start=0x7f070033;
-        public static final int status_bar_latest_event_content=0x7f0700e6;
-        public static final int submit_area=0x7f07007a;
+        public static final int status_bar_latest_event_content=0x7f0700e5;
+        public static final int stripLinesLayout=0x7f07006f;
+        public static final int submit_area=0x7f070067;
         public static final int tabMode=0x7f07000f;
-        public static final int tableLayout1=0x7f0700f1;
-        public static final int tableRow1=0x7f0700f2;
-        public static final int tableRow2=0x7f0700f4;
-        public static final int tableRow3=0x7f0700f7;
-        public static final int tableRow4=0x7f0700f8;
-        public static final int text=0x7f0700ee;
-        public static final int text2=0x7f0700ec;
-        public static final int textSpacerNoButtons=0x7f070062;
-        public static final int textView1=0x7f0700c0;
-        public static final int textView10=0x7f0700cf;
-        public static final int textView11=0x7f0700d0;
-        public static final int textView12=0x7f0700d2;
-        public static final int textView13=0x7f0700d4;
-        public static final int textView14=0x7f0700d5;
-        public static final int textView15=0x7f0700d7;
-        public static final int textView16=0x7f0700d9;
-        public static final int textView17=0x7f0700da;
-        public static final int textView18=0x7f0700dc;
-        public static final int textView19=0x7f0700de;
-        public static final int textView2=0x7f0700c1;
-        public static final int textView20=0x7f0700df;
-        public static final int textView21=0x7f0700e1;
-        public static final int textView3=0x7f0700c3;
-        public static final int textView4=0x7f0700c5;
-        public static final int textView5=0x7f0700c6;
-        public static final int textView6=0x7f0700c8;
-        public static final int textView7=0x7f0700ca;
-        public static final int textView8=0x7f0700cb;
-        public static final int textView9=0x7f0700cd;
-        public static final int time=0x7f0700ea;
-        public static final int title=0x7f070058;
-        public static final int title_template=0x7f07005d;
-        public static final int tooltipContent=0x7f0700fb;
-        public static final int tooltipTitle=0x7f0700fa;
+        public static final int tableLayout1=0x7f0700f0;
+        public static final int tableRow1=0x7f0700f1;
+        public static final int tableRow2=0x7f0700f3;
+        public static final int tableRow3=0x7f0700f6;
+        public static final int tableRow4=0x7f0700f7;
+        public static final int technicalIndicatorLayout=0x7f070072;
+        public static final int text=0x7f0700ed;
+        public static final int text2=0x7f0700eb;
+        public static final int textSpacerNoButtons=0x7f07004f;
+        public static final int textView1=0x7f0700bf;
+        public static final int textView10=0x7f0700ce;
+        public static final int textView11=0x7f0700cf;
+        public static final int textView12=0x7f0700d1;
+        public static final int textView13=0x7f0700d3;
+        public static final int textView14=0x7f0700d4;
+        public static final int textView15=0x7f0700d6;
+        public static final int textView16=0x7f0700d8;
+        public static final int textView17=0x7f0700d9;
+        public static final int textView18=0x7f0700db;
+        public static final int textView19=0x7f0700dd;
+        public static final int textView2=0x7f0700c0;
+        public static final int textView20=0x7f0700de;
+        public static final int textView21=0x7f0700e0;
+        public static final int textView3=0x7f0700c2;
+        public static final int textView4=0x7f0700c4;
+        public static final int textView5=0x7f0700c5;
+        public static final int textView6=0x7f0700c7;
+        public static final int textView7=0x7f0700c9;
+        public static final int textView8=0x7f0700ca;
+        public static final int textView9=0x7f0700cc;
+        public static final int textViewCalories=0x7f0700a1;
+        public static final int textViewGoal=0x7f0700a0;
+        public static final int textViewHR=0x7f07009f;
+        public static final int thumbLayout=0x7f0700fc;
+        public static final int time=0x7f0700e9;
+        public static final int title=0x7f070045;
+        public static final int title_template=0x7f07004a;
         public static final int top=0x7f070034;
-        public static final int topPanel=0x7f07005c;
-        public static final int touch_outside=0x7f070082;
-        public static final int txtViewCategory=0x7f0700a5;
-        public static final int txtViewContent=0x7f0700a6;
-        public static final int txtViewTitle=0x7f0700a4;
+        public static final int topPanel=0x7f070049;
+        public static final int top_labels=0x7f0700f8;
+        public static final int touch_outside=0x7f07007e;
+        public static final int txtViewCategory=0x7f0700a4;
+        public static final int txtViewContent=0x7f0700a5;
+        public static final int txtViewTitle=0x7f0700a3;
         public static final int up=0x7f070009;
         public static final int useLogo=0x7f070016;
-        public static final int userInfo=0x7f0700f5;
+        public static final int userInfo=0x7f0700f4;
         public static final int view_offset_helper=0x7f07000a;
-        public static final int volume_item_container=0x7f0700b8;
+        public static final int volume_item_container=0x7f0700b7;
         public static final int withText=0x7f070024;
         public static final int wrap_content=0x7f070017;
     }
@@ -3469,68 +2947,74 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030016;
         public static final int abc_search_view=0x7f030017;
         public static final int abc_select_dialog_material=0x7f030018;
-        public static final int community=0x7f030019;
-        public static final int design_bottom_sheet_dialog=0x7f03001a;
-        public static final int design_layout_snackbar=0x7f03001b;
-        public static final int design_layout_snackbar_include=0x7f03001c;
-        public static final int design_layout_tab_icon=0x7f03001d;
-        public static final int design_layout_tab_text=0x7f03001e;
-        public static final int design_menu_item_action_area=0x7f03001f;
-        public static final int design_navigation_item=0x7f030020;
-        public static final int design_navigation_item_header=0x7f030021;
-        public static final int design_navigation_item_separator=0x7f030022;
-        public static final int design_navigation_item_subheader=0x7f030023;
-        public static final int design_navigation_menu=0x7f030024;
-        public static final int design_navigation_menu_item=0x7f030025;
-        public static final int dialog_calendar=0x7f030026;
-        public static final int dialog_choosehealthplan=0x7f030027;
-        public static final int dialog_new_thread=0x7f030028;
-        public static final int diary=0x7f030029;
-        public static final int exercisedialogview=0x7f03002a;
-        public static final int exercisemain=0x7f03002b;
-        public static final int firstview=0x7f03002c;
-        public static final int healthplan=0x7f03002d;
-        public static final int listview_row=0x7f03002e;
-        public static final int mr_chooser_dialog=0x7f03002f;
-        public static final int mr_chooser_list_item=0x7f030030;
-        public static final int mr_controller_material_dialog_b=0x7f030031;
-        public static final int mr_controller_volume_item=0x7f030032;
-        public static final int mr_playback_control=0x7f030033;
-        public static final int mr_volume_control=0x7f030034;
-        public static final int newhealthplan=0x7f030035;
-        public static final int notification_media_action=0x7f030036;
-        public static final int notification_media_cancel_action=0x7f030037;
-        public static final int notification_template_big_media=0x7f030038;
-        public static final int notification_template_big_media_narrow=0x7f030039;
-        public static final int notification_template_lines=0x7f03003a;
-        public static final int notification_template_media=0x7f03003b;
-        public static final int notification_template_part_chronometer=0x7f03003c;
-        public static final int notification_template_part_time=0x7f03003d;
-        public static final int profile=0x7f03003e;
-        public static final int recipedialogview=0x7f03003f;
-        public static final int recipemain=0x7f030040;
-        public static final int recipes=0x7f030041;
-        public static final int select_dialog_item_material=0x7f030042;
-        public static final int select_dialog_multichoice_material=0x7f030043;
-        public static final int select_dialog_singlechoice_material=0x7f030044;
-        public static final int splashscreen=0x7f030045;
-        public static final int support_simple_spinner_dropdown_item=0x7f030046;
-        public static final int tooltip=0x7f030047;
+        public static final int chart_layout=0x7f030019;
+        public static final int chart_legend=0x7f03001a;
+        public static final int chart_legend_item=0x7f03001b;
+        public static final int chartmainpage=0x7f03001c;
+        public static final int community=0x7f03001d;
+        public static final int design_bottom_sheet_dialog=0x7f03001e;
+        public static final int design_layout_snackbar=0x7f03001f;
+        public static final int design_layout_snackbar_include=0x7f030020;
+        public static final int design_layout_tab_icon=0x7f030021;
+        public static final int design_layout_tab_text=0x7f030022;
+        public static final int design_menu_item_action_area=0x7f030023;
+        public static final int design_navigation_item=0x7f030024;
+        public static final int design_navigation_item_header=0x7f030025;
+        public static final int design_navigation_item_separator=0x7f030026;
+        public static final int design_navigation_item_subheader=0x7f030027;
+        public static final int design_navigation_menu=0x7f030028;
+        public static final int design_navigation_menu_item=0x7f030029;
+        public static final int dialog_calendar=0x7f03002a;
+        public static final int dialog_choosehealthplan=0x7f03002b;
+        public static final int dialog_new_thread=0x7f03002c;
+        public static final int diary=0x7f03002d;
+        public static final int exercisedialogview=0x7f03002e;
+        public static final int exercisemain=0x7f03002f;
+        public static final int firstview=0x7f030030;
+        public static final int healthplan=0x7f030031;
+        public static final int listview_row=0x7f030032;
+        public static final int mr_chooser_dialog=0x7f030033;
+        public static final int mr_chooser_list_item=0x7f030034;
+        public static final int mr_controller_material_dialog_b=0x7f030035;
+        public static final int mr_controller_volume_item=0x7f030036;
+        public static final int mr_playback_control=0x7f030037;
+        public static final int mr_volume_control=0x7f030038;
+        public static final int newhealthplan=0x7f030039;
+        public static final int notification_media_action=0x7f03003a;
+        public static final int notification_media_cancel_action=0x7f03003b;
+        public static final int notification_template_big_media=0x7f03003c;
+        public static final int notification_template_big_media_narrow=0x7f03003d;
+        public static final int notification_template_lines=0x7f03003e;
+        public static final int notification_template_media=0x7f03003f;
+        public static final int notification_template_part_chronometer=0x7f030040;
+        public static final int notification_template_part_time=0x7f030041;
+        public static final int profile=0x7f030042;
+        public static final int range_navigator_layout=0x7f030043;
+        public static final int recipedialogview=0x7f030044;
+        public static final int recipemain=0x7f030045;
+        public static final int recipes=0x7f030046;
+        public static final int select_dialog_item_material=0x7f030047;
+        public static final int select_dialog_multichoice_material=0x7f030048;
+        public static final int select_dialog_singlechoice_material=0x7f030049;
+        public static final int splashscreen=0x7f03004a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03004b;
     }
     public static final class string {
-        public static final int ApplicationName=0x7f080027;
-        public static final int Community=0x7f08002d;
-        public static final int Diary=0x7f080028;
-        public static final int Exercises=0x7f08002c;
-        public static final int Health_Plan=0x7f08002a;
-        public static final int Hello=0x7f080026;
-        public static final int My_Threads=0x7f080030;
-        public static final int New_Thread=0x7f08002f;
-        public static final int Profile=0x7f080029;
-        public static final int Recipes=0x7f08002b;
-        public static final int Title=0x7f080032;
-        public static final int Today=0x7f08002e;
-        public static final int Your_Question=0x7f080031;
+        public static final int AppGoals=0x7f08003a;
+        public static final int ApplicationName=0x7f08002b;
+        public static final int Community=0x7f080031;
+        public static final int Diary=0x7f08002c;
+        public static final int Exercises=0x7f080030;
+        public static final int Goal=0x7f080039;
+        public static final int Health_Plan=0x7f08002e;
+        public static final int Hello=0x7f08002a;
+        public static final int My_Threads=0x7f080034;
+        public static final int New_Thread=0x7f080033;
+        public static final int Profile=0x7f08002d;
+        public static final int Recipes=0x7f08002f;
+        public static final int Title=0x7f080036;
+        public static final int Today=0x7f080032;
+        public static final int Your_Question=0x7f080035;
         public static final int abc_action_bar_home_description=0x7f08000f;
         public static final int abc_action_bar_home_description_format=0x7f080010;
         public static final int abc_action_bar_home_subtitle_description_format=0x7f080011;
@@ -3552,8 +3036,8 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f080021;
         public static final int appbar_scrolling_view_behavior=0x7f080023;
         public static final int bottom_sheet_behavior=0x7f080024;
-        public static final int cancelThread=0x7f080033;
-        public static final int category_prompt=0x7f080035;
+        public static final int cancelThread=0x7f080037;
+        public static final int category_prompt=0x7f08003b;
         public static final int character_counter_pattern=0x7f080025;
         public static final int mr_button_content_description=0x7f080000;
         public static final int mr_chooser_searching=0x7f080001;
@@ -3570,8 +3054,12 @@ containing a value of this type.
         public static final int mr_controller_stop=0x7f08000c;
         public static final int mr_system_route_name=0x7f08000d;
         public static final int mr_user_route_category_name=0x7f08000e;
+        public static final int q=0x7f080026;
+        public static final int quarter=0x7f080027;
         public static final int status_bar_notification_info_overflow=0x7f080022;
-        public static final int submitThread=0x7f080034;
+        public static final int submitThread=0x7f080038;
+        public static final int w=0x7f080028;
+        public static final int week=0x7f080029;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a00a1;
@@ -3579,39 +3067,6 @@ containing a value of this type.
         public static final int Animation_AppCompat_Dialog=0x7f0a00a3;
         public static final int Animation_AppCompat_DropDownUp=0x7f0a00a4;
         public static final int Animation_Design_BottomSheetDialog=0x7f0a015a;
-        /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-
-
-
-
-
-
-
-
-
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-
-
-
-
-
-
-
-
-
-        
-         */
-        public static final int AppBaseTheme=0x7f0a0172;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f0a0173;
         public static final int Base_AlertDialog_AppCompat=0x7f0a00a5;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f0a00a6;
         public static final int Base_Animation_AppCompat_Dialog=0x7f0a00a7;
@@ -3761,7 +3216,7 @@ containing a value of this type.
         public static final int CardView_Light=0x7f0a001a;
         /**  Inherit from the light Material Theme 
          */
-        public static final int MainTheme=0x7f0a0175;
+        public static final int MainTheme=0x7f0a0173;
         public static final int Platform_AppCompat=0x7f0a0032;
         public static final int Platform_AppCompat_Light=0x7f0a0033;
         public static final int Platform_ThemeOverlay_AppCompat=0x7f0a0095;
@@ -3866,7 +3321,7 @@ containing a value of this type.
         public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0a010b;
         public static final int Theme_AppCompat_Light_NoActionBar=0x7f0a010c;
         public static final int Theme_AppCompat_NoActionBar=0x7f0a010d;
-        public static final int Theme_Custom=0x7f0a0178;
+        public static final int Theme_Custom=0x7f0a0176;
         public static final int Theme_Design=0x7f0a0163;
         public static final int Theme_Design_BottomSheetDialog=0x7f0a0164;
         public static final int Theme_Design_Light=0x7f0a0165;
@@ -3877,7 +3332,7 @@ containing a value of this type.
         public static final int Theme_MediaRouter_Light=0x7f0a0001;
         public static final int Theme_MediaRouter_Light_DarkControlPanel=0x7f0a0002;
         public static final int Theme_MediaRouter_LightControlPanel=0x7f0a0003;
-        public static final int Theme_Splash=0x7f0a0174;
+        public static final int Theme_Splash=0x7f0a0172;
         public static final int ThemeOverlay_AppCompat=0x7f0a010e;
         public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0a010f;
         public static final int ThemeOverlay_AppCompat_Dark=0x7f0a0110;
@@ -3982,8 +3437,8 @@ containing a value of this type.
         public static final int Widget_MediaRouter_ControllerText_Title_Light=0x7f0a0014;
         public static final int Widget_MediaRouter_Light_MediaRouteButton=0x7f0a0015;
         public static final int Widget_MediaRouter_MediaRouteButton=0x7f0a0016;
-        public static final int dialog_animation=0x7f0a0177;
-        public static final int textViewTheme=0x7f0a0176;
+        public static final int dialog_animation=0x7f0a0175;
+        public static final int textViewTheme=0x7f0a0174;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.
@@ -7379,962 +6834,6 @@ containing a value of this type.
           @attr name YWWACP.droid:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
-        /**  END duplicate fields for FlexChartCore 
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_animated YWWACP.droid:flexPie_animated}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_backgroundColor YWWACP.droid:flexPie_backgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_binding YWWACP.droid:flexPie_binding}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_bindingName YWWACP.droid:flexPie_bindingName}</code></td><td> END duplicate fields for FlexChartCore </td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_borderColor YWWACP.droid:flexPie_borderColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_borderWidth YWWACP.droid:flexPie_borderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_FontColor YWWACP.droid:flexPie_datalabel_FontColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_FontSize YWWACP.droid:flexPie_datalabel_FontSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_FontTypeface YWWACP.droid:flexPie_datalabel_FontTypeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_FontWeight YWWACP.droid:flexPie_datalabel_FontWeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_backgroundColor YWWACP.droid:flexPie_datalabel_backgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_borderColor YWWACP.droid:flexPie_datalabel_borderColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_borderWidth YWWACP.droid:flexPie_datalabel_borderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_datalabel_position YWWACP.droid:flexPie_datalabel_position}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_footer YWWACP.droid:flexPie_footer}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_footerFontColor YWWACP.droid:flexPie_footerFontColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_footerFontGravity YWWACP.droid:flexPie_footerFontGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_footerFontSize YWWACP.droid:flexPie_footerFontSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_footerFontTypeface YWWACP.droid:flexPie_footerFontTypeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_footerFontWeight YWWACP.droid:flexPie_footerFontWeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_header YWWACP.droid:flexPie_header}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_headerFontColor YWWACP.droid:flexPie_headerFontColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_headerFontGravity YWWACP.droid:flexPie_headerFontGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_headerFontSize YWWACP.droid:flexPie_headerFontSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_headerFontTypeface YWWACP.droid:flexPie_headerFontTypeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_headerFontWeight YWWACP.droid:flexPie_headerFontWeight}</code></td><td> BEGIN duplicate fields for FlexChartCore </td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_innerRadius YWWACP.droid:flexPie_innerRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_FontColor YWWACP.droid:flexPie_legend_FontColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_FontSize YWWACP.droid:flexPie_legend_FontSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_FontTypeface YWWACP.droid:flexPie_legend_FontTypeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_FontWeight YWWACP.droid:flexPie_legend_FontWeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_backgroundColor YWWACP.droid:flexPie_legend_backgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_borderColor YWWACP.droid:flexPie_legend_borderColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_borderWidth YWWACP.droid:flexPie_legend_borderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_orientation YWWACP.droid:flexPie_legend_orientation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_legend_position YWWACP.droid:flexPie_legend_position}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_loadAnimation_duration YWWACP.droid:flexPie_loadAnimation_duration}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_loadAnimation_loadAnimationMode YWWACP.droid:flexPie_loadAnimation_loadAnimationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_loadAnimation_startDelay YWWACP.droid:flexPie_loadAnimation_startDelay}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_offset YWWACP.droid:flexPie_offset}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_palette YWWACP.droid:flexPie_palette}</code></td><td> BEGIN duplicate fields for FlexChartCore </td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_plotAreabackgroundColor YWWACP.droid:flexPie_plotAreabackgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_reversed YWWACP.droid:flexPie_reversed}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_selectAnimation_duration YWWACP.droid:flexPie_selectAnimation_duration}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_selectAnimation_startDelay YWWACP.droid:flexPie_selectAnimation_startDelay}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_selectedBorderColor YWWACP.droid:flexPie_selectedBorderColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_selectedBorderWidth YWWACP.droid:flexPie_selectedBorderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_selectedItemOffset YWWACP.droid:flexPie_selectedItemOffset}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_selectedItemPosition YWWACP.droid:flexPie_selectedItemPosition}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_selectionMode YWWACP.droid:flexPie_selectionMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_sliceBorderWidth YWWACP.droid:flexPie_sliceBorderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_startAngle YWWACP.droid:flexPie_startAngle}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_updateAnimation_duration YWWACP.droid:flexPie_updateAnimation_duration}</code></td><td></td></tr>
-           <tr><td><code>{@link #FlexPie_flexPie_updateAnimation_startDelay YWWACP.droid:flexPie_updateAnimation_startDelay}</code></td><td></td></tr>
-           </table>
-           @see #FlexPie_flexPie_animated
-           @see #FlexPie_flexPie_backgroundColor
-           @see #FlexPie_flexPie_binding
-           @see #FlexPie_flexPie_bindingName
-           @see #FlexPie_flexPie_borderColor
-           @see #FlexPie_flexPie_borderWidth
-           @see #FlexPie_flexPie_datalabel_FontColor
-           @see #FlexPie_flexPie_datalabel_FontSize
-           @see #FlexPie_flexPie_datalabel_FontTypeface
-           @see #FlexPie_flexPie_datalabel_FontWeight
-           @see #FlexPie_flexPie_datalabel_backgroundColor
-           @see #FlexPie_flexPie_datalabel_borderColor
-           @see #FlexPie_flexPie_datalabel_borderWidth
-           @see #FlexPie_flexPie_datalabel_position
-           @see #FlexPie_flexPie_footer
-           @see #FlexPie_flexPie_footerFontColor
-           @see #FlexPie_flexPie_footerFontGravity
-           @see #FlexPie_flexPie_footerFontSize
-           @see #FlexPie_flexPie_footerFontTypeface
-           @see #FlexPie_flexPie_footerFontWeight
-           @see #FlexPie_flexPie_header
-           @see #FlexPie_flexPie_headerFontColor
-           @see #FlexPie_flexPie_headerFontGravity
-           @see #FlexPie_flexPie_headerFontSize
-           @see #FlexPie_flexPie_headerFontTypeface
-           @see #FlexPie_flexPie_headerFontWeight
-           @see #FlexPie_flexPie_innerRadius
-           @see #FlexPie_flexPie_legend_FontColor
-           @see #FlexPie_flexPie_legend_FontSize
-           @see #FlexPie_flexPie_legend_FontTypeface
-           @see #FlexPie_flexPie_legend_FontWeight
-           @see #FlexPie_flexPie_legend_backgroundColor
-           @see #FlexPie_flexPie_legend_borderColor
-           @see #FlexPie_flexPie_legend_borderWidth
-           @see #FlexPie_flexPie_legend_orientation
-           @see #FlexPie_flexPie_legend_position
-           @see #FlexPie_flexPie_loadAnimation_duration
-           @see #FlexPie_flexPie_loadAnimation_loadAnimationMode
-           @see #FlexPie_flexPie_loadAnimation_startDelay
-           @see #FlexPie_flexPie_offset
-           @see #FlexPie_flexPie_palette
-           @see #FlexPie_flexPie_plotAreabackgroundColor
-           @see #FlexPie_flexPie_reversed
-           @see #FlexPie_flexPie_selectAnimation_duration
-           @see #FlexPie_flexPie_selectAnimation_startDelay
-           @see #FlexPie_flexPie_selectedBorderColor
-           @see #FlexPie_flexPie_selectedBorderWidth
-           @see #FlexPie_flexPie_selectedItemOffset
-           @see #FlexPie_flexPie_selectedItemPosition
-           @see #FlexPie_flexPie_selectionMode
-           @see #FlexPie_flexPie_sliceBorderWidth
-           @see #FlexPie_flexPie_startAngle
-           @see #FlexPie_flexPie_updateAnimation_duration
-           @see #FlexPie_flexPie_updateAnimation_startDelay
-         */
-        public static final int[] FlexPie = {
-            0x7f01013c, 0x7f01013d, 0x7f01013e, 0x7f01013f,
-            0x7f010140, 0x7f010141, 0x7f010142, 0x7f010143,
-            0x7f010144, 0x7f010145, 0x7f010146, 0x7f010147,
-            0x7f010148, 0x7f010149, 0x7f01014a, 0x7f01014b,
-            0x7f01014c, 0x7f01014d, 0x7f01014e, 0x7f01014f,
-            0x7f010150, 0x7f010151, 0x7f010152, 0x7f010153,
-            0x7f010154, 0x7f010155, 0x7f010156, 0x7f010157,
-            0x7f010158, 0x7f010159, 0x7f01015a, 0x7f01015b,
-            0x7f01015c, 0x7f01015d, 0x7f01015e, 0x7f01015f,
-            0x7f010160, 0x7f010161, 0x7f010162, 0x7f010163,
-            0x7f010164, 0x7f010165, 0x7f010166, 0x7f010167,
-            0x7f010168, 0x7f010169, 0x7f01016a, 0x7f01016b,
-            0x7f01016c, 0x7f01016d, 0x7f01016e, 0x7f01016f,
-            0x7f010170, 0x7f010171
-        };
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_animated}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_animated
-        */
-        public static final int FlexPie_flexPie_animated = 36;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_backgroundColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_backgroundColor
-        */
-        public static final int FlexPie_flexPie_backgroundColor = 14;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_binding}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_binding
-        */
-        public static final int FlexPie_flexPie_binding = 34;
-        /**
-          <p>
-          @attr description
-           END duplicate fields for FlexChartCore 
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name YWWACP.droid:flexPie_bindingName
-        */
-        public static final int FlexPie_flexPie_bindingName = 33;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_borderColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_borderColor
-        */
-        public static final int FlexPie_flexPie_borderColor = 15;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_borderWidth}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_borderWidth
-        */
-        public static final int FlexPie_flexPie_borderWidth = 16;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_FontColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_datalabel_FontColor
-        */
-        public static final int FlexPie_flexPie_datalabel_FontColor = 29;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_FontSize}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_datalabel_FontSize
-        */
-        public static final int FlexPie_flexPie_datalabel_FontSize = 30;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_FontTypeface}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_datalabel_FontTypeface
-        */
-        public static final int FlexPie_flexPie_datalabel_FontTypeface = 31;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_FontWeight}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_datalabel_FontWeight
-        */
-        public static final int FlexPie_flexPie_datalabel_FontWeight = 32;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_backgroundColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_datalabel_backgroundColor
-        */
-        public static final int FlexPie_flexPie_datalabel_backgroundColor = 26;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_borderColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_datalabel_borderColor
-        */
-        public static final int FlexPie_flexPie_datalabel_borderColor = 27;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_borderWidth}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_datalabel_borderWidth
-        */
-        public static final int FlexPie_flexPie_datalabel_borderWidth = 28;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_datalabel_position}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>CENTER</code></td><td>1</td><td></td></tr>
-<tr><td><code>INSIDE</code></td><td>2</td><td></td></tr>
-<tr><td><code>OUTSIDE</code></td><td>3</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_datalabel_position
-        */
-        public static final int FlexPie_flexPie_datalabel_position = 53;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_footer}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_footer
-        */
-        public static final int FlexPie_flexPie_footer = 10;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_footerFontColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_footerFontColor
-        */
-        public static final int FlexPie_flexPie_footerFontColor = 13;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_footerFontGravity}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>LEFT</code></td><td>3</td><td></td></tr>
-<tr><td><code>CENTER_HORIZONTAL</code></td><td>1</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>5</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_footerFontGravity
-        */
-        public static final int FlexPie_flexPie_footerFontGravity = 3;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_footerFontSize}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_footerFontSize
-        */
-        public static final int FlexPie_flexPie_footerFontSize = 11;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_footerFontTypeface}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_footerFontTypeface
-        */
-        public static final int FlexPie_flexPie_footerFontTypeface = 12;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_footerFontWeight}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NORMAL</code></td><td>0</td><td></td></tr>
-<tr><td><code>BOLD</code></td><td>1</td><td></td></tr>
-<tr><td><code>ITALIC</code></td><td>2</td><td></td></tr>
-<tr><td><code>BOLD_ITALIC</code></td><td>3</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_footerFontWeight
-        */
-        public static final int FlexPie_flexPie_footerFontWeight = 2;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_header}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_header
-        */
-        public static final int FlexPie_flexPie_header = 6;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_headerFontColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_headerFontColor
-        */
-        public static final int FlexPie_flexPie_headerFontColor = 9;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_headerFontGravity}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>LEFT</code></td><td>3</td><td></td></tr>
-<tr><td><code>CENTER_HORIZONTAL</code></td><td>1</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>5</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_headerFontGravity
-        */
-        public static final int FlexPie_flexPie_headerFontGravity = 1;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_headerFontSize}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_headerFontSize
-        */
-        public static final int FlexPie_flexPie_headerFontSize = 7;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_headerFontTypeface}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_headerFontTypeface
-        */
-        public static final int FlexPie_flexPie_headerFontTypeface = 8;
-        /**
-          <p>
-          @attr description
-           BEGIN duplicate fields for FlexChartCore 
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NORMAL</code></td><td>0</td><td></td></tr>
-<tr><td><code>BOLD</code></td><td>1</td><td></td></tr>
-<tr><td><code>ITALIC</code></td><td>2</td><td></td></tr>
-<tr><td><code>BOLD_ITALIC</code></td><td>3</td><td></td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name YWWACP.droid:flexPie_headerFontWeight
-        */
-        public static final int FlexPie_flexPie_headerFontWeight = 0;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_innerRadius}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_innerRadius
-        */
-        public static final int FlexPie_flexPie_innerRadius = 35;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_FontColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_legend_FontColor
-        */
-        public static final int FlexPie_flexPie_legend_FontColor = 23;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_FontSize}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_legend_FontSize
-        */
-        public static final int FlexPie_flexPie_legend_FontSize = 24;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_FontTypeface}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_legend_FontTypeface
-        */
-        public static final int FlexPie_flexPie_legend_FontTypeface = 25;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_FontWeight}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NORMAL</code></td><td>0</td><td></td></tr>
-<tr><td><code>BOLD</code></td><td>1</td><td></td></tr>
-<tr><td><code>ITALIC</code></td><td>2</td><td></td></tr>
-<tr><td><code>BOLD_ITALIC</code></td><td>3</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_legend_FontWeight
-        */
-        public static final int FlexPie_flexPie_legend_FontWeight = 4;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_backgroundColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_legend_backgroundColor
-        */
-        public static final int FlexPie_flexPie_legend_backgroundColor = 20;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_borderColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_legend_borderColor
-        */
-        public static final int FlexPie_flexPie_legend_borderColor = 21;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_borderWidth}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_legend_borderWidth
-        */
-        public static final int FlexPie_flexPie_legend_borderWidth = 22;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_orientation}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>AUTO</code></td><td>0</td><td></td></tr>
-<tr><td><code>HORIZONTAL</code></td><td>1</td><td></td></tr>
-<tr><td><code>VERTICAL</code></td><td>2</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_legend_orientation
-        */
-        public static final int FlexPie_flexPie_legend_orientation = 44;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_legend_position}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>LEFT</code></td><td>1</td><td></td></tr>
-<tr><td><code>TOP</code></td><td>2</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>3</td><td></td></tr>
-<tr><td><code>BOTTOM</code></td><td>4</td><td></td></tr>
-<tr><td><code>AUTO</code></td><td>5</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_legend_position
-        */
-        public static final int FlexPie_flexPie_legend_position = 45;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_loadAnimation_duration}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_loadAnimation_duration
-        */
-        public static final int FlexPie_flexPie_loadAnimation_duration = 47;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_loadAnimation_loadAnimationMode}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>ALL</code></td><td>0</td><td></td></tr>
-<tr><td><code>POINT</code></td><td>1</td><td></td></tr>
-<tr><td><code>SERIES</code></td><td>2</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_loadAnimation_loadAnimationMode
-        */
-        public static final int FlexPie_flexPie_loadAnimation_loadAnimationMode = 46;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_loadAnimation_startDelay}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_loadAnimation_startDelay
-        */
-        public static final int FlexPie_flexPie_loadAnimation_startDelay = 48;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_offset}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_offset
-        */
-        public static final int FlexPie_flexPie_offset = 39;
-        /**
-          <p>
-          @attr description
-           BEGIN duplicate fields for FlexChartCore 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name YWWACP.droid:flexPie_palette
-        */
-        public static final int FlexPie_flexPie_palette = 5;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_plotAreabackgroundColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_plotAreabackgroundColor
-        */
-        public static final int FlexPie_flexPie_plotAreabackgroundColor = 17;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_reversed}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_reversed
-        */
-        public static final int FlexPie_flexPie_reversed = 40;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_selectAnimation_duration}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_selectAnimation_duration
-        */
-        public static final int FlexPie_flexPie_selectAnimation_duration = 51;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_selectAnimation_startDelay}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_selectAnimation_startDelay
-        */
-        public static final int FlexPie_flexPie_selectAnimation_startDelay = 52;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_selectedBorderColor}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_selectedBorderColor
-        */
-        public static final int FlexPie_flexPie_selectedBorderColor = 18;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_selectedBorderWidth}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_selectedBorderWidth
-        */
-        public static final int FlexPie_flexPie_selectedBorderWidth = 19;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_selectedItemOffset}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_selectedItemOffset
-        */
-        public static final int FlexPie_flexPie_selectedItemOffset = 41;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_selectedItemPosition}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>LEFT</code></td><td>1</td><td></td></tr>
-<tr><td><code>TOP</code></td><td>2</td><td></td></tr>
-<tr><td><code>RIGHT</code></td><td>3</td><td></td></tr>
-<tr><td><code>BOTTOM</code></td><td>4</td><td></td></tr>
-<tr><td><code>AUTO</code></td><td>5</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_selectedItemPosition
-        */
-        public static final int FlexPie_flexPie_selectedItemPosition = 42;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_selectionMode}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>NONE</code></td><td>0</td><td></td></tr>
-<tr><td><code>SERIES</code></td><td>1</td><td></td></tr>
-<tr><td><code>POINT</code></td><td>2</td><td></td></tr>
-</table>
-          @attr name YWWACP.droid:flexPie_selectionMode
-        */
-        public static final int FlexPie_flexPie_selectionMode = 43;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_sliceBorderWidth}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_sliceBorderWidth
-        */
-        public static final int FlexPie_flexPie_sliceBorderWidth = 37;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_startAngle}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_startAngle
-        */
-        public static final int FlexPie_flexPie_startAngle = 38;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_updateAnimation_duration}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_updateAnimation_duration
-        */
-        public static final int FlexPie_flexPie_updateAnimation_duration = 49;
-        /**
-          <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#flexPie_updateAnimation_startDelay}
-          attribute's value can be found in the {@link #FlexPie} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name YWWACP.droid:flexPie_updateAnimation_startDelay
-        */
-        public static final int FlexPie_flexPie_updateAnimation_startDelay = 50;
         /** Attributes that can be used with a FloatingActionButton.
            <p>Includes the following attributes:</p>
            <table>
@@ -9106,7 +7605,7 @@ containing a value of this type.
            @see #MvxBinding_MvxLang
          */
         public static final int[] MvxBinding = {
-            0x7f010172, 0x7f010173
+            0x7f01013c, 0x7f01013d
         };
         /**
           <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#MvxBind}
@@ -9147,7 +7646,7 @@ containing a value of this type.
            @see #MvxControl_MvxTemplate
          */
         public static final int[] MvxControl = {
-            0x7f010174
+            0x7f01013e
         };
         /**
           <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#MvxTemplate}
@@ -9174,7 +7673,7 @@ containing a value of this type.
            @see #MvxExpandableListView_MvxGroupItemTemplate
          */
         public static final int[] MvxExpandableListView = {
-            0x7f010177
+            0x7f010141
         };
         /**
           <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#MvxGroupItemTemplate}
@@ -9201,7 +7700,7 @@ containing a value of this type.
            @see #MvxImageView_MvxSource
          */
         public static final int[] MvxImageView = {
-            0x7f010178
+            0x7f010142
         };
         /**
           <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#MvxSource}
@@ -9230,7 +7729,7 @@ containing a value of this type.
            @see #MvxListView_MvxItemTemplate
          */
         public static final int[] MvxListView = {
-            0x7f010175, 0x7f010176
+            0x7f01013f, 0x7f010140
         };
         /**
           <p>This symbol is the offset where the {@link YWWACP.droid.R.attr#MvxDropDownItemTemplate}
