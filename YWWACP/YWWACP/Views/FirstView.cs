@@ -107,7 +107,6 @@ namespace YWWACP.Views
 
         }
     
-
     private void BtnGraph_Click(object sender, EventArgs e)
         {
            var intent = new Intent(this, typeof(ChartMainPageActivity));

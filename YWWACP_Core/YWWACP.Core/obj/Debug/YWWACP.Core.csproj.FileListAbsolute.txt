@@ -22,3 +22,7 @@ D:\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.dll.mdb
 D:\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\YWWACP.Core.dll.mdb
 C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.dll.mdb
 C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\YWWACP.Core.dll.mdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.dll.mdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\YWWACP.Core.dll.mdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\obj\Debug\YWWACP.Core.dll.mdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP_Core\YWWACP.Core\bin\Debug\YWWACP.Core.dll.mdb
