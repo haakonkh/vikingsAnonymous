@@ -17,10 +17,13 @@
         android:layout_height="wrap_content"
         android:text="@string/Health_Plan" />
     <Button
-        android:id="@+id/btnProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Profile" />
+      
+     
+
+    android:id="@+id/btnProfile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/Profile" />
     <Button
         android:id="@+id/btnRecipes"
         android:layout_width="match_parent"
@@ -41,17 +44,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Graph" />
+  
+  <!--oxyplot start-->
     <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="100dp">
+      <OxyPlot.Xamarin.Android.PlotView
+        android:id="@+id/plot_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+  </LinearLayout>
+  <!--oxyplot end-->
+  <!--Boxes start-->
+  <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
-        android:layout_weight="1">
+         
+         android:minHeight="100px"
+        
+        
+        >
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:gravity="center"
+            android:gravity="center"        
             android:layout_weight="1">
             <LinearLayout
                 android:orientation="vertical"
@@ -67,18 +88,21 @@
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
+                    android:minHeight="30px"
                     android:layout_weight="1" />
                 <TextView
                     android:text="Avarage"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
+                       android:minHeight="30px"
                     android:layout_weight="1" />
                 <TextView
                     android:text="Top"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
+                       android:minHeight="30px"
                     android:layout_weight="1" />
             </LinearLayout>
         </LinearLayout>
@@ -152,5 +176,6 @@
                     android:layout_weight="1" />
             </LinearLayout>
         </LinearLayout>
+    <!--boxes end-->
     </LinearLayout>
 </LinearLayout>

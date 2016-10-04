@@ -7,6 +7,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Microsoft.WindowsAzure.MobileServices;
+using OxyPlot.Xamarin.Android;
+using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
 //using Syncfusion.SfChart.XForms.Droid;
 
 
@@ -36,8 +40,13 @@ namespace YWWACP.Views
             base.OnCreate(bundle);
             //   Forms.Init(this, bundle);
 
-          //  new Syncfusion.SfChart.XForms.Droid.SfChartRenderer();
+            
+
             SetContentView(Resource.Layout.FirstView);
+
+            //Generates a plotview
+            PlotView view = FindViewById<PlotView>(Resource.Id.plot_view);
+            view.Model = CreatePlotModel();
 
             // Get our button from the layout resource,
             // and attach an event to it
@@ -54,8 +63,7 @@ namespace YWWACP.Views
             btnCommunity.Click += BtnCommunity_Click;
             btnRecipes.Click += BtnRecipes_Click;
             btnProfile.Click += BtnProfile_Click;
-            btnExercise.Click += BtnExercise_Click;
-           
+            btnExercise.Click += BtnExercise_Click;          
             btnGraph.Click += BtnGraph_Click;
 
             //Text Views 
@@ -70,7 +78,37 @@ namespace YWWACP.Views
          //   textViewGoal.SetText(Goal);
         }
 
-        private void BtnGraph_Click(object sender, EventArgs e)
+        private PlotModel CreatePlotModel()
+        {
+            var plotModel = new PlotModel { Title = "Your progression" };
+
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0 });
+
+            var series1 = new OxyPlot.Series.LineSeries
+            {
+                MarkerType = MarkerType.Circle,
+                MarkerSize = 4,
+                MarkerStroke = OxyColors.White
+            };
+
+            //The different points on the graph 
+            series1.Points.Add(new OxyPlot.DataPoint(0.0, 10.0));
+            series1.Points.Add(new OxyPlot.DataPoint(1.4, 2.1));
+            series1.Points.Add(new OxyPlot.DataPoint(2.0, 4.2));
+            series1.Points.Add(new OxyPlot.DataPoint(3.3, 2.3));
+            series1.Points.Add(new OxyPlot.DataPoint(4.7, 7.4));
+            series1.Points.Add(new OxyPlot.DataPoint(6.0, 6.2));
+            series1.Points.Add(new OxyPlot.DataPoint(8.9, 8.9));
+
+            plotModel.Series.Add(series1);
+
+            return plotModel;
+
+        }
+    
+
+    private void BtnGraph_Click(object sender, EventArgs e)
         {
            var intent = new Intent(this, typeof(ChartMainPageActivity));
           StartActivity(intent);
