@@ -44,12 +44,12 @@ namespace YWWACP
             //mAdapter = new ListViewAdapter(this, mItems);
             //mListView.Adapter = mAdapter;
         }
-        //protected override void OnResume()
-        //{
-        //    var vm = (CommunityViewModel)ViewModel;
-        //    vm.OnResume();
-        //    base.OnResume();
-        //}
+        protected override void OnResume()
+        {
+            var vm = (CommunityViewModel)ViewModel;
+            vm.OnResume();
+            base.OnResume();
+        }
 
         // When clicked, new thread will be created and and placed 
         // below the buttons

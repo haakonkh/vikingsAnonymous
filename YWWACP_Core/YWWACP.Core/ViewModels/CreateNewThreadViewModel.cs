@@ -16,13 +16,12 @@ namespace YWWACP.Core.ViewModels
 {
     public class CreateNewThreadViewModel : MvxViewModel
     {
+        private ISqlite sqlite;
         public ICommand SubmitCommand { get; set; }
         public ICommand CancelCommand { get; set; }
         public ICommand GoBackCommand { get; set; }
+
         private string title;
-        private CommunityViewModel cvm = new CommunityViewModel();
-
-
         public string Title
         {
             get { return title; }
@@ -59,103 +58,39 @@ namespace YWWACP.Core.ViewModels
                 }
              }
         }
-        public ObservableCollection<NewDiscussionThread> newThreads = new ObservableCollection<NewDiscussionThread>();
-        public ObservableCollection<NewDiscussionThread> NewThreads
-        {
-            get { return newThreads; }
-            set { SetProperty(ref newThreads, value); }
 
-        }
-
-        public CreateNewThreadViewModel()
+        public CreateNewThreadViewModel(ISqlite sqlite)
         {
+            sqlite = this.sqlite;
 
             SubmitCommand = new MvxCommand(() =>
             {
-                AddThread(new NewDiscussionThread(Title, Category, Content));
-                RaisePropertyChanged(() => NewThreads);
+                AddThread(new Threads
+                {
+                    Title = Title,
+                    Category = Category,
+                    Content = Content,
+                    CommentsID = 1,
+                    UserID = 1
+                });
+
             });
             GoBackCommand = new MvxCommand(() => ShowViewModel<CommunityViewModel>());
 
         }
 
-        public void AddThread(NewDiscussionThread thread)
+        public void AddThread(Threads thread)
         {
-            thread.Content = "HEI";            thread.Category = " MAT";            thread.Title = "EHOHEHE";
-            NewThreads.Add(thread);      
+            var database = new DatabaseTables(sqlite);
+           // var azuredatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
+            
+            if (!database.CheckIfThreadExists(thread))
+            {
+                database.InsertThread(thread);
+            }
+            
         }
 
-
-        //private ISqlite sqlite;
-        //private IDialogService dialog;
-        //private ObservableCollection<Threads> threads;
-
-        //public ObservableCollection<Threads> Threads
-        //{
-        //    get { return threads; }
-        //    set { SetProperty(ref threads, value); }
-        //}
-
-        //private string title;
-
-        //public string Title
-        //{       
-        //    get { return title; }
-        //    set { SetProperty(ref title, value); }
-        //}
-
-        //private string category;
-
-        //public string Category
-        //{
-        //    get { return category; }
-        //    set { SetProperty(ref category, value); }
-        //}
-
-        //private string content;
-
-        //public string Content
-        //{
-        //    get { return content; }
-        //    set { SetProperty(ref content, value); }
-        //}
-
-        //public ICommand SubmitCommand { get; private set; }
-
-        //public CreateNewThreadViewModel(ISqlite sqlite, IDialogService dialog)
-        //{
-        //    this.sqlite = sqlite;
-        //    this.dialog = dialog;
-        //    Threads = new ObservableCollection<Threads>();
-        //SubmitCommand = new MvxCommand<Threads>(currentThread =>
-        //{
-        //    CurrentThread(currentThread);
-        //});
-        //}
-
-        //public async void CurrentThread(Threads currentThread)
-        //{
-        //    var azuredatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
-        //    var database = new DatabaseTables(sqlite);
-
-        //    if (!database.CheckIfThreadExists(currentThread))
-        //    {
-
-        //        database.InsertThread(currentThread);
-        //        await azuredatabase.GetTable<Threads>().InsertAsync(new Threads
-        //        {
-        //            Title = currentThread.Title,
-        //            Category = currentThread.Category,
-        //            Content = currentThread.Content
-        //    });
-        //        Close(this);    
-        //    }
-        //    else
-        //    {
-
-        //        Close(this);
-        //    }
-        //}
-
+        
     }
 }

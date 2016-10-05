@@ -18,45 +18,47 @@ namespace YWWACP.Core.ViewModels
    public class CommunityViewModel : MvxViewModel
     {
 
+        private DatabaseTables database;
         public ICommand AddNewThreadCommand { get; set; }
         public ICommand MyThreadsCommand { get; set; }
-
+        public ICommand SelectedThreadCommad { get; set; }
         //List<Threads> threads = new List<Threads>();
         //DatabaseTables database;
         //private ISqlite sqlite;
-        public ObservableCollection<NewDiscussionThread> newThreads;
-        public ObservableCollection<NewDiscussionThread> NewThreads
+        private ObservableCollection<Threads> threads;
+        public ObservableCollection<Threads> Threads
         {
-            get { return newThreads; }
-            set { SetProperty(ref newThreads, value); }
+            get { return threads; }
+            set { SetProperty(ref threads, value); }
 
         }
 
-        public CommunityViewModel()
+        public CommunityViewModel(ISqlite sqlite)
         {
+            database = new DatabaseTables(sqlite);
             //database = new DatabaseTables(sqlite);
             AddNewThreadCommand = new MvxCommand(() =>ShowViewModel<CreateNewThreadViewModel>());
                 
         }
 
-        //public void OnResume()
-        //{
-        //    GetThreads();
-        //}
+        public void OnResume()
+        {
+            GetThreads();
+        }
 
-        //public async void GetThreads()
-        //{
-        //    var azuredatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
-        //    var azureresults = await azuredatabase.GetTable<Threads>().ToListAsync();
-        //    var threads = database.GetThreads();
+        public void GetThreads()
+        {
+            var threads = database.GetThreads();
 
-        //    NewThreads.Clear();
-        //    foreach(var thread in threads)
-        //    {
-        //        NewThreads.Add(new NewDiscussionThread(thread.Title, thread.Category, thread.Content));
-        //    }
+            Threads.Clear();
+            foreach (var thread in threads)
+            {
+                Threads.Add(thread);
+            }
+            
+            RaisePropertyChanged(() => Threads);
 
-        //}
+        }
     }
     
 }
