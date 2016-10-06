@@ -66,7 +66,7 @@ namespace YWWACP.Views
             btnExercise.Click += BtnExercise_Click;          
             btnGraph.Click += BtnGraph_Click;
 
-            //Text Views 
+            //Text View Box
            textViewGoal = FindViewById<TextView>(Resource.Id.textViewGoal);
            textViewHR= FindViewById<TextView>(Resource.Id.textViewHR);
            textViewCalories = FindViewById<TextView>(Resource.Id.textViewCalories);

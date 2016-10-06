@@ -432,5 +432,6 @@ C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP\YWWACP\bin\Debug\OxyPlot.x
 C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP\YWWACP\bin\Debug\OxyPlot.Xamarin.Android.xml
 C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP\YWWACP\bin\Debug\OxyPlot.dll.mdb
 C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP\YWWACP\obj\Debug\android\assets\OxyPlot.dll.mdb
+C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP\YWWACP\obj\Debug\res\layout\exercisedialognewexer.xml
 C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP\YWWACP\obj\Debug\YWWACP.dll.mdb
 C:\Users\Kristoffer\Documents\vikingsAnonymous\YWWACP\YWWACP\bin\Debug\YWWACP.dll.mdb

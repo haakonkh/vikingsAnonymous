@@ -26,6 +26,10 @@ YWWACP.ExerciseActivity, YWWACP;md571ace0a4b16b292ac22f62155d888856.ExerciseActi
 YWWACP.ExerciseActivity, YWWACP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md571ace0a4b16b292ac22f62155d888856.ExerciseActivity
 YWWACP.ExerciseActivity;md571ace0a4b16b292ac22f62155d888856.ExerciseActivity
 ywwacp.ExerciseActivity;md571ace0a4b16b292ac22f62155d888856.ExerciseActivity
+YWWACP.NewExerciseDialog, YWWACP;md571ace0a4b16b292ac22f62155d888856.NewExerciseDialog
+YWWACP.NewExerciseDialog, YWWACP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md571ace0a4b16b292ac22f62155d888856.NewExerciseDialog
+YWWACP.NewExerciseDialog;md571ace0a4b16b292ac22f62155d888856.NewExerciseDialog
+ywwacp.NewExerciseDialog;md571ace0a4b16b292ac22f62155d888856.NewExerciseDialog
 YWWACP.ExerciseDialog, YWWACP;md571ace0a4b16b292ac22f62155d888856.ExerciseDialog
 YWWACP.ExerciseDialog, YWWACP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md571ace0a4b16b292ac22f62155d888856.ExerciseDialog
 YWWACP.ExerciseDialog;md571ace0a4b16b292ac22f62155d888856.ExerciseDialog

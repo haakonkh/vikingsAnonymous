@@ -200,6 +200,7 @@
     <Compile Include="dialog_new_thread.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="ExerciseActivity.cs" />
+    <Compile Include="NewExerciseDialog .cs" />
     <Compile Include="ExerciseDialog.cs" />
     <Compile Include="GridAdapter-exercise.cs" />
     <Compile Include="HealthPlanActivity.cs" />
@@ -267,6 +268,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ChartMainPage.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\exerciseDialogNewExer.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
