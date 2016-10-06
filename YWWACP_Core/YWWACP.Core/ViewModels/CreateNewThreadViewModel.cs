@@ -13,6 +13,7 @@ using YWWACP.Core.Database;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels;
+using Android.Widget;
 
 namespace YWWACP.Core.ViewModels
 {
@@ -74,7 +75,7 @@ namespace YWWACP.Core.ViewModels
                 AddThread(new MyTable
                 {
                     ThreadTitle = Title,
-                    Category = "FOOD",
+                    Category =  Category,
                     Content = Content
                 });
             });
@@ -86,9 +87,9 @@ namespace YWWACP.Core.ViewModels
             // var azuredatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
             var x = await database.InsertTableRow(thread);
             ShowViewModel<CommunityViewModel>();
+       }
 
-
-        }
+       
     }
     }
 

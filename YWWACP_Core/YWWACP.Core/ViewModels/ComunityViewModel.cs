@@ -54,7 +54,7 @@ namespace YWWACP.Core.ViewModels
             foreach (var thread in threads)
             {
               //  Threads.Add(thread);
-                NewThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category, thread.Content));
+                NewThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category , thread.Content));
                 
             }
 

@@ -1,5 +1,6 @@
 using Android.App;
 using Android.OS;
+using Android.Widget;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
@@ -14,6 +15,7 @@ namespace YWWACP.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Dialog_New_Thread);
+            
         }
 
 
