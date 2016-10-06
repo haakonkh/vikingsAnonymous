@@ -75,6 +75,10 @@
       <HintPath>..\..\YWWACP_Core\packages\MvvmCross.Core.4.3.0\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MvvmCross.Droid.FullFragging, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\MvvmCross.Droid.FullFragging.4.3.0\lib\MonoAndroid\MvvmCross.Droid.FullFragging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MvvmCross.Droid.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\YWWACP_Core\packages\MvvmCross.Droid.Shared.4.3.0\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
       <Private>True</Private>
@@ -185,6 +189,7 @@
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Database\SQLiteDroid.cs" />
     <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\ParentActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -236,6 +241,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ChartMainPage.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ParentLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

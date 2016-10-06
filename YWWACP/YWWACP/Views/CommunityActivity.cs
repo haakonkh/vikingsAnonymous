@@ -1,15 +1,16 @@
 using Android.App;
 using Android.OS;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
 
 //Author: Student 9805061, Student Andreas Norstein
 namespace YWWACP.Views
 {
-    [MvxViewFor(typeof(CommunityViewModel))]
-    [Activity(Label = "CommunityActivity")]
-    public class CommunityActivity : MvxActivity
+    [MvxFragment(typeof(ParentViewModel), Resource.Id.frameLayout)]
+    [Register("YWWACP.Community")]
+    public class CommunityActivity : MvxFragment
     {
         //private Button mNewThread;
         //    private Button mMyThreads;

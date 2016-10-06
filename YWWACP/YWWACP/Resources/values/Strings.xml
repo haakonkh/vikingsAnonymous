@@ -44,5 +44,11 @@
     <item>Salmon</item>
     <item>Whaleshark and rice</item>
   </string-array>
-  
+
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">MvvmCrossDemo</string>
+    <string name="OpenDrawerString">Open</string>
+    <string name="CloseDrawerString">Close</string>
+
+
 </resources>
