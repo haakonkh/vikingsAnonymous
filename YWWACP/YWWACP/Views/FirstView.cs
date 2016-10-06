@@ -49,6 +49,7 @@ namespace YWWACP.Views
            // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
             btnHealthPlan.Click += BtnHealthPlan_Click;
             btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
+            btnGraph = FindViewById<Button>(Resource.Id.btnGraph);
 
             btnDiary.Click += DiaryButton_Click;
             //btnCommunity.Click += BtnCommunity_Click;
