@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9eaf6"
+    android:weightSum="100">
+
+
+
+  <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:id="@+id/editTextExerciseTitle"/>
+
+  <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:id="@+id/editTextExerciseName"/>
+
+  <EditText
+       android:inputType="textMultiLine"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:hint="Sets"
+       android:id="@+id/editTextExerciseSets"/>
+
+  <EditText
+       android:inputType="textMultiLine"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:hint="Reps"
+       android:id="@+id/editTextExerciseReps"/>
+
+  <Button
+        android:text="Cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelBtnExercise" />
+
+  <Button
+      android:text="Add new exercise"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/addBtnExercise"/>
+
+
+
+
+</LinearLayout>

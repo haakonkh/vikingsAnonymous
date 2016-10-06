@@ -15,26 +15,28 @@ namespace YWWACP
 
 
     [Activity(Label = "ExerciseDialog")]
-    class ExerciseDialog : DialogFragment
+    class NewExerciseDialog : DialogFragment
     {
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
             //Forandret ( View
-            var view = inflater.Inflate(Resource.Layout.exerciseDialogView, container, false);
+            var view = inflater.Inflate(Resource.Layout.ExerciseDialogNewExer, container, false);
 
             // Close dialog fragment
-            view.FindViewById<Button>(Resource.Id.cancelBtn).Click += (sender, args) => Dismiss();
-
-            view.FindViewById<ImageView>(Resource.Id.exerciseImage).SetImageResource(Resource.Drawable.barbell_Standing);
+            var addBtn = view.FindViewById<Button>(Resource.Id.addBtnExercise);
 
             // Close dialog fragment
-            var addBtn = view.FindViewById<Button>(Resource.Id.addBtn);
+            view.FindViewById<Button>(Resource.Id.cancelBtnExercise).Click += (sender, args) => Dismiss();
 
             addBtn.Click += delegate (object sender, EventArgs args)
             {
-                Toast.MakeText(Activity, "Exercise added to plan", ToastLength.Short).Show();
+
+
+                //LEgge til i database kode
+
+                Toast.MakeText(Activity, "New exercise created", ToastLength.Short).Show();
             };
 
             return view;
