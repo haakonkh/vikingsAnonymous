@@ -25,6 +25,7 @@
         android:textSize="25dip"
         android:paddingLeft="5dp"
         android:paddingTop="2dp"
+        local:MvxBind="Text Title"
             />
     <TextView
         style="@+style/textViewTheme"
@@ -33,6 +34,7 @@
         android:layout_height="match_parent"
         android:layout_weight="50"
         android:id="@+id/txtViewCategory"
+        local:MvxBind="Category"
             />
   </LinearLayout>
   <TextView
@@ -44,5 +46,6 @@
       android:id="@+id/txtViewContent"
       android:paddingTop="10dp"
       android:paddingLeft="15dp"
+      local:MvxBind="Text Content"
         />
 </LinearLayout>

@@ -19,9 +19,15 @@ namespace YWWACP.Core.ViewModels
         public ICommand AddNewThreadCommand { get; set; }
         public ICommand MyThreadsCommand { get; set; }
         public ICommand SelectedThreadCommad { get; set; }
-        //List<Threads> threads = new List<Threads>();
-        //DatabaseTables database;
-        //private ISqlite sqlite;
+
+        private ObservableCollection<NewDiscussionThread> newThreads = new ObservableCollection<NewDiscussionThread>();
+
+        public ObservableCollection<NewDiscussionThread> NewThreads
+        {
+            get { return newThreads; }
+            set { SetProperty(ref newThreads, value); }
+        }
+
         private ObservableCollection<MyTable> threads = new ObservableCollection<MyTable>();
         public ObservableCollection<MyTable> Threads
         {
@@ -43,14 +49,16 @@ namespace YWWACP.Core.ViewModels
         public async void GetThreads()
         {
             var threads = await database.GetTable();
-            Threads.Clear();
+            //Threads.Clear();
+            NewThreads.Clear();
             foreach (var thread in threads)
             {
-                Threads.Add(thread);
+              //  Threads.Add(thread);
+                NewThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category, thread.Content));
                 
             }
 
-            RaisePropertyChanged(() => Threads);
+            RaisePropertyChanged(() => NewThreads);
 
         }
     }
