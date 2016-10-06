@@ -1612,8 +1612,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b0026
 			public const int activity_chooser_view_content = 2131427366;
 			
-			// aapt resource value: 0x7f0b0065
-			public const int addBtn = 2131427429;
+			// aapt resource value: 0x7f0b0068
+			public const int addBtn = 2131427432;
 			
 			// aapt resource value: 0x7f0b0032
 			public const int alertTitle = 2131427378;
@@ -1624,56 +1624,56 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b001a
 			public const int beginning = 2131427354;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int btnAddPlan = 2131427437;
+			// aapt resource value: 0x7f0b0070
+			public const int btnAddPlan = 2131427440;
 			
-			// aapt resource value: 0x7f0b005c
-			public const int btnCancelThread = 2131427420;
+			// aapt resource value: 0x7f0b005f
+			public const int btnCancelThread = 2131427423;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int btnCommunity = 2131427435;
+			// aapt resource value: 0x7f0b006e
+			public const int btnCommunity = 2131427438;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int btnDiary = 2131427431;
+			// aapt resource value: 0x7f0b006a
+			public const int btnDiary = 2131427434;
 			
 			// aapt resource value: 0x7f0b0094
 			public const int btnDone = 2131427476;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int btnExercise = 2131427436;
+			// aapt resource value: 0x7f0b006f
+			public const int btnExercise = 2131427439;
 			
-			// aapt resource value: 0x7f0b0058
-			public const int btnExisting = 2131427416;
+			// aapt resource value: 0x7f0b005b
+			public const int btnExisting = 2131427419;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int btnHealthPlan = 2131427432;
+			// aapt resource value: 0x7f0b006b
+			public const int btnHealthPlan = 2131427435;
 			
 			// aapt resource value: 0x7f0b0054
 			public const int btnMyThreads = 2131427412;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int btnNew = 2131427415;
+			// aapt resource value: 0x7f0b005a
+			public const int btnNew = 2131427418;
 			
 			// aapt resource value: 0x7f0b0053
 			public const int btnNewThread = 2131427411;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int btnProfile = 2131427433;
+			// aapt resource value: 0x7f0b006c
+			public const int btnProfile = 2131427436;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int btnRecipes = 2131427434;
-			
-			// aapt resource value: 0x7f0b005d
-			public const int btnSubmitThread = 2131427421;
+			// aapt resource value: 0x7f0b006d
+			public const int btnRecipes = 2131427437;
 			
 			// aapt resource value: 0x7f0b0060
-			public const int btnToday = 2131427424;
+			public const int btnSubmitThread = 2131427424;
 			
-			// aapt resource value: 0x7f0b0061
-			public const int btnTomorrow = 2131427425;
+			// aapt resource value: 0x7f0b0063
+			public const int btnToday = 2131427427;
 			
-			// aapt resource value: 0x7f0b005f
-			public const int btnYesterday = 2131427423;
+			// aapt resource value: 0x7f0b0064
+			public const int btnTomorrow = 2131427428;
+			
+			// aapt resource value: 0x7f0b0062
+			public const int btnYesterday = 2131427426;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int buttonPanel = 2131427373;
@@ -1681,11 +1681,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b00a7
 			public const int buttonSaveText = 2131427495;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int calendarView1 = 2131427414;
+			// aapt resource value: 0x7f0b0059
+			public const int calendarView1 = 2131427417;
 			
-			// aapt resource value: 0x7f0b0064
-			public const int cancelBtn = 2131427428;
+			// aapt resource value: 0x7f0b0067
+			public const int cancelBtn = 2131427431;
 			
 			// aapt resource value: 0x7f0b0096
 			public const int cancel_action = 2131427478;
@@ -1708,8 +1708,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b0038
 			public const int customPanel = 2131427384;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int dayPicker = 2131427422;
+			// aapt resource value: 0x7f0b0061
+			public const int dayPicker = 2131427425;
 			
 			// aapt resource value: 0x7f0b0041
 			public const int decor_content_parent = 2131427393;
@@ -1720,11 +1720,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b000e
 			public const int disableHome = 2131427342;
 			
-			// aapt resource value: 0x7f0b005b
-			public const int editTxtQuestion = 2131427419;
+			// aapt resource value: 0x7f0b005e
+			public const int editTxtQuestion = 2131427422;
 			
-			// aapt resource value: 0x7f0b0059
-			public const int editTxtTitle = 2131427417;
+			// aapt resource value: 0x7f0b005c
+			public const int editTxtTitle = 2131427420;
 			
 			// aapt resource value: 0x7f0b0045
 			public const int edit_query = 2131427397;
@@ -1735,8 +1735,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b00a1
 			public const int end_padder = 2131427489;
 			
-			// aapt resource value: 0x7f0b0062
-			public const int exerciseImage = 2131427426;
+			// aapt resource value: 0x7f0b0065
+			public const int exerciseImage = 2131427429;
 			
 			// aapt resource value: 0x7f0b0027
 			public const int expand_activities_button = 2131427367;
@@ -1744,8 +1744,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b003a
 			public const int expanded_menu = 2131427386;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int grid = 2131427430;
+			// aapt resource value: 0x7f0b0069
+			public const int grid = 2131427433;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int home = 2131427332;
@@ -1819,8 +1819,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b00aa
 			public const int recepieImage = 2131427498;
 			
-			// aapt resource value: 0x7f0b0063
-			public const int recepieText = 2131427427;
+			// aapt resource value: 0x7f0b0066
+			public const int recepieText = 2131427430;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int screen = 2131427350;
@@ -1903,8 +1903,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b007d
 			public const int spinnerActivitiesWednesday = 2131427453;
 			
-			// aapt resource value: 0x7f0b005a
-			public const int spinnerCategories = 2131427418;
+			// aapt resource value: 0x7f0b005d
+			public const int spinnerCategories = 2131427421;
 			
 			// aapt resource value: 0x7f0b0089
 			public const int spinnerFoodFriday = 2131427465;
@@ -2047,14 +2047,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b0030
 			public const int topPanel = 2131427376;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int txtViewCategory = 2131427439;
+			// aapt resource value: 0x7f0b0057
+			public const int txtViewCategory = 2131427415;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int txtViewContent = 2131427440;
+			// aapt resource value: 0x7f0b0058
+			public const int txtViewContent = 2131427416;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int txtViewTitle = 2131427438;
+			// aapt resource value: 0x7f0b0056
+			public const int txtViewTitle = 2131427414;
 			
 			// aapt resource value: 0x7f0b0008
 			public const int up = 2131427336;
@@ -2191,31 +2191,31 @@ namespace YWWACP
 			public const int Community = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int Dialog_calendar = 2130903066;
+			public const int CommunityListViewRow = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int Dialog_ChooseHealthPlan = 2130903067;
+			public const int Dialog_calendar = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int Dialog_New_Thread = 2130903068;
+			public const int Dialog_ChooseHealthPlan = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int Diary = 2130903069;
+			public const int Dialog_New_Thread = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int exerciseDialogView = 2130903070;
+			public const int Diary = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int ExerciseMain = 2130903071;
+			public const int exerciseDialogView = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int FirstView = 2130903072;
+			public const int ExerciseMain = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int HealthPlan = 2130903073;
+			public const int FirstView = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int ListView_Row = 2130903074;
+			public const int HealthPlan = 2130903074;
 			
 			// aapt resource value: 0x7f030023
 			public const int NewHealthPlan = 2130903075;

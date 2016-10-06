@@ -1,7 +1,12 @@
 using Android.Content;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
+using YWWACP.Core.Interfaces;
+using YWWACP.Database;
+using YWWACP;
+using YWWACP.Core.Database;
 
 namespace YWWACP
 {
@@ -20,5 +25,13 @@ namespace YWWACP
         {
             return new DebugTrace();
         }
+
+        protected override void InitializeFirstChance()
+        {
+            Mvx.LazyConstructAndRegisterSingleton<ISqlite, SQLiteDroid>();
+            Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseTables>();
+            base.InitializeFirstChance();
+        }
+
     }
 }

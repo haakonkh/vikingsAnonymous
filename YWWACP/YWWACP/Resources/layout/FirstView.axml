@@ -7,7 +7,6 @@
     android:layout_height="match_parent">
 
   <!-- <android.support.v7.widget.Toolbar
-
     android:id="@id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,8 +14,7 @@
     android:backround="?attr/colorPrimary"
     app:theme="@style/ThemeOverlay.AppCompat.Dark.Actionbar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
-  
-  
+ 
   -->
   
     <Button
@@ -40,11 +38,12 @@
         android:layout_height="wrap_content"
         android:text="@string/Recipes" />
     <Button
-        android:id="@+id/btnCommunity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Community" />
-
+      android:id="@+id/btnCommunity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/Community"
+      local:MvxBind="Click OpenCommand" />
+        
   <Button
     android:id="@+id/btnExercise"
     android:layout_width="match_parent"

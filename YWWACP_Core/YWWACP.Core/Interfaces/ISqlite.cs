@@ -10,5 +10,6 @@ namespace YWWACP.Core.Interfaces
     public interface ISqlite
     {
         SQLiteConnection GetConnection();
-    }
+    }
+
 }

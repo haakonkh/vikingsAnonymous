@@ -7,7 +7,46 @@ using System.Threading.Tasks;
 
 namespace YWWACP.Core.Models
 {
-   public class User 
+    public class MyTable
+    {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public double Height { get; set; }
+        public double Weight { get; set; }
+        public int Age { get; set; }
+        public string UserType { get; set; }
+
+        public string ThreadTitle { get; set; }
+        public string Category { get; set; }
+        public string Content { get; set; }
+        public string CommentContent { get; set; }
+
+        public string DiaryEntry { get; set; }
+
+        public string Goals { get; set; }
+        [Ignore]
+        public DateTime Date { get; set; }
+
+        public string MealTitle { get; set; }
+        [Ignore]
+        public List<string> Ingredients { get; set; }
+        // Should maybe be a list? 
+        public string Approach { get; set; }
+        // Time to put in diary/healthPlan
+        [Ignore]
+        public DateTime MealTimestamp { get; set; }
+
+        public string ExerciseTittle { get; set; }
+        public string ExerciseName { get; set; }
+        public int Sets { get; set; }
+        public int Reps { get; set; }
+        [Ignore]
+        public DateTime ExerciseTimestamp { get; set; }
+
+       }
+    /*
+    public class User 
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
@@ -62,11 +101,12 @@ namespace YWWACP.Core.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Goals { get; set; }
+        
         // FK
         public List<int> MealsID { get; set; }
         // FK
         public List<int> ExerciseID { get; set; }
+        public string Goals { get; set; }
         public DateTime Date { get; set; }
     }
 
@@ -102,5 +142,5 @@ namespace YWWACP.Core.Models
         public int Reps { get; set; }
         public DateTime Timestamp { get; set; }
 
-    }
+    }*/
 }

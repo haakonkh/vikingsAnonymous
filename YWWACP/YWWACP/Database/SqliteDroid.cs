@@ -11,10 +11,11 @@ using Android.Views;
 using Android.Widget;
 using SQLite.Net;
 using System.IO;
+using YWWACP.Core.Interfaces;
 
 namespace YWWACP
 {
-    public class SQLiteDroid
+    public class SQLiteDroid : ISqlite
     {
         public SQLiteConnection GetConnection()
         {
