@@ -63,17 +63,12 @@ namespace YWWACP.Core.ViewModels
 
         public async void GetComments()
         {
+            SetThreadContentOnComments();
             var loadComments = await database.GetTable();
             Comments.Clear();
 
-           
             foreach (var comment in loadComments)
             {
-                if (comment.ThreadID == ThreadID)
-                {
-                    ThreadContent = comment.Content;
-                }
-
                 if (comment.CommentContent != null)
                 {
                     if (ThreadID == comment.ThreadID)
@@ -83,14 +78,25 @@ namespace YWWACP.Core.ViewModels
                 }
             }
             RaisePropertyChanged(() => Comments);
-            RaisePropertyChanged(() => ThreadContent);
-            
-
         }
 
 
-
-
+        /// <summary>
+        /// Sets thread content on top of the screen
+        /// Gets called innside GetComments
+        /// </summary>
+        private async void SetThreadContentOnComments()
+        {
+            var loadThreads = await database.GetTable();
+            foreach (var threads in loadThreads)
+            {
+                if (ThreadID == threads.ThreadID)
+                {
+                    ThreadContent = threads.Content;
+                    break;
+                }
+                RaisePropertyChanged(() => ThreadContent);
+            }
+        }
     }
-    
 }
