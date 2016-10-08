@@ -72,6 +72,14 @@ namespace YWWACP.Core.ViewModels
             }
         }
 
+        private string userId;
+
+        public string UserId
+        {
+            get { return userId;}
+            set { SetProperty(ref userId, value); }
+        }
+
         public CreateNewThreadViewModel(IDatabase database)
         {
             this.database = database;
@@ -83,10 +91,16 @@ namespace YWWACP.Core.ViewModels
                 ThreadTitle = Title,
                 Category = Category,
                 Content = Content,
-                ThreadID = GetGeneratedThreadId()
+                ThreadID = GetGeneratedThreadId(),
+                UserId = UserId
 
                 });
             });
+        }
+
+        public void Init(string userid)
+        {
+            UserId = userid;
         }
 
         public async void AddThread(MyTable thread)

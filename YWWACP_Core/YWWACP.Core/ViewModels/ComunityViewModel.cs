@@ -20,7 +20,6 @@ namespace YWWACP.Core.ViewModels
         public ICommand MyThreadsCommand { get; set; }
         public ICommand SelectThreadCommand { get; set; }
        
-
         private ObservableCollection<NewDiscussionThread> newThreads = new ObservableCollection<NewDiscussionThread>();
 
         public ObservableCollection<NewDiscussionThread> NewThreads
@@ -29,23 +28,30 @@ namespace YWWACP.Core.ViewModels
             set { SetProperty(ref newThreads, value); }
         }
 
-        private ObservableCollection<MyTable> threads = new ObservableCollection<MyTable>();
-        public ObservableCollection<MyTable> Threads
+        private string userId;
+
+        public string UserId
         {
-            get { return threads; }
-            set { SetProperty(ref threads, value); }
+            get { return userId; }
+            set { SetProperty(ref userId, value); }
         }
+
 
         public CommunityViewModel(IDatabase database)
         {
             this.database = database;
-            AddNewThreadCommand = new MvxCommand(() => ShowViewModel<CreateNewThreadViewModel>());
+            AddNewThreadCommand = new MvxCommand(() => ShowViewModel<CreateNewThreadViewModel>(new {userid = UserId}));
             SelectThreadCommand = new MvxCommand<NewDiscussionThread>(thread => ShowViewModel<CommentsViewModel>(new {threadID = thread.ThreadID}));
 
             MyThreadsCommand = new MvxCommand(() =>
             {
                 DeleteEverything();
             });
+        }
+
+        public void Init(string userid)
+        {
+            UserId = userid;
         }
 
         public void OnResume()
@@ -56,7 +62,6 @@ namespace YWWACP.Core.ViewModels
         public async void GetThreads()
         {
             var threads = await database.GetTable();
-            //Threads.Clear();
             NewThreads.Clear();
             foreach (var thread in threads)
             {

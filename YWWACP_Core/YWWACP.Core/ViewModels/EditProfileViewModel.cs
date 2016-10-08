@@ -10,6 +10,8 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels
 {
+    // THIS PAGE CANNOT BE DONE BEFORE A NEW METHOD TO THE DATABASE ARE ADDED
+    // NEED TO EDIT EXISTING ROW
     public class EditProfileViewModel : MvxViewModel
     {
         public ICommand SaveProfileCommand { get; set; }
