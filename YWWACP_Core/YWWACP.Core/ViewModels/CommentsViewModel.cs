@@ -80,7 +80,6 @@ namespace YWWACP.Core.ViewModels
             RaisePropertyChanged(() => Comments);
         }
 
-
         /// <summary>
         /// Sets thread content on top of the screen
         /// Gets called innside GetComments

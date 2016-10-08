@@ -11,10 +11,11 @@ namespace YWWACP.Core.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        public string UserId { get; set; }
         public string Name { get; set; }
-        public double Height { get; set; }
-        public double Weight { get; set; }
-        public int Age { get; set; }
+        public string Height { get; set; }
+        public string Weight { get; set; }
+        public string Age { get; set; }
         public string UserType { get; set; }
 
         public string ThreadID { get; set; }
@@ -32,6 +33,7 @@ namespace YWWACP.Core.Models
         [Ignore]
         public DateTime Date { get; set; }
 
+        public string MealId { get; set; }
         public string MealTitle { get; set; }
         [Ignore]
         public List<string> Ingredients { get; set; }
@@ -41,6 +43,7 @@ namespace YWWACP.Core.Models
         [Ignore]
         public DateTime MealTimestamp { get; set; }
 
+        public string ExerciseId { get; set; }
         public string ExerciseTittle { get; set; }
         public string ExerciseName { get; set; }
         public int Sets { get; set; }

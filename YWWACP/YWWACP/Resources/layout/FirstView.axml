@@ -29,7 +29,9 @@
         android:id="@+id/btnProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Profile" />
+        android:text="@string/Profile" 
+        local:MvxBind="Click OpenProfileCommand" />
+        
     <Button
         android:id="@+id/btnRecipes"
         android:layout_width="match_parent"
@@ -46,140 +48,138 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Exercises" />
-
-  <Button
-    android:id="@+id/btnGraph"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Graph" />
-  <!--oxyplot start-->
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="fill_parent"
-      android:layout_height="100dp">
-    <OxyPlot.Xamarin.Android.PlotView
-        android:id="@+id/plot_view"
+    <Button
+        android:id="@+id/btnGraph"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-  </LinearLayout>
-  <!--oxyplot end-->
-  <!--Boxes start-->
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:gravity="center"
-      android:minHeight="100px">
+        android:layout_height="wrap_content"
+        android:text="Graph" />
+<!--oxyplot start-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp">
+        <OxyPlot.Xamarin.Android.PlotView
+            android:id="@+id/plot_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+<!--oxyplot end-->
+<!--Boxes start-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
-        android:layout_weight="1">
-      <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:background="@drawable/FirstViewRect"
-          android:gravity="center"
-          android:layout_weight="1">
-        <TextView
-            android:text="Heart rate"
-            android:textSize="10pt"
-            android:id="@+id/textViewHR"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
+        android:minHeight="100px">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:minHeight="30px"
-            android:layout_weight="1" />
-        <TextView
-            android:id="@+id/textViewHRAvg"
-            android:text="Avarage"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/FirstViewRect"
+                android:gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:text="Heart rate"
+                    android:textSize="10pt"
+                    android:id="@+id/textViewHR"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:minHeight="30px"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/textViewHRAvg"
+                    android:text="Avarage"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:minHeight="30px"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="Top"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:minHeight="30px"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:minHeight="30px"
-            android:layout_weight="1" />
-        <TextView
-            android:text="Top"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/FirstViewRect"
+                android:gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:text="Goal"
+                    android:textSize="10pt"
+                    android:id="@+id/textViewGoal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="Achieved/No"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="Left this weak?"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:minHeight="30px"
-            android:layout_weight="1" />
-      </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:layout_weight="1">
-      <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:background="@drawable/FirstViewRect"
-          android:gravity="center"
-          android:layout_weight="1">
-        <TextView
-            android:text="Goal"
-            android:textSize="10pt"
-            android:id="@+id/textViewGoal"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" />
-        <TextView
-            android:text="Achieved/No"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" />
-        <TextView
-            android:text="Left this weak?"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" />
-      </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:layout_weight="1">
-      <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:background="@drawable/FirstViewRect"
-          android:gravity="center"
-          android:layout_weight="1">
-        <TextView
-            android:text="Calories"
-            android:textSize="10pt"
-            android:id="@+id/textViewCalories"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" />
-        <TextView
-            android:text="This week burnt"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" />
-        <TextView
-            android:text="Something"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" />
-      </LinearLayout>
-    </LinearLayout>
+            android:gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/FirstViewRect"
+                android:gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:text="Calories"
+                    android:textSize="10pt"
+                    android:id="@+id/textViewCalories"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="This week burnt"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="Something"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
     <!--boxes end-->
-  </LinearLayout>
-   
+    </LinearLayout>
 </LinearLayout>

@@ -152,7 +152,8 @@
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
-    <Compile Include="ProfileActivity.cs" />
+    <Compile Include="Views\EditProfileView.cs" />
+    <Compile Include="Views\ProfileActivity.cs" />
     <Compile Include="RecipesActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -191,7 +192,6 @@
     <AndroidResource Include="Resources\layout\recipeDialogView.axml" />
     <AndroidResource Include="Resources\layout\RecipeMain.axml" />
     <AndroidResource Include="Resources\drawable\recipeIcon.png" />
-    <AndroidResource Include="Resources\layout\Profile.axml" />
     <AndroidResource Include="Resources\layout\FirstView.axml" />
     <AndroidResource Include="Resources\layout\Dialog_ChooseHealthPlan.axml" />
     <AndroidResource Include="Resources\layout\HealthPlan.axml" />
@@ -221,6 +221,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\WriteComment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Profile.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditProfile.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

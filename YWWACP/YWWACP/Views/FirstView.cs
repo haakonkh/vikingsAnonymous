@@ -7,9 +7,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Microsoft.WindowsAzure.MobileServices;
+using MvvmCross.Core.ViewModels;
 using OxyPlot.Axes;
 using OxyPlot;
 using OxyPlot.Xamarin.Android;
+using YWWACP.Core.ViewModels;
+
 ////, Theme="@style/MyTheme"
 namespace YWWACP.Views
 {
@@ -17,7 +20,7 @@ namespace YWWACP.Views
     public class FirstView : MvxActivity
     {
         private Button btnDiary;
-        private Button btnProfile;
+        //private Button btnProfile;
         private Button btnRecipes;
         private Button btnHealthPlan;
         //private Button btnCommunity;
@@ -43,7 +46,7 @@ namespace YWWACP.Views
             // Get our button from the layout resource,
             // and attach an event to it
             btnDiary = FindViewById<Button>(Resource.Id.btnDiary);
-            btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
+           // btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
             btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
            // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
@@ -54,7 +57,7 @@ namespace YWWACP.Views
             btnDiary.Click += DiaryButton_Click;
             //btnCommunity.Click += BtnCommunity_Click;
             btnRecipes.Click += BtnRecipes_Click;
-            btnProfile.Click += BtnProfile_Click;
+           // btnProfile.Click += BtnProfile_Click;
             btnExercise.Click += BtnExercise_Click;
             btnGraph.Click += BtnGraph_Click;
 
@@ -103,11 +106,12 @@ namespace YWWACP.Views
             var intent = new Intent(this, typeof(ExerciseActivity));
             StartActivity(intent);
         }
+        /**
         private void BtnProfile_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(ProfileActivity));
             StartActivity(intent);
-        }
+        }*/
 
         private void BtnRecipes_Click(object sender, EventArgs e)
         {

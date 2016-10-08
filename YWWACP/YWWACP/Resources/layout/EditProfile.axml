@@ -5,42 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="100">
-    <TextView
-        android:text="Name"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    <EditText
+        android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
-        android:id="@+id/textViewName"
+        android:id="@+id/editTextName"
+        android:hint="Type your name"
         local:MvxBind="Text Name" />
-    <TextView
-        android:text="Height"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    <EditText
+        android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
-        android:id="@+id/textViewHeight"
+        android:id="@+id/editTextName"
+        android:hint="Type your height (CM)"
         local:MvxBind="Text Height" />
-    <TextView
-        android:text="Weight"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    <EditText
+        android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
-        android:id="@+id/textViewWeight"
+        android:id="@+id/editTextName"
+        android:hint="Type your weight (kg)"
         local:MvxBind="Text Weight" />
-    <TextView
-        android:text="Age"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    <EditText
+        android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
-        android:id="@+id/textViewAge"
+        android:id="@+id/editTextName"
+        android:hint="Type your age"
         local:MvxBind="Text Age" />
     <Button
-        android:text="Edit"
+        android:text="Save"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
-        android:id="@+id/buttonEditProfileInformation" />
+        android:id="@+id/postComment"
+        local:MvxBind="Click SaveProfileCommand" />
 </LinearLayout>
