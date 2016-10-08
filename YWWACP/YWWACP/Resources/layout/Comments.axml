@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:id="@+id/linearLayoutQuestionWrap">
+      <TextView
+            style="@+style/textViewTheme"
+            android:text="Content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtViewQuestion"
+            android:textStyle="bold"
+            android:textSize="25dip"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            local:MvxBind="Text ThreadContent" />
+    </LinearLayout>
+    <Mvx.MvxListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:id="@+id/listViewComments"
+        local:MvxItemTemplate="@layout/commentslistviewrow"
+        local:MvxBind="ItemsSource Comments" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:id="@+id/linearLayoutQuestionButtonWrap">
+        <Button
+            android:text="@string/Add_Comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAddComment"
+            local:MvxBind="Click AddCommentCommand" />
+    </LinearLayout>
+</LinearLayout>

@@ -17,10 +17,14 @@ namespace YWWACP.Core.Models
         public int Age { get; set; }
         public string UserType { get; set; }
 
+        public string ThreadID { get; set; }
         public string ThreadTitle { get; set; }
         public string Category { get; set; }
         public string Content { get; set; }
+        public string CommentsID { get; set; }
+        public string CommentID { get; set; }
         public string CommentContent { get; set; }
+       
 
         public string DiaryEntry { get; set; }
 

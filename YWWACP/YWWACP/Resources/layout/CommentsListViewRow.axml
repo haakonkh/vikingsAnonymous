@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:weightSum="100"
+    android:background="@drawable/border">
+    <TextView
+        style="@+style/textViewTheme"
+        android:text="Comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:id="@+id/txtViewComment"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        local:MvxBind="Text CommentContent" />
+</LinearLayout>

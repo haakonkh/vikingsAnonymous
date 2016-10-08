@@ -1,66 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-              
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="100">
-  
-  <EditText
-      android:inputType="textMultiLine"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="10"
-      android:hint="Title"
-      android:id="@+id/editTxtTitle"
-      android:textStyle="bold"
-      android:textSize="25dip"
-      android:gravity="bottom|left"
-      local:MvxBind="Text Title"/>
-  <TextView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="10dip"
-      android:text="@string/category_prompt"/>
-  <Spinner
-      android:id="@+id/spinnerCategories"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="10"
-      android:prompt="@string/category_prompt" />
-  <EditText
-      android:inputType="textMultiLine"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="70"
-      android:hint="Start your question here"
-      android:id="@+id/editTxtQuestion"
-      android:gravity="top|left"
-      local:MvxBind="Text Content"
-        />
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_weight="20"
-      android:layout_height="0dp"
-      android:layout_width="match_parent"
-      android:weightSum="100">
-    <Button
-        android:text="@string/cancelThread"
-        android:layout_width="0dp"
-        android:layout_weight="50"
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:hint="Title"
+        android:id="@+id/editTxtTitle"
+        android:textStyle="bold"
+        android:textSize="25dip"
+        android:gravity="bottom|left"
+        local:MvxBind="Text Title" />
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCancelThread"
-        local:MvxBind="Click CancelCommand"
-            />
-    <Button
-        android:text="@string/submitThread"
-        android:layout_width="0dp"
-        android:layout_weight="50"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSubmitThread"
-        local:MvxBind="Click SubmitCommand"
-            
-            />
-  </LinearLayout>
+        android:layout_marginTop="10dip"
+        android:text="@string/category_prompt" />
+    <Spinner
+        android:id="@+id/spinnerCategories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:prompt="@string/category_prompt" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:hint="Start your question here"
+        android:id="@+id/editTxtQuestion"
+        android:gravity="top|left"
+        local:MvxBind="Text Content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="20"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:weightSum="100">
+        <Button
+            android:text="@string/cancelThread"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelThread"
+            local:MvxBind="Click CancelCommand" />
+        <Button
+            android:text="@string/submitThread"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubmitThread"
+            local:MvxBind="Click SubmitCommand" />
+    </LinearLayout>
 </LinearLayout>

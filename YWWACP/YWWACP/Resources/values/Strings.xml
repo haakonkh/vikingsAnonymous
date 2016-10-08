@@ -14,6 +14,7 @@
     <string name="Title">Title</string>
     <string name="cancelThread">Cancel</string>
     <string name="submitThread">Submit</string>
+  <string name="Add_Comment">Add Comment</string>
 
   <string name="category_prompt">Categories</string>
   <string-array name="categories_array">

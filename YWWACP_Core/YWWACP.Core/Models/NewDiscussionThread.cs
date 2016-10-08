@@ -13,13 +13,15 @@ namespace YWWACP.Core.Models
         public string Category { get; set; }
 
         public string Content { get; set; }
+        public string ThreadID { get; set; }
 
         public NewDiscussionThread() { }
-        public NewDiscussionThread(string title, string category, string content)
+        public NewDiscussionThread(string title, string category, string content, string id)
         {
             Title = title;
             Category = category;
             Content = content;
+            ThreadID = id;
         }
     }
 }

@@ -8,44 +8,41 @@
     android:minHeight="25px"
     android:weightSum="100"
     android:background="@drawable/border">
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="20"
-      android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:weightSum="100">
+        <TextView
+            style="@+style/textViewTheme"
+            android:text="Title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:id="@+id/txtViewTitle"
+            android:textStyle="bold"
+            android:textSize="25dip"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            local:MvxBind="Text Title" />
+        <TextView
+            style="@+style/textViewTheme"
+            android:text="Category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:id="@+id/txtViewCategory"
+            local:MvxBind="Category" />
+    </LinearLayout>
     <TextView
         style="@+style/textViewTheme"
-        android:text="Title"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="50"
-        android:id="@+id/txtViewTitle"
-        android:textStyle="bold"
-        android:textSize="25dip"
-        android:paddingLeft="5dp"
-        android:paddingTop="2dp"
-        local:MvxBind="Text Title"
-            />
-    <TextView
-        style="@+style/textViewTheme"
-        android:text="Category"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="50"
-        android:id="@+id/txtViewCategory"
-        local:MvxBind="Category"
-            />
-  </LinearLayout>
-  <TextView
-      style="@+style/textViewTheme"
-      android:text="Content"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="80"
-      android:id="@+id/txtViewContent"
-      android:paddingTop="10dp"
-      android:paddingLeft="15dp"
-      local:MvxBind="Text Content"
-        />
+        android:text="Content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:id="@+id/txtViewContent"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        local:MvxBind="Text Content" />
 </LinearLayout>

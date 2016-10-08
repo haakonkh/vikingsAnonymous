@@ -21,7 +21,13 @@ namespace YWWACP.Core.ViewModels
     {
         private IDatabase database;
         public ICommand SubmitCommand { get; set; }
-        public ICommand CancelCommand { get; set; }
+        public ICommand CancelCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
+        }
         public ICommand GoBackCommand { get; set; }
 
         private string title;
@@ -69,27 +75,45 @@ namespace YWWACP.Core.ViewModels
         public CreateNewThreadViewModel(IDatabase database)
         {
             this.database = database;
-
+            var t = new MyTable();
             SubmitCommand = new MvxCommand(() =>
             {
-                AddThread(new MyTable
+                AddThread( new MyTable()
                 {
-                    ThreadTitle = Title,
-                    Category =  Category,
-                    Content = Content
+                ThreadTitle = Title,
+                Category = Category,
+                Content = Content,
+                ThreadID = GetGeneratedThreadId()
+
                 });
             });
         }
 
         public async void AddThread(MyTable thread)
         {
-            //var data = new DatabaseTables();
             // var azuredatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
-            var x = await database.InsertTableRow(thread);
-            ShowViewModel<CommunityViewModel>();
+            if (thread.Content != "" || thread.Content != null)
+            {
+                var x = await database.InsertTableRow(thread);
+                Close(this);
+            }
+
        }
 
-       
+        public string GetGeneratedThreadId()
+        {
+            Guid g = Guid.NewGuid();
+            string GuidString = Convert.ToBase64String(g.ToByteArray());
+            GuidString = GuidString.Replace("=", "");
+            GuidString = GuidString.Replace("+", "");
+
+            string GS = Convert.ToBase64String(g.ToByteArray());
+            GS = GuidString.Replace("=", "");
+            GS = GuidString.Replace("+", "");
+            return GuidString + GS;
+        }
+            
+        
     }
-    }
+ }
 

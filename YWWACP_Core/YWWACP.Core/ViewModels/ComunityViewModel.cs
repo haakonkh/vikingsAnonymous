@@ -18,7 +18,8 @@ namespace YWWACP.Core.ViewModels
         private readonly IDatabase database;
         public ICommand AddNewThreadCommand { get; set; }
         public ICommand MyThreadsCommand { get; set; }
-        public ICommand SelectedThreadCommad { get; set; }
+        public ICommand SelectThreadCommand { get; set; }
+       
 
         private ObservableCollection<NewDiscussionThread> newThreads = new ObservableCollection<NewDiscussionThread>();
 
@@ -39,6 +40,12 @@ namespace YWWACP.Core.ViewModels
         {
             this.database = database;
             AddNewThreadCommand = new MvxCommand(() => ShowViewModel<CreateNewThreadViewModel>());
+            SelectThreadCommand = new MvxCommand<NewDiscussionThread>(thread => ShowViewModel<CommentsViewModel>(new {threadID = thread.ThreadID}));
+
+            MyThreadsCommand = new MvxCommand(() =>
+            {
+                DeleteEverything();
+            });
         }
 
         public void OnResume()
@@ -53,13 +60,28 @@ namespace YWWACP.Core.ViewModels
             NewThreads.Clear();
             foreach (var thread in threads)
             {
-              //  Threads.Add(thread);
-                NewThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category , thread.Content));
-                
+                var c = thread.Content;
+
+                    if (thread.Content != null)
+                {
+                    NewThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category , thread.Content, thread.ThreadID));
+                }
             }
 
             RaisePropertyChanged(() => NewThreads);
 
+        }
+
+        public async void DeleteEverything()
+        {
+            var threads = await database.GetTable();
+            NewThreads.Clear();
+            foreach (var thread in threads)
+            {
+                await database.DeleteTableRow(thread.Id);
+
+            }
+            RaisePropertyChanged(() => NewThreads);
         }
     }
 
