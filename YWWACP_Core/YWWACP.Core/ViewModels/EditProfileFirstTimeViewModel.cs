@@ -96,19 +96,16 @@ namespace YWWACP.Core.ViewModels
 
         public string GetGeneratedUserId()
         {
-            Guid g = Guid.NewGuid();
-            string GuidString = Convert.ToBase64String(g.ToByteArray());
-            GuidString = GuidString.Replace("=", "");
-            GuidString = GuidString.Replace("+", "");
-
-            string GS = Convert.ToBase64String(g.ToByteArray());
-            GS = GuidString.Replace("=", "");
-            GS = GuidString.Replace("+", "");
-
-            string NGS = Convert.ToBase64String(g.ToByteArray());
-            NGS = GuidString.Replace("=", "");
-            NGS = GuidString.Replace("+", "");
-            return GuidString + GS + NGS;
+            var id = "";
+            for (var i = 0; i < 3; i++)
+            {
+                Guid g = Guid.NewGuid();
+                string GuidString = Convert.ToBase64String(g.ToByteArray());
+                GuidString = GuidString.Replace("=", "");
+                GuidString = GuidString.Replace("+", "");
+                id += GuidString;
+            }
+            return id;
         }
 
 

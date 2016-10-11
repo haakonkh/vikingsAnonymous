@@ -1,3 +1,4 @@
+using System;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -10,10 +11,9 @@ namespace YWWACP.Core
     public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
        
-       ISharedPreferences prefs = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
-       
+     private ISharedPreferences prefs = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
 
-    public override void Initialize()
+        public override void Initialize()
         {
             CreatableTypes()
                 .EndingWith("Service")
@@ -22,6 +22,7 @@ namespace YWWACP.Core
 
             if (prefs.GetBoolean("my_first_time", true))
             {
+
                 //the app is being launched for first time, do something        
                 Log.Debug("Comments", "First time");
 

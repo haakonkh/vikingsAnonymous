@@ -82,7 +82,7 @@ namespace YWWACP.Core.ViewModels
         public ProfileViewModel(IDatabase database)
         {
             this.database = database;
-            EditProfileCommand = new MvxCommand(() => ShowViewModel<EditProfileViewModel>());
+            EditProfileCommand = new MvxCommand(() => ShowViewModel<EditProfileViewModel>(new {userid = UserId}));
             
         }
 

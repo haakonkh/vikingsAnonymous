@@ -15,5 +15,7 @@ namespace YWWACP.Core.Interfaces
         Task<int> InsertTableRow(MyTable tablerow);
         Task<bool> CheckIfExists(MyTable tablerow);
 
+
+
     }
 }

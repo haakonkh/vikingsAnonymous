@@ -72,21 +72,7 @@ namespace YWWACP.Core.ViewModels
                 }
             }
         }
-
-        //private string category;
-
-        //public string Category
-        //{
-        //    get { return category; }
-        //    set
-        //    {
-        //        if (value != null)
-        //        {
-        //            SetProperty(ref category, value);
-        //        }
-        //    }
-        //}
-
+        
         private string content;
 
         public string Content

@@ -10,8 +10,6 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels
 {
-    // THIS PAGE CANNOT BE DONE BEFORE A NEW METHOD TO THE DATABASE ARE ADDED
-    // NEED TO EDIT EXISTING ROW
     public class EditProfileViewModel : MvxViewModel
     {
         public ICommand SaveProfileCommand { get; set; }
@@ -72,6 +70,14 @@ namespace YWWACP.Core.ViewModels
                 }
             }
         }
+        private string userId;
+
+        public string UserId
+        {
+            get { return userId; }
+            set { SetProperty(ref userId, value); }
+        }
+
 
         public EditProfileViewModel(IDatabase database)
         {
@@ -84,15 +90,38 @@ namespace YWWACP.Core.ViewModels
                     Age = Age,
                     Weight = Weight,
                     Height =  Height,
+                    UserId = UserId
                 });
             });
 
         }
 
+        public void Init(string userid)
+        {
+            UserId = userid;
+        }
+
+        /// <summary>
+        /// This method will delete the exisiting row for that user and 
+        /// create a new one with updated information. The user ID will NOT be changed
+        /// but the primary key for that user will be changed. 
+        /// </summary>
+        /// <param name="userinfo"></param>
         public async void SaveUserChanges(MyTable userinfo)
         {
-            var x = await database.InsertTableRow(userinfo);
-            Close(this);
+            var users = await database.GetTable();
+            foreach (var user in users)
+            {
+
+                if (user.UserId == UserId && user.ThreadID == null && user.DiaryEntry == null && user.ExerciseId == null &&
+                    user.MealId == null && user.Goals == null)
+                {
+                    var u = user.UserId;
+                    await database.DeleteTableRow(user.Id);
+                    var x = await database.InsertTableRow(userinfo);
+                    Close(this);
+                }
+            }
         }
     }
 }

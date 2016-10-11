@@ -58,6 +58,7 @@ namespace YWWACP.Core.Database
                 .Any(x => x.Id == myTable.Id);
             return exists;
         }
+
         /*
 public IEnumerable<User> GetUsers()
 {
