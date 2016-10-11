@@ -5,32 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="100">
+    <TextView
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewNameLable"
+        android:capitalize="sentences"
+        android:paddingLeft="5dp" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
         android:layout_weight="20"
         android:id="@+id/editTextName"
+        android:capitalize="sentences"
         android:hint="Type your name"
-        local:MvxBind="Text Name" />
+        local:MvxBind="Text Name"
+        android:layout_height="0dp" />
+    <TextView
+        android:text="Height (CM)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:id="@+id/textViewHeightLable" />
     <EditText
-        android:inputType="textMultiLine"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
         android:id="@+id/editTextName"
         android:hint="Type your height (CM)"
         local:MvxBind="Text Height" />
+    <TextView
+        android:text="Weight (KG)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewWeightLable" />
     <EditText
-        android:inputType="textMultiLine"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
         android:id="@+id/editTextName"
         android:hint="Type your weight (kg)"
         local:MvxBind="Text Weight" />
+    <TextView
+        android:text="Age"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewAgeLable" />
     <EditText
-        android:inputType="textMultiLine"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"

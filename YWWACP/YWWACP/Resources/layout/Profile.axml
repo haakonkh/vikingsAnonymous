@@ -9,33 +9,68 @@
         android:text="Name"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:id="@+id/textViewName"
-        local:MvxBind="Text Name" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewNameLabel"
+        android:padding="5dp" />
     <TextView
-        android:text="Height"
+        android:text="NamePlaceHolder"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
+        android:id="@+id/textViewName"
+        local:MvxBind="Text Name"
+        android:paddingLeft="15dp" />
+
+  <TextView
+    android:text="Height"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewHeightLabel"
+    android:padding="5dp" />
+    <TextView
+        android:text="HeightPlaceHolder"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:paddingLeft="15dp"
         android:id="@+id/textViewHeight"
         local:MvxBind="Text Height" />
+
+  <TextView
+    android:text="Weight"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewWeightLabel"
+    android:padding="5dp" />
     <TextView
-        android:text="Weight"
+        android:text="WeightPlaceHolder"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
         android:id="@+id/textViewWeight"
+        android:paddingLeft="15dp"
         local:MvxBind="Text Weight" />
+
+  <TextView
+    android:text="Age"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textViewAgeLabel"
+    android:padding="5dp" />
     <TextView
-        android:text="Age"
+        android:text="AgePlaceHolder"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
         android:id="@+id/textViewAge"
+        android:paddingLeft="15dp"
         local:MvxBind="Text Age" />
     <Button
         android:text="Edit"
