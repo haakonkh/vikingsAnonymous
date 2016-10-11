@@ -21,14 +21,43 @@ namespace YWWACP.Core.ViewModels
     {
         private IDatabase database;
         public ICommand SubmitCommand { get; set; }
+
         public ICommand CancelCommand
         {
-            get
+            get { return new MvxCommand(() => Close(this)); }
+        }
+
+        public ICommand GoBackCommand { get; set; }
+
+
+        private List<Item> categories_array = new List<Item>()
+        {
+            new Item("Food"),
+            new Item("Exercises"),
+            new Item("ChitChat"),
+            new Item("Random")
+        };
+
+        public List<Item> CategoriesArray
+        {
+            get { return categories_array; }
+            set
             {
-                return new MvxCommand(() => Close(this));
+                categories_array = value;
+                RaisePropertyChanged(() => CategoriesArray);
             }
         }
-        public ICommand GoBackCommand { get; set; }
+
+        private Item selectedItem = new Item("Three");
+
+        public Item SelectedItem
+        {
+            get { return selectedItem; }
+            set { selectedItem = value;
+                RaisePropertyChanged(() => SelectedItem); }
+
+        }
+
 
         private string title;
 
@@ -44,19 +73,19 @@ namespace YWWACP.Core.ViewModels
             }
         }
 
-        private string category;
+        //private string category;
 
-        public string Category
-        {
-            get { return category; }
-            set
-            {
-                if (value != null)
-                {
-                    SetProperty(ref category, value);
-                }
-            }
-        }
+        //public string Category
+        //{
+        //    get { return category; }
+        //    set
+        //    {
+        //        if (value != null)
+        //        {
+        //            SetProperty(ref category, value);
+        //        }
+        //    }
+        //}
 
         private string content;
 
@@ -76,7 +105,7 @@ namespace YWWACP.Core.ViewModels
 
         public string UserId
         {
-            get { return userId;}
+            get { return userId; }
             set { SetProperty(ref userId, value); }
         }
 
@@ -86,13 +115,13 @@ namespace YWWACP.Core.ViewModels
             var t = new MyTable();
             SubmitCommand = new MvxCommand(() =>
             {
-                AddThread( new MyTable()
+                AddThread(new MyTable()
                 {
-                ThreadTitle = Title,
-                Category = Category,
-                Content = Content,
-                ThreadID = GetGeneratedThreadId(),
-                UserId = UserId
+                    ThreadTitle = Title,
+                    Category = SelectedItem.Caption,
+                    Content = Content,
+                    ThreadID = GetGeneratedThreadId(),
+                    UserId = UserId
 
                 });
             });
@@ -111,7 +140,7 @@ namespace YWWACP.Core.ViewModels
                 var x = await database.InsertTableRow(thread);
                 Close(this);
             }
-       }
+        }
 
         public string GetGeneratedThreadId()
         {
@@ -125,8 +154,37 @@ namespace YWWACP.Core.ViewModels
             GS = GuidString.Replace("+", "");
             return GuidString + GS;
         }
-            
-        
-    }
- }
 
+    }
+
+    public class Item
+    {
+        public Item(string caption)
+        {
+            Caption = caption;
+        }
+
+        public string Caption { get; private set; }
+
+        public override string ToString()
+        {
+            return Caption;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var rhs = obj as Item;
+            if (rhs == null)
+                return false;
+            return rhs.Caption == Caption;
+        }
+
+        public override int GetHashCode()
+        {
+            if (Caption == null)
+                return 0;
+            return Caption.GetHashCode();
+        }
+
+    }
+}

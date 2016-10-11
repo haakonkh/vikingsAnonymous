@@ -21,12 +21,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dip"
         android:text="@string/category_prompt" />
-    <Spinner
+    <MvxSpinner
         android:id="@+id/spinnerCategories"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
-        android:prompt="@string/category_prompt" />
+        local:MvxBind="ItemsSource CategoriesArray; SelectedItem SelectedItem" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
