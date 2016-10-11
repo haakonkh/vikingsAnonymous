@@ -45,7 +45,8 @@ namespace YWWACP.Core.ViewModels
 
             MyThreadsCommand = new MvxCommand(() =>
             {
-                DeleteEverything();
+                ShowViewModel<MyThreadsViewModel>(new {userid = UserId});
+                Close(this);
             });
         }
 
@@ -76,18 +77,7 @@ namespace YWWACP.Core.ViewModels
             RaisePropertyChanged(() => NewThreads);
 
         }
-
-        public async void DeleteEverything()
-        {
-            var threads = await database.GetTable();
-            NewThreads.Clear();
-            foreach (var thread in threads)
-            {
-                await database.DeleteTableRow(thread.Id);
-
-            }
-            RaisePropertyChanged(() => NewThreads);
-        }
+        
     }
 
 }

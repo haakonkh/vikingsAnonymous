@@ -106,12 +106,11 @@ namespace YWWACP.Core.ViewModels
         public async void AddThread(MyTable thread)
         {
             // var azuredatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
-            if (thread.Content != "" || thread.Content != null)
+            if (!String.IsNullOrEmpty(thread.Content))
             {
                 var x = await database.InsertTableRow(thread);
                 Close(this);
             }
-
        }
 
         public string GetGeneratedThreadId()
