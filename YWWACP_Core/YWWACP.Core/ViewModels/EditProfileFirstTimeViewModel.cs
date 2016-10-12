@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using System.Windows.Input;
+using Android.App;
+using Android.Content;
+using YWWACP.Core.Database;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
@@ -14,6 +17,7 @@ namespace YWWACP.Core.ViewModels
     {
         public ICommand SaveProfileCommand { get; set; }
         public IDatabase database;
+       
 
         private string name;
 
@@ -71,9 +75,20 @@ namespace YWWACP.Core.ViewModels
             }
         }
 
+        private string userId;
+
+        public string UserId
+        {
+            get { return userId; }
+            set { SetProperty(ref userId, value); }
+        }
+
         public EditProfileFirstTimeViewModel(IDatabase database)
         {
+            
             this.database = database;
+            UserId = GetGeneratedUserId();
+
             SaveProfileCommand = new MvxCommand(()=>
             {
                 SaveUserChanges(new MyTable()
@@ -82,15 +97,19 @@ namespace YWWACP.Core.ViewModels
                     Age = Age,
                     Weight = Weight,
                     Height = Height,
-                    UserId = GetGeneratedUserId()
+                    UserId = UserId
                 });
-            });
+                ISharedPreferences pref = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+                ISharedPreferencesEditor editor = pref.Edit();
+                editor.PutString("UserId", UserId);
+                editor.Apply();
+              });
         }
 
         public async void SaveUserChanges(MyTable userinfo)
         {
             var x = await database.InsertTableRow(userinfo);
-            ShowViewModel<FirstViewModel>(new {userid = userinfo.UserId});
+            ShowViewModel<FirstViewModel>();
             Close(this);
         }
 

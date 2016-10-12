@@ -5,14 +5,17 @@ using Android.OS;
 using Android.Preferences;
 using Android.Util;
 using MvvmCross.Platform.IoC;
+using YWWACP.Core.Database;
+using YWWACP.Core.Interfaces;
+using YWWACP.Core.Models;
 
 namespace YWWACP.Core
 {
     public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
-       
-     private ISharedPreferences prefs = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
 
+        private ISharedPreferences prefs = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
+        
         public override void Initialize()
         {
             CreatableTypes()
