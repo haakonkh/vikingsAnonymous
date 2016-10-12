@@ -23,7 +23,7 @@ namespace vikinganonymousService.Models
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
-
+        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.MyTable> MyTables { get; set; }
         public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.User> Users { get; set; }
         public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Threads> Threads { get; set; }
         public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Comments> Comments { get; set; }

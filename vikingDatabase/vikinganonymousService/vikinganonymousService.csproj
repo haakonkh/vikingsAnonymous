@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.props" Condition="Exists('..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -116,20 +117,48 @@
       <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.0\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\Microsoft.Azure.Mobile.Client.3.0.2\lib\net45\Microsoft.WindowsAzure.Mobile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile.Ext, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\Microsoft.Azure.Mobile.Client.3.0.2\lib\net45\Microsoft.WindowsAzure.Mobile.Ext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile.SQLiteStore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\Microsoft.Azure.Mobile.Client.SQLiteStore.3.0.2\lib\portable-win+net45+wp8+wpa81+monotouch10+monoandroid10+xamarinios10\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCL, Version=3.8.7.2, Culture=neutral, PublicKeyToken=bddade01e9c850c5, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\lib\net45\SQLitePCL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\SQLitePCLRaw.bundle_green.1.0.0\lib\net45\SQLitePCLRaw.batteries_green.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\SQLitePCLRaw.core.1.0.0\lib\net45\SQLitePCLRaw.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.0.0\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20511.1437, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.2.205111437\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Net.Http.Extensions, Version=2.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Net.Http.Primitives, Version=4.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
@@ -185,6 +214,7 @@
     <Compile Include="Controllers\ExerciseController.cs" />
     <Compile Include="Controllers\HealthPlanController.cs" />
     <Compile Include="Controllers\MealController.cs" />
+    <Compile Include="Controllers\MyTableController.cs" />
     <Compile Include="Controllers\ThreadsController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -218,9 +248,20 @@
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
   </Target>
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
-  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
-  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
-    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
-    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.props'))" />
+    <Error Condition="!Exists('..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.targets'))" />
+    <Error Condition="!Exists('..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.linux.targets'))" />
+    <Error Condition="!Exists('..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.osx.targets'))" />
+    <Error Condition="!Exists('..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets'))" />
   </Target>
+  <Import Project="..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.targets" Condition="Exists('..\..\YWWACP_Core\packages\SQLitePCL.3.8.7.2\build\net45\SQLitePCL.targets')" />
+  <Import Project="..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
+  <Import Project="..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.osx.targets" Condition="Exists('..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" />
+  <Import Project="..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets" Condition="Exists('..\..\YWWACP_Core\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.0.0\build\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" />
 </Project>

@@ -27,6 +27,8 @@ namespace vikinganonymousService
 
             // Use Entity Framework Code First to create database tables based on your DbContext
             Database.SetInitializer(new vikinganonymousInitializer());
+            Database.SetInitializer(new MyTableInitializer());
+
 
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
             // Database.SetInitializer<vikinganonymousContext>(null);
@@ -67,5 +69,16 @@ namespace vikinganonymousService
             base.Seed(context);
         }
     }
+
+    public class MyTableInitializer : CreateDatabaseIfNotExists<DatabaseContext>
+    {
+        protected override void Seed(DatabaseContext context)
+        {
+            var data = new MyTable() { ThreadID = "SADSAGTGDSFVNFDGSKSDFDMSDS", ThreadTitle = "TESTINIT", Content = "IS THIS WORKING"};
+            context.Set<MyTable>().Add(data);
+            base.Seed(context);
+        }
+    }
+
 }
 

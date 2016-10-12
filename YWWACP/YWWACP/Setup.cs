@@ -30,6 +30,8 @@ namespace YWWACP
         {
             Mvx.LazyConstructAndRegisterSingleton<ISqlite, SQLiteDroid>();
             Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseTables>();
+            Mvx.LazyConstructAndRegisterSingleton<IAzureDatabase, AzureDatabase>();
+
             base.InitializeFirstChance();
         }
 
