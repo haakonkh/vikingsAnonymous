@@ -28,7 +28,7 @@ namespace YWWACP.Core.Models
        
 
         public string DiaryEntry { get; set; }
-
+        public string GoalId { get; set; }
         public string Goals { get; set; }
         [Ignore]
         public DateTime Date { get; set; }
