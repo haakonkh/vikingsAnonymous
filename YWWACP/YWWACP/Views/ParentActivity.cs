@@ -11,17 +11,17 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
 using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCrossDemo.Core.ViewModels;
+using YWWACP.Core.ViewModels;
 using Android.Support.V4.Widget;
 using MvvmCross.Droid.FullFragging.Fragments;
 
-namespace MvvmCrossDemo.Droid.Views
+namespace YWWACP.Views
 {
     [Activity(Label = "ParentActivity")]
     public class ParentActivity : MvxCachingFragmentCompatActivity<ParentViewModel>
     {
-        MvxFragment[] fragments = { new ForecastView(), new WeatherMapView() };
-        string[] titles = { "Forecast", "Weather Map" };
+        MvxFragment[] fragments = { new CommunityActivity()};
+        string[] titles = { "Forecast" };
         ActionBarDrawerToggle drawerToggle;
 
         ListView drawerListView;
