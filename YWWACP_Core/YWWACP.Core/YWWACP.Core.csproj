@@ -55,6 +55,7 @@
     <Compile Include="ViewModels\EditProfileViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\AddExerciseViewModel.cs" />
+    <Compile Include="ViewModels\Health Plan\ExerciseDetailsViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\HealthPlanExerciseViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\HealthPlanViewModel.cs" />
     <Compile Include="ViewModels\MyThreadsViewModel.cs" />

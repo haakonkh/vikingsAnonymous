@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnAddPlan"
-        local:MvxBind="Click OpenExerciseCommand"/>
-  <Button
+        local:MvxBind="Click OpenExerciseCommand" />
+    <Button
         android:text="Meals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnAddPlan"
-        local:MvxBind="Click OpenMealCommand"/>
+        local:MvxBind="Click OpenMealCommand" />
 </LinearLayout>

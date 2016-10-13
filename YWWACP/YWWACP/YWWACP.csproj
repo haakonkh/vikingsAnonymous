@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <Debugger>Xamarin</Debugger>
@@ -157,6 +157,7 @@
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="Views\EditProfileView.cs" />
     <Compile Include="Views\Health Plan\AddExerciseView.cs" />
+    <Compile Include="Views\Health Plan\ExerciseDetailsView.cs" />
     <Compile Include="Views\Health Plan\HealthPlanExercisesView.cs" />
     <Compile Include="Views\Health Plan\HealthPlanView.cs" />
     <Compile Include="Views\MyThreadsView.cs" />
@@ -252,6 +253,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\AddExerciseToPlanRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ExerciseAdd.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
