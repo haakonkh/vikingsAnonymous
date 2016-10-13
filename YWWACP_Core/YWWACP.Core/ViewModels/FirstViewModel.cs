@@ -15,6 +15,7 @@ namespace YWWACP.Core.ViewModels
         public ICommand DeleteEverythingCommand { get; set; }
         private readonly ISharedPreferences prefUserInfo = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
         private readonly ISharedPreferences prefAppOpend = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
+        public ICommand OpenHealthPlanCommand { get; set; }
 
 
         private string userId;
@@ -32,6 +33,7 @@ namespace YWWACP.Core.ViewModels
             
             OpenProfileCommand = new MvxCommand(() => ShowViewModel<ProfileViewModel>(new { userid = UserId}));
             OpenCommand = new MvxCommand(() => ShowViewModel<CommunityViewModel>(new {userid = UserId }));
+            OpenHealthPlanCommand = new MvxCommand(() => ShowViewModel<HealthPlanViewModel>(new { userid = UserId }));
             DeleteEverythingCommand = new MvxCommand(() =>
             {
                 DeleteEverything();

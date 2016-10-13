@@ -44,6 +44,7 @@
     <Compile Include="Interfaces\ISqlite.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
+    <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\KeyPair.cs" />
     <Compile Include="Models\NewDiscussionThread.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,7 +54,11 @@
     <Compile Include="ViewModels\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\EditProfileViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\Health Plan\AddExerciseViewModel.cs" />
+    <Compile Include="ViewModels\Health Plan\HealthPlanExerciseViewModel.cs" />
+    <Compile Include="ViewModels\Health Plan\HealthPlanViewModel.cs" />
     <Compile Include="ViewModels\MyThreadsViewModel.cs" />
+    <Compile Include="ViewModels\Health Plan\NewHealthPlanViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="ViewModels\WriteCommentViewModel.cs" />
   </ItemGroup>

@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -156,7 +156,11 @@
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="Views\EditProfileView.cs" />
+    <Compile Include="Views\Health Plan\AddExerciseView.cs" />
+    <Compile Include="Views\Health Plan\HealthPlanExercisesView.cs" />
+    <Compile Include="Views\Health Plan\HealthPlanView.cs" />
     <Compile Include="Views\MyThreadsView.cs" />
+    <Compile Include="Views\Health Plan\NewHealthPlanView.cs" />
     <Compile Include="Views\ProfileActivity.cs" />
     <Compile Include="RecipesActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -198,7 +202,6 @@
     <AndroidResource Include="Resources\drawable\recipeIcon.png" />
     <AndroidResource Include="Resources\layout\FirstView.axml" />
     <AndroidResource Include="Resources\layout\Dialog_ChooseHealthPlan.axml" />
-    <AndroidResource Include="Resources\layout\HealthPlan.axml" />
     <AndroidResource Include="Resources\layout\NewHealthPlan.axml" />
     <AndroidResource Include="Resources\layout\ExerciseMain.axml" />
     <AndroidResource Include="Resources\layout\exerciseDialogView.axml" />
@@ -234,6 +237,21 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\MyThreads.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HealthPlan.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HealthPlanExercises.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HealthPlanExerciseRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddExerciseToPlan.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddExerciseToPlanRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -293,6 +311,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout\HealthPlan\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

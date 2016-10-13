@@ -1,387 +1,391 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-  <ScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-    <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:weightSum="100">
-      <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="match_parent"
-          android:layout_height="100dp"
-          android:minWidth="25px"
-          android:minHeight="25px">
-        <TextView
-            android:text="Monday:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-        <TextView
-            android:text="Activity: "
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="0dp"
-            android:layout_weight="40"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2" />
-          <Spinner
-            android:id="@+id/spinnerActivitiesMonday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Food: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView3" />
-          <Spinner
-            android:id="@+id/spinnerFoodMonday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:minWidth="25px"
-            android:minHeight="25px">
-        <TextView
-            android:text="Tuesday:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4" />
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Activity: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView5" />
-          <Spinner
-            android:id="@+id/spinnerActivitiesTuesday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
+            android:weightSum="100">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Monday:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Activity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2" />
+                    <Button
+                        android:id="@+id/btnActivitiesMonday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:text="@string/ActivitiesMonday"
+                        local:MvxBind="Click MondayExerciseCommand" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Food: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3" />
+                    <Spinner
+                        android:id="@+id/spinnerFoodMonday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Tuesday:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Activity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView5" />
+                    <Spinner
+                        android:id="@+id/spinnerActivitiesTuesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Food: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView6" />
+                    <Spinner
+                        android:id="@+id/spinnerFoodTuesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Wednesday:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Activity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView8" />
+                    <Spinner
+                        android:id="@+id/spinnerActivitiesWednesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Food: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView9" />
+                    <Spinner
+                        android:id="@+id/spinnerFoodWednesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Thursday:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView10" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Activity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView11" />
+                    <Spinner
+                        android:id="@+id/spinnerActivitiesThursday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Food: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView12" />
+                    <Spinner
+                        android:id="@+id/spinnerFoodThursday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Friday:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView13" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Activity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView14" />
+                    <Spinner
+                        android:id="@+id/spinnerActivitiesFriday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Food: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView15" />
+                    <Spinner
+                        android:id="@+id/spinnerFoodFriday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Saturday:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView16" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Activity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView17" />
+                    <Spinner
+                        android:id="@+id/spinnerActivitiesSaturday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100"
+                    android:id="@+id/linearLayout2">
+                    <TextView
+                        android:text="Food: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView18" />
+                    <Spinner
+                        android:id="@+id/spinnerFoodSaturday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <TextView
+                    android:text="Sunday:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView19" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Activity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView20" />
+                    <Spinner
+                        android:id="@+id/spinnerActivitiesSunday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="20"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="Food: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView21" />
+                    <Spinner
+                        android:id="@+id/spinnerFoodSunday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:minWidth="25px"
+                android:minHeight="25px">
+                <Button
+                    android:text="Done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnDone" />
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Food: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView6" />
-          <Spinner
-            android:id="@+id/spinnerFoodTuesday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:minWidth="25px"
-            android:minHeight="25px">
-        <TextView
-            android:text="Wednesday:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView7" />
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Activity: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView8" />
-          <Spinner
-            android:id="@+id/spinnerActivitiesWednesday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Food: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView9" />
-          <Spinner
-            android:id="@+id/spinnerFoodWednesday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:minWidth="25px"
-            android:minHeight="25px">
-        <TextView
-            android:text="Thursday:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView10" />
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Activity: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView11" />
-          <Spinner
-            android:id="@+id/spinnerActivitiesThursday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Food: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView12" />
-          <Spinner
-            android:id="@+id/spinnerFoodThursday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:minWidth="25px"
-            android:minHeight="25px">
-        <TextView
-            android:text="Friday:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView13" />
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Activity: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView14" />
-          <Spinner
-            android:id="@+id/spinnerActivitiesFriday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Food: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView15" />
-          <Spinner
-            android:id="@+id/spinnerFoodFriday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:minWidth="25px"
-            android:minHeight="25px">
-        <TextView
-            android:text="Saturday:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView16" />
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Activity: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView17" />
-          <Spinner
-            android:id="@+id/spinnerActivitiesSaturday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Food: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView18" />
-          <Spinner
-            android:id="@+id/spinnerFoodSaturday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:minWidth="25px"
-            android:minHeight="25px">
-        <TextView
-            android:text="Sunday:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView19" />
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Activity: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView20" />
-          <Spinner
-            android:id="@+id/spinnerActivitiesSunday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-        <LinearLayout
-          android:orientation="horizontal"
-          android:layout_weight="20"
-          android:layout_height="0dp"
-          android:layout_width="match_parent"
-          android:weightSum="100">
-          <TextView
-              android:text="Food: "
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:layout_width="0dp"
-              android:layout_weight="40"
-              android:layout_height="wrap_content"
-              android:id="@+id/textView21" />
-          <Spinner
-            android:id="@+id/spinnerFoodSunday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="60"/>
-        </LinearLayout>
-      </LinearLayout>
-    <LinearLayout
-       android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:minWidth="25px"
-        android:minHeight="25px">
-        <Button
-            android:text="Done"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnDone" />
-    </LinearLayout>
-    </LinearLayout>
-  </ScrollView>
+    </ScrollView>
 </LinearLayout>

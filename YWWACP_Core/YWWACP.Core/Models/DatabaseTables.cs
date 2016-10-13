@@ -45,11 +45,11 @@ namespace YWWACP.Core.Models
 
         public string ExerciseId { get; set; }
         public string ExerciseTittle { get; set; }
-        public string ExerciseName { get; set; }
+        public string ExerciseContent { get; set; }
         public int Sets { get; set; }
         public int Reps { get; set; }
-        [Ignore]
-        public DateTime ExerciseTimestamp { get; set; }
+        //[Ignore]
+        public string ExerciseTimestamp { get; set; }
 
        }
     /*

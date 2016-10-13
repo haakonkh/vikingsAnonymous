@@ -50,7 +50,7 @@ namespace YWWACP
             SetContentView(Resource.Layout.NewHealthPlan);
 
             //Get the Ids
-            MondayActivities = FindViewById<Spinner>(Resource.Id.spinnerActivitiesMonday);
+            //MondayActivities = FindViewById<Spinner>(Resource.Id.spinnerActivitiesMonday);
             MondayFood = FindViewById<Spinner>(Resource.Id.spinnerFoodMonday);
 
             TuesdayActivities = FindViewById<Spinner>(Resource.Id.spinnerActivitiesTuesday);
