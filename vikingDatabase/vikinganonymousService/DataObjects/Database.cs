@@ -28,28 +28,29 @@ namespace vikinganonymousService.DataObjects
         public string DiaryEntry { get; set; }
         public string GoalId { get; set; }
         public string Goals { get; set; }
-        
-        //public DateTime Date { get; set; }
+        public string Date { get; set; }
 
         public string MealId { get; set; }
         public string MealTitle { get; set; }
-        
-        //public List<string> Ingredients { get; set; }
+
+        public string Ingredients { get; set; }
         // Should maybe be a list? 
         public string Approach { get; set; }
         // Time to put in diary/healthPlan
-        
-        //public DateTime MealTimestamp { get; set; }
+
+        public string MealTimestamp { get; set; }
 
         public string ExerciseId { get; set; }
         public string ExerciseTittle { get; set; }
         public string ExerciseName { get; set; }
         public int Sets { get; set; }
         public int Reps { get; set; }
-        
-        public DateTime ExerciseTimestamp { get; set; }
+
+        public string ExerciseTimestamp { get; set; }
 
     }
+
+    /*
     public class User : EntityData
     {
         public string Name { get; set; }
@@ -134,6 +135,6 @@ namespace vikinganonymousService.DataObjects
     }
 
 
-
+    */
 
 }

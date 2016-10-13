@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 

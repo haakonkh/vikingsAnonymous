@@ -239,6 +239,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\newvikings - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - FTP %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - FTP %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - Web Deploy %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - Web Deploy %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - Web Deploy %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\vikinganonymous - Web Deploy %286%29.pubxml" />
     <None Include="Properties\PublishProfiles\vikinganonymous - Web Deploy.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

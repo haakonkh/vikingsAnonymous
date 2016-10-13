@@ -24,16 +24,16 @@ namespace vikinganonymousService.Models
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
         public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.MyTable> MyTables { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.User> Users { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Threads> Threads { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Comments> Comments { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Comment> Comment { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Diary> Diarys { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Day> Days { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.HealthPlan> HealthPlans { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Meal> Meals { get; set; }
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Exercise> Exercises { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.User> Users { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Threads> Threads { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Comments> Comments { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Comment> Comment { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Diary> Diarys { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Day> Days { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.HealthPlan> HealthPlans { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Meal> Meals { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Exercise> Exercises { get; set; }
 
-        public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Diary> Diaries { get; set; }
+        //public System.Data.Entity.DbSet<vikinganonymousService.DataObjects.Diary> Diaries { get; set; }
     }
 }

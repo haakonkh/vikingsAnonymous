@@ -74,7 +74,7 @@ namespace vikinganonymousService
     {
         protected override void Seed(DatabaseContext context)
         {
-            var data = new MyTable() { ThreadID = "SADSAGTGDSFVNFDGSKSDFDMSDS", ThreadTitle = "TESTINIT", Content = "IS THIS WORKING"};
+            var data = new MyTable() {Id =  new Guid().ToString(), ThreadID = "SADSAGTGDSFVNFDGSKSDFDMSDS", ThreadTitle = "TESTINIT", Content = "IS THIS WORKING"};
             context.Set<MyTable>().Add(data);
             base.Seed(context);
         }
