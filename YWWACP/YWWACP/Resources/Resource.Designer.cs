@@ -1768,8 +1768,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b006d
 			public const int editTextName = 2131427437;
 			
-			// aapt resource value: 0x7f0b00ca
-			public const int editTextWriteComment = 2131427530;
+			// aapt resource value: 0x7f0b00cf
+			public const int editTextWriteComment = 2131427535;
 			
 			// aapt resource value: 0x7f0b0065
 			public const int editTxtQuestion = 2131427429;
@@ -1813,6 +1813,9 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b0028
 			public const int image = 2131427368;
 			
+			// aapt resource value: 0x7f0b00cb
+			public const int imageRecipe = 2131427531;
+			
 			// aapt resource value: 0x7f0b00be
 			public const int info = 2131427518;
 			
@@ -1845,6 +1848,12 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f0b008e
 			public const int listViewMyThreads = 2131427470;
+			
+			// aapt resource value: 0x7f0b00cd
+			public const int listViewRecipe = 2131427533;
+			
+			// aapt resource value: 0x7f0b00ce
+			public const int listViewRecipes = 2131427534;
 			
 			// aapt resource value: 0x7f0b002a
 			public const int list_item = 2131427370;
@@ -2149,6 +2158,12 @@ namespace YWWACP
 			// aapt resource value: 0x7f0b0030
 			public const int topPanel = 2131427376;
 			
+			// aapt resource value: 0x7f0b00cc
+			public const int txtRecipeViewContent = 2131427532;
+			
+			// aapt resource value: 0x7f0b00ca
+			public const int txtRecipeViewTitle = 2131427530;
+			
 			// aapt resource value: 0x7f0b005e
 			public const int txtViewCategory = 2131427422;
 			
@@ -2374,28 +2389,37 @@ namespace YWWACP
 			public const int recipeDialogView = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int RecipeMain = 2130903092;
+			public const int RecipeListViewRow = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int Recipes = 2130903093;
+			public const int RecipeMain = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int select_dialog_item_material = 2130903094;
+			public const int Recipes = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int select_dialog_multichoice_material = 2130903095;
+			public const int select_dialog_item_material = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int select_dialog_singlechoice_material = 2130903096;
+			public const int select_dialog_multichoice_material = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int SplashScreen = 2130903097;
+			public const int select_dialog_singlechoice_material = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int support_simple_spinner_dropdown_item = 2130903098;
+			public const int SingleRecipe = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int WriteComment = 2130903099;
+			public const int SingleRecipeListViewRow = 2130903099;
+			
+			// aapt resource value: 0x7f03003c
+			public const int SplashScreen = 2130903100;
+			
+			// aapt resource value: 0x7f03003d
+			public const int support_simple_spinner_dropdown_item = 2130903101;
+			
+			// aapt resource value: 0x7f03003e
+			public const int WriteComment = 2130903102;
 			
 			static Layout()
 			{

@@ -35,7 +35,8 @@
         android:id="@+id/btnRecipes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Recipes" />
+        android:text="@string/Recipes" 
+        local:MvxBind="Click OpenRecipeCommand"/>
     <Button
         android:id="@+id/btnCommunity"
         android:layout_width="match_parent"

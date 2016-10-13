@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:weightSum="100"
+    android:background="@drawable/border">
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="20"
+      android:weightSum="100">
+    <TextView
+        style="@+style/textViewTheme"
+        android:text="Title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:id="@+id/txtRecipeViewTitle"
+        android:textStyle="bold"
+        android:textSize="25dip"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp"
+        local:MvxBind="Text MealTitle" />
+    <TextView
+        style="@+style/textViewTheme"
+        android:text="Category"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:id="@+id/imageRecipe"
+        local:MvxBind="Text MealId" />
+  </LinearLayout>
+  <TextView
+      style="@+style/textViewTheme"
+      android:text="Content"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="80"
+      android:id="@+id/txtRecipeViewContent"
+      android:paddingTop="10dp"
+      android:paddingLeft="15dp"
+      local:MvxBind="Text MealSummary " />
+</LinearLayout>
