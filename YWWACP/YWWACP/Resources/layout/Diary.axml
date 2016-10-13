@@ -12,6 +12,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/dayPicker"
         android:background="@android:color/holo_blue_light">
+        <MvvmCross.Binding.Droid.Views.MvxDatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mvxDatePicker1" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,5 +31,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnTomorrow"
             android:drawableStart="@drawable/arrow_right" />
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker1" />
     </ActionMenuView>
 </LinearLayout>
