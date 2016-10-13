@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="100">
-    <LinearLayout
+    <FrameLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
+        android:layout_height="wrap_content"
         android:id="@+id/linearLayoutQuestionWrap">
-      <TextView
+        <TextView
             style="@+style/textViewTheme"
             android:text="Content"
             android:layout_width="match_parent"
@@ -22,11 +21,21 @@
             android:paddingLeft="5dp"
             android:paddingTop="2dp"
             local:MvxBind="Text ThreadContent" />
-    </LinearLayout>
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/trashIcon"
+            android:id="@+id/textViewTrash"
+            local:MvxBind="Click DeletePopupCommand"
+            android:textColor="#FFF000"
+            android:translationX="330dp" />
+    </FrameLayout>
     <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="70"
+        android:layout_weight="90"
         android:id="@+id/listViewComments"
         local:MvxItemTemplate="@layout/commentslistviewrow"
         local:MvxBind="ItemsSource Comments" />

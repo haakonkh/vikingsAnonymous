@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace YWWACP
 {
-    class dialog_calendar : DialogFragment
+    public class dialog_calendar : DialogFragment
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
