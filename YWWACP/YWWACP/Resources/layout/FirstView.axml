@@ -24,7 +24,8 @@
         android:id="@+id/btnHealthPlan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Health_Plan" />
+        android:text="@string/Health_Plan"
+        local:MvxBind="Click OpenHealthPlanCommand" />
     <Button
         android:id="@+id/btnProfile"
         android:layout_width="match_parent"
@@ -52,13 +53,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Graph" />
-      <Button
+    <Button
         android:id="@+id/btnDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DELETE ENTIRE DATABASE" 
+        android:text="DELETE ENTIRE DATABASE"
         local:MvxBind="Click DeleteEverythingCommand" />
-  
 <!--oxyplot start-->
     <LinearLayout
         android:orientation="vertical"

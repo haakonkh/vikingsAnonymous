@@ -50,7 +50,7 @@ namespace YWWACP.Views
             btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
            // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
-            btnHealthPlan.Click += BtnHealthPlan_Click;
+           // btnHealthPlan.Click += BtnHealthPlan_Click;
             btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
             btnGraph = FindViewById<Button>(Resource.Id.btnGraph);
 
@@ -137,11 +137,11 @@ namespace YWWACP.Views
 
         }
 
-        private void BtnHealthPlan_Click(object sender, EventArgs e)
+        /*private void BtnHealthPlan_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(HealthPlanActivity));
             StartActivity(intent);
-        }
+        }*/
     }
     
 }
