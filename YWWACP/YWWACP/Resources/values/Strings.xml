@@ -11,11 +11,11 @@
     <string name="New_Thread">New Thread</string>
     <string name="My_Threads">My Threads</string>
     <string name="All_Threads">All Threads</string>
-  <string name="Your_Question">Your Question</string>
+    <string name="Your_Question">Your Question</string>
     <string name="Title">Title</string>
     <string name="cancelThread">Cancel</string>
     <string name="submitThread">Submit</string>
-  <string name="Add_Comment">Add Comment</string>
+    <string name="Add_Comment">Tap to reply</string>
 
   <string name="category_prompt">Categories</string>
   <string-array name="categories_array">

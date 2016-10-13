@@ -50,6 +50,7 @@
     <Compile Include="ViewModels\CommentsViewModel.cs" />
     <Compile Include="ViewModels\ComunityViewModel.cs" />
     <Compile Include="ViewModels\CreateNewThreadViewModel.cs" />
+    <Compile Include="ViewModels\DeleteThreadViewModel.cs" />
     <Compile Include="ViewModels\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\EditProfileViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />

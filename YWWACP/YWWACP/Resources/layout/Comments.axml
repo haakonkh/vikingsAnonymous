@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="100">
-    <LinearLayout
-        android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:id="@+id/linearLayoutQuestionWrap">
-      <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/questionwrap"
+        android:layout_alignParentTop="true">
+        <TextView
             style="@+style/textViewTheme"
             android:text="Content"
+            android:scaleType="fitCenter"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:id="@+id/txtViewQuestion"
             android:textStyle="bold"
-            android:textSize="25dip"
+            android:textSize="23dip"
             android:paddingLeft="5dp"
             android:paddingTop="2dp"
             local:MvxBind="Text ThreadContent" />
-    </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wrapbin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/trashsmall"
+            android:id="@+id/textViewTrash"
+            local:MvxBind="Click DeletePopupCommand"
+            android:paddingTop="5dp" />
+    </RelativeLayout>
+    <Button
+        android:text="@string/Add_Comment"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnAddComment"
+        local:MvxBind="Click AddCommentCommand" />
     <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="70"
+        android:layout_above="@id/btnAddComment"
+        android:layout_below="@id/questionwrap"
         android:id="@+id/listViewComments"
         local:MvxItemTemplate="@layout/commentslistviewrow"
         local:MvxBind="ItemsSource Comments" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        android:id="@+id/linearLayoutQuestionButtonWrap">
-        <Button
-            android:text="@string/Add_Comment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnAddComment"
-            local:MvxBind="Click AddCommentCommand" />
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -41,7 +41,7 @@ namespace YWWACP.Core.ViewModels
         {
             this.database = database;
             AddNewThreadCommand = new MvxCommand(() => ShowViewModel<CreateNewThreadViewModel>(new {userid = UserId}));
-            SelectThreadCommand = new MvxCommand<NewDiscussionThread>(thread => ShowViewModel<CommentsViewModel>(new {threadID = thread.ThreadID}));
+            SelectThreadCommand = new MvxCommand<NewDiscussionThread>(thread => ShowViewModel<CommentsViewModel>(new {threadID = thread.ThreadID, userid = UserId}));
 
             MyThreadsCommand = new MvxCommand(() =>
             {

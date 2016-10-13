@@ -5,7 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Android.App;
+using Android.Widget;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
@@ -15,7 +18,11 @@ namespace YWWACP.Core.ViewModels
     {
         private readonly IDatabase database;
         private ObservableCollection<Comment>  comments = new ObservableCollection<Comment>();
+        public ICommand DeletePopupCommand { get; set; }
 
+
+        private string userId;
+        public string UserId { get { return userId; } set { SetProperty(ref userId, value); } }
         private string threadID;
 
         public string ThreadID
@@ -48,12 +55,18 @@ namespace YWWACP.Core.ViewModels
         public CommentsViewModel(IDatabase database )
         {
             this.database = database;
-            AddCommentCommand = new MvxCommand(() => ShowViewModel<WriteCommentViewModel>(new {tId = ThreadID}));   
+            AddCommentCommand = new MvxCommand(() => ShowViewModel<WriteCommentViewModel>(new {tId = ThreadID}));
+            DeletePopupCommand = new MvxCommand(() =>
+            {
+                DeleteThread();
+            });
+
         }
 
-        public void Init(string threadID)
+        public void Init(string threadID, string userid)
         {
             ThreadID = threadID;
+            UserId = userid;
         }
 
         public void OnResume()
@@ -96,6 +109,29 @@ namespace YWWACP.Core.ViewModels
                 }
                 RaisePropertyChanged(() => ThreadContent);
             }
+        }
+
+        public async Task<bool> VerifyUser()
+        {
+            var users = await database.GetTable();
+            return users.Any(user => user.UserId == UserId && user.ThreadID == ThreadID);
+        }
+
+        public async void DeleteThread()
+        {
+            if (await VerifyUser())
+            {
+                var threads = await database.GetTable();
+                foreach (var thread in threads)
+                {
+                    if (thread.ThreadID == ThreadID)
+                    {
+                        await database.DeleteTableRow(thread.Id);
+                    }
+                }
+                Close(this);
+            }
+            
         }
     }
 }
