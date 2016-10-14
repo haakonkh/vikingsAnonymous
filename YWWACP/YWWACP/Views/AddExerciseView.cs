@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
+using YWWACP.Core.ViewModels;
 using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Views.Health_Plan
@@ -24,6 +25,13 @@ namespace YWWACP.Views.Health_Plan
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.AddExerciseToPlan);
 
+        }
+
+        protected override void OnResume()
+        {
+            var vm = (AddExerciseViewModel)ViewModel;
+            vm.OnResume();
+            base.OnResume();
         }
     }
 }

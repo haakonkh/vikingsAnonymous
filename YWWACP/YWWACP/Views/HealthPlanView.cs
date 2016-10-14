@@ -25,5 +25,6 @@ namespace YWWACP.Views
             SetContentView(Resource.Layout.HealthPlan);
 
         }
+
     }
 }

@@ -26,6 +26,11 @@ namespace YWWACP.Core.ViewModels
 
 
         }
+        public void Init( string userId)
+        {
+            UserId = userId;
+        }
+
         private string userId;
 
         public string UserId

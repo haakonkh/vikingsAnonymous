@@ -40,11 +40,15 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         async void testStart()
         {
-            DeleteEverything();
+            /*DeleteEverything();
             await database.InsertTableRow(new MyTable() { ExerciseContent = "Run bitch, run!", ExerciseTittle = "Running", Sets = 0, Reps = 0, ExerciseTimestamp = new DateTime(2016, 10, 12, 15, 30, 0).ToString(), UserId = UserId,ExerciseId = GenerateExerciseID()});
             await database.InsertTableRow(new MyTable() { ExerciseContent = "Bounce up and down", ExerciseTittle = "Squatting", Sets = 4, Reps = 8, ExerciseTimestamp = new DateTime(2016, 10, 15, 12, 45, 0).ToString(),UserId = UserId, ExerciseId = GenerateExerciseID() });
-            await database.InsertTableRow(new MyTable() { ExerciseContent = "Kick a ball", ExerciseTittle = "Football", Sets = 0, Reps = 0, ExerciseTimestamp = new DateTime(2016, 10, 15, 13, 45, 0).ToString(), UserId = "sdfgsdfgsdfg", ExerciseId = GenerateExerciseID() });
+            await database.InsertTableRow(new MyTable() { ExerciseContent = "Kick a ball", ExerciseTittle = "Football", Sets = 0, Reps = 0, ExerciseTimestamp = new DateTime(2016, 10, 15, 13, 45, 0).ToString(), UserId = "sdfgsdfgsdfg", ExerciseId = GenerateExerciseID() });*/
             GetExercises();
+        }
+        public void Init(string userId)
+        {
+            UserId = userId;
         }
 
         public async void DeleteEverything()
@@ -72,7 +76,10 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             RaisePropertyChanged(() => Exercises);
 
         }
-
+        public void OnResume()
+        {
+            GetExercises();
+        }
         private string userId;
 
         public string UserId

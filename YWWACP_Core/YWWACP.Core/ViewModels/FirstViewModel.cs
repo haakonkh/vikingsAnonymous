@@ -1,8 +1,10 @@
+using System;
 using MvvmCross.Core.ViewModels;
 using System.Windows.Input;
 using Android.App;
 using Android.Content;
 using YWWACP.Core.Interfaces;
+using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels
 {
@@ -39,7 +41,38 @@ namespace YWWACP.Core.ViewModels
                 DeleteEverything();
             });
         }
-        
+        public void Init(string userId)
+        {
+            initDatabase();
+            
+        }
+        public async void DropDatabase()
+        {
+            var tables = await database.GetTable();
+            foreach (var table in tables)
+            {
+                await database.DeleteTableRow(table.Id);
+            }
+        }
+        async void initDatabase()
+        {
+            DropDatabase();
+            await database.InsertTableRow(new MyTable() { ExerciseContent = "Run bitch, run!", ExerciseTittle = "Running", Sets = 0, Reps = 0, ExerciseId = GenerateID(), UserId = "",basic = true});
+            await database.InsertTableRow(new MyTable() { ExerciseContent = "Bounce up and down", ExerciseTittle = "Squatting", Sets = 4, Reps = 8, ExerciseId = GenerateID(),UserId = "",basic = true});
+            await database.InsertTableRow(new MyTable() { ExerciseContent = "Kick a ball", ExerciseTittle = "Football", Sets = 0, Reps = 0, ExerciseId = GenerateID() ,UserId = "",basic = true});
+
+        }
+
+        public string GenerateID()
+        {
+            Guid g = Guid.NewGuid();
+            string GuidString = Convert.ToBase64String(g.ToByteArray());
+            GuidString = GuidString.Replace("=", "").Replace("+", "");
+
+            string GS = Convert.ToBase64String(g.ToByteArray());
+            GS = GuidString.Replace("=", "").Replace("+", "");
+            return GuidString + GS;
+        }
         public async void DeleteEverything()
         {
             var threads = await database.GetTable();

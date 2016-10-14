@@ -1,53 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-  <ScrollView
+    android:layout_height="match_parent">
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
-    <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-      <TextView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:textSize="30dp"
-          local:MvxBind="Text ExerciseTitle" />
-      <TextView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:textSize="20dp"
-          local:MvxBind="Text ExerciseContent" />
-      <TextView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:textSize="15dp"
-          local:MvxBind="Text ExerciseReps" />
-      <TextView
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:textSize="15dp"
-          local:MvxBind="Text ExerciseSets" />
-      <MvvmCross.Binding.Droid.Views.MvxDatePicker
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/datePicker1"
-           local:MvxBind="Value ExerciseDate"/>
-      <EditText 
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:textSize="15dp"
-          local:MvxBind="Text ExerciseDate" />
-      <Button
-        android:text="Add exercise"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sdfsdg"
-        local:MvxBind="Click AddToPlanCommand" />
-    </LinearLayout>
-  </ScrollView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                local:MvxBind="Text ExerciseTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                local:MvxBind="Text ExerciseContent" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                local:MvxBind="Text DisplayExerciseReps" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                local:MvxBind="Text DisplayExerciseSets" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <MvvmCross.Binding.Droid.Views.MvxDatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datePicker1"
+                    android:layout_centerHorizontal="true"
+                    local:MvxBind="Value ExerciseDate"
+                    android:layout_marginLeft="100px"
+                    android:layout_marginTop="20px" />
+            </RelativeLayout>
+            <Button
+                android:text="Add exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sdfsdg"
+                local:MvxBind="Click AddToPlanCommand" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

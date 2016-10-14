@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Java.Sql;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
+using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels.Health_Plan
 {
     public class ExerciseDetailsViewModel: MvxViewModel
     {
         public IDatabase database;
+        public ICommand AddToPlanCommand { get; set; }
 
         //Exercise properties
         private string exerciseID;
@@ -35,6 +38,21 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             get { return exerciseTitle; }
             set { SetProperty(ref exerciseTitle, value); }
         }
+        private string displayExerciseSets;
+
+        public string DisplayExerciseSets
+        {
+            get { return displayExerciseSets; }
+            set { SetProperty(ref displayExerciseSets, value); }
+        }
+        private string displayExerciseReps;
+
+        public string DisplayExerciseReps
+        {
+            get { return displayExerciseReps; }
+            set { SetProperty(ref displayExerciseReps, value); }
+        }
+
         private int exerciseSets;
 
         public int ExerciseSets
@@ -48,6 +66,13 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         {
             get { return exerciseReps; }
             set { SetProperty(ref exerciseReps, value); }
+        }
+        private string userId;
+
+        public string UserId
+        {
+            get { return userId; }
+            set { SetProperty(ref userId, value); }
         }
         /*
         private DateTime exerciseTime;
@@ -79,17 +104,42 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         public ExerciseDetailsViewModel(IDatabase database)
         {
             this.database = database;
+            AddToPlanCommand = new MvxCommand(() =>
+            {
+                addToTable();
+                Close(this);
+            });
+
         }
 
-        public void Init(string exerciseID)
+        public async void addToTable()
+        {
+            await database.InsertTableRow(new MyTable() { ExerciseContent = ExerciseContent, ExerciseTittle = ExerciseTitle, Sets = ExerciseSets, Reps = ExerciseReps, ExerciseTimestamp = ExerciseDate.ToString("dd/MM/yyyy"), UserId = UserId, ExerciseId = GenerateExerciseID() });
+
+        }
+
+        public void Init(string exerciseID,string userId)
         {
             ExerciseID = exerciseID;
-            
+            UserId = userId;
+            ExerciseDate = DateTime.Now.Date;
+            RaisePropertyChanged(() => ExerciseDate);
         }
 
         public void OnResume()
         {
             GetExercise();
+        }
+
+        public string GenerateExerciseID()
+        {
+            Guid g = Guid.NewGuid();
+            string GuidString = Convert.ToBase64String(g.ToByteArray());
+            GuidString = GuidString.Replace("=", "").Replace("+", "");
+
+            string GS = Convert.ToBase64String(g.ToByteArray());
+            GS = GuidString.Replace("=", "").Replace("+", "");
+            return GuidString + GS;
         }
 
         private async void GetExercise()
@@ -103,10 +153,20 @@ namespace YWWACP.Core.ViewModels.Health_Plan
                     ExerciseTitle = exercise.ExerciseTittle;
                     ExerciseSets = exercise.Sets;
                     ExerciseReps = exercise.Reps;
+                    if(exercise.Reps > 0) {
+                    DisplayExerciseReps = "Reps: " + exercise.Reps;
+                    }
+                    if (exercise.Sets > 0)
+                    {
+                        DisplayExerciseSets = "Sets: " + exercise.Sets;
+                    }
+                    
                     RaisePropertyChanged(() => ExerciseContent);
                     RaisePropertyChanged(() => ExerciseTitle);
                     RaisePropertyChanged(() => ExerciseSets);
                     RaisePropertyChanged(() => ExerciseReps);
+                    RaisePropertyChanged(() => DisplayExerciseReps);
+                    RaisePropertyChanged(() => DisplayExerciseSets);
                     break;
                 }
                 

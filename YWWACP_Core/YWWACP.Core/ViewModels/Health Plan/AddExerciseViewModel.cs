@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Microsoft.WindowsAzure.MobileServices;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
@@ -40,9 +41,17 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         {
             this.database = database;
             GetExercises();
-            SelectExerciseCommand = new MvxCommand<Exercise>(exercise => ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = exercise.ExerciseID }));
+            SelectExerciseCommand = new MvxCommand<Exercise>(exercise => ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = exercise.ExerciseID, userId = UserId }));
         }
+        public void Init(string userId)
+        {
+            UserId = userId;
 
+        }
+        public void OnResume()
+        {
+            GetExercises();
+        }
         public async void GetExercises()
         {
             var exercises = await database.GetTable();
@@ -50,9 +59,10 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             foreach (var exercise in exercises)
             {
 
-                if (exercise.ExerciseContent != null)
+                if (exercise.ExerciseContent != null && exercise.basic)
                 {
                     Exercises.Insert(0, new Exercise(exercise.ExerciseTittle, exercise.ExerciseContent, exercise.Sets, exercise.Reps, exercise.ExerciseTimestamp,exercise.ExerciseId));
+
                 }
             }
 

@@ -26,5 +26,11 @@ namespace YWWACP.Views.Health_Plan
             SetContentView(Resource.Layout.HealthPlanExercises);
 
         }
+        protected override void OnResume()
+        {
+            var vm = (HealthPlanExerciseViewModel)ViewModel;
+            vm.OnResume();
+            base.OnResume();
+        }
     }
 }
