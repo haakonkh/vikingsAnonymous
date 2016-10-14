@@ -18,39 +18,8 @@
     <string name="Add_Comment">Tap to reply</string>  
   <string name="ActivitiesMonday">Add Activity</string>
 
-  <string name="openDrawer">opened</string>
-  <string name="closeDrawer">closed</string>
+  <string name="OpenDrawerString">Open navigation drawer</string>
+  <string name="CloseDrawerString">Close navigation drawer</string>
 
-
-
-  <string name="category_prompt">Categories</string>
-  <string-array name="categories_array">
-    <item>Food</item>
-    <item>Exercise</item>
-    <item>Running</item>
-    <item>Weight lifting</item>
-    <item>Chit Chat</item>
-    <item>Random</item>
-  </string-array>
-
-  <string-array name="categories_activities">
-    <item>None</item>
-    <item>Walking</item>
-    <item>Running</item>
-    <item>Volleyball</item>
-    <item>Football</item>
-    <item>Cycling</item>
-    <item>Weightlifting</item>
-  </string-array>
-
-  <string-array name="categories_food">
-    <item>None</item>
-    <item>Beef and potatoes</item>
-    <item>Pasta bolognese</item>
-    <item>Greek salad</item>
-    <item>Kangaroo steak</item>
-    <item>Salmon</item>
-    <item>Whaleshark and rice</item>
-  </string-array>
   
 </resources>

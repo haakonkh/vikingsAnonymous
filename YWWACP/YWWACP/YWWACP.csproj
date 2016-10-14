@@ -106,6 +106,10 @@
       <HintPath>..\..\YWWACP_Core\packages\MvvmCross.Droid.Support.V4.4.3.0\lib\MonoAndroid403\MvvmCross.Droid.Support.V4.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MvvmCross.Droid.Support.V7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\YWWACP_Core\packages\MvvmCross.Droid.Support.V7.AppCompat.4.3.0\lib\MonoAndroid403\MvvmCross.Droid.Support.V7.AppCompat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\YWWACP_Core\packages\MvvmCross.Binding.4.3.0\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
       <Private>True</Private>
@@ -192,6 +196,8 @@
     <Compile Include="ActionBarDrawerToggle.cs" />
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="MyListFragment.cs" />
+    <Compile Include="MySettingsFragment.cs" />
     <Compile Include="NewExerciseDialog.cs" />
     <Compile Include="Views\CommentsView.cs" />
     <Compile Include="Views\CommunityActivity.cs" />
@@ -297,6 +303,15 @@
     <AndroidResource Include="Resources\layout\Main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\Toolbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyListView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySettingsView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -336,7 +351,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\anim\slide_right.xml" />
     <AndroidResource Include="Resources\anim\slide_up.xml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\values\theme.xml" />
     <AndroidResource Include="Resources\values\colors.xml">
       <SubType>Designer</SubType>

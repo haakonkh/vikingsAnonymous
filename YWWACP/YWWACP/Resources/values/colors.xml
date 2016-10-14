@@ -4,4 +4,8 @@
   <color name="my_lightPink">#fff8bbd0</color>
   <color name="my_purple">#2d2d86</color>
   <color name="my_peach">#fffbe9e7</color>
+
+  <color name="primary">#03A9F4</color>
+  <color name="primary_dark">#0288D1</color>
+  <color name="accent">#BE9664</color>
 </resources>

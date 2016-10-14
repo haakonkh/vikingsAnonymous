@@ -1,88 +1,74 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Windows.Input;
 using Android.App;
-using Android.Content;
-using Android.Graphics.Drawables;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using YWWACP.Views;
-using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using YWWACP.Core;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using Fragment = Android.Support.V4.App.Fragment;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
+using MvvmCross.Core.ViewModels;
+using YWWACP.Core.ViewModels;
 
 namespace YWWACP
 {
-    [Activity(Label = "DrawerLayout", MainLauncher = true, Icon ="@drawable/icon", Theme="@style/MyTheme")]
-    public class Main : ActionBarActivity
+    [Activity]
+    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
     {
+        ActionBarDrawerToggle _drawerToggle;
 
-        private SupportToolbar mToolbar;
-        private ActionBarDrawerToggle mDrawerToggle;
-        private DrawerLayout mDrawerLayout;
+        ListView _drawerListView;
 
-        private ArrayAdapter mLeftAdapter;
-        List<string> mLeftItems = new List<string>();
-        private ListView mLeftDrawer;
+        DrawerLayout _drawerLayout;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Main);
 
-            mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
-            mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
 
-            mLeftItems.Add("First Item");
-            mLeftItems.Add("Second Item");
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
 
-            mLeftAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, mLeftItems);
-            mLeftDrawer.Adapter = mLeftAdapter;
+            _drawerListView = FindViewById<ListView>(Resource.Id.drawerListView);
+            _drawerListView.ItemClick += (s, e) => ShowFragmentAt(e.Position);
+            _drawerListView.Adapter = new ArrayAdapter<string>(this, global::Android.Resource.Layout.SimpleListItem1, ViewModel.MenuItems.ToArray());
 
-            mLeftDrawer.ItemClick += MLeftDrawer_ItemClick;
-            SetSupportActionBar(mToolbar);
+            _drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerLayout);
 
-            mDrawerToggle = new ActionBarDrawerToggle(
-                this,                   // Host activity 
-                mDrawerLayout,          // Drawer Layout
-                Resource.String.openDrawer,  // Open message
-                Resource.String.closeDrawer);  // Close message
+            _drawerToggle = new ActionBarDrawerToggle(this, _drawerLayout, Resource.String.OpenDrawerString, Resource.String.CloseDrawerString);
 
-            mDrawerLayout.SetDrawerListener(mDrawerToggle);
-            SupportActionBar.SetHomeButtonEnabled(true);
-            SupportActionBar.SetDisplayShowTitleEnabled(true);
-            mDrawerToggle.SyncState();
+            _drawerLayout.SetDrawerListener(_drawerToggle);
 
+            ShowFragmentAt(0);
         }
 
-        private void MLeftDrawer_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        void ShowFragmentAt(int position)
         {
-            int position = e.Position;
-            string selectedFromList = mLeftDrawer.GetItemAtPosition(e.Position).ToString();
-            if (position == 0)
-            {
-                var intent = new Intent(this, typeof(CommunityActivity));
-                StartActivity(intent);
-            }
-            else if (position == 1)
-            {
-                var intent = new Intent(this, typeof(ProfileActivity));
-                StartActivity(intent);
-            }
+            ViewModel.NavigateTo(position);
 
+            Title = ViewModel.MenuItems.ElementAt(position);
 
+            _drawerLayout.CloseDrawer(_drawerListView);
+        }
 
+        protected override void OnPostCreate(Bundle savedInstanceState)
+        {
+            _drawerToggle.SyncState();
+
+            base.OnPostCreate(savedInstanceState);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            mDrawerToggle.OnOptionsItemSelected(item);
+            if (_drawerToggle.OnOptionsItemSelected(item))
+                return true;
+
             return base.OnOptionsItemSelected(item);
         }
     }

@@ -37,7 +37,7 @@ namespace YWWACP.Core
             }
             else
             {
-                RegisterAppStart<ViewModels.FirstViewModel>();
+                RegisterAppStart<ViewModels.MainViewModel>();
             }
 
 

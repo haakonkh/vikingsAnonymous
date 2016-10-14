@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dip"
-        android:text="@string/category_prompt" />
+        android:text="Category" />
     <MvxSpinner
         android:id="@+id/spinnerCategories"
         android:layout_width="match_parent"

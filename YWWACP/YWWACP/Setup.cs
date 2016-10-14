@@ -33,5 +33,17 @@ namespace YWWACP
             base.InitializeFirstChance();
         }
 
+        protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
+        {
+            typeof(global::Android.Support.V7.Widget.Toolbar).Assembly,
+        };
+
+        protected override IMvxAndroidViewPresenter CreateViewPresenter()
+        {
+            var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
+            Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
+            return mvxFragmentsPresenter;
+        }
+
     }
 }
