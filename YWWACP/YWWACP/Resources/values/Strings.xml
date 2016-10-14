@@ -18,6 +18,10 @@
     <string name="Add_Comment">Tap to reply</string>  
   <string name="ActivitiesMonday">Add Activity</string>
 
+  <string name="openDrawer">opened</string>
+  <string name="closeDrawer">closed</string>
+
+
 
   <string name="category_prompt">Categories</string>
   <string-array name="categories_array">
