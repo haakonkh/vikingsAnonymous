@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -191,6 +191,7 @@
   <ItemGroup>
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
+    <Compile Include="Views\AddExerciseView.cs" />
     <Compile Include="Views\CommentsView.cs" />
     <Compile Include="Views\CommunityActivity.cs" />
     <Compile Include="Database\AzureDatabase.cs" />
@@ -209,7 +210,11 @@
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="Views\DeleteThreadFragment.cs" />
     <Compile Include="Views\EditProfileView.cs" />
+    <Compile Include="Views\ExerciseDetailsView.cs" />
+    <Compile Include="Views\HealthPlanExercisesView.cs" />
+    <Compile Include="Views\HealthPlanView.cs" />
     <Compile Include="Views\MyThreadsView.cs" />
+    <Compile Include="Views\NewHealthPlanView.cs" />
     <Compile Include="Views\ProfileActivity.cs" />
     <Compile Include="RecipesActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -292,6 +297,11 @@
     <AndroidResource Include="Resources\layout\Dialog_DeleteThread.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddExerciseToPlan.axml" />
+    <AndroidResource Include="Resources\layout\AddExerciseToPlanRow.axml" />
+    <AndroidResource Include="Resources\layout\ExerciseAdd.axml" />
+    <AndroidResource Include="Resources\layout\HealthPlanExerciseRow.axml" />
+    <AndroidResource Include="Resources\layout\HealthPlanExercises.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
