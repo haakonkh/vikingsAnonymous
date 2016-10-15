@@ -1,12 +1,15 @@
+using System.Collections.Generic;
+using System.Reflection;
 using Android.Content;
-using MvvmCross.Droid.Platform;
+using YWWACP.Core;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Droid.Views;
+using MvvmCross.Droid.Support.V7.Fragging.Presenter;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
-using YWWACP.Core.Interfaces;
-using YWWACP.Database;
-using YWWACP;
 using YWWACP.Core.Database;
+using YWWACP.Core.Interfaces;
 
 namespace YWWACP
 {
@@ -18,7 +21,7 @@ namespace YWWACP
 
         protected override IMvxApplication CreateApp()
         {
-            return new YWWACP.Core.App();
+            return new App();
         }
 
         protected override IMvxTrace CreateDebugTrace()

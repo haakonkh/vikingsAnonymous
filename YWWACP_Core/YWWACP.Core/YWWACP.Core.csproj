@@ -60,6 +60,8 @@
     <Compile Include="ViewModels\Health Plan\HealthPlanExerciseViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\HealthPlanViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MyListViewModel.cs" />
+    <Compile Include="ViewModels\MySettingsViewModel.cs" />
     <Compile Include="ViewModels\MyThreadsViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\NewHealthPlanViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />

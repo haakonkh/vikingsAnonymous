@@ -1,33 +1,47 @@
-using System;
 using Android.App;
 using Android.OS;
-using Android.Widget;
+using Android.Runtime;
+using Android.Views;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Views;
+using YWWACP.Core;
+using MvvmCross.Droid.Support.V7.Fragging.Attributes;
+using MvvmCross.Droid.Support.V7.Fragging.Fragments;
 using YWWACP.Core.ViewModels;
 
 
 namespace YWWACP.Views
 {
-    [Activity(Label = "Profile")]
+    //[MvxFragment(typeof(MainViewModel), Resource.Id.frameLayout)]
     [MvxViewFor(typeof(ProfileViewModel))]
-    public class ProfileActivity : MvxActivity
+    [Register("YWWACP.Profile")]
+    public class ProfileActivity :  MvxFragment<ProfileViewModel>
     {
-
-        protected override void OnCreate(Bundle savedInstanceState)
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Profile);
+            return inflater.Inflate(Resource.Layout.Profile, container, false);
         }
 
-        protected override void OnResume()
-        {
-            var vm = (ProfileViewModel)ViewModel;
-            vm.OnResume();
-            base.OnResume();
-        }
+        public ProfileActivity() { }
     }
+
+
+    //MvxActivity
+    //{
+
+    //    protected override void OnCreate(Bundle savedInstanceState)
+    //    {
+    //        base.OnCreate(savedInstanceState);
+    //        // Set our view from the "main" layout resource
+    //        SetContentView(Resource.Layout.Profile);
+    //    }
+
+    //    protected override void OnResume()
+    //    {
+    //        var vm = (ProfileViewModel)ViewModel;
+    //        vm.OnResume();
+    //        base.OnResume();
+    //    }
+    //}
 }
 
 

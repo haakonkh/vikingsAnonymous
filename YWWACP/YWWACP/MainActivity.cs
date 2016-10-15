@@ -8,10 +8,10 @@ using Android.Views;
 using Android.Widget;
 using YWWACP.Core;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using YWWACP.Core.ViewModels;
 using Fragment = Android.Support.V4.App.Fragment;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
-using MvvmCross.Core.ViewModels;
-using YWWACP.Core.ViewModels;
+
 
 namespace YWWACP
 {
@@ -37,11 +37,13 @@ namespace YWWACP
 
             _drawerListView = FindViewById<ListView>(Resource.Id.drawerListView);
             _drawerListView.ItemClick += (s, e) => ShowFragmentAt(e.Position);
-            _drawerListView.Adapter = new ArrayAdapter<string>(this, global::Android.Resource.Layout.SimpleListItem1, ViewModel.MenuItems.ToArray());
+            _drawerListView.Adapter = new ArrayAdapter<string>(this, global::Android.Resource.Layout.SimpleListItem1,
+                ViewModel.MenuItems.ToArray());
 
             _drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawerLayout);
 
-            _drawerToggle = new ActionBarDrawerToggle(this, _drawerLayout, Resource.String.OpenDrawerString, Resource.String.CloseDrawerString);
+            _drawerToggle = new ActionBarDrawerToggle(this, _drawerLayout, Resource.String.OpenDrawerString,
+                Resource.String.CloseDrawerString);
 
             _drawerLayout.SetDrawerListener(_drawerToggle);
 
@@ -72,4 +74,6 @@ namespace YWWACP
             return base.OnOptionsItemSelected(item);
         }
     }
+
+
 }

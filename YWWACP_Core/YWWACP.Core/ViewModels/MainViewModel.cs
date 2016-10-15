@@ -1,17 +1,20 @@
 ﻿using MvvmCross.Core.ViewModels;
 using System;
 using System.Collections.Generic;
+using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
         readonly Type[] _menuItemTypes = {
-            typeof(MyListViewModel),
-            typeof(MySettingsViewModel),
+            
+            //typeof(ProfileViewModel),
+            typeof(CommunityViewModel),
+            typeof(FirstViewModel)
         };
 
-        public IEnumerable<string> MenuItems { get; private set; } = new[] { "My List", "My Settings" };
+        public IEnumerable<string> MenuItems { get; private set; } = new[] { "Profile", "Community", "First"};
 
         public void ShowDefaultMenuItem()
         {
@@ -41,13 +44,5 @@ namespace YWWACP.Core.ViewModels
         }
     }
 
-    
-        public class MyListViewModel : MvxViewModel
-        {
-        }
-
-        public class MySettingsViewModel : MvxViewModel
-        {
-        }
-
+   
 }
