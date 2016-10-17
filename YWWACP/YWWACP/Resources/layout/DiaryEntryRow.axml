@@ -9,14 +9,4 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         local:MvxBind="Text Title" />
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        local:MvxBind="Text Contents" />
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="10dp"
-        local:MvxBind="Text Time" />
 </LinearLayout>

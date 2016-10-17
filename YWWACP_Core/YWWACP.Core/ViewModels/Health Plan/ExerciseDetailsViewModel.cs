@@ -114,7 +114,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         public async void addToTable()
         {
-            await database.InsertTableRow(new MyTable() { ExerciseContent = ExerciseContent, ExerciseTitle = ExerciseTitle, Sets = ExerciseSets, Reps = ExerciseReps, ExerciseTimestamp = ExerciseDate.ToString("dd/MM/yyyy"), UserId = UserId, ExerciseId = GenerateExerciseID() });
+            await database.InsertTableRow(new MyTable() { ExerciseContent = ExerciseContent, ExerciseTitle = ExerciseTitle, Sets = ExerciseSets, Reps = ExerciseReps, ExerciseTimestamp = ExerciseDate.ToString("dd/MM/yyyy"), ExerciseDate=ExerciseDate.ToString(), UserId = UserId, ExerciseId = GenerateExerciseID() });
 
         }
 

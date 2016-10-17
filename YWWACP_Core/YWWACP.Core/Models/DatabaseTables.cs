@@ -54,6 +54,7 @@ namespace YWWACP.Core.Models
         public bool basic { get; set; }
         //[Ignore]
         public string ExerciseTimestamp { get; set; }
+        public string ExerciseDate { get; set; }
 
         public string ExerciseTitle { get; set; }
         public String ExerciseSummary { get; set; }

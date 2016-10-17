@@ -45,11 +45,8 @@
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
     <Compile Include="Models\Exercise.cs" />
-
     <Compile Include="Models\KeyPair.cs" />
-
     <Compile Include="Models\Meal.cs" />
-
     <Compile Include="Models\NewDiscussionThread.cs" />
     <Compile Include="Models\NewExerciseThread.cs" />
     <Compile Include="Models\NewRecipeThread.cs" />
@@ -58,6 +55,7 @@
     <Compile Include="ViewModels\ComunityViewModel.cs" />
     <Compile Include="ViewModels\CreateNewThreadViewModel.cs" />
     <Compile Include="ViewModels\DeleteThreadViewModel.cs" />
+    <Compile Include="ViewModels\Diary\DiaryViewModel.cs" />
     <Compile Include="ViewModels\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\EditProfileViewModel.cs" />
     <Compile Include="ViewModels\ExerciseViewModel.cs" />
