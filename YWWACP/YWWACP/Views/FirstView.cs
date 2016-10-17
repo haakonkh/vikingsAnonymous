@@ -21,10 +21,10 @@ namespace YWWACP.Views
     {
         private Button btnDiary;
         //private Button btnProfile;
-        private Button btnRecipes;
+        //private Button btnRecipes;
         private Button btnHealthPlan;
         //private Button btnCommunity;
-        private Button btnExercise;
+        //private Button btnExercise;
         private Button btnGraph;
         private TextView textViewHR;
         private TextView textViewGoal;
@@ -47,18 +47,23 @@ namespace YWWACP.Views
             // and attach an event to it
             btnDiary = FindViewById<Button>(Resource.Id.btnDiary);
            // btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
-            btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
+           // btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
            // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
+<<<<<<< HEAD
            // btnHealthPlan.Click += BtnHealthPlan_Click;
             btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
+=======
+            btnHealthPlan.Click += BtnHealthPlan_Click;
+            //btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
+>>>>>>> recipeExercise
             btnGraph = FindViewById<Button>(Resource.Id.btnGraph);
 
             btnDiary.Click += DiaryButton_Click;
             //btnCommunity.Click += BtnCommunity_Click;
-            btnRecipes.Click += BtnRecipes_Click;
+           // btnRecipes.Click += BtnRecipes_Click;
            // btnProfile.Click += BtnProfile_Click;
-            btnExercise.Click += BtnExercise_Click;
+           // btnExercise.Click += BtnExercise_Click;
             btnGraph.Click += BtnGraph_Click;
 
             //Text View Box
@@ -101,11 +106,11 @@ namespace YWWACP.Views
             StartActivity(intent);
         }
 
-        private void BtnExercise_Click(object sender, EventArgs e)
+        /**private void BtnExercise_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(ExerciseActivity));
             StartActivity(intent);
-        }
+        }**/
         /**
         private void BtnProfile_Click(object sender, EventArgs e)
         {
@@ -113,11 +118,11 @@ namespace YWWACP.Views
             StartActivity(intent);
         }*/
 
-        private void BtnRecipes_Click(object sender, EventArgs e)
+       /** private void BtnRecipes_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(RecipesActivity));
             StartActivity(intent);
-        }
+        } */
 
         /*
         // When Community button is clicked

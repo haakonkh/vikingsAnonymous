@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="90"
-        android:id="@+id/listViewRecipe"
-        local:MvxItemTemplate="@layout/recipelistviewrow"
-        local:MvxBind="ItemsSource NewRecipes; ItemClick SelectRecipeCommand" />
+        android:id="@+id/listViewExercise"
+        local:MvxItemTemplate="@layout/exerciselistviewrow"
+        local:MvxBind="ItemsSource NewExercise; ItemClick SelectExerciseCommand" />
 </LinearLayout>

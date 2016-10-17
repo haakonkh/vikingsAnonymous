@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite.Net;
+using YWWACP.Core.ViewModels;
 
 namespace YWWACP.Core.Models
 {
@@ -35,8 +37,9 @@ namespace YWWACP.Core.Models
 
         public string MealId { get; set; }
         public string MealTitle { get; set; }
-        [Ignore]
-        public List<string> Ingredients { get; set; }
+        public string MealSummary { get; set; }
+       
+        public string Ingredients { get; set; }
         // Should maybe be a list? 
         public string Approach { get; set; }
         // Time to put in diary/healthPlan
@@ -44,7 +47,7 @@ namespace YWWACP.Core.Models
         public DateTime MealTimestamp { get; set; }
 
         public string ExerciseId { get; set; }
-        public string ExerciseTittle { get; set; }
+
         public string ExerciseContent { get; set; }
         public int Sets { get; set; }
         public int Reps { get; set; }
@@ -52,7 +55,12 @@ namespace YWWACP.Core.Models
         //[Ignore]
         public string ExerciseTimestamp { get; set; }
 
-       }
+        public string ExerciseTitle { get; set; }
+        public String ExerciseSummary { get; set; }
+
+       
+    }
+
     /*
     public class User 
     {

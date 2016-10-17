@@ -1600,8 +1600,13 @@ namespace YWWACP
 			// aapt resource value: 0x7f05000d
 			public const int abc_dialog_min_width_major = 2131034125;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f05000e
 			public const int abc_dialog_min_width_minor = 2131034126;
+=======
+			// aapt resource value: 0x7f0b00b6
+			public const int action0 = 2131427510;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050026
 			public const int abc_dialog_padding_material = 2131034150;
@@ -1627,8 +1632,13 @@ namespace YWWACP
 			// aapt resource value: 0x7f05002d
 			public const int abc_edit_text_inset_bottom_material = 2131034157;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f05002e
 			public const int abc_edit_text_inset_horizontal_material = 2131034158;
+=======
+			// aapt resource value: 0x7f0b00ba
+			public const int action_divider = 2131427514;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f05002f
 			public const int abc_edit_text_inset_top_material = 2131034159;
@@ -1648,11 +1658,19 @@ namespace YWWACP
 			// aapt resource value: 0x7f05000f
 			public const int abc_search_view_text_min_width = 2131034127;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050034
 			public const int abc_seekbar_track_background_height_material = 2131034164;
 			
 			// aapt resource value: 0x7f050035
 			public const int abc_seekbar_track_progress_height_material = 2131034165;
+=======
+			// aapt resource value: 0x7f0b007c
+			public const int addBtn = 2131427452;
+			
+			// aapt resource value: 0x7f0b0078
+			public const int addBtnExercise = 2131427448;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050036
 			public const int abc_select_dialog_padding_start_material = 2131034166;
@@ -1666,12 +1684,18 @@ namespace YWWACP
 			// aapt resource value: 0x7f050038
 			public const int abc_text_size_body_2_material = 2131034168;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050039
 			public const int abc_text_size_button_material = 2131034169;
+=======
+			// aapt resource value: 0x7f0b008d
+			public const int btnAddPlan = 2131427469;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f05003a
 			public const int abc_text_size_caption_material = 2131034170;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f05003b
 			public const int abc_text_size_display_1_material = 2131034171;
 			
@@ -1686,31 +1710,66 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f05003f
 			public const int abc_text_size_headline_material = 2131034175;
+=======
+			// aapt resource value: 0x7f0b0085
+			public const int btnCommunity = 2131427461;
+			
+			// aapt resource value: 0x7f0b0088
+			public const int btnDelete = 2131427464;
+			
+			// aapt resource value: 0x7f0b0081
+			public const int btnDiary = 2131427457;
+			
+			// aapt resource value: 0x7f0b00b5
+			public const int btnDone = 2131427509;
+			
+			// aapt resource value: 0x7f0b0086
+			public const int btnExercise = 2131427462;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050040
 			public const int abc_text_size_large_material = 2131034176;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050041
 			public const int abc_text_size_medium_material = 2131034177;
 			
 			// aapt resource value: 0x7f050042
 			public const int abc_text_size_menu_material = 2131034178;
+=======
+			// aapt resource value: 0x7f0b0087
+			public const int btnGraph = 2131427463;
+			
+			// aapt resource value: 0x7f0b0082
+			public const int btnHealthPlan = 2131427458;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050043
 			public const int abc_text_size_small_material = 2131034179;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050044
 			public const int abc_text_size_subhead_material = 2131034180;
+=======
+			// aapt resource value: 0x7f0b0090
+			public const int btnMyThreadsMY = 2131427472;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050006
 			public const int abc_text_size_subtitle_material_toolbar = 2131034118;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050045
 			public const int abc_text_size_title_material = 2131034181;
+=======
+			// aapt resource value: 0x7f0b007f
+			public const int btnNewExer = 2131427455;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050007
 			public const int abc_text_size_title_material_toolbar = 2131034119;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050056
 			public const int design_appbar_elevation = 2131034198;
 			
@@ -1719,6 +1778,16 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f050058
 			public const int design_fab_content_size = 2131034200;
+=======
+			// aapt resource value: 0x7f0b008f
+			public const int btnNewThreadMY = 2131427471;
+			
+			// aapt resource value: 0x7f0b0083
+			public const int btnProfile = 2131427459;
+			
+			// aapt resource value: 0x7f0b0084
+			public const int btnRecipes = 2131427460;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050059
 			public const int design_fab_elevation = 2131034201;
@@ -1732,8 +1801,13 @@ namespace YWWACP
 			// aapt resource value: 0x7f05005c
 			public const int design_fab_translation_z_pressed = 2131034204;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f05005d
 			public const int design_navigation_elevation = 2131034205;
+=======
+			// aapt resource value: 0x7f0b00cb
+			public const int buttonEditProfileInformation = 2131427531;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f05005e
 			public const int design_navigation_icon_padding = 2131034206;
@@ -1741,6 +1815,7 @@ namespace YWWACP
 			// aapt resource value: 0x7f05005f
 			public const int design_navigation_icon_size = 2131034207;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050060
 			public const int design_navigation_max_width = 2131034208;
 			
@@ -1749,12 +1824,27 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f050055
 			public const int design_navigation_padding_top_default = 2131034197;
+=======
+			// aapt resource value: 0x7f0b007b
+			public const int cancelBtn = 2131427451;
+			
+			// aapt resource value: 0x7f0b0077
+			public const int cancelBtnExercise = 2131427447;
+			
+			// aapt resource value: 0x7f0b00b7
+			public const int cancel_action = 2131427511;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050062
 			public const int design_navigation_separator_vertical_padding = 2131034210;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f05004e
 			public const int design_snackbar_action_inline_max_width = 2131034190;
+=======
+			// aapt resource value: 0x7f0b00bd
+			public const int chronometer = 2131427517;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f05004f
 			public const int design_snackbar_background_corner_radius = 2131034191;
@@ -1777,6 +1867,7 @@ namespace YWWACP
 			// aapt resource value: 0x7f050065
 			public const int design_snackbar_padding_vertical = 2131034213;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050053
 			public const int design_snackbar_padding_vertical_2lines = 2131034195;
 			
@@ -1791,12 +1882,36 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f050046
 			public const int disabled_alpha_material_dark = 2131034182;
+=======
+			// aapt resource value: 0x7f0b007e
+			public const int demoImageView = 2131427454;
+			
+			// aapt resource value: 0x7f0b000e
+			public const int disableHome = 2131427342;
+			
+			// aapt resource value: 0x7f0b0074
+			public const int editTextExerciseName = 2131427444;
+			
+			// aapt resource value: 0x7f0b0076
+			public const int editTextExerciseReps = 2131427446;
+			
+			// aapt resource value: 0x7f0b0075
+			public const int editTextExerciseSets = 2131427445;
+			
+			// aapt resource value: 0x7f0b0073
+			public const int editTextExerciseTitle = 2131427443;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050047
 			public const int disabled_alpha_material_light = 2131034183;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050048
 			public const int highlight_alpha_material_colored = 2131034184;
+=======
+			// aapt resource value: 0x7f0b00d0
+			public const int editTextWriteComment = 2131427536;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f050049
 			public const int highlight_alpha_material_dark = 2131034185;
@@ -1810,11 +1925,19 @@ namespace YWWACP
 			// aapt resource value: 0x7f050001
 			public const int item_touch_helper_swipe_escape_max_velocity = 2131034113;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f050002
 			public const int item_touch_helper_swipe_escape_velocity = 2131034114;
 			
 			// aapt resource value: 0x7f05004b
 			public const int notification_large_icon_height = 2131034187;
+=======
+			// aapt resource value: 0x7f0b00c2
+			public const int end_padder = 2131427522;
+			
+			// aapt resource value: 0x7f0b0079
+			public const int exerciseImage = 2131427449;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f05004c
 			public const int notification_large_icon_width = 2131034188;
@@ -1822,10 +1945,15 @@ namespace YWWACP
 			// aapt resource value: 0x7f05004d
 			public const int notification_subtext_size = 2131034189;
 			
+<<<<<<< HEAD
 			static Dimension()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
+=======
+			// aapt resource value: 0x7f0b0080
+			public const int grid = 2131427456;
+>>>>>>> recipeExercise
 			
 			private Dimension()
 			{
@@ -1847,6 +1975,7 @@ namespace YWWACP
 			// aapt resource value: 0x7f020003
 			public const int abc_btn_check_material = 2130837507;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020004
 			public const int abc_btn_check_to_on_mtrl_000 = 2130837508;
 			
@@ -1855,6 +1984,16 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f020006
 			public const int abc_btn_colored_material = 2130837510;
+=======
+			// aapt resource value: 0x7f0b00c1
+			public const int info = 2131427521;
+			
+			// aapt resource value: 0x7f0b00bb
+			public const int line1 = 2131427515;
+			
+			// aapt resource value: 0x7f0b00bf
+			public const int line3 = 2131427519;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f020007
 			public const int abc_btn_default_mtrl_shape = 2130837511;
@@ -1865,8 +2004,13 @@ namespace YWWACP
 			// aapt resource value: 0x7f020009
 			public const int abc_btn_radio_to_on_mtrl_000 = 2130837513;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f02000a
 			public const int abc_btn_radio_to_on_mtrl_015 = 2130837514;
+=======
+			// aapt resource value: 0x7f0b008e
+			public const int linearLayoutWrapTopButtonsMY = 2131427470;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f02000b
 			public const int abc_btn_rating_star_off_mtrl_alpha = 2130837515;
@@ -1877,14 +2021,36 @@ namespace YWWACP
 			// aapt resource value: 0x7f02000d
 			public const int abc_btn_switch_to_on_mtrl_00001 = 2130837517;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f02000e
 			public const int abc_btn_switch_to_on_mtrl_00012 = 2130837518;
+=======
+			// aapt resource value: 0x7f0b0072
+			public const int listViewExercise = 2131427442;
+			
+			// aapt resource value: 0x7f0b00ce
+			public const int listViewExercises = 2131427534;
+			
+			// aapt resource value: 0x7f0b0091
+			public const int listViewMyThreads = 2131427473;
+			
+			// aapt resource value: 0x7f0b00cd
+			public const int listViewRecipe = 2131427533;
+			
+			// aapt resource value: 0x7f0b00cf
+			public const int listViewRecipes = 2131427535;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f02000f
 			public const int abc_cab_background_internal_bg = 2130837519;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020010
 			public const int abc_cab_background_top_material = 2130837520;
+=======
+			// aapt resource value: 0x7f0b00b9
+			public const int media_actions = 2131427513;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f020011
 			public const int abc_cab_background_top_mtrl_alpha = 2130837521;
@@ -1919,11 +2085,19 @@ namespace YWWACP
 			// aapt resource value: 0x7f02001b
 			public const int abc_ic_menu_cut_mtrl_alpha = 2130837531;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f02001c
 			public const int abc_ic_menu_moreoverflow_mtrl_alpha = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
 			public const int abc_ic_menu_paste_mtrl_am_alpha = 2130837533;
+=======
+			// aapt resource value: 0x7f0b00cc
+			public const int recepieImage = 2131427532;
+			
+			// aapt resource value: 0x7f0b007a
+			public const int recepieText = 2131427450;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f02001e
 			public const int abc_ic_menu_selectall_mtrl_alpha = 2130837534;
@@ -1985,6 +2159,7 @@ namespace YWWACP
 			// aapt resource value: 0x7f020031
 			public const int abc_list_selector_holo_dark = 2130837553;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020032
 			public const int abc_list_selector_holo_light = 2130837554;
 			
@@ -2002,10 +2177,33 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f020037
 			public const int abc_ratingbar_small_material = 2130837559;
+=======
+			// aapt resource value: 0x7f0b00a8
+			public const int spinnerActivitiesFriday = 2131427496;
+			
+			// aapt resource value: 0x7f0b0094
+			public const int spinnerActivitiesMonday = 2131427476;
+			
+			// aapt resource value: 0x7f0b00ad
+			public const int spinnerActivitiesSaturday = 2131427501;
+			
+			// aapt resource value: 0x7f0b00b2
+			public const int spinnerActivitiesSunday = 2131427506;
+			
+			// aapt resource value: 0x7f0b00a3
+			public const int spinnerActivitiesThursday = 2131427491;
+			
+			// aapt resource value: 0x7f0b0099
+			public const int spinnerActivitiesTuesday = 2131427481;
+			
+			// aapt resource value: 0x7f0b009e
+			public const int spinnerActivitiesWednesday = 2131427486;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f020038
 			public const int abc_scrubber_control_off_mtrl_alpha = 2130837560;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020039
 			public const int abc_scrubber_control_to_pressed_mtrl_000 = 2130837561;
 			
@@ -2026,6 +2224,28 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f02003f
 			public const int abc_spinner_mtrl_am_alpha = 2130837567;
+=======
+			// aapt resource value: 0x7f0b00aa
+			public const int spinnerFoodFriday = 2131427498;
+			
+			// aapt resource value: 0x7f0b0096
+			public const int spinnerFoodMonday = 2131427478;
+			
+			// aapt resource value: 0x7f0b00af
+			public const int spinnerFoodSaturday = 2131427503;
+			
+			// aapt resource value: 0x7f0b00b4
+			public const int spinnerFoodSunday = 2131427508;
+			
+			// aapt resource value: 0x7f0b00a5
+			public const int spinnerFoodThursday = 2131427493;
+			
+			// aapt resource value: 0x7f0b009b
+			public const int spinnerFoodTuesday = 2131427483;
+			
+			// aapt resource value: 0x7f0b00a0
+			public const int spinnerFoodWednesday = 2131427488;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f020040
 			public const int abc_spinner_textfield_background_material = 2130837568;
@@ -2039,8 +2259,13 @@ namespace YWWACP
 			// aapt resource value: 0x7f020043
 			public const int abc_tab_indicator_material = 2130837571;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020044
 			public const int abc_tab_indicator_mtrl_alpha = 2130837572;
+=======
+			// aapt resource value: 0x7f0b00b8
+			public const int status_bar_latest_event_content = 2131427512;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f020045
 			public const int abc_text_cursor_material = 2130837573;
@@ -2048,15 +2273,24 @@ namespace YWWACP
 			// aapt resource value: 0x7f020046
 			public const int abc_textfield_activated_mtrl_alpha = 2130837574;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020047
 			public const int abc_textfield_default_mtrl_alpha = 2130837575;
 			
 			// aapt resource value: 0x7f020048
 			public const int abc_textfield_search_activated_mtrl_alpha = 2130837576;
+=======
+			// aapt resource value: 0x7f0b00c0
+			public const int text = 2131427520;
+			
+			// aapt resource value: 0x7f0b00be
+			public const int text2 = 2131427518;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f020049
 			public const int abc_textfield_search_default_mtrl_alpha = 2130837577;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f02004a
 			public const int abc_textfield_search_material = 2130837578;
 			
@@ -2125,10 +2359,81 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f02005f
 			public const int recipeIcon = 2130837599;
+=======
+			// aapt resource value: 0x7f0b0092
+			public const int textView1 = 2131427474;
+			
+			// aapt resource value: 0x7f0b00a1
+			public const int textView10 = 2131427489;
+			
+			// aapt resource value: 0x7f0b00a2
+			public const int textView11 = 2131427490;
+			
+			// aapt resource value: 0x7f0b00a4
+			public const int textView12 = 2131427492;
+			
+			// aapt resource value: 0x7f0b00a6
+			public const int textView13 = 2131427494;
+			
+			// aapt resource value: 0x7f0b00a7
+			public const int textView14 = 2131427495;
+			
+			// aapt resource value: 0x7f0b00a9
+			public const int textView15 = 2131427497;
+			
+			// aapt resource value: 0x7f0b00ab
+			public const int textView16 = 2131427499;
+			
+			// aapt resource value: 0x7f0b00ac
+			public const int textView17 = 2131427500;
+			
+			// aapt resource value: 0x7f0b00ae
+			public const int textView18 = 2131427502;
+			
+			// aapt resource value: 0x7f0b00b0
+			public const int textView19 = 2131427504;
+			
+			// aapt resource value: 0x7f0b0093
+			public const int textView2 = 2131427475;
+			
+			// aapt resource value: 0x7f0b00b1
+			public const int textView20 = 2131427505;
+			
+			// aapt resource value: 0x7f0b00b3
+			public const int textView21 = 2131427507;
+			
+			// aapt resource value: 0x7f0b0095
+			public const int textView3 = 2131427477;
+			
+			// aapt resource value: 0x7f0b0097
+			public const int textView4 = 2131427479;
+			
+			// aapt resource value: 0x7f0b0098
+			public const int textView5 = 2131427480;
+			
+			// aapt resource value: 0x7f0b009a
+			public const int textView6 = 2131427482;
+			
+			// aapt resource value: 0x7f0b009c
+			public const int textView7 = 2131427484;
+			
+			// aapt resource value: 0x7f0b009d
+			public const int textView8 = 2131427485;
+			
+			// aapt resource value: 0x7f0b009f
+			public const int textView9 = 2131427487;
+			
+			// aapt resource value: 0x7f0b00ca
+			public const int textViewAge = 2131427530;
+			
+			// aapt resource value: 0x7f0b00c9
+			public const int textViewAgeLabel = 2131427529;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f020060
 			public const int roundedbg = 2130837600;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020061
 			public const int roundedbgdark = 2130837601;
 			
@@ -2153,30 +2458,70 @@ namespace YWWACP
 		
 		public partial class Id
 		{
+=======
+			// aapt resource value: 0x7f0b008c
+			public const int textViewCalories = 2131427468;
+			
+			// aapt resource value: 0x7f0b008b
+			public const int textViewGoal = 2131427467;
+			
+			// aapt resource value: 0x7f0b0089
+			public const int textViewHR = 2131427465;
+			
+			// aapt resource value: 0x7f0b008a
+			public const int textViewHRAvg = 2131427466;
+			
+			// aapt resource value: 0x7f0b00c6
+			public const int textViewHeight = 2131427526;
+			
+			// aapt resource value: 0x7f0b00c5
+			public const int textViewHeightLabel = 2131427525;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f06000b
 			public const int MvvmCrossTagId = 2131099659;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f06000c
 			public const int MvxBindingTagUnique = 2131099660;
 			
 			// aapt resource value: 0x7f0600d8
 			public const int action0 = 2131099864;
+=======
+			// aapt resource value: 0x7f0b00c4
+			public const int textViewName = 2131427524;
+			
+			// aapt resource value: 0x7f0b00c3
+			public const int textViewNameLabel = 2131427523;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f06005b
 			public const int action_bar = 2131099739;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f060001
 			public const int action_bar_activity_content = 2131099649;
 			
 			// aapt resource value: 0x7f06005a
 			public const int action_bar_container = 2131099738;
+=======
+			// aapt resource value: 0x7f0b00c8
+			public const int textViewWeight = 2131427528;
+			
+			// aapt resource value: 0x7f0b00c7
+			public const int textViewWeightLabel = 2131427527;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f060056
 			public const int action_bar_root = 2131099734;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f060002
 			public const int action_bar_spinner = 2131099650;
+=======
+			// aapt resource value: 0x7f0b00bc
+			public const int time = 2131427516;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f06003c
 			public const int action_bar_subtitle = 2131099708;
@@ -2187,8 +2532,16 @@ namespace YWWACP
 			// aapt resource value: 0x7f06005c
 			public const int action_context_bar = 2131099740;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0600dc
 			public const int action_divider = 2131099868;
+=======
+			// aapt resource value: 0x7f0b007d
+			public const int txtRecipeViewContent = 2131427453;
+			
+			// aapt resource value: 0x7f0b005e
+			public const int txtViewCategory = 2131427422;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -2346,6 +2699,7 @@ namespace YWWACP
 			// aapt resource value: 0x7f060021
 			public const int collapseActionView = 2131099681;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f06004b
 			public const int contentPanel = 2131099723;
 			
@@ -2420,6 +2774,100 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f060052
 			public const int expanded_menu = 2131099730;
+=======
+			// aapt resource value: 0x7f030023
+			public const int Exercise = 2130903075;
+			
+			// aapt resource value: 0x7f030024
+			public const int ExerciseDialogNewExer = 2130903076;
+			
+			// aapt resource value: 0x7f030025
+			public const int exerciseDialogView = 2130903077;
+			
+			// aapt resource value: 0x7f030026
+			public const int ExerciseListViewRow = 2130903078;
+			
+			// aapt resource value: 0x7f030027
+			public const int ExerciseMain = 2130903079;
+			
+			// aapt resource value: 0x7f030028
+			public const int FirstView = 2130903080;
+			
+			// aapt resource value: 0x7f030029
+			public const int HealthPlan = 2130903081;
+			
+			// aapt resource value: 0x7f03002a
+			public const int MyThreads = 2130903082;
+			
+			// aapt resource value: 0x7f03002b
+			public const int NewHealthPlan = 2130903083;
+			
+			// aapt resource value: 0x7f03002c
+			public const int notification_media_action = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int notification_media_cancel_action = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int notification_template_big_media = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int notification_template_big_media_narrow = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int notification_template_lines = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int notification_template_media = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int notification_template_part_chronometer = 2130903090;
+			
+			// aapt resource value: 0x7f030033
+			public const int notification_template_part_time = 2130903091;
+			
+			// aapt resource value: 0x7f030034
+			public const int Profile = 2130903092;
+			
+			// aapt resource value: 0x7f030035
+			public const int recipeDialogView = 2130903093;
+			
+			// aapt resource value: 0x7f030036
+			public const int RecipeListViewRow = 2130903094;
+			
+			// aapt resource value: 0x7f030037
+			public const int Recipes = 2130903095;
+			
+			// aapt resource value: 0x7f030038
+			public const int select_dialog_item_material = 2130903096;
+			
+			// aapt resource value: 0x7f030039
+			public const int select_dialog_multichoice_material = 2130903097;
+			
+			// aapt resource value: 0x7f03003a
+			public const int select_dialog_singlechoice_material = 2130903098;
+			
+			// aapt resource value: 0x7f03003b
+			public const int SingleExercise = 2130903099;
+			
+			// aapt resource value: 0x7f03003c
+			public const int SingleExerciseListViewRow = 2130903100;
+			
+			// aapt resource value: 0x7f03003d
+			public const int SingleRecipe = 2130903101;
+			
+			// aapt resource value: 0x7f03003e
+			public const int SingleRecipeListViewRow = 2130903102;
+			
+			// aapt resource value: 0x7f03003f
+			public const int SplashScreen = 2130903103;
+			
+			// aapt resource value: 0x7f030040
+			public const int support_simple_spinner_dropdown_item = 2130903104;
+			
+			// aapt resource value: 0x7f030041
+			public const int WriteComment = 2130903105;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f060036
 			public const int fill = 2131099702;
@@ -3309,8 +3757,13 @@ namespace YWWACP
 			// aapt resource value: 0x7f080011
 			public const int abc_searchview_description_voice = 2131230737;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f080012
 			public const int abc_shareactionprovider_share_with = 2131230738;
+=======
+			// aapt resource value: 0x7f080139
+			public const int Theme_Custom = 2131231033;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f080013
 			public const int abc_shareactionprovider_share_with_application = 2131230739;
@@ -3541,8 +3994,19 @@ namespace YWWACP
 			// aapt resource value: 0x7f070062
 			public const int Base_Theme_AppCompat_Light = 2131165282;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0700a2
 			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131165346;
+=======
+			// aapt resource value: 0x7f080137
+			public const int bigTextViewTheme = 2131231031;
+			
+			// aapt resource value: 0x7f080138
+			public const int dialog_animation = 2131231032;
+			
+			// aapt resource value: 0x7f080136
+			public const int smallTextViewTheme = 2131231030;
+>>>>>>> recipeExercise
 			
 			// aapt resource value: 0x7f07001d
 			public const int Base_Theme_AppCompat_Light_Dialog = 2131165213;

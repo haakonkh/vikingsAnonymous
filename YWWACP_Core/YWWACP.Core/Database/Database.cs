@@ -59,6 +59,7 @@ namespace YWWACP.Core.Database
             return exists;
         }
 
+
         /*
 public IEnumerable<User> GetUsers()
 {

@@ -73,6 +73,7 @@ namespace vikinganonymousService.DataObjects
     {
         public string Tittle { get; set; }
         public List<string> Ingredients { get; set; }
+        public string Summary { get; set; }
         // Should maybe be a list? 
         public string Approach { get; set; }
         // Time to put in diary/healthPlan

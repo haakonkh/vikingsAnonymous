@@ -10,13 +10,22 @@
     <item name="android:colorBackground">@color/my_peach</item>
     <item name="android:textColorPrimary">@color/my_purple</item>
     <item name="android:textColorSecondary">@color/my_purple</item>
-
-    <item name="android:fontFamily">"sans-serif-condensed"</item>
+    <item name="android:typeface">serif</item>
   </style>
 
   <style name="textViewTheme" parent="android:Theme.Material.Light">
     <!-- Override the color of UI controls -->
     <item name="android:background">@color/my_peach</item>
     <item name="android:textColorPrimary">@color/my_purple</item>    
+  </style>
+  <style name="smallTextViewTheme" parent="android:Theme.Material.Light">
+    <!-- Override the color of UI controls -->
+    <item name="android:textStyle">bold|italic</item>
+  </style>
+  <style name="bigTextViewTheme" parent="android:Theme.Material.Light">
+    <!-- Override the color of UI controls -->
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColorPrimary">@color/my_darkPink</item>
+    <item name="android:textSize">15sp</item>
   </style>
 </resources>

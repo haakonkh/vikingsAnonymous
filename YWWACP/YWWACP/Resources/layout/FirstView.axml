@@ -36,7 +36,8 @@
         android:id="@+id/btnRecipes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Recipes" />
+        android:text="@string/Recipes"
+        local:MvxBind="Click OpenRecipeCommand" />
     <Button
         android:id="@+id/btnCommunity"
         android:layout_width="match_parent"
@@ -47,7 +48,8 @@
         android:id="@+id/btnExercise"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Exercises" />
+        android:text="@string/Exercises"
+        local:MvxBind="Click OpenExerciseCommand"/>
     <Button
         android:id="@+id/btnGraph"
         android:layout_width="match_parent"

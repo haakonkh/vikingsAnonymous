@@ -220,6 +220,8 @@
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Database\SQLiteDroid.cs" />
     <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\RecipeActivity.cs" />
+    <Compile Include="Views\SingleRecipeView.cs" />
     <Compile Include="Views\WriteCommentView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -289,7 +291,17 @@
     <AndroidResource Include="Resources\layout\MyThreads.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+<<<<<<< HEAD
     <AndroidResource Include="Resources\layout\Dialog_DeleteThread.axml">
+=======
+    <AndroidResource Include="Resources\layout\RecipeListViewRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SingleRecipe.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SingleRecipeListViewRow.axml">
+>>>>>>> recipeExercise
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+=======
+using YWWACP.Core.Interfaces;
+>>>>>>> recipeExercise
 
 namespace YWWACP.Core.Models
 {
@@ -10,6 +14,7 @@ namespace YWWACP.Core.Models
     {
         public string Title { get; set; }
         public string Contents { get; set; }
+		public string ExerciseSummary { get; set; }
         public int Sets { get; set; }
         public int Reps { get; set; }
         public string Time { get; set; }
@@ -26,5 +31,15 @@ namespace YWWACP.Core.Models
             Time = time;
             ExerciseID = exerciseID;
         }
+
+        public Exercise(string id, string title, string summary, int set, int rep)
+        {
+            ExerciseId = id;
+            ExerciseTitle = title;
+            ExerciseSummary = summary;
+            Sets = set;
+            Reps = rep;
+        }
+
     }
 }
