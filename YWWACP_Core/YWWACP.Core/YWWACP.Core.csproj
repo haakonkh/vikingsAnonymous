@@ -43,8 +43,10 @@
     <Compile Include="Interfaces\ISqlite.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
+    <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\Meal.cs" />
     <Compile Include="Models\NewDiscussionThread.cs" />
+    <Compile Include="Models\NewExerciseThread.cs" />
     <Compile Include="Models\NewRecipeThread.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CommentsViewModel.cs" />
@@ -52,10 +54,12 @@
     <Compile Include="ViewModels\CreateNewThreadViewModel.cs" />
     <Compile Include="ViewModels\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\EditProfileViewModel.cs" />
+    <Compile Include="ViewModels\ExerciseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\MyThreadsViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="ViewModels\RecipeViewModel.cs" />
+    <Compile Include="ViewModels\SingleExerciseViewModel.cs" />
     <Compile Include="ViewModels\SingleRecipeViewModel.cs" />
     <Compile Include="ViewModels\WriteCommentViewModel.cs" />
   </ItemGroup>

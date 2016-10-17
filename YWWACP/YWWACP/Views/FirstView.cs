@@ -24,7 +24,7 @@ namespace YWWACP.Views
         //private Button btnRecipes;
         private Button btnHealthPlan;
         //private Button btnCommunity;
-        private Button btnExercise;
+        //private Button btnExercise;
         private Button btnGraph;
         private TextView textViewHR;
         private TextView textViewGoal;
@@ -51,14 +51,14 @@ namespace YWWACP.Views
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
            // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
             btnHealthPlan.Click += BtnHealthPlan_Click;
-            btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
+            //btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
             btnGraph = FindViewById<Button>(Resource.Id.btnGraph);
 
             btnDiary.Click += DiaryButton_Click;
             //btnCommunity.Click += BtnCommunity_Click;
            // btnRecipes.Click += BtnRecipes_Click;
            // btnProfile.Click += BtnProfile_Click;
-            btnExercise.Click += BtnExercise_Click;
+           // btnExercise.Click += BtnExercise_Click;
             btnGraph.Click += BtnGraph_Click;
 
             //Text View Box
@@ -101,11 +101,11 @@ namespace YWWACP.Views
             StartActivity(intent);
         }
 
-        private void BtnExercise_Click(object sender, EventArgs e)
+        /**private void BtnExercise_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(ExerciseActivity));
             StartActivity(intent);
-        }
+        }**/
         /**
         private void BtnProfile_Click(object sender, EventArgs e)
         {

@@ -2,7 +2,7 @@
 <resources>
   <color name="theme_custom_background">#ffef9a9a</color><color name="theme_devicedefault_background">#fffbe9e7</color>
   <style name="Theme.Custom" parent="@android:style/Theme.DeviceDefault">
-    <item name="android:colorBackground">@color/theme_custom_background</item>
-    <item name="android:windowBackground">?android:attr/colorBackground</item>
+   <item name="android:colorBackground">@color/theme_custom_background</item>
+   <item name="android:windowBackground">?android:attr/colorBackground</item>
   <item name="android:colorPrimary">#ffec407a</item><item name="android:colorPrimaryDark">#ff512da8</item><item name="android:colorAccent">#ff512da8</item><item name="android:textColorPrimary">#fffbe9e7</item><item name="android:textColorSecondary">#fffbe9e7</item><item name="android:colorControlNormal">#ff512da8</item><item name="android:colorButtonNormal">#fff8bbd0</item></style>
 </resources>

@@ -47,10 +47,10 @@ namespace YWWACP.Core.Models
         public DateTime MealTimestamp { get; set; }
 
         public string ExerciseId { get; set; }
-        public string ExerciseTittle { get; set; }
-        public string ExerciseName { get; set; }
+        public string ExerciseTitle { get; set; }
         public int Sets { get; set; }
         public int Reps { get; set; }
+        public String ExerciseSummary { get; set; }
         [Ignore]
         public DateTime ExerciseTimestamp { get; set; }
         
