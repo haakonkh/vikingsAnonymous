@@ -50,13 +50,11 @@ namespace YWWACP.Views
            // btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
             btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
            // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
-<<<<<<< HEAD
+
            // btnHealthPlan.Click += BtnHealthPlan_Click;
-            btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
-=======
-            btnHealthPlan.Click += BtnHealthPlan_Click;
             //btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
->>>>>>> recipeExercise
+            //btnExercise = FindViewById<Button>(Resource.Id.btnExercise);
+
             btnGraph = FindViewById<Button>(Resource.Id.btnGraph);
 
             btnDiary.Click += DiaryButton_Click;

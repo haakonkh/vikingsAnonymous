@@ -207,13 +207,12 @@
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="Views\DeleteThreadFragment.cs" />
     <Compile Include="Views\EditProfileView.cs" />
-<<<<<<< HEAD
+
     <Compile Include="Views\ExerciseDetailsView.cs" />
     <Compile Include="Views\HealthPlanExercisesView.cs" />
     <Compile Include="Views\HealthPlanView.cs" />
-=======
     <Compile Include="Views\ExerciseActivity.cs" />
->>>>>>> recipeExercise
+
     <Compile Include="Views\MyThreadsView.cs" />
     <Compile Include="Views\NewHealthPlanView.cs" />
     <Compile Include="Views\ProfileActivity.cs" />
@@ -296,7 +295,7 @@
     <AndroidResource Include="Resources\layout\MyThreads.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-<<<<<<< HEAD
+
     <AndroidResource Include="Resources\layout\Dialog_DeleteThread.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -305,7 +304,7 @@
     <AndroidResource Include="Resources\layout\ExerciseAdd.axml" />
     <AndroidResource Include="Resources\layout\HealthPlanExerciseRow.axml" />
     <AndroidResource Include="Resources\layout\HealthPlanExercises.axml" />
-=======
+
     <AndroidResource Include="Resources\layout\RecipeListViewRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -327,7 +326,7 @@
     <AndroidResource Include="Resources\layout\SingleExerciseListViewRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
->>>>>>> recipeExercise
+
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

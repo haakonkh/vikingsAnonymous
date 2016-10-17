@@ -45,11 +45,11 @@
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
     <Compile Include="Models\Exercise.cs" />
-<<<<<<< HEAD
+
     <Compile Include="Models\KeyPair.cs" />
-=======
+
     <Compile Include="Models\Meal.cs" />
->>>>>>> recipeExercise
+
     <Compile Include="Models\NewDiscussionThread.cs" />
     <Compile Include="Models\NewExerciseThread.cs" />
     <Compile Include="Models\NewRecipeThread.cs" />

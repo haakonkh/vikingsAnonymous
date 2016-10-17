@@ -69,7 +69,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
                 if (exercise.ExerciseContent != null && exercise.UserId == UserId)
                 {
-                    Exercises.Insert(0, new Exercise(exercise.ExerciseTittle, exercise.ExerciseContent, exercise.Sets, exercise.Reps,exercise.ExerciseTimestamp,exercise.ExerciseId));
+                    Exercises.Insert(0, new Exercise(exercise.ExerciseTitle, exercise.ExerciseContent, exercise.Sets, exercise.Reps,exercise.ExerciseTimestamp,exercise.ExerciseId));
                 }
             }
 

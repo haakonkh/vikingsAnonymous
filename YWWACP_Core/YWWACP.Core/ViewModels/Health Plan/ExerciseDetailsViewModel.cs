@@ -114,7 +114,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         public async void addToTable()
         {
-            await database.InsertTableRow(new MyTable() { ExerciseContent = ExerciseContent, ExerciseTittle = ExerciseTitle, Sets = ExerciseSets, Reps = ExerciseReps, ExerciseTimestamp = ExerciseDate.ToString("dd/MM/yyyy"), UserId = UserId, ExerciseId = GenerateExerciseID() });
+            await database.InsertTableRow(new MyTable() { ExerciseContent = ExerciseContent, ExerciseTitle = ExerciseTitle, Sets = ExerciseSets, Reps = ExerciseReps, ExerciseTimestamp = ExerciseDate.ToString("dd/MM/yyyy"), UserId = UserId, ExerciseId = GenerateExerciseID() });
 
         }
 
@@ -150,7 +150,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
                 if (ExerciseID == exercise.ExerciseId)
                 {
                     ExerciseContent = exercise.ExerciseContent;
-                    ExerciseTitle = exercise.ExerciseTittle;
+                    ExerciseTitle = exercise.ExerciseTitle;
                     ExerciseSets = exercise.Sets;
                     ExerciseReps = exercise.Reps;
                     if(exercise.Reps > 0) {

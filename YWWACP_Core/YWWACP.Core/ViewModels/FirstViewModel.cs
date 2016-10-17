@@ -85,10 +85,10 @@ namespace YWWACP.Core.ViewModels
 
         }
 
-        public void InitDb()
+        public async void InitDb()
         {
 			DropDatabase();
-            database.InsertTableRow(new MyTable
+            await database.InsertTableRow(new MyTable
                 {
                     MealId = "1",
                     MealTitle = "Stewed fruit with custard or cream",
@@ -99,7 +99,7 @@ namespace YWWACP.Core.ViewModels
                 }
             );
 
-            database.InsertTableRow(new MyTable
+           await database.InsertTableRow(new MyTable
             {
                 MealId = "2",
                 MealTitle = "Tangy protein smoothie",
@@ -109,7 +109,7 @@ namespace YWWACP.Core.ViewModels
             }
             );
 
-            database.InsertTableRow(new MyTable
+           await database.InsertTableRow(new MyTable
             {
                 MealId = "3",
                 MealTitle = "Chicken and white bean soup",
@@ -119,7 +119,7 @@ namespace YWWACP.Core.ViewModels
             }
             );
 
-           database.InsertTableRow(new MyTable
+           await database.InsertTableRow(new MyTable
            {
                ExerciseId = "1",
                ExerciseTitle = "Burpess",
@@ -128,9 +128,9 @@ namespace YWWACP.Core.ViewModels
                Reps = 12
            });
 		   
-		    await database.InsertTableRow(new MyTable() { ExerciseContent = "Run bitch, run!", ExerciseTittle = "Running", Sets = 0, Reps = 0, ExerciseId = GenerateID(), UserId = "",basic = true});
-            await database.InsertTableRow(new MyTable() { ExerciseContent = "Bounce up and down", ExerciseTittle = "Squatting", Sets = 4, Reps = 8, ExerciseId = GenerateID(),UserId = "",basic = true});
-            await database.InsertTableRow(new MyTable() { ExerciseContent = "Kick a ball", ExerciseTittle = "Football", Sets = 0, Reps = 0, ExerciseId = GenerateID() ,UserId = "",basic = true});
+		    await database.InsertTableRow(new MyTable() { ExerciseContent = "Run bitch, run!", ExerciseTitle = "Running", Sets = 0, Reps = 0, ExerciseId = GenerateID(), UserId = "",basic = true});
+            await database.InsertTableRow(new MyTable() { ExerciseContent = "Bounce up and down", ExerciseTitle = "Squatting", Sets = 4, Reps = 8, ExerciseId = GenerateID(),UserId = "",basic = true});
+            await database.InsertTableRow(new MyTable() { ExerciseContent = "Kick a ball", ExerciseTitle = "Football", Sets = 0, Reps = 0, ExerciseId = GenerateID() ,UserId = "",basic = true});
 
 
 
