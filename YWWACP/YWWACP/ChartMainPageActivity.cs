@@ -17,6 +17,7 @@ using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
 
+//Author: Student 9787283, Student Kristoffer Helgesen 
 namespace YWWACP
 {
 

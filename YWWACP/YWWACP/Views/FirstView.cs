@@ -71,6 +71,8 @@ namespace YWWACP.Views
         }
         private PlotModel CreatePlotModel()
         {
+
+            //Author: Student 9787283, Student Kristoffer Helgesen
             var plotModel = new PlotModel { Title = "Your progression" };
 
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });

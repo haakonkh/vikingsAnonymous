@@ -3,8 +3,10 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <TextView
+
+  <!--Author: Student 9787283, Student Kristoffer Helgesen -->
+  <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Loading...." />
+        android:text="Loading ywwacp...." />
 </LinearLayout>
