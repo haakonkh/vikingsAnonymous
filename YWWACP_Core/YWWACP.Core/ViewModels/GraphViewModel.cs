@@ -86,11 +86,11 @@ namespace YWWACP.Core.ViewModels
                 ShowViewModel<ExerciseViewModel>(new { userid = UserId });
                 Close(this);
             });
-            //OpenCommunityCommand = new MvxCommand(() =>
-            //{
-            //    ShowViewModel<CommunityViewModel>();
-            //    Close(this);
-            //});
+            OpenCommunityCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<CommunityViewModel>();
+                Close(this);
+            });
 
         }
 
