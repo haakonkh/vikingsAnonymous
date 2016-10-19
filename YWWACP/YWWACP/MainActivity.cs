@@ -1,22 +1,24 @@
+using System;
 using System.Linq;
 using Android.App;
 using Android.OS;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
-using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using MvvmCross.Core.ViewModels;
 using YWWACP.Core;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Support.V7.Fragging.Attributes;
+using MvvmCross.Droid.Support.V7.Fragging.Presenter;
 using YWWACP.Core.ViewModels;
-using Fragment = Android.Support.V4.App.Fragment;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 
 namespace YWWACP
 {
     [Activity]
-    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>
+    public class MainActivity : MvxCachingFragmentCompatActivity<MainViewModel>, IMvxFragmentHost
     {
         ActionBarDrawerToggle _drawerToggle;
 
@@ -72,6 +74,15 @@ namespace YWWACP
                 return true;
 
             return base.OnOptionsItemSelected(item);
+        }
+
+        public bool Show(MvxViewModelRequest request, Bundle bundle, Type fragmentType, MvxFragmentAttribute fragmentAttribute)
+        {
+            var fragmentTag = GetFragmentTag(request, bundle, fragmentType);
+            FragmentCacheConfiguration.RegisterFragmentToCache(fragmentTag, fragmentType, request.ViewModelType);
+            
+            ShowFragment(fragmentTag, fragmentAttribute.FragmentContentId, bundle);
+                      return true;
         }
     }
 

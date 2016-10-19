@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:weightSum="120"
+    android:id="@+id/linearLayoutButtonWrap">
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:drawableStart="@drawable/web"
+        local:MvxBind="Click OpenHomeCommand"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:drawableStart="@drawable/wedding-planning"
+        local:MvxBind="Click OpenHealthPlanCommand"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:drawableStart="@drawable/health-care"
+        local:MvxBind="Click OpenRecipesCommand"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        local:MvxBind="Click OpenDiaryCommand"
+        android:drawableStart="@drawable/valentines-contact-book" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:drawableStart="@drawable/chat"
+        local:MvxBind="Click OpenCommunityCommand"
+         />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        local:MvxBind="Click OpenExerciseCommand"
+        android:text="yolo" />
+</LinearLayout>

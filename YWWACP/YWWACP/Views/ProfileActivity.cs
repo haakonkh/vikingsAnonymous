@@ -11,17 +11,17 @@ using YWWACP.Core.ViewModels;
 
 namespace YWWACP.Views
 {
-    //[MvxFragment(typeof(MainViewModel), Resource.Id.frameLayout)]
-    [MvxViewFor(typeof(ProfileViewModel))]
+    [MvxFragment(typeof(MainViewModel), Resource.Id.frameLayout)]
+    //[MvxViewFor(typeof(ProfileViewModel))]
     [Register("YWWACP.Profile")]
-    public class ProfileActivity :  MvxFragment<ProfileViewModel>
+    public class ProfileActivity :  MvxFragment<ProfileViewModel>, IMvxFragmentView
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             return inflater.Inflate(Resource.Layout.Profile, container, false);
         }
 
-        public ProfileActivity() { }
+        //public ProfileActivity() { }
     }
 
 

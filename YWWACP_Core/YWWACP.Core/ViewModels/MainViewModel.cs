@@ -9,7 +9,7 @@ namespace YWWACP.Core.ViewModels
     {
         readonly Type[] _menuItemTypes = {
             
-            //typeof(ProfileViewModel),
+            typeof(ProfileViewModel),
             typeof(CommunityViewModel),
             typeof(FirstViewModel)
         };
