@@ -16,13 +16,18 @@ using OxyPlot.Xamarin.Android;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
+using YWWACP.Core.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Views;
 
 //Author: Student 9787283, Student Kristoffer Helgesen 
 namespace YWWACP
 {
 
-    [Activity(Label = "ChartActivity")]
-    public class ChartMainPageActivity : Activity
+    //Sets the connection to the mView.
+    [MvxViewFor(typeof(GraphViewModel))]
+    [Activity(Label = "ChartMainPAgeActivity")]
+    public class ChartMainPageActivity : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -34,6 +39,12 @@ namespace YWWACP
             view.Model = CreatePlotModel();
 
         }
+     //   protected override void OnResume()
+    //    {
+    //        var vm = (GraphViewModel)ViewModel;
+   //         vm.OnResume();
+   //         base.OnResume();
+  //      }
 
         private PlotModel CreatePlotModel()
         {
