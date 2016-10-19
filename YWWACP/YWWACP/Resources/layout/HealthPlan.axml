@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <Button
-        android:text="Exercises"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnAddPlan"
-        local:MvxBind="Click OpenExerciseCommand" />
-    <Button
-        android:text="Meals"
+        android:layout_alignParentBottom="true"
+        layout="@layout/navbar" />
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAddPlan"
-        local:MvxBind="Click OpenMealCommand" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:weightSum="100">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:id="@+id/sdfgfdasg"
+            android:weightSum="100">
+            <Button
+                android:text="Exercises"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:id="@+id/btndsfgdsfg"
+                android:paddingLeft="20px"
+                local:MvxBind="Click OpenHealthPlanExerciseCommand" />
+            <Button
+                android:text="Meals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:id="@+id/btnsdgsdg"
+                local:MvxBind="Click OpenMealCommand" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/my_purple" />
+    </LinearLayout>
+</RelativeLayout>

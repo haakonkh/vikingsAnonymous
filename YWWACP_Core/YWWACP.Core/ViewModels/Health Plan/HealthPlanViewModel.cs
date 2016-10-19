@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
+using YWWACP.Core.ViewModels.Diary;
 using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Core.ViewModels
 {
     public class HealthPlanViewModel : MvxViewModel
     {
+        //Navigation
+        public ICommand OpenCommunityCommand { get; set; }
+        public ICommand OpenRecipesCommand { get; set; }
+        public ICommand OpenDiaryCommand { get; set; }
+        public ICommand OpenHomeCommand { get; set; }
         public ICommand OpenExerciseCommand { get; set; }
+
+        public ICommand OpenHealthPlanExerciseCommand { get; set; }
         public ICommand OpenMealCommand { get; set; }
 
         public IDatabase database;
@@ -21,10 +29,35 @@ namespace YWWACP.Core.ViewModels
         {
             this.database = database;
 
-            OpenExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userid = UserId }));
-            //OpenMealCommand = new MvxCommand(() => ShowViewModel<NewHealthPlanViewModel>());
+            OpenHealthPlanExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userid = UserId }));
+            OpenMealCommand = new MvxCommand(() => ShowViewModel<HealthPlanMealViewModel>());
 
-
+            //Navigation
+            OpenDiaryCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<DiaryViewModel>(new {userid = UserId});
+                Close(this);
+            });
+            OpenHomeCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<FirstViewModel>(new { userid = UserId });
+                Close(this);
+            });
+            OpenRecipesCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<RecipeViewModel>(new { userid = UserId });
+                Close(this);
+            });
+            OpenExerciseCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<ExerciseViewModel>(new { userid = UserId });
+                Close(this);
+            });
+            OpenCommunityCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<CommunityViewModel>();
+                Close(this);
+            });
         }
         public void Init( string userId)
         {

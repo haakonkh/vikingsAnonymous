@@ -58,9 +58,9 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             Exercises.Clear();
             foreach (var exercise in exercises)
             {
-                if (exercise.ExerciseContent != null && exercise.basic)
+                if (exercise.ExerciseSummary != null && exercise.basic)
                 {
-                    Exercises.Insert(0, new Exercise(exercise.ExerciseTitle, exercise.ExerciseContent, exercise.Sets, exercise.Reps, exercise.ExerciseTimestamp,exercise.ExerciseId));
+                    Exercises.Insert(0, new Exercise(exercise.ExerciseTitle, exercise.ExerciseSummary, exercise.Sets, exercise.Reps, exercise.ExerciseTimestamp,exercise.ExerciseId));
 
                 }
             }

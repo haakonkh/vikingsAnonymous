@@ -19,7 +19,7 @@ namespace YWWACP
             SetContentView(Resource.Layout.HealthPlan);
 
             // Connects to buttons
-            btnAddPlan = FindViewById<Button>(Resource.Id.btnAddPlan);
+            //btnAddPlan = FindViewById<Button>(Resource.Id.btnAddPlan);
 
             btnAddPlan.Click += btnAddPlan_Click;
 

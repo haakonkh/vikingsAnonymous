@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
+  <include
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="100">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/navbar" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_height="50dp"
             android:paddingLeft="90px"
             android:paddingRight="90px"
+            android:layout_weight="10"
             android:id="@+id/linearLayoutWrapTopButtons"
-            android:weightSum="100">      
+            android:weightSum="100">
             <Button
                 android:drawableStart="@drawable/Arrow_Back"
                 android:layout_width="0dp"
@@ -32,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
                 android:id="@+id/btnToday"
-                local:MvxBind="Text ShowDate; Click TodayCommand"/>
+                local:MvxBind="Text ShowDate; Click TodayCommand" />
             <Button
                 android:drawableStart="@drawable/Arrow_Forward"
                 android:layout_width="0dp"
@@ -42,15 +47,18 @@
                 android:paddingRight="20px"
                 local:MvxBind="Click NextDayCommand" />
         </LinearLayout>
-      <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/my_purple" />
         <Mvx.MvxListView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="90"
             local:MvxItemTemplate="@layout/diaryentryrow"
+            android:layout_above="@id/navigation"
+            android:layout_below="@id/linearLayoutWrapTopButtons"
             local:MvxBind="ItemsSource Entries;" />
-    </LinearLayout>
-</LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

@@ -13,21 +13,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="30dp"
                 local:MvxBind="Text ExerciseTitle" />
             <TextView
+                style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 local:MvxBind="Text ExerciseContent" />
             <TextView
+                style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 local:MvxBind="Text DisplayExerciseReps" />
             <TextView
+                style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
@@ -35,7 +39,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/my_purple" />
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">

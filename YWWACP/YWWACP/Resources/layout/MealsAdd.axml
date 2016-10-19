@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <TextView
+          style="@+style/textViewTheme"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:textSize="30dp"
+          local:MvxBind="Text MealTitle" />
+      <TextView
+          style="@+style/textViewTheme"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20dp"
+          local:MvxBind="Text MealContent" />
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/my_purple" />
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent">
+        <MvvmCross.Binding.Droid.Views.MvxDatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker1"
+            android:layout_centerHorizontal="true"
+            local:MvxBind="Value MealDate"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="20px" />
+      </RelativeLayout>
+      <Button
+          android:text="Add meal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/sdfgsdfgsdg"
+          local:MvxBind="Click AddToPlanCommand" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

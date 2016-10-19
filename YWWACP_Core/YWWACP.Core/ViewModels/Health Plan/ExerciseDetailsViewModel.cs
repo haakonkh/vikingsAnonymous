@@ -104,6 +104,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         public ExerciseDetailsViewModel(IDatabase database)
         {
             this.database = database;
+
             AddToPlanCommand = new MvxCommand(() =>
             {
                 addToTable();
@@ -114,7 +115,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         public async void addToTable()
         {
-            await database.InsertTableRow(new MyTable() { ExerciseContent = ExerciseContent, ExerciseTitle = ExerciseTitle, Sets = ExerciseSets, Reps = ExerciseReps, ExerciseTimestamp = ExerciseDate.ToString("dd/MM/yyyy"), ExerciseDate=ExerciseDate.ToString(), UserId = UserId, ExerciseId = GenerateExerciseID() });
+            await database.InsertTableRow(new MyTable() { ExerciseSummary = ExerciseContent, ExerciseTitle = ExerciseTitle, Sets = ExerciseSets, Reps = ExerciseReps, ExerciseTimestamp = ExerciseDate.ToString("dd/MM/yyyy"), ExerciseDate=ExerciseDate.ToString(), UserId = UserId, ExerciseId = GenerateExerciseID() });
 
         }
 
@@ -149,7 +150,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             {
                 if (ExerciseID == exercise.ExerciseId)
                 {
-                    ExerciseContent = exercise.ExerciseContent;
+                    ExerciseContent = exercise.ExerciseSummary;
                     ExerciseTitle = exercise.ExerciseTitle;
                     ExerciseSets = exercise.Sets;
                     ExerciseReps = exercise.Reps;

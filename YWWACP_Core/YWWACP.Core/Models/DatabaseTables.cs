@@ -43,8 +43,8 @@ namespace YWWACP.Core.Models
         // Should maybe be a list? 
         public string Approach { get; set; }
         // Time to put in diary/healthPlan
-        [Ignore]
-        public DateTime MealTimestamp { get; set; }
+        public string MealDate { get; set; }
+        public string MealTimestamp { get; set; }
 
         public string ExerciseId { get; set; }
 

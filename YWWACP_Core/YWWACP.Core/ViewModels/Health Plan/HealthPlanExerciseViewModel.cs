@@ -40,10 +40,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         async void testStart()
         {
-            /*DeleteEverything();
-            await database.InsertTableRow(new MyTable() { ExerciseContent = "Run bitch, run!", ExerciseTittle = "Running", Sets = 0, Reps = 0, ExerciseTimestamp = new DateTime(2016, 10, 12, 15, 30, 0).ToString(), UserId = UserId,ExerciseId = GenerateExerciseID()});
-            await database.InsertTableRow(new MyTable() { ExerciseContent = "Bounce up and down", ExerciseTittle = "Squatting", Sets = 4, Reps = 8, ExerciseTimestamp = new DateTime(2016, 10, 15, 12, 45, 0).ToString(),UserId = UserId, ExerciseId = GenerateExerciseID() });
-            await database.InsertTableRow(new MyTable() { ExerciseContent = "Kick a ball", ExerciseTittle = "Football", Sets = 0, Reps = 0, ExerciseTimestamp = new DateTime(2016, 10, 15, 13, 45, 0).ToString(), UserId = "sdfgsdfgsdfg", ExerciseId = GenerateExerciseID() });*/
+            
             GetExercises();
         }
         public void Init(string userId)
@@ -67,14 +64,18 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             foreach (var exercise in exercises)
             {
 
-                if (exercise.ExerciseContent != null && exercise.UserId == UserId)
+                if (exercise.ExerciseSummary != null && exercise.UserId == UserId)
                 {
-                    Exercises.Insert(0, new Exercise(exercise.ExerciseTitle, exercise.ExerciseContent, exercise.Sets, exercise.Reps,exercise.ExerciseTimestamp,exercise.ExerciseId));
+                    Exercises.Insert(0, new Exercise(exercise.ExerciseTitle, exercise.ExerciseSummary, exercise.Sets, exercise.Reps,exercise.ExerciseTimestamp,exercise.ExerciseId));
                 }
             }
 
             RaisePropertyChanged(() => Exercises);
-
+            if (Exercises.Count == 0)
+            {
+                Exercises.Insert(0, new Exercise("No exercises planned", "", 0, 0, "", ""));
+                RaisePropertyChanged(() => Exercises);
+            }
         }
         public void OnResume()
         {

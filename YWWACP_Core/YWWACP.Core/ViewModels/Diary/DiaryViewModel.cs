@@ -14,6 +14,12 @@ namespace YWWACP.Core.ViewModels.Diary
 {
     public class DiaryViewModel:MvxViewModel
     {
+        public ICommand OpenCommunityCommand { get; set; }
+        public ICommand OpenHealthPlanCommand { get; set; }
+        public ICommand OpenRecipesCommand { get; set; }
+        public ICommand OpenHomeCommand { get; set; }
+        public ICommand OpenExerciseCommand { get; set; }
+
         public IDatabase database;
         public ICommand PrevDayCommand { get; set; }
         public ICommand TodayCommand { get; set; }
@@ -52,7 +58,31 @@ namespace YWWACP.Core.ViewModels.Diary
                 Close(this);
             });
 
-
+            OpenHealthPlanCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<HealthPlanViewModel>(new { userid = UserId });
+                Close(this);
+            });
+            OpenHomeCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<FirstViewModel>(new { userid = UserId });
+                Close(this);
+            });
+            OpenRecipesCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<RecipeViewModel>(new { userid = UserId });
+                Close(this);
+            });
+            OpenExerciseCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<ExerciseViewModel>(new { userid = UserId });
+                Close(this);
+            });
+            OpenCommunityCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<CommunityViewModel>();
+                Close(this);
+            });
         }
         public void Init(string userId, DateTime DateIn)
         {
@@ -131,7 +161,7 @@ namespace YWWACP.Core.ViewModels.Diary
 
                     if (dt.Date == Date.Date)
                     {
-                        Entries.Insert(0, new Exercise(entry.ExerciseTitle, entry.ExerciseContent, entry.Sets, entry.Reps, entry.ExerciseTimestamp, entry.ExerciseId));
+                        Entries.Insert(0, new Exercise(entry.ExerciseTitle, entry.ExerciseSummary, entry.Sets, entry.Reps, entry.ExerciseTimestamp, entry.ExerciseId));
                     }
                 }
 

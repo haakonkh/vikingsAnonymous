@@ -9,11 +9,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <Button
-            android:text="Add new exercise"
+            android:text="Add new meal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnAddExercise"
-            local:MvxBind="Click OpenNewExerciseCommand" />
+            android:id="@+id/btnAddMeal"
+            local:MvxBind="Click OpenNewMealCommand" />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -21,7 +21,7 @@
         <Mvx.MvxListView
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            local:MvxItemTemplate="@layout/healthplanexerciserow"
-            local:MvxBind="ItemsSource Exercises;" />
+            local:MvxItemTemplate="@layout/healthplanmealsrow"
+            local:MvxBind="ItemsSource Meals;" />
     </LinearLayout>
 </LinearLayout>
