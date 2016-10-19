@@ -71,11 +71,27 @@ namespace YWWACP.Views
         }
         private PlotModel CreatePlotModel()
         {
-
+         
+            var xAxis = new DateTimeAxis
+            {
+                Position = AxisPosition.Bottom,
+                StringFormat = "dd/MM",
+                Title = "End of week",
+              
+                IntervalLength = 75,              
+                MinorIntervalType = DateTimeIntervalType.Days,
+                IntervalType = DateTimeIntervalType.Days,
+                MajorGridlineStyle = LineStyle.Solid,
+                MinorGridlineStyle = LineStyle.None,
+               
+            };
+            
             //Author: Student 9787283, Student Kristoffer Helgesen
             var plotModel = new PlotModel { Title = "Your progression" };
-
-            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });
+        
+            //(new LinearAxis { Position = AxisPosition.Bottom });
+            
+            plotModel.Axes.Add(xAxis); 
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0 });
 
             var series1 = new OxyPlot.Series.LineSeries
@@ -84,15 +100,25 @@ namespace YWWACP.Views
                 MarkerSize = 4,
                 MarkerStroke = OxyColors.White
             };
+            //The first datapoint section is ment to set the day
+            //The second datapoint is ment to set the value of the exercise based on a value of the day.
 
+           DateTime tid = DateTime.Now;
+    
             //The different points on the graph 
-            series1.Points.Add(new OxyPlot.DataPoint(0.0, 10.0));
-            series1.Points.Add(new OxyPlot.DataPoint(1.4, 2.1));
-            series1.Points.Add(new OxyPlot.DataPoint(2.0, 4.2));
-            series1.Points.Add(new OxyPlot.DataPoint(3.3, 2.3));
-            series1.Points.Add(new OxyPlot.DataPoint(4.7, 7.4));
-            series1.Points.Add(new OxyPlot.DataPoint(6.0, 6.2));
-            series1.Points.Add(new OxyPlot.DataPoint(8.9, 8.9));
+            series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(DateTime.Now), 4));
+            series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(DateTime.Now.AddDays(+5)), 4));
+            series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(DateTime.Now.AddDays(+10)), 5));
+            series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(DateTime.Now.AddDays(+15)), 6));
+            series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(DateTime.Now.AddDays(+20)), 7));
+         //   series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(DateTime.Now.AddDays(+1.25)), 8));
+            //    series1.Points.Add(new OxyPlot.DataPoint(0.0, 10.0));
+            //     series1.Points.Add(new OxyPlot.DataPoint(1.0, 2.0));
+            //      series1.Points.Add(new OxyPlot.DataPoint(2.0, 4.0));
+            //       series1.Points.Add(new OxyPlot.DataPoint(3.0, 2.5));
+            //        series1.Points.Add(new OxyPlot.DataPoint(4.0, 7.0));
+            //         series1.Points.Add(new OxyPlot.DataPoint(5.0, 6.0));
+            //           series1.Points.Add(new OxyPlot.DataPoint(6.0, 9.0));
 
             plotModel.Series.Add(series1);
 
