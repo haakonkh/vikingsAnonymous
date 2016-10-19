@@ -2244,8 +2244,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600ba
 			public const int btnActivitiesMonday = 2131099834;
 			
-			// aapt resource value: 0x7f06006f
-			public const int btnAddComment = 2131099759;
+			// aapt resource value: 0x7f060071
+			public const int btnAddComment = 2131099761;
 			
 			// aapt resource value: 0x7f0600ae
 			public const int btnAddExercise = 2131099822;
@@ -2292,8 +2292,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06009f
 			public const int btnNewExer = 2131099807;
 			
-			// aapt resource value: 0x7f060074
-			public const int btnNewThread = 2131099764;
+			// aapt resource value: 0x7f06006a
+			public const int btnNewThread = 2131099754;
 			
 			// aapt resource value: 0x7f0600b4
 			public const int btnNewThreadMY = 2131099828;
@@ -2496,8 +2496,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600f9
 			public const int linearLayoutQuestionWrap = 2131099897;
 			
-			// aapt resource value: 0x7f060073
-			public const int linearLayoutWrapTopButtons = 2131099763;
+			// aapt resource value: 0x7f060074
+			public const int linearLayoutWrapTopButtons = 2131099764;
 			
 			// aapt resource value: 0x7f0600b3
 			public const int linearLayoutWrapTopButtonsMY = 2131099827;
@@ -2508,8 +2508,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06000d
 			public const int listMode = 2131099661;
 			
-			// aapt resource value: 0x7f060070
-			public const int listViewComments = 2131099760;
+			// aapt resource value: 0x7f060072
+			public const int listViewComments = 2131099762;
 			
 			// aapt resource value: 0x7f060076
 			public const int listViewCommunity = 2131099766;
@@ -2559,8 +2559,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060086
 			public const int mvxDatePicker1 = 2131099782;
 			
-			// aapt resource value: 0x7f060072
-			public const int navigation = 2131099762;
+			// aapt resource value: 0x7f06006c
+			public const int navigation = 2131099756;
 			
 			// aapt resource value: 0x7f060023
 			public const int never = 2131099683;
@@ -2580,8 +2580,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06002a
 			public const int pin = 2131099690;
 			
-			// aapt resource value: 0x7f06006a
-			public const int plot_view = 2131099754;
+			// aapt resource value: 0x7f06006b
+			public const int plot_view = 2131099755;
 			
 			// aapt resource value: 0x7f060090
 			public const int postComment = 2131099792;
@@ -2592,8 +2592,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060007
 			public const int progress_horizontal = 2131099655;
 			
-			// aapt resource value: 0x7f06006b
-			public const int questionwrap = 2131099755;
+			// aapt resource value: 0x7f06006d
+			public const int questionwrap = 2131099757;
 			
 			// aapt resource value: 0x7f060055
 			public const int radio = 2131099733;
@@ -2865,8 +2865,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600b0
 			public const int textViewStatus = 2131099824;
 			
-			// aapt resource value: 0x7f06006e
-			public const int textViewTrash = 2131099758;
+			// aapt resource value: 0x7f060070
+			public const int textViewTrash = 2131099760;
 			
 			// aapt resource value: 0x7f0600f3
 			public const int textViewWeight = 2131099891;
@@ -2898,14 +2898,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f060078
 			public const int txtViewCategory = 2131099768;
 			
-			// aapt resource value: 0x7f060071
-			public const int txtViewComment = 2131099761;
+			// aapt resource value: 0x7f060073
+			public const int txtViewComment = 2131099763;
 			
 			// aapt resource value: 0x7f060079
 			public const int txtViewContent = 2131099769;
 			
-			// aapt resource value: 0x7f06006c
-			public const int txtViewQuestion = 2131099756;
+			// aapt resource value: 0x7f06006e
+			public const int txtViewQuestion = 2131099758;
 			
 			// aapt resource value: 0x7f060077
 			public const int txtViewTitle = 2131099767;
@@ -2925,8 +2925,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060017
 			public const int wrap_content = 2131099671;
 			
-			// aapt resource value: 0x7f06006d
-			public const int wrapbin = 2131099757;
+			// aapt resource value: 0x7f06006f
+			public const int wrapbin = 2131099759;
 			
 			static Id()
 			{

@@ -9,7 +9,7 @@ using YWWACP.Core.Interfaces;
 
 namespace YWWACP.Core.ViewModels
 {
-  public class GraphViewModel : MvxViewModel
+    public class GraphViewModel : MvxViewModel
     {
         // Everyone should include these commands on their pages
         public ICommand OpenCommunityCommand { get; set; }
