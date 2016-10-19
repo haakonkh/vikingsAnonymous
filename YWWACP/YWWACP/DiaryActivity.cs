@@ -27,9 +27,9 @@ namespace YWWACP
             SetContentView(Resource.Layout.Diary);
 
             // Connects to buttons
-            mYesterdayBtn = FindViewById<Button>(Resource.Id.btnYesterday);
-            mTodayBtn = FindViewById<Button>(Resource.Id.btnToday);
-            mTomorrowBtn = FindViewById<Button>(Resource.Id.btnTomorrow);
+            //mYesterdayBtn = FindViewById<Button>(Resource.Id.btnYesterday);
+            //mTodayBtn = FindViewById<Button>(Resource.Id.btnToday);
+            //mTomorrowBtn = FindViewById<Button>(Resource.Id.btnTomorrow);
 
             mTodayBtn.Click += MTodayBtn_Click;
             

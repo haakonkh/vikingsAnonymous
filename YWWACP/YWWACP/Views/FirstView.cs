@@ -45,10 +45,10 @@ namespace YWWACP.Views
 
             // Get our button from the layout resource,
             // and attach an event to it
-            btnDiary = FindViewById<Button>(Resource.Id.btnDiary);
+            //btnDiary = FindViewById<Button>(Resource.Id.btnDiary);
            // btnProfile = FindViewById<Button>(Resource.Id.btnProfile);
            // btnRecipes = FindViewById<Button>(Resource.Id.btnRecipes);
-            btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
+            //btnHealthPlan = FindViewById<Button>(Resource.Id.btnHealthPlan);
            // btnCommunity = FindViewById<Button>(Resource.Id.btnCommunity);
 
            // btnHealthPlan.Click += BtnHealthPlan_Click;
@@ -57,7 +57,7 @@ namespace YWWACP.Views
 
             btnGraph = FindViewById<Button>(Resource.Id.btnGraph);
 
-            btnDiary.Click += DiaryButton_Click;
+            //btnDiary.Click += DiaryButton_Click;
             //btnCommunity.Click += BtnCommunity_Click;
            // btnRecipes.Click += BtnRecipes_Click;
            // btnProfile.Click += BtnProfile_Click;
@@ -159,14 +159,14 @@ namespace YWWACP.Views
         }*/
 
 
-
+/*
         //When Diary Button is clicked
         private void DiaryButton_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(DiaryActivity));
             StartActivity(intent);
 
-        }
+        }*/
 
         /*private void BtnHealthPlan_Click(object sender, EventArgs e)
         {

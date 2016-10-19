@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -206,6 +206,8 @@
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="Views\DeleteThreadFragment.cs" />
+    <Compile Include="Views\DiaryDayView.cs" />
+    <Compile Include="Views\DiaryView.cs" />
     <Compile Include="Views\EditProfileView.cs" />
     <Compile Include="Views\ExerciseDetailsView.cs" />
     <Compile Include="Views\HealthPlanExercisesView.cs" />
@@ -325,6 +327,8 @@
     <AndroidResource Include="Resources\layout\navbar.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\DiaryEntryRow.axml" />
+    <AndroidResource Include="Resources\layout\DiaryPickDate.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -388,6 +392,8 @@
     <AndroidResource Include="Resources\drawable\hc.png" />
     <AndroidResource Include="Resources\drawable\hp.png" />
     <AndroidResource Include="Resources\drawable\web.png" />
+    <AndroidResource Include="Resources\drawable\Arrow_Back.png" />
+    <AndroidResource Include="Resources\drawable\Arrow_Forward.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

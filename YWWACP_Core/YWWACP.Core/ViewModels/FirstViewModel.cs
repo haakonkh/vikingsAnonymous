@@ -5,6 +5,7 @@ using Android.App;
 using Android.Content;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
+using YWWACP.Core.ViewModels.Diary;
 
 namespace YWWACP.Core.ViewModels
 {
@@ -16,6 +17,8 @@ namespace YWWACP.Core.ViewModels
         public ICommand OpenProfileCommand { get; set; }
         public ICommand OpenRecipeCommand { get; set; }
         public ICommand OpenExerciseCommand { get; set; }
+        public ICommand OpenDiaryCommand { get; set; }
+
         public ICommand DeleteEverythingCommand { get; set; }
         private readonly ISharedPreferences prefUserInfo = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
         private readonly ISharedPreferences prefAppOpend = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
@@ -42,8 +45,10 @@ namespace YWWACP.Core.ViewModels
             OpenRecipeCommand = new MvxCommand(() => ShowViewModel<RecipeViewModel>(new {userid = UserId}));
             OpenProfileCommand = new MvxCommand(() => ShowViewModel<ProfileViewModel>(new {userid = UserId}));
             OpenCommand = new MvxCommand(() => ShowViewModel<CommunityViewModel>(new {userid = UserId}));
-           
-		   DeleteEverythingCommand = new MvxCommand(() =>
+            OpenDiaryCommand = new MvxCommand(() => ShowViewModel<DiaryViewModel>(new { userid = UserId,DateIn = DateTime.MinValue }));
+
+
+            DeleteEverythingCommand = new MvxCommand(() =>
             {
                 DeleteEverything();
             });

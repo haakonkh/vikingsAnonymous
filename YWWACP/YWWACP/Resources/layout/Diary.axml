@@ -1,39 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <ActionMenuView
-        android:minWidth="25px"
-        android:minHeight="40px"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/dayPicker"
-        android:background="@android:color/holo_blue_light">
-        <MvvmCross.Binding.Droid.Views.MvxDatePicker
+        android:layout_height="match_parent"
+        android:weightSum="100">
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mvxDatePicker1" />
-        <Button
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:paddingLeft="90px"
+            android:paddingRight="90px"
+            android:id="@+id/linearLayoutWrapTopButtons"
+            android:weightSum="100">      
+            <Button
+                android:drawableStart="@drawable/Arrow_Back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:id="@+id/btnPrevDay"
+                android:paddingLeft="20px"
+                local:MvxBind="Click PrevDayCommand" />
+            <Button
+                android:text="Today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:id="@+id/btnToday"
+                local:MvxBind="Text ShowDate; Click TodayCommand"/>
+            <Button
+                android:drawableStart="@drawable/Arrow_Forward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:id="@+id/btnNextDay"
+                android:paddingRight="20px"
+                local:MvxBind="Click NextDayCommand" />
+        </LinearLayout>
+      <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
+        <Mvx.MvxListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnYesterday"
-            android:drawableStart="@drawable/arrow_left" />
-        <Button
-            android:text="@string/Today"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnToday" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnTomorrow"
-            android:drawableStart="@drawable/arrow_right" />
-        <DatePicker
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/datePicker1" />
-    </ActionMenuView>
+            android:layout_height="0dp"
+            android:layout_weight="90"
+            local:MvxItemTemplate="@layout/diaryentryrow"
+            local:MvxBind="ItemsSource Entries;" />
+    </LinearLayout>
 </LinearLayout>
