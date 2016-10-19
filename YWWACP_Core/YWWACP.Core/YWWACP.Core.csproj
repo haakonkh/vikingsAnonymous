@@ -55,6 +55,7 @@
     <Compile Include="ViewModels\ComunityViewModel.cs" />
     <Compile Include="ViewModels\CreateNewThreadViewModel.cs" />
     <Compile Include="ViewModels\DeleteThreadViewModel.cs" />
+    <Compile Include="ViewModels\Diary\DiaryDayViewModel.cs" />
     <Compile Include="ViewModels\Diary\DiaryViewModel.cs" />
     <Compile Include="ViewModels\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\EditProfileViewModel.cs" />

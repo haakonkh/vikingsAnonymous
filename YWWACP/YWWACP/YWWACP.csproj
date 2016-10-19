@@ -206,6 +206,7 @@
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="Views\DeleteThreadFragment.cs" />
+    <Compile Include="Views\DiaryDayView.cs" />
     <Compile Include="Views\DiaryView.cs" />
     <Compile Include="Views\EditProfileView.cs" />
     <Compile Include="Views\ExerciseDetailsView.cs" />
@@ -299,7 +300,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\AddExerciseToPlan.axml" />
     <AndroidResource Include="Resources\layout\AddExerciseToPlanRow.axml" />
-    <AndroidResource Include="Resources\layout\ExerciseAdd.axml" />
+    <AndroidResource Include="Resources\layout\ExerciseAdd.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\HealthPlanExerciseRow.axml" />
     <AndroidResource Include="Resources\layout\HealthPlanExercises.axml" />
     <AndroidResource Include="Resources\layout\RecipeListViewRow.axml">
@@ -324,6 +327,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\DiaryEntryRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DiaryPickDate.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

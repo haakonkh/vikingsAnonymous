@@ -5,33 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="100">
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="10"
-      android:id="@+id/linearLayoutWrapTopButtonsMY"
-      android:weightSum="100">
-    <Button
-        android:text="@string/New_Thread"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:id="@+id/btnNewThreadMY"
-        local:MvxBind="Click AddNewThreadCommand" />
-    <Button
-        android:text="@string/All_Threads"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:id="@+id/btnMyThreadsMY"
-        local:MvxBind="Click AllThreadsCommand" />
-  </LinearLayout>
-  <Mvx.MvxListView
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="90"
-      android:id="@+id/listViewMyThreads"
-      local:MvxItemTemplate="@layout/communitylistviewrow"
-      local:MvxBind="ItemsSource MyThreads; ItemClick SelectThreadCommand" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:id="@+id/linearLayoutWrapTopButtonsMY"
+        android:weightSum="100">
+        <Button
+            android:text="@string/New_Thread"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/btnNewThreadMY"
+            local:MvxBind="Click AddNewThreadCommand" />
+        <Button
+            android:text="@string/All_Threads"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/btnMyThreadsMY"
+            local:MvxBind="Click AllThreadsCommand" />
+    </LinearLayout>
+    <Mvx.MvxListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:id="@+id/listViewMyThreads"
+        local:MvxItemTemplate="@layout/communitylistviewrow"
+        local:MvxBind="ItemsSource MyThreads; ItemClick SelectThreadCommand" />
 </LinearLayout>

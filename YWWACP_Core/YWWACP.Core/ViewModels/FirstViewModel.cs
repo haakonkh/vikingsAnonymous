@@ -45,7 +45,7 @@ namespace YWWACP.Core.ViewModels
             OpenRecipeCommand = new MvxCommand(() => ShowViewModel<RecipeViewModel>(new {userid = UserId}));
             OpenProfileCommand = new MvxCommand(() => ShowViewModel<ProfileViewModel>(new {userid = UserId}));
             OpenCommand = new MvxCommand(() => ShowViewModel<CommunityViewModel>(new {userid = UserId}));
-            OpenDiaryCommand = new MvxCommand(() => ShowViewModel<DiaryViewModel>(new { userid = UserId }));
+            OpenDiaryCommand = new MvxCommand(() => ShowViewModel<DiaryViewModel>(new { userid = UserId,DateIn = DateTime.MinValue }));
 
 
             DeleteEverythingCommand = new MvxCommand(() =>

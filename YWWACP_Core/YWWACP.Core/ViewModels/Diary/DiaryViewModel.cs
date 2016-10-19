@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
@@ -14,6 +15,10 @@ namespace YWWACP.Core.ViewModels.Diary
     public class DiaryViewModel:MvxViewModel
     {
         public IDatabase database;
+        public ICommand PrevDayCommand { get; set; }
+        public ICommand TodayCommand { get; set; }
+        public ICommand NextDayCommand { get; set; }
+
         private ObservableCollection<Exercise> entries = new ObservableCollection<Exercise>();
         public ObservableCollection<Exercise> Entries
         {
@@ -30,14 +35,37 @@ namespace YWWACP.Core.ViewModels.Diary
         {
             this.database = database;
             GetDiary();
-            //OpenExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userid = UserId }));
+            PrevDayCommand = new MvxCommand(() =>
+            {
+                Date = Date.AddDays(-1);
+                RaisePropertyChanged(() => Date);
+                
+            });
+            NextDayCommand = new MvxCommand(() =>
+            {
+                Date = Date.AddDays(1);
+                RaisePropertyChanged(() => Date);
+            });
+            TodayCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<DiaryDayViewModel>(new {userId = UserId, currentDate = Date});
+                Close(this);
+            });
 
 
         }
-        public void Init(string userId)
+        public void Init(string userId, DateTime DateIn)
         {
             UserId = userId;
-            Date = DateTime.Now.Date;
+            if (DateIn == DateTime.MinValue)
+            {
+                Date = DateTime.Now.Date;
+
+            }
+            else
+            {
+                Date = DateIn;
+            }
             RaisePropertyChanged(() => Date);
         }
         public void OnResume()
@@ -55,7 +83,30 @@ namespace YWWACP.Core.ViewModels.Diary
                     date = value;
                     GetDiary();
                     RaisePropertyChanged(() => Date);
-                    
+                    if (Date.Date == DateTime.Now.Date)
+                    {
+                        ShowDate = "Today";
+                    }
+                    else
+                    {
+                        ShowDate = Date.ToString("dd/MM/yyyy");
+
+                    }
+                    RaisePropertyChanged(() => ShowDate);
+                }
+            }
+        }
+        private string showDate;
+        public string ShowDate
+        {
+            get { return showDate; }
+            set
+            {
+                if (value != showDate)
+                {
+                    showDate = value;
+                    RaisePropertyChanged(() => ShowDate);
+
                 }
             }
         }
@@ -86,6 +137,11 @@ namespace YWWACP.Core.ViewModels.Diary
 
             }
             RaisePropertyChanged(() => Entries);
+            if (Entries.Count == 0)
+            {
+                Entries.Insert(0, new Exercise("No entries for this day", "", 0, 0,"", ""));
+                RaisePropertyChanged(() => Entries);
+            }
 
         }
 

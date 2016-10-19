@@ -7,25 +7,43 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-            <MvvmCross.Binding.Droid.Views.MvxDatePicker
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/datePicker1"
-                android:layout_centerHorizontal="true"
-                local:MvxBind="Value Date"
-                android:layout_marginLeft="100px"
-                android:layout_marginTop="20px" />
-          <Mvx.MvxListView
+        android:layout_height="match_parent"
+        android:weightSum="100">
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:id="@+id/linearLayoutWrapTopButtons"
+            android:weightSum="90">
+            <Button
+                
+                Image="arrow_left.png"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:id="@+id/btnPrevDay"
+                local:MvxBind="Click PrevDayCommand" />
+            <Button
+                android:text="Today"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:id="@+id/btnToday"
+                local:MvxBind="Text ShowDate; Click TodayCommand"/>
+            <Button
+                android:text="Next day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:id="@+id/btnNextDay"
+                local:MvxBind="Click NextDayCommand" />
+        </LinearLayout>
+        <Mvx.MvxListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="90"
             local:MvxItemTemplate="@layout/diaryentryrow"
             local:MvxBind="ItemsSource Entries;" />
-        </RelativeLayout>
-      
     </LinearLayout>
 </LinearLayout>
