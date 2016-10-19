@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:weightSum="100">
     <EditText
-        android:inputType="textMultiLine"
+        android:inputType="textCapSentences"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
@@ -28,7 +28,7 @@
         android:layout_weight="10"
         local:MvxBind="ItemsSource CategoriesArray; SelectedItem SelectedItem" />
     <EditText
-        android:inputType="textMultiLine"
+        android:inputType="textCapSentences"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="70"
