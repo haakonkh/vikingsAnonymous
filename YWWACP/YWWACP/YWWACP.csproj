@@ -390,6 +390,8 @@
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
     <AndroidResource Include="Resources\drawable\trashIcon.png" />
     <AndroidResource Include="Resources\drawable\trashsmall.png" />
+    <AndroidResource Include="Resources\drawable\Arrow_Back.png" />
+    <AndroidResource Include="Resources\drawable\Arrow_Forward.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

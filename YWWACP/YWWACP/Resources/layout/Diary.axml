@@ -14,31 +14,38 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="10"
+            android:paddingLeft="90px"
+            android:paddingRight="90px"
             android:id="@+id/linearLayoutWrapTopButtons"
-            android:weightSum="90">
+            android:weightSum="100">      
             <Button
-                
-                Image="arrow_left.png"
+                android:drawableStart="@drawable/Arrow_Back"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="30"
+                android:layout_weight="25"
                 android:id="@+id/btnPrevDay"
+                android:paddingLeft="20px"
                 local:MvxBind="Click PrevDayCommand" />
             <Button
                 android:text="Today"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="30"
+                android:layout_weight="50"
                 android:id="@+id/btnToday"
                 local:MvxBind="Text ShowDate; Click TodayCommand"/>
             <Button
-                android:text="Next day"
+                android:drawableStart="@drawable/Arrow_Forward"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="30"
+                android:layout_weight="25"
                 android:id="@+id/btnNextDay"
+                android:paddingRight="20px"
                 local:MvxBind="Click NextDayCommand" />
         </LinearLayout>
+      <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
         <Mvx.MvxListView
             android:layout_width="match_parent"
             android:layout_height="0dp"
