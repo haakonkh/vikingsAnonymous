@@ -23,6 +23,7 @@ namespace YWWACP.Core.ViewModels
         private readonly ISharedPreferences prefUserInfo = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
         private readonly ISharedPreferences prefAppOpend = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
         public ICommand OpenHealthPlanCommand { get; set; }
+        public ICommand OpenGraphCommand { get; set; }
 
 
         private string userId;
@@ -40,7 +41,7 @@ namespace YWWACP.Core.ViewModels
             UserId = prefUserInfo.GetString("UserId", "");
             
             OpenHealthPlanCommand = new MvxCommand(() => ShowViewModel<HealthPlanViewModel>(new { userid = UserId }));
-            
+            OpenGraphCommand = new MvxCommand(() => ShowViewModel<GraphViewModel>(new { userid = UserId }));
             OpenExerciseCommand = new MvxCommand(() => ShowViewModel<ExerciseViewModel>(new { userid = UserId }));
             OpenRecipeCommand = new MvxCommand(() => ShowViewModel<RecipeViewModel>(new {userid = UserId}));
             OpenProfileCommand = new MvxCommand(() => ShowViewModel<ProfileViewModel>(new {userid = UserId}));

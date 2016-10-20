@@ -19,6 +19,9 @@ using OxyPlot.Series;
 using YWWACP.Core.ViewModels;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
+using MvvmCross.Droid.Support.V4;
+using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Binding.BindingContext;
 
 //Author: Student 9787283, Student Kristoffer Helgesen 
 namespace YWWACP
@@ -26,52 +29,48 @@ namespace YWWACP
 
     //Sets the connection to the mView.
     [MvxViewFor(typeof(GraphViewModel))]
-    [Activity(Label = "ChartMainPAgeActivity")]
+    [Activity(Label = "ChartMainPageActivity")]
+
+
     public class ChartMainPageActivity : MvxActivity
     {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
 
+   
+
+       protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ChartMainPage);
+            
 
-            PlotView view = FindViewById<PlotView>(Resource.Id.plot_view);
-            view.Model = CreatePlotModel();
+            //Ting fra stack -- provd 
+            
+            //public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+            //{
 
-        }
-     //   protected override void OnResume()
-    //    {
-    //        var vm = (GraphViewModel)ViewModel;
-   //         vm.OnResume();
-   //         base.OnResume();
-  //      }
+            //    //IDF-KNOW
+            //    var ignored = base.OnCreateView(inflater, container, savedInstanceState);
+            //    var view = this.BindingInflate(Resource.Layout.ChartMainPage, null);
 
-        private PlotModel CreatePlotModel()
-        {
-            var plotModel = new PlotModel { Title = "Your progression" };
+            //    var graphControl = view.FindViewById<PlotView>(Resource.Id.plot_view);
 
-            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });
-            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0 });
+            //    var bindset = this.CreateBindingSet<ChartMainPageActivity, GraphViewModel>();
 
-            var series1 = new OxyPlot.Series.LineSeries
-            {
-                MarkerType = MarkerType.Circle,
-                MarkerSize = 4,
-                MarkerStroke = OxyColors.White
-            };
+            //    bindset.Bind(graphControl).For(c => c.Model).To(vm => vm.MyModel);
+            //    bindset.Apply();
 
-            series1.Points.Add(new OxyPlot.DataPoint(0.0, 6.0));
-            series1.Points.Add(new OxyPlot.DataPoint(1.4, 2.1));
-            series1.Points.Add(new OxyPlot.DataPoint(2.0, 4.2));
-            series1.Points.Add(new OxyPlot.DataPoint(3.3, 2.3));
-            series1.Points.Add(new OxyPlot.DataPoint(4.7, 7.4));
-            series1.Points.Add(new OxyPlot.DataPoint(6.0, 6.2));
-            series1.Points.Add(new OxyPlot.DataPoint(8.9, 8.9));
 
-            plotModel.Series.Add(series1);
+            //    return view;
+            }
+            
 
-            return plotModel;
+            //   protected override void OnResume()
+            //    {
+            //        var vm = (GraphViewModel)ViewModel;
+            //         vm.OnResume();
+            //         base.OnResume();
+            //      }
+
 
         }
     }
-}
