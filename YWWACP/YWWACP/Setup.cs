@@ -34,6 +34,5 @@ namespace YWWACP
             Mvx.LazyConstructAndRegisterSingleton<IToast, ToastService>();
             base.InitializeFirstChance();
         }
-
     }
 }
