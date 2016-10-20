@@ -29,48 +29,25 @@ namespace YWWACP
 
     //Sets the connection to the mView.
     [MvxViewFor(typeof(GraphViewModel))]
-    [Activity(Label = "ChartMainPageActivity")]
-
-
+    [Activity(Label = "Your Progress")]
     public class ChartMainPageActivity : MvxActivity
     {
 
-   
-
-       protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ChartMainPage);
             
-
-            //Ting fra stack -- provd 
-            
-            //public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-            //{
-
-            //    //IDF-KNOW
-            //    var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            //    var view = this.BindingInflate(Resource.Layout.ChartMainPage, null);
-
-            //    var graphControl = view.FindViewById<PlotView>(Resource.Id.plot_view);
-
-            //    var bindset = this.CreateBindingSet<ChartMainPageActivity, GraphViewModel>();
-
-            //    bindset.Bind(graphControl).For(c => c.Model).To(vm => vm.MyModel);
-            //    bindset.Apply();
-
-
-            //    return view;
             }
-            
-
-            //   protected override void OnResume()
-            //    {
-            //        var vm = (GraphViewModel)ViewModel;
-            //         vm.OnResume();
-            //         base.OnResume();
-            //      }
 
 
+        protected override void OnResume()
+        {
+            var vm = (GraphViewModel)ViewModel;
+            vm.OnResume();
+            base.OnResume();
         }
+
+
     }
+}

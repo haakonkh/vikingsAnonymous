@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <Debugger>Xamarin</Debugger>
@@ -192,6 +192,7 @@
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
     <Compile Include="Views\AddExerciseView.cs" />
+    <Compile Include="Views\AddMealToPlanView.cs" />
     <Compile Include="Views\CommentsView.cs" />
     <Compile Include="Views\CommunityActivity.cs" />
     <Compile Include="Database\AzureDatabase.cs" />
@@ -206,11 +207,15 @@
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
     <Compile Include="Views\DeleteThreadFragment.cs" />
+    <Compile Include="Views\DiaryDayView.cs" />
+    <Compile Include="Views\DiaryView.cs" />
     <Compile Include="Views\EditProfileView.cs" />
     <Compile Include="Views\ExerciseDetailsView.cs" />
     <Compile Include="Views\HealthPlanExercisesView.cs" />
+    <Compile Include="Views\HealthPlanMealsView.cs" />
     <Compile Include="Views\HealthPlanView.cs" />
     <Compile Include="Views\ExerciseActivity.cs" />
+    <Compile Include="Views\MealDetailsView.cs" />
     <Compile Include="Views\MyThreadsView.cs" />
     <Compile Include="Views\NewHealthPlanView.cs" />
     <Compile Include="Views\ProfileActivity.cs" />
@@ -255,7 +260,9 @@
     <AndroidResource Include="Resources\drawable\recipeIcon.png" />
     <AndroidResource Include="Resources\layout\FirstView.axml" />
     <AndroidResource Include="Resources\layout\Dialog_ChooseHealthPlan.axml" />
-    <AndroidResource Include="Resources\layout\HealthPlan.axml" />
+    <AndroidResource Include="Resources\layout\HealthPlan.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\NewHealthPlan.axml" />
     <AndroidResource Include="Resources\layout\ExerciseMain.axml" />
     <AndroidResource Include="Resources\layout\exerciseDialogView.axml" />
@@ -296,10 +303,16 @@
     <AndroidResource Include="Resources\layout\Dialog_DeleteThread.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\AddExerciseToPlan.axml" />
-    <AndroidResource Include="Resources\layout\AddExerciseToPlanRow.axml" />
+    <AndroidResource Include="Resources\layout\AddExerciseToPlan.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddExerciseToPlanRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\ExerciseAdd.axml" />
-    <AndroidResource Include="Resources\layout\HealthPlanExerciseRow.axml" />
+    <AndroidResource Include="Resources\layout\HealthPlanExerciseRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\HealthPlanExercises.axml" />
     <AndroidResource Include="Resources\layout\RecipeListViewRow.axml">
       <SubType>Designer</SubType>
@@ -323,6 +336,23 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\navbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DiaryEntryRow.axml" />
+    <AndroidResource Include="Resources\layout\DiaryPickDate.axml" />
+    <AndroidResource Include="Resources\layout\HealthPlanMeals.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HealthPlanMealsRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddMealToPlan.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddMealToPlanRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MealsAdd.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -388,6 +418,8 @@
     <AndroidResource Include="Resources\drawable\hc.png" />
     <AndroidResource Include="Resources\drawable\hp.png" />
     <AndroidResource Include="Resources\drawable\web.png" />
+    <AndroidResource Include="Resources\drawable\Arrow_Back.png" />
+    <AndroidResource Include="Resources\drawable\Arrow_Forward.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

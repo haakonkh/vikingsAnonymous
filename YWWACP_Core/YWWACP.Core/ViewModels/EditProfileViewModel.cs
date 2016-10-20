@@ -114,7 +114,7 @@ namespace YWWACP.Core.ViewModels
             {
 
                 if (user.UserId == UserId && user.ThreadID == null && user.DiaryEntry == null && user.ExerciseId == null &&
-                    user.MealId == null && user.Goals == null)
+                    user.MealId == null && user.GoalContent == null)
                 {
                     var u = user.UserId;
                     await database.DeleteTableRow(user.Id);

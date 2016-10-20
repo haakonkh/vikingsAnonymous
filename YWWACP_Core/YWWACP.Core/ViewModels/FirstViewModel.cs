@@ -37,9 +37,9 @@ namespace YWWACP.Core.ViewModels
         public FirstViewModel(IDatabase database)
         {
             this.database = database;
-			InitDb();
             UserId = prefUserInfo.GetString("UserId", "");
-            
+            InitDb();
+
             OpenHealthPlanCommand = new MvxCommand(() => ShowViewModel<HealthPlanViewModel>(new { userid = UserId }));
             OpenGraphCommand = new MvxCommand(() => ShowViewModel<GraphViewModel>(new { userid = UserId }));
             OpenExerciseCommand = new MvxCommand(() => ShowViewModel<ExerciseViewModel>(new { userid = UserId }));
@@ -147,7 +147,24 @@ namespace YWWACP.Core.ViewModels
             await database.InsertTableRow(new MyTable() { ExerciseSummary = "Kick a ball", ExerciseTitle = "Football", Sets = 0, Reps = 0, ExerciseId = GenerateID() ,UserId = "",basic = true});
 
 
+            await database.InsertTableRow(new MyTable()
+            {
+                GoalId = new Guid().ToString(),
+                GoalContent = "Drink 10 glasses of water",
+                GoalDate = DateTime.Now.Date.ToString(),
+                GoalSatisfaction = 8.0,
+                UserId = UserId
+                
+            });
 
+            await database.InsertTableRow(new MyTable()
+            {
+                GoalId = new Guid().ToString(),
+                GoalContent = "Run 5km",
+                GoalDate = DateTime.Now.Date.AddDays(+5).ToString(),
+                GoalSatisfaction = 2.0,
+                UserId = UserId
+            });
 
 
 

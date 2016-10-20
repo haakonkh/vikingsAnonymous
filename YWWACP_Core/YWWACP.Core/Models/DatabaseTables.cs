@@ -30,10 +30,11 @@ namespace YWWACP.Core.Models
        
 
         public string DiaryEntry { get; set; }
+
         public string GoalId { get; set; }
-        public string Goals { get; set; }
-        [Ignore]
-        public DateTime Date { get; set; }
+        public string GoalContent { get; set; }
+        public string GoalDate { get; set; }
+        public double GoalSatisfaction { get; set; }
 
         public string MealId { get; set; }
         public string MealTitle { get; set; }
