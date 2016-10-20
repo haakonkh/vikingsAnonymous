@@ -21,12 +21,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:background="@drawable/buttonshape"
             android:id="@+id/btnNewThread"
             local:MvxBind="Click AddNewThreadCommand" />
         <Button
             android:text="@string/My_Threads"
-            android:background="@drawable/buttonshape"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="50"
