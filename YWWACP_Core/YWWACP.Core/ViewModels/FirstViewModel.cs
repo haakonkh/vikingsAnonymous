@@ -132,6 +132,22 @@ namespace YWWACP.Core.ViewModels
             await database.InsertTableRow(new MyTable() { ExerciseContent = "Bounce up and down", ExerciseTitle = "Squatting", Sets = 4, Reps = 8, ExerciseId = GenerateID(),UserId = "",basic = true});
             await database.InsertTableRow(new MyTable() { ExerciseContent = "Kick a ball", ExerciseTitle = "Football", Sets = 0, Reps = 0, ExerciseId = GenerateID() ,UserId = "",basic = true});
 
+            await database.InsertTableRow(new MyTable()
+            {
+                ThreadID = "YOLOSWAGLORD",
+                ThreadTitle = "YOLO, DU eier ikke meg!",
+                Content = "HAhahahah, du fikk feilmelding hvis du prøvde å slette meg! LOL",
+                UserId = new Guid().ToString(),
+                Category = "Random"
+            });
+
+            await database.InsertTableRow(new MyTable()
+            {
+                ThreadID = "YOLOSWAGLORD",
+                CommentID = new Guid().ToString(),
+                CommentContent = "Faen, jeg ville slette deg",
+                UserId = new Guid().ToString()
+            });
 
 
 

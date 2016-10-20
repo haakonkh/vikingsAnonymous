@@ -191,6 +191,7 @@
   <ItemGroup>
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
+    <Compile Include="Services\ToastService.cs" />
     <Compile Include="Views\AddExerciseView.cs" />
     <Compile Include="Views\CommentsView.cs" />
     <Compile Include="Views\CommunityActivity.cs" />
@@ -323,6 +324,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\navbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\buttonshape.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -42,14 +42,12 @@
     <Compile Include="Interfaces\IAzureDatabase.cs" />
     <Compile Include="Interfaces\IDatabase.cs" />
     <Compile Include="Interfaces\ISqlite.cs" />
+    <Compile Include="Interfaces\IToast.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
     <Compile Include="Models\Exercise.cs" />
-
     <Compile Include="Models\KeyPair.cs" />
-
     <Compile Include="Models\Meal.cs" />
-
     <Compile Include="Models\NewDiscussionThread.cs" />
     <Compile Include="Models\NewExerciseThread.cs" />
     <Compile Include="Models\NewRecipeThread.cs" />

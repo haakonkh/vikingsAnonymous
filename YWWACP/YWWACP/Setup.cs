@@ -7,6 +7,7 @@ using YWWACP.Core.Interfaces;
 using YWWACP.Database;
 using YWWACP;
 using YWWACP.Core.Database;
+using YWWACP.Services;
 
 namespace YWWACP
 {
@@ -30,6 +31,7 @@ namespace YWWACP
         {
             Mvx.LazyConstructAndRegisterSingleton<ISqlite, SQLiteDroid>();
             Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseTables>();
+            Mvx.LazyConstructAndRegisterSingleton<IToast, ToastService>();
             base.InitializeFirstChance();
         }
 
