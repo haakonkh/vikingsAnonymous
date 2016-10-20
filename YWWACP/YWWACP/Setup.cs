@@ -7,7 +7,7 @@ using YWWACP.Core.Interfaces;
 using YWWACP.Database;
 using YWWACP;
 using YWWACP.Core.Database;
-using YWWACP.Services;
+using YWWACP.Service;
 
 namespace YWWACP
 {

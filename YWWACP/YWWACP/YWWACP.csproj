@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -191,6 +191,7 @@
   <ItemGroup>
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
+    <Compile Include="Service\ToastService.cs" />
     <Compile Include="Views\AddExerciseView.cs" />
     <Compile Include="Views\AddMealToPlanView.cs" />
     <Compile Include="Views\CommentsView.cs" />

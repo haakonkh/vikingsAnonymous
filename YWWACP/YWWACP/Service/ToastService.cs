@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 using YWWACP.Core.Interfaces;
 
-namespace YWWACP.Services
+namespace YWWACP.Service
 {
     public class ToastService : IToast
     {
