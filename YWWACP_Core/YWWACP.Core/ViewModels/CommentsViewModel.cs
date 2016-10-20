@@ -131,7 +131,11 @@ namespace YWWACP.Core.ViewModels
                 }
                 Close(this);
             }
-            
+            else
+            {
+                Mvx.Resolve<IToast>().Show("You are not allowed to delete other people's threads");
+            }
+
         }
     }
 }
