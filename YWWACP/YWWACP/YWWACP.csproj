@@ -191,6 +191,7 @@
   <ItemGroup>
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
+    <Compile Include="NewGoalActivity.cs" />
     <Compile Include="Views\AddExerciseView.cs" />
     <Compile Include="Views\AddMealToPlanView.cs" />
     <Compile Include="Views\CommentsView.cs" />
@@ -358,6 +359,9 @@
     <AndroidResource Include="Resources\layout\GoalListViewRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\NewGoal.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -423,6 +427,8 @@
     <AndroidResource Include="Resources\drawable\web.png" />
     <AndroidResource Include="Resources\drawable\Arrow_Back.png" />
     <AndroidResource Include="Resources\drawable\Arrow_Forward.png" />
+    <AndroidResource Include="Resources\drawable\IconFlower.png" />
+    <AndroidResource Include="Resources\drawable\round_plus.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

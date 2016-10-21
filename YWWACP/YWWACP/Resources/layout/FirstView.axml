@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Diary"
-        local:MvxBind ="Click OpenDiaryCommand"/>
+        local:MvxBind="Click OpenDiaryCommand" />
     <Button
         android:id="@+id/btnHealthPlan"
         android:layout_width="match_parent"

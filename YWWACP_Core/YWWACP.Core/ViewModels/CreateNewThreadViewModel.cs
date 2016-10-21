@@ -136,9 +136,16 @@ namespace YWWACP.Core.ViewModels
 
     public class Item
     {
+        private DateTime dateTime;
+
         public Item(string caption)
         {
             Caption = caption;
+        }
+
+        public Item(DateTime dateTime)
+        {
+            this.dateTime = dateTime;
         }
 
         public string Caption { get; private set; }

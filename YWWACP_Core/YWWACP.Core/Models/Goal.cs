@@ -12,11 +12,11 @@ namespace YWWACP.Core.Models
         public string GoalId { get; set; }
         public string GoalContent { get; set; }
         public string GoalDate { get; set; }
-        public double GoalSatisfaction { get; set; }
+        public string GoalSatisfaction { get; set; }
 
 
         public Goal() { }
-        public Goal(string goalId, string goalContent, string goalDate, double goalSatisfaction)
+        public Goal(string goalId, string goalContent, string goalDate, string goalSatisfaction)
         {
             GoalId = goalId;
             GoalContent = goalContent;

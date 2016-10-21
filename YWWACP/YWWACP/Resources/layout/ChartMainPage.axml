@@ -8,7 +8,8 @@
         android:layout_width="fill_parent"
         android:layout_alignParentTop="true"
         android:id="@+id/linearLayoutGraph"
-        android:layout_height="350dp">
+        android:layout_height="400dp">
+      
         <OxyPlot.Xamarin.Android.PlotView
             android:id="@+id/plot_view"
             android:layout_width="match_parent"
@@ -23,11 +24,20 @@
         layout="@layout/navbar" />
     <Mvx.MvxListView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="70"
+        android:layout_height="wrap_content"
         android:layout_above="@id/navigation"
-        android:layout_below="@id/linearLayoutGraph"
+        android:layout_below="@id/plot_view"
+        android:layout_alignParentLeft="true"
         android:id="@+id/listViewGoals"
         local:MvxItemTemplate="@layout/goallistviewrow"
         local:MvxBind="ItemsSource Goals" />
+    <ImageView
+        android:src="@drawable/round_plus"
+        android:layout_width="40dp"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/plot_view"
+        android:layout_height="wrap_content"
+        local:MvxBind="Click OpenNewGoalCommand"
+        android:layout_alignParentRight="true"
+        android:id="@+id/imageButton1" />
 </RelativeLayout>

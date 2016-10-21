@@ -72,6 +72,7 @@
     <Compile Include="ViewModels\Health Plan\MealDetailsViewModel.cs" />
     <Compile Include="ViewModels\MyThreadsViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\NewHealthPlanViewModel.cs" />
+    <Compile Include="ViewModels\NewGoalViewModel.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="ViewModels\RecipeViewModel.cs" />
     <Compile Include="ViewModels\SingleExerciseViewModel.cs" />

@@ -22,10 +22,10 @@
             android:layout_weight="50"
             android:id="@+id/txtViewTitle"
             android:textStyle="bold"
-            android:textSize="25dip"
+            android:textSize="10dip"
             android:paddingLeft="5dp"
             android:paddingTop="2dp"
-            local:MvxBind="Text GoalDate" />
+            local:MvxBind="Text GoalContent" />
         <TextView
             style="@+style/textViewTheme"
             android:text="GoalSatisfaction"
@@ -33,7 +33,9 @@
             android:layout_height="match_parent"
             android:layout_weight="50"
             android:id="@+id/txtViewCategory"
+            android:textSize="10dip"
             local:MvxBind="Text GoalSatisfaction" />
+     
     </LinearLayout>
     <TextView
         style="@+style/textViewTheme"
@@ -44,5 +46,5 @@
         android:id="@+id/txtViewContent"
         android:paddingTop="10dp"
         android:paddingLeft="15dp"
-        local:MvxBind="Text GoalContent" />
+        local:MvxBind="Text GoalDate" />
 </LinearLayout>

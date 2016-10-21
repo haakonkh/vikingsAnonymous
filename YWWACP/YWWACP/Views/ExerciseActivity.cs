@@ -6,7 +6,7 @@ using YWWACP.Core.ViewModels;
 
 namespace YWWACP.Views
 {
-    [MvxViewFor(typeof(ExerciseViewModel))]
+    [MvxViewFor(typeof(CreateNewGViewModel))]
     [Activity(Label = "ExerciseActivity")]
     public class ExerciseActivity : MvxActivity
     {
@@ -22,7 +22,7 @@ namespace YWWACP.Views
 
         protected override void OnResume()
         {
-            var vm = (ExerciseViewModel)ViewModel;
+            var vm = (CreateNewGViewModel)ViewModel;
             vm.OnResume();
             base.OnResume();
         }

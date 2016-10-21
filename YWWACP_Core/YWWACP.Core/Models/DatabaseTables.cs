@@ -31,6 +31,7 @@ namespace YWWACP.Core.Models
 
         public string DiaryEntry { get; set; }
 
+        //Goal/graph 
         public string GoalId { get; set; }
         public string GoalContent { get; set; }
         public string GoalDate { get; set; }
