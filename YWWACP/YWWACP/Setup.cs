@@ -32,6 +32,8 @@ namespace YWWACP
             Mvx.LazyConstructAndRegisterSingleton<ISqlite, SQLiteDroid>();
             Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseTables>();
             Mvx.LazyConstructAndRegisterSingleton<IToast, ToastService>();
+            Mvx.LazyConstructAndRegisterSingleton<IDialogService, DialogService>();
+
             base.InitializeFirstChance();
         }
     }

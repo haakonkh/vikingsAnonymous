@@ -41,6 +41,7 @@
     <Compile Include="Database\KeyPairDatabase.cs" />
     <Compile Include="Interfaces\IAzureDatabase.cs" />
     <Compile Include="Interfaces\IDatabase.cs" />
+    <Compile Include="Interfaces\IDialogService.cs" />
     <Compile Include="Interfaces\ISqlite.cs" />
     <Compile Include="Interfaces\IToast.cs" />
     <Compile Include="Models\Comments.cs" />

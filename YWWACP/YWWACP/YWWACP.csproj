@@ -191,6 +191,7 @@
   <ItemGroup>
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
+    <Compile Include="Service\DialogService.cs" />
     <Compile Include="Service\ToastService.cs" />
     <Compile Include="Views\AddExerciseView.cs" />
     <Compile Include="Views\AddMealToPlanView.cs" />

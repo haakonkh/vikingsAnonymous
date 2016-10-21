@@ -17,6 +17,7 @@ namespace YWWACP.Core.ViewModels
     public class CommentsViewModel : MvxViewModel
     {
         private readonly IDatabase database;
+        private readonly IDialogService dialog;
         private ObservableCollection<Comment>  comments = new ObservableCollection<Comment>();
         public ICommand DeletePopupCommand { get; set; }
 
@@ -52,9 +53,10 @@ namespace YWWACP.Core.ViewModels
 
         public ICommand AddCommentCommand { get; set; }
         
-        public CommentsViewModel(IDatabase database )
+        public CommentsViewModel(IDatabase database, IDialogService dialog)
         {
             this.database = database;
+            this.dialog = dialog;
             AddCommentCommand = new MvxCommand(() => ShowViewModel<WriteCommentViewModel>(new {tId = ThreadID}));
             DeletePopupCommand = new MvxCommand(() =>
             {
@@ -121,15 +123,22 @@ namespace YWWACP.Core.ViewModels
         {
             if (await VerifyUser())
             {
-                var threads = await database.GetTable();
-                foreach (var thread in threads)
+                if (await dialog.Show("Are you sure you want to delete this thread", "Delete", "Delte", "Cancel"))
                 {
-                    if (thread.ThreadID == ThreadID)
+                    var threads = await database.GetTable();
+                    foreach (var thread in threads)
                     {
-                        await database.DeleteTableRow(thread.Id);
+                        if (thread.ThreadID == ThreadID)
+                        {
+                            await database.DeleteTableRow(thread.Id);
+                        }
                     }
+                    Close(this);
                 }
-                Close(this);
+                else
+                {
+                    return;
+                }
             }
             else
             {
