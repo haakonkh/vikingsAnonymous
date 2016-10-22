@@ -1,4 +1,7 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using Android.App;
+using Android.OS;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -99,22 +102,38 @@ namespace YWWACP.Core.ViewModels
         public NewGoalViewModel(IDatabase database)
         {
             
+            
             this.database = database;
             var t = new MyTable();
           SetNewGoalCommand = new MvxCommand(() =>
             {
                 string[] x = SelectedGoal.Caption.Split('-');
-                AddGoal(new MyTable()
+                if (GoalSatisfaction <= 10)
                 {
-                    GoalContent = goalContent,
-                    GoalDate = SelectedGoal.Caption.Split('-')[1].Trim(),
-                    GoalSatisfaction = goalSatisfaction,
-                    GoalId = GetGeneratedGoalId(),
-                    UserId = UserId
 
-                });
+                    if (GoalContent != null)
+                    {
+                        AddGoal(new MyTable()
+                        {
+                            GoalContent = goalContent,
+                            GoalDate = SelectedGoal.Caption.Split('-')[1].Trim(),
+                            GoalSatisfaction = goalSatisfaction,
+                            GoalId = GetGeneratedGoalId(),
+                            UserId = UserId
+
+                        });
+                    }
+                    else { 
+                    Mvx.Resolve<IToast>().Show("Goal content inst filled out ");
+                    }
+                }
+                else {
+                    Mvx.Resolve<IToast>().Show("Your goal satisfaction cant be more than 10");                   
+                }
             });  
         }
+
+     
         public void Init(string userid)
         {
             UserId = userid;
