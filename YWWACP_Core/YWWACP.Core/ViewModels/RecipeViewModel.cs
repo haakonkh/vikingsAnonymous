@@ -46,7 +46,7 @@ namespace YWWACP.Core.ViewModels
             
             ExerciseViewCommand = new MvxCommand(() =>
             {
-                ShowViewModel<ExerciseViewModel>(new { userid = UserId });
+                ShowViewModel<ListExerciseViewModel>(new { userid = UserId });
                 Close(this);
             });
         }

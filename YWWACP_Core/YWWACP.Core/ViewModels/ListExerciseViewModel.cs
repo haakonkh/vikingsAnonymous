@@ -13,7 +13,7 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels
 {
-    public class ExerciseViewModel : MvxViewModel
+    public class ListExerciseViewModel : MvxViewModel
     {
 
         private readonly IDatabase database;
@@ -38,7 +38,7 @@ namespace YWWACP.Core.ViewModels
         }
 
 
-        public ExerciseViewModel(IDatabase database)
+        public ListExerciseViewModel(IDatabase database)
         {
             this.database = database;
             CreateExerciseCommand = new MvxCommand(() => ShowViewModel<CreateExerciseViewModel>(new { userid = UserId }));

@@ -58,7 +58,7 @@
     <Compile Include="ViewModels\DeleteThreadViewModel.cs" />
     <Compile Include="ViewModels\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\EditProfileViewModel.cs" />
-    <Compile Include="ViewModels\ExerciseViewModel.cs" />
+    <Compile Include="ViewModels\ListExerciseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\AddExerciseViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\ExerciseDetailsViewModel.cs" />
