@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Android.Graphics;
+using Android.Graphics.Drawables;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
@@ -80,6 +82,8 @@ namespace YWWACP.Core.ViewModels
             }
             RaisePropertyChanged(() => Exercises);
         }
+
+        
 
         /// <summary>
         /// Sets thread content on top of the screen

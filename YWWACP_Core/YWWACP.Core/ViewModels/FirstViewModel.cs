@@ -1,8 +1,13 @@
 using System;
+using System.IO;
 using MvvmCross.Core.ViewModels;
 using System.Windows.Input;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
+using Android.Media;
+using Android.Util;
+using Java.IO;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
@@ -85,6 +90,7 @@ namespace YWWACP.Core.ViewModels
 
         }
 
+
         public async void InitDb()
         {
 			DropDatabase();
@@ -125,7 +131,8 @@ namespace YWWACP.Core.ViewModels
                ExerciseTitle = "Burpess",
                ExerciseSummary = "yeah, we all know the pain",
                Sets = 3,
-               Reps = 12
+               Reps = 12,
+               exerciseImage = "barbell_Standing.png"
            });
 		   
 		    await database.InsertTableRow(new MyTable() { ExerciseContent = "Run bitch, run!", ExerciseTitle = "Running", Sets = 0, Reps = 0, ExerciseId = GenerateID(), UserId = "",basic = true});

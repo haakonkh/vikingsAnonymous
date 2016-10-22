@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Android.Graphics;
 using SQLite.Net;
 using YWWACP.Core.ViewModels;
 
@@ -52,11 +53,12 @@ namespace YWWACP.Core.Models
         public int Sets { get; set; }
         public int Reps { get; set; }
         public bool basic { get; set; }
+        public string exerciseImage { get; set; }
         //[Ignore]
         public string ExerciseTimestamp { get; set; }
 
         public string ExerciseTitle { get; set; }
-        public String ExerciseSummary { get; set; }
+        public string ExerciseSummary { get; set; }
 
        
     }

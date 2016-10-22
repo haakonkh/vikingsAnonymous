@@ -25,7 +25,7 @@
   <style name="bigTextViewTheme" parent="android:Theme.Material.Light">
     <!-- Override the color of UI controls -->
     <item name="android:textStyle">bold</item>
-    <item name="android:textColorPrimary">@color/my_darkPink</item>
-    <item name="android:textSize">15sp</item>
+    <item name="android:textColor">@color/my_darkPink</item>
+    <item name="android:textSize">25dp</item>
   </style>
 </resources>
