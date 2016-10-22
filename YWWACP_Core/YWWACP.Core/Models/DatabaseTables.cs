@@ -27,7 +27,6 @@ namespace YWWACP.Core.Models
         public string CommentsID { get; set; }
         public string CommentID { get; set; }
         public string CommentContent { get; set; }
-       
 
         public string DiaryEntry { get; set; }
 
@@ -40,7 +39,7 @@ namespace YWWACP.Core.Models
         public string MealId { get; set; }
         public string MealTitle { get; set; }
         public string MealSummary { get; set; }
-       
+
         public string Ingredients { get; set; }
         // Should maybe be a list? 
         public string Approach { get; set; }
@@ -54,16 +53,15 @@ namespace YWWACP.Core.Models
         public int Sets { get; set; }
         public int Reps { get; set; }
         public bool basic { get; set; }
-        //[Ignore]
+
         public string ExerciseTimestamp { get; set; }
         public string ExerciseDate { get; set; }
 
         public string ExerciseTitle { get; set; }
-        public String ExerciseSummary { get; set; }
 
-       
+        public string ExerciseSummary { get; set; }
+
     }
-
     /*
     public class User 
     {

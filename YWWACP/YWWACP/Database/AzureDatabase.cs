@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -10,18 +11,38 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
+using YWWACP.Core.Interfaces;
+using YWWACP.Core.Models;
 
 namespace YWWACP.Database
 {
-    class AzureDatabase
+    public class AzureDatabase : IAzureDatabase
     {
+        MobileServiceClient azureDatabase;
+
         public MobileServiceClient GetMobileServiceClient()
         {
             CurrentPlatform.Init();
-            var client = new MobileServiceClient("https://vikinganonymous.azurewebsites.net");
-            return client;
+            azureDatabase = new MobileServiceClient("https://madvikings.azurewebsites.net");
+            InitializeLocal();
+            return azureDatabase;
         }
 
-  
+        private void InitializeLocal()
+        {
+            var sqliteFilename = "LocationSQLite.db3";
+            string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
+            var path = Path.Combine(documentsPath, sqliteFilename);
+            if (!File.Exists(path))
+            {
+                File.Create(path).Dispose();
+            }
+            var store = new MobileServiceSQLiteStore(path);
+            store.DefineTable<MyTable>();
+            azureDatabase.SyncContext.InitializeAsync(store);
+        }
+
+
     }
 }

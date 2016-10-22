@@ -33,6 +33,7 @@ namespace YWWACP
             Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseTables>();
             Mvx.LazyConstructAndRegisterSingleton<IToast, ToastService>();
             Mvx.LazyConstructAndRegisterSingleton<IDialogService, DialogService>();
+            Mvx.LazyConstructAndRegisterSingleton<IAzureDatabase, AzureDatabase>();
 
             base.InitializeFirstChance();
         }
