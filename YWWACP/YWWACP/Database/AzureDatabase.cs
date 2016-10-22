@@ -24,7 +24,7 @@ namespace YWWACP.Database
         public MobileServiceClient GetMobileServiceClient()
         {
             CurrentPlatform.Init();
-            azureDatabase = new MobileServiceClient("https://vikinganonymous.azurewebsites.net");
+            azureDatabase = new MobileServiceClient("https://madvikings.azurewebsites.net");
             InitializeLocal();
             return azureDatabase;
         }

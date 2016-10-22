@@ -239,6 +239,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\madvikings - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\newvikings - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\vikinganonymous - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\vikinganonymous - FTP %283%29.pubxml" />
