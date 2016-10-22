@@ -191,7 +191,6 @@
   <ItemGroup>
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
-    <Compile Include="ValueConverter\StringToBitmapConverter.cs" />
     <Compile Include="Views\AddExerciseView.cs" />
     <Compile Include="Views\CommentsView.cs" />
     <Compile Include="Views\CommunityActivity.cs" />
@@ -199,6 +198,7 @@
     <Compile Include="DebugTrace.cs" />
     <Compile Include="dialog_calendar.cs" />
     <Compile Include="dialog_ChooseHealthPlan.cs" />
+    <Compile Include="Views\CreateNewExercise.cs" />
     <Compile Include="Views\CreateNewThreadView.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="HealthPlanActivity.cs" />
@@ -259,7 +259,9 @@
     <AndroidResource Include="Resources\layout\HealthPlan.axml" />
     <AndroidResource Include="Resources\layout\NewHealthPlan.axml" />
     <AndroidResource Include="Resources\layout\ExerciseMain.axml" />
-    <AndroidResource Include="Resources\layout\exerciseDialogView.axml" />
+    <AndroidResource Include="Resources\layout\exerciseDialogView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
     <AndroidResource Include="Resources\layout\ExerciseDialogNewExer.axml">
       <SubType>Designer</SubType>
@@ -382,6 +384,9 @@
     <AndroidResource Include="Resources\drawable\trashIcon.png" />
     <AndroidResource Include="Resources\drawable\trashsmall.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValueConverter\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\YWWACP_Core\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

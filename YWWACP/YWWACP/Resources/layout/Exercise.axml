@@ -5,27 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="100">
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="10"
-      android:id="@+id/linearLayoutWrapTopButtons"
-      android:weightSum="100">
-    <Button
-        android:text="Exercises"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:id="@+id/btnNewThread" />
-    <Button
-        android:text="Recipes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:id="@+id/btnMyThreads"
-        local:MvxBind="Click RecipesViewCommand" /> 
-  </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:id="@+id/linearLayoutWrapTopButtons"
+        android:weightSum="100">
+        <Button
+            android:text="Exercises"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:id="@+id/btnNewThread" />
+        <Button
+            android:text="Recipes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:id="@+id/btnMyThreads"
+            local:MvxBind="Click RecipesViewCommand" />
+        <Button
+            android:text="Create new exercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:id="@+id/btnNewThread"
+            local:MvxBind="Click CreateExerciseCommand" />
+    </LinearLayout>
     <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="0dp"

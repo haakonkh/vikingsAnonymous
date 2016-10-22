@@ -19,6 +19,7 @@ namespace YWWACP.Core.ViewModels
         private readonly IDatabase database;
         public ICommand RecipesViewCommand { get; set; }
         public ICommand SelectExerciseCommand { get; set; }
+        public ICommand CreateExerciseCommand { get; set; }
 
         private ObservableCollection<NewExerciseThread> newExercise = new ObservableCollection<NewExerciseThread>();
 
@@ -40,7 +41,7 @@ namespace YWWACP.Core.ViewModels
         public ExerciseViewModel(IDatabase database)
         {
             this.database = database;
-            /*AddNewThreadCommand = new MvxCommand(() => ShowViewModel<CreateNewThreadViewModel>(new { userid = UserId }));*/
+            CreateExerciseCommand = new MvxCommand(() => ShowViewModel<CreateExerciseViewModel>(new { userid = UserId }));
             SelectExerciseCommand = new MvxCommand<NewExerciseThread>(thread => ShowViewModel<SingleExerciseViewModel>(new { exerciseId = thread.ExerciseId }));
 
             
