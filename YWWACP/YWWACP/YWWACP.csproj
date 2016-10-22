@@ -445,6 +445,8 @@
     <AndroidResource Include="Resources\drawable\web.png" />
     <AndroidResource Include="Resources\drawable\Arrow_Back.png" />
     <AndroidResource Include="Resources\drawable\Arrow_Forward.png" />
+    <AndroidResource Include="Resources\drawable\round_plus.png" />
+    <AndroidResource Include="Resources\drawable\IconFlower.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
