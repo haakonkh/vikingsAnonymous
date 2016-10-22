@@ -108,7 +108,7 @@ namespace YWWACP.Core.ViewModels
           SetNewGoalCommand = new MvxCommand(() =>
             {
                 string[] x = SelectedGoal.Caption.Split('-');
-                if (GoalSatisfaction <= 10)
+                if (GoalSatisfaction <= 10 && GoalSatisfaction !=0)
                 {
 
                     if (GoalContent != null)
@@ -128,7 +128,7 @@ namespace YWWACP.Core.ViewModels
                     }
                 }
                 else {
-                    Mvx.Resolve<IToast>().Show("Your goal satisfaction cant be more than 10");                   
+                    Mvx.Resolve<IToast>().Show("Your goal satisfactionmust be within 1-10");                   
                 }
             });  
         }
