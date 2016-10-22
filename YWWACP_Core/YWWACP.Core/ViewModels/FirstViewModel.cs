@@ -42,7 +42,7 @@ namespace YWWACP.Core.ViewModels
 
             OpenHealthPlanCommand = new MvxCommand(() => ShowViewModel<HealthPlanViewModel>(new { userid = UserId }));
             OpenGraphCommand = new MvxCommand(() => ShowViewModel<GraphViewModel>(new { userid = UserId }));
-            OpenExerciseCommand = new MvxCommand(() => ShowViewModel<ExerciseViewModel>(new { userid = UserId }));
+            OpenExerciseCommand = new MvxCommand(() => ShowViewModel<CreateNewGViewModel>(new { userid = UserId }));
             OpenRecipeCommand = new MvxCommand(() => ShowViewModel<RecipeViewModel>(new {userid = UserId}));
             OpenProfileCommand = new MvxCommand(() => ShowViewModel<ProfileViewModel>(new {userid = UserId}));
             OpenCommand = new MvxCommand(() => ShowViewModel<CommunityViewModel>(new {userid = UserId}));
@@ -166,22 +166,32 @@ namespace YWWACP.Core.ViewModels
             await database.InsertTableRow(new MyTable()
             {
                 GoalId = new Guid().ToString(),
-                GoalContent = "Drink 10 glasses of water",
-                GoalDate = DateTime.Now.Date.ToString(),
-                GoalSatisfaction = 8.0,
+                GoalContent = "Run 6km",
+                GoalDate = DateTime.Now.Date.AddDays(-5).ToString("dd/MM/yyyy"),
+                GoalSatisfaction = 6.0,
                 UserId = UserId
-                
             });
-
             await database.InsertTableRow(new MyTable()
             {
                 GoalId = new Guid().ToString(),
                 GoalContent = "Run 5km",
-                GoalDate = DateTime.Now.Date.AddDays(+5).ToString(),
+                GoalDate = DateTime.Now.Date.AddDays(-3).ToString("dd/MM/yyyy"),
                 GoalSatisfaction = 2.0,
                 UserId = UserId
             });
 
+
+            await database.InsertTableRow(new MyTable()
+            {
+                GoalId = new Guid().ToString(),
+                GoalContent = "Drink 10 glasses of water",
+                GoalDate = DateTime.Now.Date.AddDays(-1).ToString("dd/MM/yyyy"),
+                GoalSatisfaction = 8.0,
+                UserId = UserId
+
+            });
+
+        
 
 
         }

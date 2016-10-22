@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:inputType="textCapSentences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Goal"
+        android:id="@+id/editTxtGoalContent"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        local:MvxBind="Text GoalContent" />
+ <!--   <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Days until next goal"
+        android:id="@+id/editTxtGoalDate"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        local:MvxBind="Text GoalDate" />  -->
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dip"
+      android:text="Dates" />
+  <MvxSpinner
+      android:id="@+id/spinnerDates"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="ItemsSource GoalsArray; SelectedItem SelectedGoal" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Goal satisfaction"
+        android:id="@+id/editTxtGoalSatisFaction"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        local:MvxBind="Text GoalSatisfaction" />
+    <Button
+        android:text="@string/submitThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSubmitGoal"
+        local:MvxBind="Click SetNewGoalCommand" />
+</LinearLayout>

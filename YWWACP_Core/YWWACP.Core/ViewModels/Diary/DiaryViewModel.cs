@@ -75,7 +75,7 @@ namespace YWWACP.Core.ViewModels.Diary
             });
             OpenExerciseCommand = new MvxCommand(() =>
             {
-                ShowViewModel<ExerciseViewModel>(new { userid = UserId });
+                ShowViewModel<CreateNewGViewModel>(new { userid = UserId });
                 Close(this);
             });
             OpenCommunityCommand = new MvxCommand(() =>

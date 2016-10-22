@@ -13,7 +13,7 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels
 {
-    public class ExerciseViewModel : MvxViewModel
+    public class CreateNewGViewModel : MvxViewModel
     {
 
         private readonly IDatabase database;
@@ -38,7 +38,7 @@ namespace YWWACP.Core.ViewModels
         }
 
 
-        public ExerciseViewModel(IDatabase database)
+        public CreateNewGViewModel(IDatabase database)
         {
             this.database = database;
             /*AddNewThreadCommand = new MvxCommand(() => ShowViewModel<CreateNewThreadViewModel>(new { userid = UserId }));*/
