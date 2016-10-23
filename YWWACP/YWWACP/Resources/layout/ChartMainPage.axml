@@ -9,7 +9,6 @@
         android:layout_alignParentTop="true"
         android:id="@+id/linearLayoutGraph"
         android:layout_height="400dp">
-      
         <OxyPlot.Xamarin.Android.PlotView
             android:id="@+id/plot_view"
             android:layout_width="match_parent"
@@ -34,6 +33,9 @@
     <ImageView
         android:src="@drawable/round_plus"
         android:layout_width="40dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        
         android:layout_above="@id/navigation"
         android:layout_below="@id/plot_view"
         android:layout_height="wrap_content"

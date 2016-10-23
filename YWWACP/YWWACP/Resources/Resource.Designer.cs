@@ -2427,8 +2427,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060106
 			public const int editTextWriteComment = 2131099910;
 			
-			// aapt resource value: 0x7f0600be
-			public const int editTxtGoalContent = 2131099838;
+			// aapt resource value: 0x7f0600bf
+			public const int editTxtGoalContent = 2131099839;
 			
 			// aapt resource value: 0x7f0600c0
 			public const int editTxtGoalSatisFaction = 2131099840;
@@ -2742,8 +2742,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060084
 			public const int spinnerCategories = 2131099780;
 			
-			// aapt resource value: 0x7f0600bf
-			public const int spinnerDates = 2131099839;
+			// aapt resource value: 0x7f0600be
+			public const int spinnerDates = 2131099838;
 			
 			// aapt resource value: 0x7f0600da
 			public const int spinnerFoodFriday = 2131099866;
@@ -3384,6 +3384,9 @@ namespace YWWACP
 			// aapt resource value: 0x7f08001d
 			public const int Recipes = 2131230749;
 			
+			// aapt resource value: 0x7f08002a
+			public const int SaveButton = 2131230762;
+			
 			// aapt resource value: 0x7f080025
 			public const int Title = 2131230757;
 			
@@ -3456,8 +3459,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f080026
 			public const int cancelThread = 2131230758;
 			
-			// aapt resource value: 0x7f08002a
-			public const int category_prompt = 2131230762;
+			// aapt resource value: 0x7f08002b
+			public const int category_prompt = 2131230763;
 			
 			// aapt resource value: 0x7f080019
 			public const int library_name = 2131230745;

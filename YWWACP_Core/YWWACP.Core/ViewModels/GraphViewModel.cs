@@ -129,9 +129,20 @@ namespace YWWACP.Core.ViewModels
             foreach (var goal in goals)
             {
                 if (goal.UserId == UserId && goal.GoalContent != null && goal.GoalDate.Trim() == DateTime.Now.Date.ToString("dd/MM/yyyy").Trim())
-                {
-                    Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated, "Satisfaction: " + goal.GoalSatisfaction.ToString()));
-                    break;
+                {// goal.GoalSatisfaction.ToString()
+                    if (goal.GoalSatisfaction ==  1 || goal.GoalSatisfaction == 2 || goal.GoalSatisfaction == 3 ){
+                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
+                        break;
+                    }
+                    if (goal.GoalSatisfaction == 4 || goal.GoalSatisfaction == 5 || goal.GoalSatisfaction == 6 ){
+                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
+                        break;
+                    }
+                    if (goal.GoalSatisfaction == 7 || goal.GoalSatisfaction == 8 || goal.GoalSatisfaction == 9 || goal.GoalSatisfaction == 10)
+                    {
+                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
+                        break;
+                    }
                 }
 
             }
