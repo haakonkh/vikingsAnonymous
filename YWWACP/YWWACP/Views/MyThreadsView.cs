@@ -12,6 +12,7 @@ using Android.Widget;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.Community;
 
 namespace YWWACP.Views
 {

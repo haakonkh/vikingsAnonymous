@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.Profile
 {
     public class ProfileViewModel : MvxViewModel
     {
@@ -104,7 +99,7 @@ namespace YWWACP.Core.ViewModels
             var loadProfile = await database.GetTable();
             foreach (var profile in loadProfile)
             {
-                if (UserId == profile.UserId)
+                if (UserId == profile.UserId && profile.ThreadID == null && profile.CommentID == null && profile.GoalId == null && profile.ExerciseId == null && profile.MealId == null)
                 {
                     Name = profile.Name;
                     break;
@@ -119,7 +114,7 @@ namespace YWWACP.Core.ViewModels
             var loadProfile = await database.GetTable();
             foreach (var profile in loadProfile)
             {
-                if (UserId == profile.UserId)
+                if (UserId == profile.UserId && profile.ThreadID == null && profile.CommentID == null && profile.GoalId == null && profile.ExerciseId == null && profile.MealId == null)
                 {
                     Age = profile.Age;
                     break;
@@ -133,7 +128,7 @@ namespace YWWACP.Core.ViewModels
             var loadProfile = await database.GetTable();
             foreach (var profile in loadProfile)
             {
-                if (UserId == profile.UserId)
+                if (UserId == profile.UserId && profile.ThreadID == null && profile.CommentID == null && profile.GoalId == null && profile.ExerciseId == null && profile.MealId == null)
                 {
                     Height = profile.Height;
                     break;
@@ -146,7 +141,7 @@ namespace YWWACP.Core.ViewModels
             var loadProfile = await database.GetTable();
             foreach (var profile in loadProfile)
             {
-                if (UserId == profile.UserId)
+                if (UserId == profile.UserId && profile.ThreadID == null && profile.CommentID == null && profile.GoalId == null && profile.ExerciseId == null && profile.MealId == null)
                 {
                     Weight = profile.Weight;
                     break;

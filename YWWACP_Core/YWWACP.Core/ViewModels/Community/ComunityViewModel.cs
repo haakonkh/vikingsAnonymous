@@ -5,11 +5,10 @@ using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Diary;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.Community
 {
-    public class MyThreadsViewModel : MvxViewModel
+    public class CommunityViewModel : MvxViewModel
     {
-
         // Everyone should include these commands on their pages
         public ICommand OpenCommunityCommand { get; set; }
         public ICommand OpenHealthPlanCommand { get; set; }
@@ -19,17 +18,18 @@ namespace YWWACP.Core.ViewModels
         public ICommand OpenExerciseCommand { get; set; }
 
 
+        // Specific for this class
         private readonly IDatabase database;
         public ICommand AddNewThreadCommand { get; set; }
-        public ICommand AllThreadsCommand { get; set; }
+        public ICommand MyThreadsCommand { get; set; }
         public ICommand SelectThreadCommand { get; set; }
 
-        private ObservableCollection<NewDiscussionThread> myThreads = new ObservableCollection<NewDiscussionThread>();
+        private ObservableCollection<NewDiscussionThread> newThreads = new ObservableCollection<NewDiscussionThread>();
 
-        public ObservableCollection<NewDiscussionThread> MyThreads
+        public ObservableCollection<NewDiscussionThread> NewThreads
         {
-            get { return myThreads; }
-            set { SetProperty(ref myThreads, value); }
+            get { return newThreads; }
+            set { SetProperty(ref newThreads, value); }
         }
 
         private string userId;
@@ -40,16 +40,18 @@ namespace YWWACP.Core.ViewModels
             set { SetProperty(ref userId, value); }
         }
 
-        public MyThreadsViewModel(IDatabase database)
+
+        public CommunityViewModel(IDatabase database)
         {
             this.database = database;
             AddNewThreadCommand = new MvxCommand(() => ShowViewModel<CreateNewThreadViewModel>(new { userid = UserId }));
-            SelectThreadCommand = new MvxCommand<NewDiscussionThread>(thread => ShowViewModel<CommentsViewModel>(new { threadID = thread.ThreadID }));
-            AllThreadsCommand = new MvxCommand(() =>
+            SelectThreadCommand = new MvxCommand<NewDiscussionThread>(thread => ShowViewModel<CommentsViewModel>(new { threadID = thread.ThreadID, userid = UserId }));
+            MyThreadsCommand = new MvxCommand(() =>
             {
-                ShowViewModel<CommunityViewModel>(new {userid = UserId});
+                ShowViewModel<MyThreadsViewModel>(new { userid = UserId });
                 Close(this);
             });
+
 
             // THESE COMMANDS MUST EVERYONE IMPLEMENT IN THEIR CONSTRUCTORS.
             // I HAVE NOT COMMENTED OUT DIARY BECAUSE THAT DOES NOT EXIST AT THIS POINT.
@@ -57,7 +59,7 @@ namespace YWWACP.Core.ViewModels
             // MAKE SURE YOU DO THE SAME
             OpenHealthPlanCommand = new MvxCommand(() =>
             {
-                ShowViewModel<HealthPlanViewModel>(new { userid = UserId });
+                ShowViewModel<HealthPlanViewModel>(new {userid = UserId});
                 Close(this);
             });
             OpenDiaryCommand = new MvxCommand(() =>
@@ -67,17 +69,17 @@ namespace YWWACP.Core.ViewModels
             });
             OpenHomeCommand = new MvxCommand(() =>
             {
-                ShowViewModel<FirstViewModel>(new { userid = UserId });
+                ShowViewModel<FirstViewModel>(new {userid = UserId});
                 Close(this);
             });
             OpenRecipesCommand = new MvxCommand(() =>
             {
-                ShowViewModel<RecipeViewModel>(new { userid = UserId });
+                ShowViewModel<RecipeViewModel>(new {userid = UserId});
                 Close(this);
             });
             OpenExerciseCommand = new MvxCommand(() =>
             {
-                ShowViewModel<CreateNewGViewModel>(new { userid = UserId });
+                ShowViewModel<CreateNewGViewModel>(new {userid = UserId});
                 Close(this);
             });
             //OpenCommunityCommand = new MvxCommand(() =>
@@ -85,6 +87,7 @@ namespace YWWACP.Core.ViewModels
             //    ShowViewModel<CommunityViewModel>();
             //    Close(this);
             //});
+
 
         }
 
@@ -95,24 +98,27 @@ namespace YWWACP.Core.ViewModels
 
         public void OnResume()
         {
-            GetMyThreads();
+            GetThreads();
         }
 
-        public async void GetMyThreads()
+        public async void GetThreads()
         {
-            var getMyThreads = await database.GetTable();
-            MyThreads.Clear();
-            foreach (var thread in getMyThreads)
+            var threads = await database.GetTable();
+            NewThreads.Clear();
+            foreach (var thread in threads)
             {
                 var c = thread.Content;
-                var i = thread.UserId;
 
-                if (thread.Content != null && thread.UserId == UserId)
+                if (thread.Content != null)
                 {
-                    MyThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category, thread.Content, thread.ThreadID));
+                    NewThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category, thread.Content, thread.ThreadID));
                 }
             }
-            RaisePropertyChanged(() => MyThreads);
+
+            RaisePropertyChanged(() => NewThreads);
+
         }
+
     }
+
 }

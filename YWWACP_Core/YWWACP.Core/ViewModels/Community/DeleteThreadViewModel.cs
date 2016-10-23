@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Android;
-using Android.App;
-using Android.OS;
-using Android.Views;
+﻿using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.Community
 {
     public class DeleteThreadViewModel : MvxViewModel
     {

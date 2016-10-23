@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
+using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
 using YWWACP.Core.ViewModels.Health_Plan;
 

@@ -8,6 +8,7 @@ using YWWACP.Core.ViewModels.Diary;
 using System.Collections.ObjectModel;
 using YWWACP.Core.Models;
 using System.Collections.Generic;
+using YWWACP.Core.ViewModels.Community;
 
 namespace YWWACP.Core.ViewModels
 {

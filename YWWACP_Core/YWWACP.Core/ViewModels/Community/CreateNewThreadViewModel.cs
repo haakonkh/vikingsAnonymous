@@ -1,12 +1,11 @@
-﻿
-using MvvmCross.Core.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.Community
 {
     public class CreateNewThreadViewModel : MvxViewModel
     {

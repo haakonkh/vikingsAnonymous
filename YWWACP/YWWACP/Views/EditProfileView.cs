@@ -12,10 +12,11 @@ using Android.Widget;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.Profile;
 
 namespace YWWACP.Views
 {
-    [Activity(Label = "EditProfile")]
+    [Activity(Label = "Edit Profile Information")]
     [MvxViewFor(typeof(EditProfileViewModel))]
     public class EditProfileView : MvxActivity
     {
@@ -29,7 +30,7 @@ namespace YWWACP.Views
 
     // This will only be used for first time registration
     // Need it so I can set ID
-    [Activity(Label = "EditProfile")]
+    [Activity(Label = "Create Profile")]
     [MvxViewFor(typeof(EditProfileFirstTimeViewModel))]
     public class EditProfileFirstTimeView : MvxActivity
     {

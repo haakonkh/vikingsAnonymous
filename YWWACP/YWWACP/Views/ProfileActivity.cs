@@ -5,6 +5,7 @@ using Android.Widget;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.Profile;
 
 
 namespace YWWACP.Views

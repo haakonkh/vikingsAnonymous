@@ -8,6 +8,7 @@ using MvvmCross.Platform.IoC;
 using YWWACP.Core.Database;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
+using YWWACP.Core.ViewModels.Profile;
 
 namespace YWWACP.Core
 {
@@ -30,7 +31,7 @@ namespace YWWACP.Core
                 Log.Debug("Comments", "First time");
 
                 // first time task
-                RegisterAppStart<ViewModels.EditProfileFirstTimeViewModel>();
+                RegisterAppStart<EditProfileFirstTimeViewModel>();
 
                 // record the fact that the app has been started at least once
                 prefs.Edit().PutBoolean("my_first_time", false).Commit();

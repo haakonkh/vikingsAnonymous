@@ -5,7 +5,9 @@ using Android.App;
 using Android.Content;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
+using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
+using YWWACP.Core.ViewModels.Profile;
 
 namespace YWWACP.Core.ViewModels
 {
@@ -39,7 +41,7 @@ namespace YWWACP.Core.ViewModels
             this.database = database;
             UserId = prefUserInfo.GetString("UserId", "");
             InitDb();
-
+   
             OpenHealthPlanCommand = new MvxCommand(() => ShowViewModel<HealthPlanViewModel>(new { userid = UserId }));
             OpenGraphCommand = new MvxCommand(() => ShowViewModel<GraphViewModel>(new { userid = UserId }));
             OpenExerciseCommand = new MvxCommand(() => ShowViewModel<CreateNewGViewModel>(new { userid = UserId }));
@@ -94,6 +96,14 @@ namespace YWWACP.Core.ViewModels
         public async void InitDb()
         {
 			DropDatabase();
+            await database.InsertTableRow(new MyTable()
+            {
+                Age = "Some old bitch",
+                Height = "Some heigh bitch",
+                Weight = "You Fat bitch",
+                Name = "Some old nasty chick's name",
+                UserId = UserId
+            });
             await database.InsertTableRow(new MyTable
                 {
                     MealId = "1",

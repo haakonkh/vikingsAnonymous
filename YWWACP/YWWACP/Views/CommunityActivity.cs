@@ -3,6 +3,7 @@ using Android.OS;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.Community;
 
 //Author: Student 9805061, Student Andreas Norstein
 namespace YWWACP.Views

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
+using YWWACP.Core.ViewModels.Community;
 
 namespace YWWACP.Core.ViewModels
 {

@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Android.App;
-using Android.Widget;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.Community
 {
     public class CommentsViewModel : MvxViewModel
     {
@@ -123,7 +118,7 @@ namespace YWWACP.Core.ViewModels
         {
             if (await VerifyUser())
             {
-                if (await dialog.Show("Are you sure you want to delete this thread", "Delete", "Delte", "Cancel"))
+                if (await dialog.Show("Are you sure you want to delete this question?", "Delete Question?", "Delete", "Cancel"))
                 {
                     var threads = await database.GetTable();
                     foreach (var thread in threads)

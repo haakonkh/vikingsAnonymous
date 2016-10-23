@@ -13,6 +13,7 @@ using MvvmCross.Droid.Views;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.ViewModels;
 using System.Windows.Input;
+using YWWACP.Core.ViewModels.Community;
 
 namespace YWWACP.Views
 {
