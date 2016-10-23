@@ -22,6 +22,7 @@
         android:layout_height="0dp"
         android:layout_weight="50"
         android:hint="Summary"
+        android:textSize="25dip"
         android:id="@+id/editTxtQuestion"
         android:gravity="top|left"
         local:MvxBind="Text Summary" />
@@ -65,7 +66,6 @@
         android:layout_weight="20"
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_alignParentBottom ="true"
         android:weightSum="100">
         <Button
             android:text="@string/cancelThread"

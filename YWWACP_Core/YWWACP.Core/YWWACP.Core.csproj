@@ -57,6 +57,7 @@
     <Compile Include="ViewModels\CommentsViewModel.cs" />
     <Compile Include="ViewModels\ComunityViewModel.cs" />
     <Compile Include="ViewModels\CreateExerciseViewModel.cs" />
+    <Compile Include="ViewModels\CreateNewRecipeViewModel.cs" />
     <Compile Include="ViewModels\CreateNewThreadViewModel.cs" />
     <Compile Include="ViewModels\DeleteThreadViewModel.cs" />
     <Compile Include="ViewModels\Diary\DiaryDayViewModel.cs" />
