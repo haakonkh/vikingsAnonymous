@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="100">
-<!--<LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="10"
-      android:id="@+id/linearLayoutWrapTopButtons"
-      android:weightSum="100">
-    <Button
-        android:text="@string/New_Thread"
-        android:layout_width="0dp"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:id="@+id/btnNewThread"
-        local:MvxBind="Click AddNewThreadCommand" />
-    <Button
-        android:text="@string/My_Threads"
-        android:layout_width="0dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/navbar" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:id="@+id/btnMyThreads"
-        local:MvxBind="Click MyThreadsCommand" /> 
-  </LinearLayout> -->
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayoutWrapTopButtons"
+        android:weightSum="100">
+        <Button
+            android:text="Exercises"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/btnNewThread"
+            local:MvxBind="Click ExerciseViewCommand" />
+        <Button
+            android:text="Recipes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:id="@+id/btnMyThreads" />
+    </LinearLayout>
     <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="90"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/linearLayoutWrapTopButtons"
         android:id="@+id/listViewRecipe"
         local:MvxItemTemplate="@layout/recipelistviewrow"
         local:MvxBind="ItemsSource NewRecipes; ItemClick SelectRecipeCommand" />
-</LinearLayout>
+
+</RelativeLayout>

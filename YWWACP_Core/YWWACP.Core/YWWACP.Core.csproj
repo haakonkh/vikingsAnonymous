@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CommentsViewModel.cs" />
     <Compile Include="ViewModels\ComunityViewModel.cs" />
+    <Compile Include="ViewModels\CreateExerciseViewModel.cs" />
     <Compile Include="ViewModels\CreateNewThreadViewModel.cs" />
     <Compile Include="ViewModels\DeleteThreadViewModel.cs" />
     <Compile Include="ViewModels\Diary\DiaryDayViewModel.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="ViewModels\Health Plan\HealthPlanMealViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\HealthPlanViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\MealDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ListExercisesViewModel.cs" />
     <Compile Include="ViewModels\MyThreadsViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\NewHealthPlanViewModel.cs" />
     <Compile Include="ViewModels\NewGoalViewModel.cs" />

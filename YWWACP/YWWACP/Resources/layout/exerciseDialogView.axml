@@ -1,45 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="100">
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:hint="Title"
+        android:id="@+id/editTxtTitle"
+        android:textStyle="bold"
+        android:textSize="25dip"
+        android:gravity="bottom|left"
+        local:MvxBind="Text Title" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:hint="Summary"
+        android:id="@+id/editTxtQuestion"
+        android:gravity="top|left"
+        local:MvxBind="Text Summary" />
   <LinearLayout
-      android:orientation="vertical"
-      android:layout_weight="80"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:weightSum="100">
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="0dp"
-        android:layout_weight="50"
-        android:layout_height="wrap_content"
-        android:id="@+id/exerciseImage" />
-    <TextView
-        android:text="Lorem iposum"
-        android:layout_width="0dp"
-        android:layout_weight="50"
-        android:layout_height="wrap_content"
-        android:id="@+id/recepieText" />
+        android:orientation="horizontal"
+        android:layout_weight="20"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:weightSum="100">
+    <EditText
+      android:inputType="textMultiLine"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="5pt"
+      android:layout_marginLeft="5pt"
+      android:layout_marginRight="5pt"
+      android:hint="Sets"
+      android:id="@+id/editTxtTitle"
+      android:textStyle="bold"
+      android:textSize="25dip"
+      android:gravity="top|left"
+      local:MvxBind="Text Sets" />
+    <EditText
+      android:inputType="textMultiLine"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="5pt"
+      android:layout_marginLeft="5pt"
+      android:layout_marginRight="5pt"
+      android:hint="Reps"
+      android:id="@+id/editTxtQuestion"
+      android:textStyle="bold"
+      android:textSize="25dip"
+      android:gravity="top|left"
+      local:MvxBind="Text Reps" />
   </LinearLayout>
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_weight="20"
-      android:layout_height="0dp"
-      android:layout_width="match_parent"
-      android:weightSum="100">
-    <Button
-        android:text="Cancel"
-        android:layout_width="0dp"
-        android:layout_weight="50"
-        android:layout_height="wrap_content"
-        android:id="@+id/cancelBtn" />
-    <Button
-        android:text="Add to plan"
-        android:layout_width="0dp"
-        android:layout_weight="50"
-        android:layout_height="wrap_content"
-        android:id="@+id/addBtn" />
-  </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="20"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom ="true"
+        android:weightSum="100">
+        <Button
+            android:text="@string/cancelThread"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelThread"
+            local:MvxBind="Click CancelCommand" />
+        <Button
+            android:text="@string/submitThread"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubmitThread"
+            local:MvxBind="Click SubmitCommand" />
+    </LinearLayout>
 </LinearLayout>

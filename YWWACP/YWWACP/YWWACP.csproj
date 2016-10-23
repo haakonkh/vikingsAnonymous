@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -221,6 +221,7 @@
     <Compile Include="DebugTrace.cs" />
     <Compile Include="dialog_calendar.cs" />
     <Compile Include="dialog_ChooseHealthPlan.cs" />
+    <Compile Include="Views\CreateNewExercise.cs" />
     <Compile Include="Views\CreateNewThreadView.cs" />
     <Compile Include="DiaryActivity.cs" />
     <Compile Include="HealthPlanActivity.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Views\HealthPlanMealsView.cs" />
     <Compile Include="Views\HealthPlanView.cs" />
     <Compile Include="Views\ExerciseActivity.cs" />
+    <Compile Include="Views\ListExercisesActivity.cs" />
     <Compile Include="Views\MealDetailsView.cs" />
     <Compile Include="Views\MyThreadsView.cs" />
     <Compile Include="Views\NewHealthPlanView.cs" />
@@ -447,6 +449,7 @@
     <AndroidResource Include="Resources\drawable\Arrow_Forward.png" />
     <AndroidResource Include="Resources\drawable\round_plus.png" />
     <AndroidResource Include="Resources\drawable\IconFlower.png" />
+    <AndroidResource Include="Resources\drawable\add.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

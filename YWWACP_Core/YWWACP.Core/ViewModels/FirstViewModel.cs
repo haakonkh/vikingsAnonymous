@@ -43,7 +43,7 @@ namespace YWWACP.Core.ViewModels
             OpenHealthPlanCommand = new MvxCommand(() => ShowViewModel<HealthPlanViewModel>(new { userid = UserId }));
             OpenGraphCommand = new MvxCommand(() => ShowViewModel<GraphViewModel>(new { userid = UserId }));
             OpenExerciseCommand = new MvxCommand(() => ShowViewModel<CreateNewGViewModel>(new { userid = UserId }));
-            OpenRecipeCommand = new MvxCommand(() => ShowViewModel<RecipeViewModel>(new {userid = UserId}));
+            OpenRecipeCommand = new MvxCommand(() => ShowViewModel<ListExercisesViewModel>(new {userid = UserId}));
             OpenProfileCommand = new MvxCommand(() => ShowViewModel<ProfileViewModel>(new {userid = UserId}));
             OpenCommand = new MvxCommand(() => ShowViewModel<CommunityViewModel>(new {userid = UserId}));
             OpenDiaryCommand = new MvxCommand(() => ShowViewModel<DiaryViewModel>(new { userid = UserId,DateIn = DateTime.MinValue }));
