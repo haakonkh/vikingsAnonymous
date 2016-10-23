@@ -2427,8 +2427,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06008e
 			public const int editTextName = 2131099790;
 			
-			// aapt resource value: 0x7f060105
-			public const int editTextWriteComment = 2131099909;
+			// aapt resource value: 0x7f060106
+			public const int editTextWriteComment = 2131099910;
 			
 			// aapt resource value: 0x7f060085
 			public const int editTxtQuestion = 2131099781;
@@ -2562,8 +2562,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060100
 			public const int listViewRecipe = 2131099904;
 			
-			// aapt resource value: 0x7f060104
-			public const int listViewRecipes = 2131099908;
+			// aapt resource value: 0x7f060103
+			public const int listViewRecipes = 2131099907;
 			
 			// aapt resource value: 0x7f0600f3
 			public const int list_container = 2131099891;
@@ -2579,6 +2579,12 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f0600b9
 			public const int loadingProgressWheel = 2131099833;
+			
+			// aapt resource value: 0x7f060105
+			public const int mealSummary = 2131099909;
+			
+			// aapt resource value: 0x7f060104
+			public const int mealTitle = 2131099908;
 			
 			// aapt resource value: 0x7f0600e8
 			public const int media_actions = 2131099880;
@@ -2924,9 +2930,6 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f060048
 			public const int topPanel = 2131099720;
-			
-			// aapt resource value: 0x7f060103
-			public const int txtRecipeViewContent = 2131099907;
 			
 			// aapt resource value: 0x7f06007b
 			public const int txtViewCategory = 2131099771;

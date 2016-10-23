@@ -1,51 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:weightSum="100"
     android:background="@drawable/border">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1">
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wraptext"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/warpImage"
+        android:layout_alignParentTop="true">
         <TextView
-            style="@+style/smallTextViewTheme"
+            style="@+style/bigTextViewTheme"
             android:text="Content"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_weight="1"
-            android:id="@+id/txtRecipeViewContent"
-            android:paddingTop="10dp"
-            android:paddingLeft="15dp"
+            android:gravity="top|left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mealTitle"
             local:MvxBind="Text Ingredients " />
+        <TextView
+            style="@+style/textViewTheme"
+            android:text="Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mealTitle"
+            android:id="@+id/mealSummary"
+            local:MvxBind="Text Approach " />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wrapImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top">
         <ImageView
-            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_weight="1"
             android:id="@+id/demoImageView"
-            android:src="@drawable/recipe"
-            android:layout_marginLeft="0.0dp" />
-    </LinearLayout>
-    <TextView
-        style="@+style/textViewTheme"
-        android:text="Content"
-        android:gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:id="@+id/txtRecipeViewContent"
-        android:paddingTop="10dp"
-        android:paddingLeft="15dp"
-        local:MvxBind="Text Approach " />
-    <Button
-        android:id="@+id/btnDiary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add" />
-</LinearLayout>
+            android:src="@drawable/recipe" />
+    </RelativeLayout>
+</RelativeLayout>
