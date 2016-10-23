@@ -93,7 +93,7 @@ namespace YWWACP.Core.ViewModels
 
         public async void InitDb()
         {
-			DropDatabase();
+			//DropDatabase();
             await database.InsertTableRow(new MyTable
                 {
                     MealId = "1",

@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Database\Database.cs" />
+    <Compile Include="Database\DatabaseAzure.cs" />
     <Compile Include="Database\KeyPairDatabase.cs" />
     <Compile Include="Interfaces\IAzureDatabase.cs" />
     <Compile Include="Interfaces\IDatabase.cs" />

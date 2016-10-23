@@ -30,10 +30,10 @@ namespace YWWACP.Views
         private TextView textViewGoal;
         private TextView textViewCalories;
 
-        public static MobileServiceClient MobileService =
-    new MobileServiceClient(
-    "https://vikinganonymous.azurewebsites.net"
-);
+//        public static MobileServiceClient MobileService =
+//    new MobileServiceClient(
+//    "https://vikinganonymous.azurewebsites.net"
+//);
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);

@@ -30,7 +30,13 @@ namespace YWWACP
         protected override void InitializeFirstChance()
         {
             Mvx.LazyConstructAndRegisterSingleton<ISqlite, SQLiteDroid>();
-            Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseTables>();
+
+            // Line below will give local database
+            //Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseTables>();
+
+            // Line below will give database synced with azure
+            Mvx.LazyConstructAndRegisterSingleton<IDatabase, DatabaseAzure>();
+
             Mvx.LazyConstructAndRegisterSingleton<IToast, ToastService>();
             Mvx.LazyConstructAndRegisterSingleton<IDialogService, DialogService>();
             Mvx.LazyConstructAndRegisterSingleton<IAzureDatabase, AzureDatabase>();
