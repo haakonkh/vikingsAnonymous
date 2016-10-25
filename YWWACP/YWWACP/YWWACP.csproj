@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -211,6 +211,7 @@
   <ItemGroup>
     <Compile Include="ChartMainPageActivity.cs" />
     <Compile Include="NewExerciseDialog.cs" />
+    <Compile Include="NewGoalActivity.cs" />
     <Compile Include="Service\DialogService.cs" />
     <Compile Include="Service\ToastService.cs" />
     <Compile Include="Views\AddExerciseView.cs" />
@@ -382,6 +383,7 @@
     <AndroidResource Include="Resources\layout\GoalListViewRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\NewGoal.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
