@@ -22,6 +22,7 @@ using MvvmCross.Droid.Views;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Binding.BindingContext;
+using YWWACP.Core.ViewModels.Goal;
 
 //Author: Student 9787283, Student Kristoffer Helgesen 
 namespace YWWACP

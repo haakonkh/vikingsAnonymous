@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -285,7 +285,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\recipeDialogView.axml" />
     <AndroidResource Include="Resources\drawable\recipeIcon.png" />
-    <AndroidResource Include="Resources\layout\FirstView.axml" />
+    <AndroidResource Include="Resources\layout\FirstView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\Dialog_ChooseHealthPlan.axml" />
     <AndroidResource Include="Resources\layout\HealthPlan.axml">
       <SubType>Designer</SubType>
@@ -465,6 +467,7 @@
     <AndroidResource Include="Resources\drawable\round_plus.png" />
     <AndroidResource Include="Resources\drawable\IconFlower.png" />
     <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\weightlifting.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -69,7 +69,7 @@
     <Compile Include="ViewModels\Profile\EditProfileViewModel.cs" />
     <Compile Include="ViewModels\ExerciseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
-    <Compile Include="ViewModels\GraphViewModel.cs" />
+    <Compile Include="ViewModels\Goal\GraphViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\AddExerciseViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\AddMealViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\ExerciseDetailsViewModel.cs" />
@@ -80,7 +80,7 @@
     <Compile Include="ViewModels\ListExercisesViewModel.cs" />
     <Compile Include="ViewModels\Community\MyThreadsViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\NewHealthPlanViewModel.cs" />
-    <Compile Include="ViewModels\NewGoalViewModel.cs" />
+    <Compile Include="ViewModels\Goal\NewGoalViewModel.cs" />
     <Compile Include="ViewModels\Profile\ProfileViewModel.cs" />
     <Compile Include="ViewModels\RecipeViewModel.cs" />
     <Compile Include="ViewModels\SingleExerciseViewModel.cs" />

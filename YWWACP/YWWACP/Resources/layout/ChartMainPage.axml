@@ -3,24 +3,112 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<!--TopBoxes starts here-->
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
         android:layout_alignParentTop="true"
-        android:id="@+id/linearLayoutGraph"
-        android:layout_height="400dp">
-        <OxyPlot.Xamarin.Android.PlotView
-            android:id="@+id/plot_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            local:MvxBind="Model MyModel" />
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/boxwrap"
+        android:gravity="center"
+        android:minHeight="150dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/FirstViewRect"
+                android:gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:text="Goal"
+                    android:textSize="10pt"
+                    android:id="@+id/textViewGoal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="Achieved/No"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="Left this weak?"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/FirstViewRect"
+                android:gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:text="Your BMI"
+                    android:textSize="10pt"
+                    android:id="@+id/textViewCalories"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                <TextView
+                    android:text="BMI - PH"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    local:MvxBind="Text BMI" />
+                <TextView
+                    android:text="Good/Bad"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    local:MvxBind="Text HealthStatus" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
+<!--TopBoxes end here-->
+<!--Graph starts-->
+
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_below="@id/boxwrap"
+    android:layout_width="fill_parent"
+    android:layout_height="250dp">
+    <OxyPlot.Xamarin.Android.PlotView
+        android:id="@+id/plot_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Model MyModel" />
+  </LinearLayout>
+<!--Graph ends-->
+<!--navbar-->
     <include
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         layout="@layout/navbar" />
+<!--Daily goal-->
     <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,12 +118,12 @@
         android:id="@+id/listViewGoals"
         local:MvxItemTemplate="@layout/goallistviewrow"
         local:MvxBind="ItemsSource Goals" />
+<!--PlussButton-->
     <ImageView
         android:src="@drawable/round_plus"
         android:layout_width="40dp"
         android:paddingRight="15dp"
         android:paddingBottom="15dp"
-        
         android:layout_above="@id/navigation"
         android:layout_below="@id/plot_view"
         android:layout_height="wrap_content"

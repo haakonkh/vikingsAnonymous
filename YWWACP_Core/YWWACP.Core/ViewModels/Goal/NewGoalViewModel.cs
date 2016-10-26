@@ -1,20 +1,13 @@
-﻿using Android.App;
-using Android.OS;
-using Java.Util;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
-using YWWACP.Core.ViewModels;
 using YWWACP.Core.ViewModels.Community;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.Goal
 {
    public class NewGoalViewModel : MvxViewModel
     {
@@ -61,16 +54,8 @@ namespace YWWACP.Core.ViewModels
             set
             {
                // selectedGoal = new Item(DateTime.Now.DayOfWeek + " - " + DateTime.Now.Date.ToString("dd/MM/yyyy"));
-               
-
-            
-
-
                     selectedGoal = value;
                     RaisePropertyChanged(() => SelectedGoal);
-
-                
-               
             }
 
         }
