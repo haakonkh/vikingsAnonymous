@@ -246,19 +246,19 @@ namespace YWWACP.Core.ViewModels
                     BMI = b;
                     if (bmi < 18.5)
                     {
-                        HealthStatus = "To skinny, eat more!";
+                        HealthStatus = "Eat more!";
                     }
                     else if (bmi < 25)
                     {
-                        HealthStatus = "Perfect body weight!";
+                        HealthStatus = "Perfect body!";
                     }
                     else if (bmi > 25 && bmi < 30)
                     {
-                        HealthStatus = "Consider loosing some weight";
+                        HealthStatus = "Consider Weightloss";
                     }
                     else
                     {
-                        HealthStatus = "You to fat, gonna die";
+                        HealthStatus = "See a doctor";
                     }
                     break;
                 }
