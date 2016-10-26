@@ -17,7 +17,7 @@ using YWWACP.Core.ViewModels.Health_Plan;
 namespace YWWACP.Views.Health_Plan
 {
     [MvxViewFor(typeof(HealthPlanExerciseViewModel))]
-    [Activity(Label = "Exercises")]
+    [Activity(Label = "Planned exercises")]
     public class HealthPlanExercisesView : MvxActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

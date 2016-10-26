@@ -4,14 +4,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <TextView
+        style="@+style/textViewTheme"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Mvx.MvxListView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            local:MvxItemTemplate="@layout/addexercisetoplanrow"
-            local:MvxBind="ItemsSource Exercises; ItemClick SelectExerciseCommand" />
-    </LinearLayout>
+        android:textSize="30dp"
+        local:MvxBind="Text Title" />
+    <TextView
+        style="@+style/textViewTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        local:MvxBind="Text Type" />
 </LinearLayout>

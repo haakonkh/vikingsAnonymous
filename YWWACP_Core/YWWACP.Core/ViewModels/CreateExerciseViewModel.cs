@@ -103,7 +103,9 @@ namespace YWWACP.Core.ViewModels
                     ExerciseTitle = Title,
                     ExerciseSummary = Summary,
                     Sets = set,
-                    Reps = rep
+                    Reps = rep,
+                    basic = true,
+                    UserId = ""
 
                 });
             });

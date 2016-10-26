@@ -107,7 +107,7 @@ namespace YWWACP.Core.ViewModels
             {
                 var c = thread.MealId;
 
-                if (c != null)
+                if (c != null && thread.basic)
                 {
                     NewRecipes.Insert(0, new NewRecipeThread(thread.MealId, thread.MealTitle, thread.MealSummary));
                 }

@@ -16,7 +16,7 @@ using YWWACP.Core.ViewModels;
 namespace YWWACP.Views
 {
     [MvxViewFor(typeof(HealthPlanViewModel))]
-    [Activity(Label = "Health Plan")]
+    [Activity(Label = "Today's plan")]
     public class HealthPlanView : MvxActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -25,6 +25,11 @@ namespace YWWACP.Views
             SetContentView(Resource.Layout.HealthPlan);
 
         }
-
+        protected override void OnResume()
+        {
+            var vm = (HealthPlanViewModel)ViewModel;
+            vm.OnResume();
+            base.OnResume();
+        }
     }
 }

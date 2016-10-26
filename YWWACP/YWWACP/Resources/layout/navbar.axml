@@ -60,6 +60,7 @@
         android:paddingTop="5dp"
         android:paddingStart="5dp"
         android:gravity="center_vertical"
+        android:drawableStart="@drawable/weightlifting"
         local:MvxBind="Click OpenExerciseCommand"
-        android:text="YO" />
+        android:text="" />
 </LinearLayout>

@@ -91,7 +91,6 @@ namespace YWWACP.Core.ViewModels.Diary
             if (DateIn == DateTime.MinValue)
             {
                 Date = DateTime.Now.Date;
-
             }
             else
             {
@@ -123,7 +122,6 @@ namespace YWWACP.Core.ViewModels.Diary
                         ShowDate = Date.ToString("dd/MM/yyyy");
 
                     }
-                    RaisePropertyChanged(() => ShowDate);
                 }
             }
         }
@@ -151,9 +149,9 @@ namespace YWWACP.Core.ViewModels.Diary
 
         private async void GetDiary()
         {
-            var entries = await database.GetTable();
+            var entriesDb = await database.GetTable();
             Entries.Clear();
-            foreach (var entry in entries)
+            foreach (var entry in entriesDb)
             {
                 
                 if (entry.ExerciseTimestamp != null && entry.UserId == UserId)
@@ -170,7 +168,7 @@ namespace YWWACP.Core.ViewModels.Diary
             RaisePropertyChanged(() => Entries);
             if (Entries.Count == 0)
             {
-                Entries.Insert(0, new Exercise("No entries for this day", "", 0, 0,"", ""));
+                Entries.Insert(0, new Exercise("No entries for this day", "", 0, 0, "", ""));
                 RaisePropertyChanged(() => Entries);
             }
 

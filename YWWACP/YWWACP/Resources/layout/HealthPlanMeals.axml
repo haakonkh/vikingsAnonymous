@@ -18,10 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/my_purple" />
-        <Mvx.MvxListView
+    </LinearLayout>
+    <Mvx.MvxListView
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             local:MvxItemTemplate="@layout/healthplanmealsrow"
             local:MvxBind="ItemsSource Meals;" />
-    </LinearLayout>
 </LinearLayout>

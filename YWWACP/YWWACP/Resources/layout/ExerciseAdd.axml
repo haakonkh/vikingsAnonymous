@@ -24,22 +24,91 @@
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 local:MvxBind="Text ExerciseContent" />
-            <TextView
-                style="@+style/textViewTheme"
-                android:layout_width="fill_parent"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                local:MvxBind="Text DisplayExerciseReps" />
-            <TextView
-                style="@+style/textViewTheme"
-                android:layout_width="fill_parent"
+                android:id="@+id/mmmmm"
+                android:weightSum="100">
+                <TextView
+                    android:text="Reps:"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10" />
+                <TextView
+                    style="@+style/textViewTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="90"
+                    android:textSize="15dp"
+                    local:MvxBind="Text ExerciseReps" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                local:MvxBind="Text DisplayExerciseSets" />
+                android:id="@+id/mmmmm"
+                android:weightSum="100">
+            <TextView
+                android:text="Sets:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10" />
+              <TextView
+                  style="@+style/textViewTheme"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="90"
+                  android:textSize="15dp"
+                  local:MvxBind="Text ExerciseSets" />
+          </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/my_purple" />
+            <TextView
+                android:text="Choose a date:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="133dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="90px"
+                android:paddingRight="90px"
+                android:id="@+id/linearLayoutWrapTopButtons"
+                android:weightSum="100"
+                android:paddingBottom="5dp">
+                <Button
+                    android:drawableStart="@drawable/Arrow_Back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:id="@+id/btnPrevDay"
+                    android:paddingLeft="20px"
+                    local:MvxBind="Click PrevDayCommand" />
+                <Button
+                    android:text="Today"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:id="@+id/btnToday"
+                    local:MvxBind="Text ShowDate; Click TodayCommand" />
+                <Button
+                    android:drawableStart="@drawable/Arrow_Forward"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:id="@+id/btnNextDay"
+                    android:paddingRight="20px"
+                    local:MvxBind="Click NextDayCommand" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/my_purple" />
+        <!--
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
@@ -51,11 +120,12 @@
                     local:MvxBind="Value ExerciseDate"
                     android:layout_marginLeft="100px"
                     android:layout_marginTop="20px" />
-            </RelativeLayout>
+            </RelativeLayout>-->
             <Button
                 android:text="Add exercise"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:id="@+id/sdfsdg"
                 local:MvxBind="Click AddToPlanCommand" />
         </LinearLayout>

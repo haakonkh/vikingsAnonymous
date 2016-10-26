@@ -5,16 +5,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!-- <android.support.v7.widget.Toolbar
-    android:id="@id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:minHeight="?attr/actionBarSize"
-    android:backround="?attr/colorPrimary"
-    app:theme="@style/ThemeOverlay.AppCompat.Dark.Actionbar"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
- 
-  -->
     <Button
         android:id="@+id/btnDiary"
         android:layout_width="match_parent"
@@ -95,45 +85,6 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <TextView
-                    android:text="Heart rate"
-                    android:textSize="10pt"
-                    android:id="@+id/textViewHR"
-                    android:gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:minHeight="30px"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/textViewHRAvg"
-                    android:text="Avarage"
-                    android:gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:minHeight="30px"
-                    android:layout_weight="1" />
-                <TextView
-                    android:text="Top"
-                    android:gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:minHeight="30px"
-                    android:layout_weight="1" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center"
-            android:layout_weight="1">
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/FirstViewRect"
-                android:gravity="center"
-                android:layout_weight="1">
-                <TextView
                     android:text="Goal"
                     android:textSize="10pt"
                     android:id="@+id/textViewGoal"
@@ -169,7 +120,7 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <TextView
-                    android:text="Calories"
+                    android:text="Your BMI"
                     android:textSize="10pt"
                     android:id="@+id/textViewCalories"
                     android:gravity="center_horizontal"
@@ -177,17 +128,19 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1" />
                 <TextView
-                    android:text="This week burnt"
+                    android:text="BMI - PH"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    local:MvxBind="Text BMI" />
                 <TextView
-                    android:text="Something"
+                    android:text="Good/Bad"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    local:MvxBind="Text HealthStatus" />
             </LinearLayout>
         </LinearLayout>
     <!--boxes end-->

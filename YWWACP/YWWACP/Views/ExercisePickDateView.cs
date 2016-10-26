@@ -15,22 +15,14 @@ using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Views
 {
-    [MvxViewFor(typeof(AddMealViewModel))]
-    [Activity(Label = "Pick meal to add")]
-    public class AddMealToPlanView: MvxActivity
+    [MvxViewFor(typeof(ExercisePickDay))]
+    [Activity(Label = "Choose a day")]
+    public class ExercisePickDateView:MvxActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.AddMealToPlan);
-
-        }
-
-        protected override void OnResume()
-        {
-            var vm = (AddMealViewModel)ViewModel;
-            vm.OnResume();
-            base.OnResume();
+            SetContentView(Resource.Layout.ExercisePickDay);
         }
     }
 }

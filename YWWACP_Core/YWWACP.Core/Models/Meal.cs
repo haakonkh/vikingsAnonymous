@@ -17,6 +17,7 @@ namespace YWWACP.Core.Models
         public string Approach { get; set; }
         public string Time { get; set; }
         public string MealID { get; set; }
+        public string MealType { get; set; }
         public Meal() { }
 
         public Meal(string id, string title, string summary, string ingredients, string approach )
@@ -28,7 +29,7 @@ namespace YWWACP.Core.Models
             Approach = approach;
 
         }
-        public Meal(string id, string title, string summary, string ingredients, string approach, string time)
+        public Meal(string id, string title, string summary, string ingredients, string approach, string time, string mealType)
         {
             MealId = id;
             MealTitle = title;
@@ -36,6 +37,7 @@ namespace YWWACP.Core.Models
             Ingredients = ingredients;
             Approach = approach;
             Time = time;
+            MealType = mealType;
         }
 
 

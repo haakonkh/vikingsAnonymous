@@ -14,6 +14,12 @@
         style="@+style/textViewTheme"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textSize="15dp"
+        local:MvxBind="Text MealType" />
+    <TextView
+        style="@+style/textViewTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:textSize="10dp"
         local:MvxBind="Text Time" />
 </LinearLayout>

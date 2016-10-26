@@ -46,6 +46,7 @@
     <Compile Include="Interfaces\IToast.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
+    <Compile Include="Models\DiaryEntry.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\Goal.cs" />
     <Compile Include="Models\KeyPair.cs" />
@@ -62,11 +63,13 @@
     <Compile Include="ViewModels\CreateNewRecipeViewModel.cs" />
     <Compile Include="ViewModels\Diary\DiaryDayViewModel.cs" />
     <Compile Include="ViewModels\Diary\DiaryViewModel.cs" />
+    <Compile Include="ViewModels\Health Plan\ExercisePickDay.cs" />
+    <Compile Include="ViewModels\Health Plan\MealPickDate.cs" />
     <Compile Include="ViewModels\Profile\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\Profile\EditProfileViewModel.cs" />
     <Compile Include="ViewModels\ExerciseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
-    <Compile Include="ViewModels\GraphViewModel.cs" />
+    <Compile Include="ViewModels\Goal\GraphViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\AddExerciseViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\AddMealViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\ExerciseDetailsViewModel.cs" />
@@ -77,7 +80,7 @@
     <Compile Include="ViewModels\ListExercisesViewModel.cs" />
     <Compile Include="ViewModels\Community\MyThreadsViewModel.cs" />
     <Compile Include="ViewModels\Health Plan\NewHealthPlanViewModel.cs" />
-    <Compile Include="ViewModels\NewGoalViewModel.cs" />
+    <Compile Include="ViewModels\Goal\NewGoalViewModel.cs" />
     <Compile Include="ViewModels\Profile\ProfileViewModel.cs" />
     <Compile Include="ViewModels\RecipeViewModel.cs" />
     <Compile Include="ViewModels\SingleExerciseViewModel.cs" />

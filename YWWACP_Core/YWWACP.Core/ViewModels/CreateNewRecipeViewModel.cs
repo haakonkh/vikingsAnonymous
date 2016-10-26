@@ -102,7 +102,9 @@ namespace YWWACP.Core.ViewModels
                     MealTitle = Title,
                     MealSummary = Summary,
                     Ingredients = ingredients,
-                    Approach = approach
+                    Approach = approach,
+                    basic = true,
+                    UserId = ""
 
                 });
             });

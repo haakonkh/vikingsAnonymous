@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
+using YWWACP.Core.ViewModels.Community;
+using YWWACP.Core.ViewModels.Diary;
 
 namespace YWWACP.Core.ViewModels.Health_Plan
 {
@@ -14,13 +17,40 @@ namespace YWWACP.Core.ViewModels.Health_Plan
     {
         public IDatabase database;
         public ICommand AddToPlanCommand { get; set; }
+        public ICommand NextDayCommand { get; set; }
+        public ICommand PrevDayCommand { get; set; }
+        public ICommand TodayCommand { get; set; }
         public MealDetailsViewModel(IDatabase database)
         {
             this.database = database;
+            NextDayCommand = new MvxCommand(() =>
+            {
+                MealDate = MealDate.AddDays(1);
+                RaisePropertyChanged(() => MealDate);
+            });
+            PrevDayCommand = new MvxCommand(() =>
+            {
+                if (MealDate.Date > DateTime.Now.Date)
+                {
+                    MealDate = MealDate.AddDays(-1);
+                    RaisePropertyChanged(() => MealDate);
+                }
+                else
+                {
+                    Mvx.Resolve<IToast>().Show("You cannot plan backwards in time");
+                }
+
+            });
+            TodayCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<MealPickDate>(new { mealId = MealID,userId = UserId, currentDate = MealDate,selectedItem = SelectedItem.Caption });
+                Close(this);
+            });
             AddToPlanCommand = new MvxCommand(() =>
             {
                 addToTable();
                 Close(this);
+                Mvx.Resolve<IToast>().Show(MealTitle+" added to plan");
             });
 
         }
@@ -30,10 +60,33 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             get { return mealDate; }
             set
             {
-                if (value != null && value != mealDate)
+                if (value != mealDate)
                 {
                     mealDate = value;
                     RaisePropertyChanged(() => MealDate);
+                    if (MealDate.Date == DateTime.Now.Date)
+                    {
+                        ShowDate = "Today";
+                    }
+                    else
+                    {
+                        ShowDate = MealDate.ToString("dd/MM/yyyy");
+
+                    }
+                }
+            }
+        }
+        private string showDate;
+        public string ShowDate
+        {
+            get { return showDate; }
+            set
+            {
+                if (value != showDate)
+                {
+                    showDate = value;
+                    RaisePropertyChanged(() => ShowDate);
+
                 }
             }
         }
@@ -44,19 +97,57 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             get { return userId; }
             set { SetProperty(ref userId, value); }
         }
+        private List<Item> mealtypes_array = new List<Item>()
+        {
+            new Item("Breakfast"),
+            new Item("Lunch"),
+            new Item("Dinner"),
+            new Item("Snack")
+
+        };
+
+        public List<Item> MealTypesArray
+        {
+            get { return mealtypes_array; }
+            set
+            {
+                mealtypes_array = value;
+                RaisePropertyChanged(() => MealTypesArray);
+            }
+        }
+
+        private Item selectedItem = new Item("Three");
+
+        public Item SelectedItem
+        {
+            get { return selectedItem; }
+            set
+            {
+                selectedItem = value;
+                RaisePropertyChanged(() => SelectedItem);
+            }
+
+        }
         public async void addToTable()
         {
-            await database.InsertTableRow(new MyTable() { MealSummary = MealContent, MealTitle = MealTitle,  MealTimestamp = MealDate.ToString("dd/MM/yyyy"), ExerciseDate = MealDate.ToString(), UserId = UserId, ExerciseId = GenerateMealID() });
+            await database.InsertTableRow(new MyTable() { MealSummary = MealContent, MealTitle = MealTitle,  MealTimestamp = MealDate.ToString("dd/MM/yyyy"), MealDate = MealDate.ToString(), UserId = UserId, MealId = GenerateMealID(),MealType = SelectedItem.Caption});
 
         }
 
-        public void Init(string mealId, string userId)
+        public void Init(string mealID, string userId,DateTime DateIn, string selectedItem)
         {
-            MealID = mealId;
-            GetMeal();
+            MealID = mealID;
             UserId = userId;
-            MealDate = DateTime.Now.Date;
-            RaisePropertyChanged(() => MealDate);
+            SelectedItem = new Item(selectedItem);
+            if (DateIn == DateTime.MinValue)
+            {
+                MealDate = DateTime.Now.Date;
+
+            }
+            else
+            {
+                MealDate = DateIn;
+            }
         }
         private string mealID;
 
@@ -71,6 +162,20 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         {
             get { return mealContent; }
             set { SetProperty(ref mealContent, value); }
+        }
+        private string mealIngredients;
+
+        public string MealIngredients
+        {
+            get { return mealIngredients; }
+            set { SetProperty(ref mealIngredients, value); }
+        }
+        private string mealApproach;
+
+        public string MealApproach
+        {
+            get { return mealApproach; }
+            set { SetProperty(ref mealApproach, value); }
         }
         private string mealTitle;
 
@@ -102,11 +207,13 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             {
                 if (MealID == meal.MealId)
                 {
+                    var ingredients = meal.Ingredients.Replace(", ", "\n- ").Insert(0,"- ");
+
                     MealContent = meal.MealSummary;
                     MealTitle = meal.MealTitle;
-                    
-                    RaisePropertyChanged(() => MealContent);
-                    RaisePropertyChanged(() => MealTitle);
+                    MealApproach = meal.Approach;
+                    MealIngredients = ingredients;
+                    RaiseAllPropertiesChanged();
                    
                     break;
                 }

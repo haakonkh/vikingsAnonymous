@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 
@@ -151,8 +152,6 @@ namespace YWWACP.Core.ViewModels.Profile
 
 
         }
-
-
 
 
 

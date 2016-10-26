@@ -70,7 +70,7 @@ namespace YWWACP.Core.ViewModels
             {
                 var c = thread.ExerciseId;
 
-                if (c != null)
+                if (c != null && thread.basic)
                 {
                     NewExercise.Insert(0, new NewExerciseThread(thread.ExerciseId, thread.ExerciseTitle, thread.ExerciseSummary));
                 }
