@@ -128,7 +128,22 @@ namespace YWWACP.Core.ViewModels
             {
                 string[] x = SelectedGoal.Caption.Split('-');
 
-                if (GoalSatisfaction <= 10 && GoalSatisfaction !=0)
+                //if (GoalSatisfaction == 0) {
+
+                //    AddGoal(new MyTable()
+                //    {
+                //        GoalContent = goalContent,
+                //        GoalDate = SelectedGoal.Caption.Split('-')[1].Trim(),
+                //        GoalSatisfaction = 0.0,
+                //        GoalId = GetGeneratedGoalId(),
+                //        UserId = UserId
+
+                //    });
+
+
+
+                //}
+                if (GoalSatisfaction <= 10)// && GoalSatisfaction !=0)
                 {
 
                     if (GoalContent != null && GoalContent !="")
