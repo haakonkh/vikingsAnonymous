@@ -119,7 +119,7 @@ namespace YWWACP.Core.ViewModels
                     NewThreads.Insert(0, new NewDiscussionThread(thread.ThreadTitle, thread.Category, thread.Content, thread.ThreadID));
                 }
             }
-
+           
             RaisePropertyChanged(() => NewThreads);
 
         }

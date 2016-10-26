@@ -27,6 +27,7 @@ namespace YWWACP.Core.Database
         {
             await SyncAsync(true);
             var mytablerow = await azureSyncTable.Where(x => x.UserId == tablerow.UserId || x.Id == tablerow.Id).ToListAsync();
+            azureDatabase.Dispose();
             return mytablerow.Any();
         }
 
@@ -38,10 +39,14 @@ namespace YWWACP.Core.Database
             {
                 await azureSyncTable.DeleteAsync(mytablerow.FirstOrDefault());
                 await SyncAsync();
+                azureDatabase.Dispose();
+
                 return 1;
             }
             else
             {
+                azureDatabase.Dispose();
+
                 return 0;
 
             }
@@ -51,6 +56,8 @@ namespace YWWACP.Core.Database
         {
             await SyncAsync(true);
             var mytable = await azureSyncTable.ToListAsync();
+            azureDatabase.Dispose();
+
             return mytable;
         }
 
@@ -59,6 +66,8 @@ namespace YWWACP.Core.Database
             await SyncAsync(true);
             await azureSyncTable.InsertAsync(tablerow);
             await SyncAsync();
+            azureDatabase.Dispose();
+
             return 1;
         }
 

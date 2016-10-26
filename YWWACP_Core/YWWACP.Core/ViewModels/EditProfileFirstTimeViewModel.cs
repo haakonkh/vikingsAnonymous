@@ -103,7 +103,7 @@ namespace YWWACP.Core.ViewModels
                 ISharedPreferencesEditor editor = pref.Edit();
                 editor.PutString("UserId", UserId);
                 editor.Apply();
-              });
+            });
         }
 
         public async void SaveUserChanges(MyTable userinfo)

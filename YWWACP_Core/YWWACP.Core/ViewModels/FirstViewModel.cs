@@ -38,7 +38,7 @@ namespace YWWACP.Core.ViewModels
         {
             this.database = database;
             UserId = prefUserInfo.GetString("UserId", "");
-            InitDb();
+            //InitDb();
 
             OpenHealthPlanCommand = new MvxCommand(() => ShowViewModel<HealthPlanViewModel>(new { userid = UserId }));
             OpenGraphCommand = new MvxCommand(() => ShowViewModel<GraphViewModel>(new { userid = UserId }));
@@ -87,7 +87,7 @@ namespace YWWACP.Core.ViewModels
 
             ISharedPreferencesEditor editor2 = prefAppOpend.Edit();
             editor2.Clear();
-            editor2.Apply(); ;
+            editor2.Apply();
 
         }
 
