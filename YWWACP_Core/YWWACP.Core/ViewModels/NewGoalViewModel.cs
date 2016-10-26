@@ -165,7 +165,7 @@ namespace YWWACP.Core.ViewModels
                     }
                 }
                 else {
-                    Mvx.Resolve<IToast>().Show("Your goal satisfaction must be within 1-10");                   
+                    Mvx.Resolve<IToast>().Show("Your goal satisfaction must be within 0-10");                   
                 }
             });  
         }
