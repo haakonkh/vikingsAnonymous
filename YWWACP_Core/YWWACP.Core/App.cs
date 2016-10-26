@@ -8,7 +8,10 @@ using MvvmCross.Platform.IoC;
 using YWWACP.Core.Database;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
+using YWWACP.Core.ViewModels;
 using YWWACP.Core.ViewModels.Profile;
+using YWWACP.Core.ViewModels.Goal;
+
 
 namespace YWWACP.Core
 {
@@ -38,7 +41,7 @@ namespace YWWACP.Core
             }
             else
             {
-                RegisterAppStart<ViewModels.FirstViewModel>();
+                RegisterAppStart<FirstViewModel>();
             }
 
 

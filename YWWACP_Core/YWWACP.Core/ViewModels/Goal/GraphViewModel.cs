@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Android.App;
+using Android.Content;
 using MvvmCross.Core.ViewModels;
 using OxyPlot;
 using OxyPlot.Axes;
@@ -15,7 +17,6 @@ namespace YWWACP.Core.ViewModels.Goal
     public class GraphViewModel : MvxViewModel
     {
 
-
         // Everyone should include these commands on their pages
         public ICommand OpenCommunityCommand { get; set; }
         public ICommand OpenHealthPlanCommand { get; set; }
@@ -26,14 +27,11 @@ namespace YWWACP.Core.ViewModels.Goal
 
 
         public ICommand OpenNewGoalCommand { get; set; }
-
-
-
-
-
         private readonly IDatabase database;
-
         public ICommand GraphShow { get; set; }
+
+        private readonly ISharedPreferences prefUserInfo = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
+        private readonly ISharedPreferences prefAppOpend = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
 
 
         private ObservableCollection<Models.Goal> goals = new ObservableCollection<Models.Goal>();
@@ -52,13 +50,15 @@ namespace YWWACP.Core.ViewModels.Goal
             get { return userId; }
             set { SetProperty(ref userId, value); }
         }
-        // private string connection;
-
 
         public GraphViewModel(IDatabase database)
         {
 
             this.database = database;
+            UserId = prefUserInfo.GetString("UserId", "");
+            UpdateGraph();
+            GetGoals();
+            CalculateBmi();
 
             OpenNewGoalCommand = new MvxCommand(() => ShowViewModel<NewGoalViewModel>(new { userid = UserId }));
 
@@ -66,36 +66,12 @@ namespace YWWACP.Core.ViewModels.Goal
             // I HAVE NOT COMMENTED OUT DIARY BECAUSE THAT DOES NOT EXIST AT THIS POINT.
             // COMMUNITY IS COMMENTED OUT BECAUSE THIS IS THE COMMUNITY VIEW AND IT MAKES ABSOULTE NO SENS TO NAVIGATE TO THE VIEW THAT YOU ARE IN
             // MAKE SURE YOU DO THE SAME
-            OpenHealthPlanCommand = new MvxCommand(() =>
-            {
-                ShowViewModel<HealthPlanViewModel>(new { userid = UserId });
-                Close(this);
-            });
-            OpenDiaryCommand = new MvxCommand(() =>
-            {
-                ShowViewModel<DiaryViewModel>(new { userid = UserId });
-                Close(this);
-            });
-            OpenHomeCommand = new MvxCommand(() =>
-            {
-                ShowViewModel<FirstViewModel>(new { userid = UserId });
-                Close(this);
-            });
-            OpenRecipesCommand = new MvxCommand(() =>
-            {
-                ShowViewModel<RecipeViewModel>(new { userid = UserId });
-                Close(this);
-            });
-            OpenExerciseCommand = new MvxCommand(() =>
-            {
-                ShowViewModel<CreateNewGViewModel>(new { userid = UserId });
-                Close(this);
-            });
-            OpenCommunityCommand = new MvxCommand(() =>
-            {
-                ShowViewModel<CommunityViewModel>();
-                Close(this);
-            });
+            OpenHealthPlanCommand = new MvxCommand(() => { ShowViewModel<HealthPlanViewModel>(new { userid = UserId }); Close(this); });
+            OpenDiaryCommand = new MvxCommand(() => {ShowViewModel<DiaryViewModel>(new { userid = UserId }); Close(this); });
+            OpenHomeCommand = new MvxCommand(() => {ShowViewModel<FirstViewModel>(new { userid = UserId }); Close(this); });
+            OpenRecipesCommand = new MvxCommand(() => { ShowViewModel<RecipeViewModel>(new { userid = UserId }); Close(this); });
+            OpenExerciseCommand = new MvxCommand(() => { ShowViewModel<CreateNewGViewModel>(new { userid = UserId }); Close(this); });
+            OpenCommunityCommand = new MvxCommand(() => { ShowViewModel<CommunityViewModel>(); Close(this); });
 
         }
 
@@ -108,16 +84,15 @@ namespace YWWACP.Core.ViewModels.Goal
         {
             UpdateGraph();
             GetGoals();
+            CalculateBmi();
 
         }
-
-
-
+        
         PlotModel _myModel;
         public PlotModel MyModel
         {
             get { return _myModel; }
-            set { SetProperty(ref _myModel, value); }
+            set { SetProperty(ref _myModel, value); RaisePropertyChanged(() => MyModel);}
         }
 
         public async void GetGoals()
@@ -130,29 +105,27 @@ namespace YWWACP.Core.ViewModels.Goal
             foreach (var goal in goals)
             {
                 if (goal.UserId == UserId && goal.GoalContent != null && goal.GoalDate.Trim() == DateTime.Now.Date.ToString("dd/MM/yyyy").Trim())
-                {// goal.GoalSatisfaction.ToString()
+                {
                     if (goal.GoalSatisfaction < 1 )
                     {
                         Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
                         break;
                     }
-                    if (goal.GoalSatisfaction ==  1 || goal.GoalSatisfaction == 2 || goal.GoalSatisfaction == 3 ){
+                    if (goal.GoalSatisfaction <=  3){
                         Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
                         break;
                     }
-                    if (goal.GoalSatisfaction == 4 || goal.GoalSatisfaction == 5 || goal.GoalSatisfaction == 6 ){
+                    if (goal.GoalSatisfaction <= 6){
                         Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
                         break;
                     }
-                    if (goal.GoalSatisfaction == 7 || goal.GoalSatisfaction == 8 || goal.GoalSatisfaction == 9 || goal.GoalSatisfaction == 10)
+                    if (goal.GoalSatisfaction > 6 && goal.GoalSatisfaction < 11)
                     {
                         Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
                         break;
                     }
                 }
-
             }
-
             RaisePropertyChanged(() => Goals);
         }
         public async void UpdateGraph()
@@ -192,15 +165,13 @@ namespace YWWACP.Core.ViewModels.Goal
 
             foreach (var graphDetail in graphDetails)
             {
-                var check = graphDetail.GoalDate;
                 if (graphDetail.UserId == UserId && graphDetail.GoalSatisfaction != 0.0)
                 {                
                     onlyGoals.Add(graphDetail);
                 }
             }
 
-            onlyGoals.Sort((x, y) => Convert.ToDateTime(x.GoalDate).CompareTo(Convert.ToDateTime(y.GoalDate)));
-
+            onlyGoals.Sort((x, y) => Convert.ToDateTime(x.GoalDate).CompareTo(Convert.ToDateTime(y.GoalDate)));    
             foreach (var goal in onlyGoals)
             {
                 if(Math.Abs(goal.GoalSatisfaction) > 0) {
@@ -215,7 +186,67 @@ namespace YWWACP.Core.ViewModels.Goal
             RaisePropertyChanged(() => MyModel);
           
         }
-          
+
+        /// ######################################################################
+
+
+        private string bmi;
+        public string BMI
+        {
+            get { return bmi; }
+            set
+            {
+                SetProperty(ref bmi, value);
+                RaisePropertyChanged(() => BMI);
+            }
+        }
+
+        private string healthStatus;
+
+        public string HealthStatus { get { return healthStatus; } set { SetProperty(ref healthStatus, value); RaisePropertyChanged(() => HealthStatus); } }
+
+        private async void CalculateBmi()
+        {
+            var profiles = await database.GetTable();
+
+            foreach (var profile in profiles)
+            {
+                if (UserId == profile.UserId && profile.ThreadID == null && profile.CommentID == null &&
+                    profile.GoalId == null && profile.ExerciseId == null && profile.MealId == null)
+                {
+
+                    var whey = Convert.ToDouble(profile.Weight);
+                    var heightCM = Convert.ToDouble(profile.Height);
+                    var heightMeter = heightCM / 100;
+
+                    var bmi = (whey / (heightMeter * heightMeter));
+                    var b = bmi.ToString();
+                    b = b.Substring(0, b.IndexOf('.') + 2);
+                    BMI = b;
+                    if (bmi < 18.5)
+                    {
+                        HealthStatus = "Eat more!";
+                    }
+                    else if (bmi < 25)
+                    {
+                        HealthStatus = "Perfect body!";
+                    }
+                    else if (bmi > 25 && bmi < 30)
+                    {
+                        HealthStatus = "Consider Weightloss";
+                    }
+                    else
+                    {
+                        HealthStatus = "See a doctor";
+                    }
+                    break;
+                }
+
+
+            }
+
+        }
+
     }
     
 }

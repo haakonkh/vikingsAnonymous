@@ -2135,8 +2135,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f020063
 			public const int IconFlower = 2130837603;
 			
-			// aapt resource value: 0x7f02006f
-			public const int notification_template_icon_bg = 2130837615;
+			// aapt resource value: 0x7f020070
+			public const int notification_template_icon_bg = 2130837616;
 			
 			// aapt resource value: 0x7f020064
 			public const int preference_list_divider_material = 2130837604;
@@ -2170,6 +2170,9 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f02006e
 			public const int web = 2130837614;
+			
+			// aapt resource value: 0x7f02006f
+			public const int weightlifting = 2130837615;
 			
 			static Drawable()
 			{

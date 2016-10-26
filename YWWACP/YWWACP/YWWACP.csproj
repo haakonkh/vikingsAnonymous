@@ -454,6 +454,7 @@
     <AndroidResource Include="Resources\drawable\round_plus.png" />
     <AndroidResource Include="Resources\drawable\IconFlower.png" />
     <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\weightlifting.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

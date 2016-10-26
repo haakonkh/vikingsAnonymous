@@ -4,6 +4,7 @@ using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Diary;
+using YWWACP.Core.ViewModels.Goal;
 
 namespace YWWACP.Core.ViewModels.Community
 {
@@ -69,7 +70,7 @@ namespace YWWACP.Core.ViewModels.Community
             });
             OpenHomeCommand = new MvxCommand(() =>
             {
-                ShowViewModel<FirstViewModel>(new {userid = UserId});
+                ShowViewModel<GraphViewModel>(new {userid = UserId});
                 Close(this);
             });
             OpenRecipesCommand = new MvxCommand(() =>
