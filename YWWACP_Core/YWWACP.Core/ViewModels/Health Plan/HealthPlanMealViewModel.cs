@@ -62,14 +62,14 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
                 if (meal.MealSummary != null && meal.UserId == UserId)
                 {
-                    Meals.Insert(0, new Meal(meal.MealId, meal.MealTitle, meal.MealSummary, meal.Ingredients, meal.Approach, meal.MealTimestamp));
+                    Meals.Insert(0, new Meal(meal.MealId, meal.MealTitle, meal.MealSummary, meal.Ingredients, meal.Approach, meal.MealTimestamp,meal.MealType));
                 }
             }
 
             RaisePropertyChanged(() => Meals);
             if (Meals.Count == 0)
             {
-                Meals.Insert(0, new Meal("","No meals planned", "", "", "", ""));
+                Meals.Insert(0, new Meal("","No meals planned", "", "", "", "",""));
                 RaisePropertyChanged(() => Meals);
             }
         }

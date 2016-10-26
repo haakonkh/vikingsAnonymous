@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Java.Sql;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
@@ -15,7 +16,9 @@ namespace YWWACP.Core.ViewModels.Health_Plan
     {
         public IDatabase database;
         public ICommand AddToPlanCommand { get; set; }
-
+        public ICommand NextDayCommand { get; set; }
+        public ICommand PrevDayCommand { get; set; }
+        public ICommand TodayCommand { get; set; }
         //Exercise properties
         private string exerciseID;
 
@@ -74,41 +77,74 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             get { return userId; }
             set { SetProperty(ref userId, value); }
         }
-        /*
-        private DateTime exerciseTime;
-        public DateTime ExerciseTime
-        {
-            get { return exerciseTime; }
-            set
-            {
-                if (value != null && value != exerciseTime)
-                {
-                    exerciseTime = value;
-                    RaisePropertyChanged(() => ExerciseTime);
-                }
-            }
-        }*/
+
         private DateTime exerciseDate;
         public DateTime ExerciseDate
         {
             get { return exerciseDate; }
             set
             {
-                if (value != null && value != exerciseDate)
+                if (value != exerciseDate)
                 {
                     exerciseDate = value;
                     RaisePropertyChanged(() => ExerciseDate);
+                    if (ExerciseDate.Date == DateTime.Now.Date)
+                    {
+                        ShowDate = "Today";
+                    }
+                    else
+                    {
+                        ShowDate = ExerciseDate.ToString("dd/MM/yyyy");
+
+                    }
+                }
+            }
+        }
+        private string showDate;
+        public string ShowDate
+        {
+            get { return showDate; }
+            set
+            {
+                if (value != showDate)
+                {
+                    showDate = value;
+                    RaisePropertyChanged(() => ShowDate);
+
                 }
             }
         }
         public ExerciseDetailsViewModel(IDatabase database)
         {
             this.database = database;
+            NextDayCommand = new MvxCommand(() =>
+            {
+                ExerciseDate = ExerciseDate.AddDays(1);
+                RaisePropertyChanged(() => ExerciseDate);
+            });
+            PrevDayCommand = new MvxCommand(() =>
+            {
+                if (ExerciseDate.Date > DateTime.Now.Date)
+                {
+                    ExerciseDate = ExerciseDate.AddDays(-1);
+                    RaisePropertyChanged(() => ExerciseDate);
+                }
+                else
+                {
+                    Mvx.Resolve<IToast>().Show("You cannot plan backwards in time");
+                }
 
+            });
+            TodayCommand = new MvxCommand(() =>
+            {
+                ShowViewModel<ExercisePickDay>(new { exerciseId = ExerciseID, userId = UserId, currentDate = ExerciseDate });
+                Close(this);
+            });
             AddToPlanCommand = new MvxCommand(() =>
             {
                 addToTable();
                 Close(this);
+                Mvx.Resolve<IToast>().Show(ExerciseTitle+" added to plan!");
             });
 
         }
@@ -119,12 +155,19 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         }
 
-        public void Init(string exerciseID,string userId)
+        public void Init(string exerciseID,string userId, DateTime DateIn)
         {
             ExerciseID = exerciseID;
             UserId = userId;
-            ExerciseDate = DateTime.Now.Date;
-            RaisePropertyChanged(() => ExerciseDate);
+            if (DateIn == DateTime.MinValue)
+            {
+                ExerciseDate = DateTime.Now.Date;
+
+            }
+            else
+            {
+                ExerciseDate = DateIn;
+            }
         }
 
         public void OnResume()
@@ -162,12 +205,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
                         DisplayExerciseSets = "Sets: " + exercise.Sets;
                     }
                     
-                    RaisePropertyChanged(() => ExerciseContent);
-                    RaisePropertyChanged(() => ExerciseTitle);
-                    RaisePropertyChanged(() => ExerciseSets);
-                    RaisePropertyChanged(() => ExerciseReps);
-                    RaisePropertyChanged(() => DisplayExerciseReps);
-                    RaisePropertyChanged(() => DisplayExerciseSets);
+                    RaiseAllPropertiesChanged();
                     break;
                 }
                 

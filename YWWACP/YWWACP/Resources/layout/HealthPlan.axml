@@ -12,7 +12,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:weightSum="100">
         <LinearLayout
             android:orientation="horizontal"
@@ -36,10 +36,33 @@
                 android:layout_weight="50"
                 android:id="@+id/btnsdgsdg"
                 local:MvxBind="Click OpenMealCommand" />
+                
         </LinearLayout>
-        <View
+      <LinearLayout
+        android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/my_purple" />
+            android:layout_height="wrap_content"
+            android:layout_weight="90"
+            android:weightSum ="100"
+            android:id="@+id/sdfgfdasg">
+        
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sdfgfdasg">
+              <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/line"
+                android:background="@color/my_purple" />
+            <Mvx.MvxListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/line"
+                local:MvxItemTemplate="@layout/healthplanrow"
+                local:MvxBind="ItemsSource Entries; ItemClick SelectEntryCommand" />
+        </RelativeLayout>
+      </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

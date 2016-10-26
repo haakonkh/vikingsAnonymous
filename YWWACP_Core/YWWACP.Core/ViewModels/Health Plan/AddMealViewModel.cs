@@ -39,6 +39,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         public AddMealViewModel(IDatabase database)
         {
             this.database = database;
+            GetMeals();
             SelectMealCommand = new MvxCommand<Meal>(meal => ShowViewModel<MealDetailsViewModel>(new { mealID = meal.MealId, userId = UserId }));
 
         }
@@ -55,14 +56,14 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         public async void GetMeals()
         {
-            var meals = await database.GetTable();
+            var mealsDb = await database.GetTable();
             Meals.Clear();
-            foreach (var meal in meals)
+            foreach (var meal in mealsDb)
             {
 
                 if (meal.MealSummary != null && meal.basic)
                 {
-                    Meals.Insert(0, new Meal(meal.MealId, meal.MealTitle, meal.MealSummary, meal.Ingredients, meal.Approach, meal.MealTimestamp));
+                    Meals.Insert(0, new Meal(meal.MealId, meal.MealTitle, meal.MealSummary, meal.Ingredients, meal.Approach, meal.MealTimestamp,meal.MealType));
                 }
             }
 

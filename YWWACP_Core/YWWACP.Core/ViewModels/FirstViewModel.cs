@@ -122,7 +122,7 @@ namespace YWWACP.Core.ViewModels
                 MealId = "2",
                 MealTitle = "Tangy protein smoothie",
                 MealSummary = "A thick, protein-packed drink",
-                Ingredients = " cup cottage cheese or plain yogurt,  cup vanilla ice cream,  cup prepared fruit - flavored gelatin(can use individual ready - to - eat snack pack),  cup low - fat milk",
+                Ingredients = "cup cottage cheese or plain yogurt, cup vanilla ice cream, up prepared fruit - flavored gelatin(can use individual ready - to - eat snack pack), cup low - fat milk",
                 Approach = "Mix all ingredients in a blender",
                 basic = true,
                 UserId = ""

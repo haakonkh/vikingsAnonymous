@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
+using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
 using YWWACP.Core.ViewModels.Health_Plan;
@@ -26,6 +28,17 @@ namespace YWWACP.Core.ViewModels
 
         public IDatabase database;
 
+        private ObservableCollection<DiaryEntry> entries = new ObservableCollection<DiaryEntry>();
+        public ObservableCollection<DiaryEntry> Entries
+        {
+            get { return entries; }
+            set
+            {
+                SetProperty(ref entries, value);
+
+            }
+
+        }
         public HealthPlanViewModel(IDatabase database)
         {
             this.database = database;
@@ -72,6 +85,57 @@ namespace YWWACP.Core.ViewModels
             get { return userId; }
             set { SetProperty(ref userId, value); }
         }
+        public void OnResume()
+        {
+            GetTodaysPlan();
+        }
+        private async void GetTodaysPlan()
+        {
+            var entriesDb = await database.GetTable();
+            Entries.Clear();
+            foreach (var entry in entriesDb)
+            {
 
+                if ((entry.ExerciseTimestamp != null || entry.MealTimestamp != null) && entry.UserId == UserId)
+                {
+                    var dt = new DateTime();
+                    var exercise = new Exercise();
+                    var meal = new Meal();
+                    var type = "";
+                    var title = "";
+                    if (entry.ExerciseTimestamp != null)
+                    {
+                        dt = Convert.ToDateTime(entry.ExerciseDate);
+                        exercise = new Exercise(entry.ExerciseTitle, entry.ExerciseSummary, entry.Sets, entry.Reps, entry.ExerciseTimestamp, entry.ExerciseId);
+                        type = "Exercise";
+                        title = entry.ExerciseTitle;
+                    }
+                    else
+                    {
+                        dt = Convert.ToDateTime(entry.MealTimestamp);
+                        meal = new Meal(entry.MealId, entry.MealTitle, entry.MealSummary, entry.Ingredients, entry.Approach, entry.MealTimestamp,entry.MealType);
+                        type = "Meal - " +entry.MealType.ToLower();
+                        title = entry.MealTitle;
+                    }
+                    if (dt.Date == DateTime.Now.Date && type == "Exercise")
+                    {
+                        Entries.Add(new DiaryEntry(meal, exercise, type, title));
+                    }
+                    else if(dt.Date == DateTime.Now.Date)
+                    {
+                        Entries.Insert(0,new DiaryEntry(meal, exercise, type, title));
+
+                    }
+                }
+
+            }
+            RaisePropertyChanged(() => Entries);
+            if (Entries.Count == 0)
+            {
+                Entries.Insert(0, new DiaryEntry(null,null,"","Nothing planned today"));
+                RaisePropertyChanged(() => Entries);
+            }
+
+        }
     }
 }

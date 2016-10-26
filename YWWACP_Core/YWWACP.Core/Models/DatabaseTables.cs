@@ -39,6 +39,7 @@ namespace YWWACP.Core.Models
         public string MealId { get; set; }
         public string MealTitle { get; set; }
         public string MealSummary { get; set; }
+        public string MealType { get; set; }
 
         public string Ingredients { get; set; }
         // Should maybe be a list? 

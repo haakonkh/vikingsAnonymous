@@ -54,9 +54,9 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         }
         public async void GetExercises()
         {
-            var exercises = await database.GetTable();
+            var exercisesDb = await database.GetTable();
             Exercises.Clear();
-            foreach (var exercise in exercises)
+            foreach (var exercise in exercisesDb)
             {
                 if (exercise.ExerciseSummary != null && exercise.basic)
                 {

@@ -46,6 +46,7 @@
     <Compile Include="Interfaces\IToast.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\DatabaseTables.cs" />
+    <Compile Include="Models\DiaryEntry.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\Goal.cs" />
     <Compile Include="Models\KeyPair.cs" />
@@ -62,6 +63,8 @@
     <Compile Include="ViewModels\CreateNewRecipeViewModel.cs" />
     <Compile Include="ViewModels\Diary\DiaryDayViewModel.cs" />
     <Compile Include="ViewModels\Diary\DiaryViewModel.cs" />
+    <Compile Include="ViewModels\Health Plan\ExercisePickDay.cs" />
+    <Compile Include="ViewModels\Health Plan\MealPickDate.cs" />
     <Compile Include="ViewModels\Profile\EditProfileFirstTimeViewModel.cs" />
     <Compile Include="ViewModels\Profile\EditProfileViewModel.cs" />
     <Compile Include="ViewModels\ExerciseViewModel.cs" />
