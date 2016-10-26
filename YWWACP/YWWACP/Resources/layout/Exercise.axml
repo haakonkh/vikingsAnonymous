@@ -9,34 +9,32 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         layout="@layout/navbar" />
-    <LinearLayout
-        android:orientation="horizontal"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:id="@+id/linearLayoutWrapTopButtons"
-        android:weightSum="100">
+        android:layout_height="100dp"
+        android:id="@+id/linearLayoutWrapTopButtons">
         <Button
             android:text="Exercises"
-            android:layout_width="0dp"
+            android:layout_width="185dp"
             android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:id="@+id/btnNewThread" />
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/btnExercise"
+            android:id="@+id/btnExercise" />
         <Button
             android:text="Recipes"
-            android:layout_width="0dp"
+            android:layout_width="185dp"
             android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:id="@+id/btnMyThreads"
+            android:id="@+id/btnRecipe"
+            android:layout_alignParentRight="true"
             local:MvxBind="Click RecipesViewCommand" />
         <Button
             android:text="Create new exercise"
-            android:layout_width="0dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:id="@+id/btnNewThread"
+            android:layout_below="@id/btnExercise"
+            android:id="@+id/btnNewExercise"
             local:MvxBind="Click CreateExerciseCommand" />
-    </LinearLayout>
+    </RelativeLayout>
     <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -130,9 +130,25 @@ namespace YWWACP.Core.ViewModels
             foreach (var goal in goals)
             {
                 if (goal.UserId == UserId && goal.GoalContent != null && goal.GoalDate.Trim() == DateTime.Now.Date.ToString("dd/MM/yyyy").Trim())
-                {
-                    Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated, "Satisfaction: " + goal.GoalSatisfaction.ToString()));
-                    break;
+                {// goal.GoalSatisfaction.ToString()
+                    if (goal.GoalSatisfaction < 1 )
+                    {
+                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
+                        break;
+                    }
+                    if (goal.GoalSatisfaction ==  1 || goal.GoalSatisfaction == 2 || goal.GoalSatisfaction == 3 ){
+                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
+                        break;
+                    }
+                    if (goal.GoalSatisfaction == 4 || goal.GoalSatisfaction == 5 || goal.GoalSatisfaction == 6 ){
+                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
+                        break;
+                    }
+                    if (goal.GoalSatisfaction == 7 || goal.GoalSatisfaction == 8 || goal.GoalSatisfaction == 9 || goal.GoalSatisfaction == 10)
+                    {
+                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
+                        break;
+                    }
                 }
 
             }
@@ -173,6 +189,7 @@ namespace YWWACP.Core.ViewModels
 
             onlyGoals.Clear();
 
+
             foreach (var graphDetail in graphDetails)
             {
                 var check = graphDetail.GoalDate;
@@ -182,12 +199,16 @@ namespace YWWACP.Core.ViewModels
                 }
             }
 
-            onlyGoals.Sort((x, y) => x.GoalDate.CompareTo(y.GoalDate));
+            onlyGoals.Sort((x, y) => Convert.ToDateTime(x.GoalDate).CompareTo(Convert.ToDateTime(y.GoalDate)));
 
             foreach (var goal in onlyGoals)
             {
-                DateTime dt = Convert.ToDateTime(goal.GoalDate);
-                series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dt), goal.GoalSatisfaction));
+                if(goal.GoalSatisfaction != 0) {
+
+             
+                    DateTime dt = Convert.ToDateTime(goal.GoalDate);
+                    series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dt), goal.GoalSatisfaction));
+               }
 
             }
 
