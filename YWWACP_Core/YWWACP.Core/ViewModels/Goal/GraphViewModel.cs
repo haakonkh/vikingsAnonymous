@@ -1,16 +1,16 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
-using YWWACP.Core.Interfaces;
+using MvvmCross.Core.ViewModels;
 using OxyPlot;
 using OxyPlot.Axes;
-using System;
-using YWWACP.Core.ViewModels.Diary;
-using System.Collections.ObjectModel;
+using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
-using System.Collections.Generic;
 using YWWACP.Core.ViewModels.Community;
+using YWWACP.Core.ViewModels.Diary;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.Goal
 {
     public class GraphViewModel : MvxViewModel
     {
@@ -36,8 +36,8 @@ namespace YWWACP.Core.ViewModels
         public ICommand GraphShow { get; set; }
 
 
-        private ObservableCollection<Goal> goals = new ObservableCollection<Goal>();
-        public ObservableCollection<Goal> Goals
+        private ObservableCollection<Models.Goal> goals = new ObservableCollection<Models.Goal>();
+        public ObservableCollection<Models.Goal> Goals
         {
             get { return goals; }
             set { SetProperty(ref goals, value); }
@@ -133,20 +133,20 @@ namespace YWWACP.Core.ViewModels
                 {// goal.GoalSatisfaction.ToString()
                     if (goal.GoalSatisfaction < 1 )
                     {
-                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
                         break;
                     }
                     if (goal.GoalSatisfaction ==  1 || goal.GoalSatisfaction == 2 || goal.GoalSatisfaction == 3 ){
-                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
                         break;
                     }
                     if (goal.GoalSatisfaction == 4 || goal.GoalSatisfaction == 5 || goal.GoalSatisfaction == 6 ){
-                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
                         break;
                     }
                     if (goal.GoalSatisfaction == 7 || goal.GoalSatisfaction == 8 || goal.GoalSatisfaction == 9 || goal.GoalSatisfaction == 10)
                     {
-                        Goals.Add(new Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
                         break;
                     }
                 }
@@ -203,17 +203,14 @@ namespace YWWACP.Core.ViewModels
 
             foreach (var goal in onlyGoals)
             {
-                if(goal.GoalSatisfaction != 0) {
+                if(Math.Abs(goal.GoalSatisfaction) > 0) {
 
-             
                     DateTime dt = Convert.ToDateTime(goal.GoalDate);
                     series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dt), goal.GoalSatisfaction));
                }
-
             }
 
             plotModel.Series.Add(series1);
-            //  return plotModel;
             MyModel = plotModel;
             RaisePropertyChanged(() => MyModel);
           
