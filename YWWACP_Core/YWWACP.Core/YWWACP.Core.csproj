@@ -87,6 +87,8 @@
     <Compile Include="ViewModels\SingleExerciseViewModel.cs" />
     <Compile Include="ViewModels\SingleRecipeViewModel.cs" />
     <Compile Include="ViewModels\Community\WriteCommentViewModel.cs" />
+    <Compile Include="ViewModels\ViewExerciseDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ViewMealDetailsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

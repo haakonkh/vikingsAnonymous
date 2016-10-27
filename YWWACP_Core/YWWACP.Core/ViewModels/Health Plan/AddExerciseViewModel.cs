@@ -41,7 +41,14 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         {
             this.database = database;
             GetExercises();
-            SelectExerciseCommand = new MvxCommand<Exercise>(exercise => ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = exercise.ExerciseID, userid = UserId }));
+            SelectExerciseCommand = new MvxCommand<Exercise>(exercise =>
+            {
+                if (exercise.ExerciseID != null)
+                {
+                    ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = exercise.ExerciseID, userid = UserId });
+                }
+
+            });
         }
         public void Init(string userid)
         {
@@ -66,7 +73,11 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             }
 
             RaisePropertyChanged(() => Exercises);
-
+            if (Exercises.Count == 0)
+            {
+                Exercises.Insert(0, new Exercise("No exercises in the database", null, 0, 0, null, null));
+                RaisePropertyChanged(() => Exercises);
+            }
         }
     }
 }

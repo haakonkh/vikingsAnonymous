@@ -84,7 +84,7 @@ namespace YWWACP.Core.ViewModels
 
             OpenCommunityCommand = new MvxCommand(() =>
             {
-                ShowViewModel<CommunityViewModel>();
+                ShowViewModel<CommunityViewModel>(new {userid = UserId});
                 Close(this);
             });
         

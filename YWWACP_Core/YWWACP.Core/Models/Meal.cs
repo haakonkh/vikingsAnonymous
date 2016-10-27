@@ -16,7 +16,6 @@ namespace YWWACP.Core.Models
         public string Ingredients { get; set; }
         public string Approach { get; set; }
         public string Time { get; set; }
-        public string MealID { get; set; }
         public string MealType { get; set; }
         public Meal() { }
 

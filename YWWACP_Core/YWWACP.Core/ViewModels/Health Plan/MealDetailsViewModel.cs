@@ -37,7 +37,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
                 }
                 else
                 {
-                    Mvx.Resolve<IToast>().Show("You cannot plan backwards in time");
+                    Mvx.Resolve<IToast>().Show("You cannot pick dates from the past");
                 }
 
             });
@@ -130,13 +130,13 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         }
         public async void addToTable()
         {
-            await database.InsertTableRow(new MyTable() { MealSummary = MealContent, MealTitle = MealTitle,  MealTimestamp = MealDate.ToString("dd/MM/yyyy"), MealDate = MealDate.ToString(), UserId = UserId, MealId = GenerateMealID(),MealType = SelectedItem.Caption});
+            await database.InsertTableRow(new MyTable() { MealSummary = MealContent, MealTitle = MealTitle,  MealTimestamp = MealDate.ToString("dd/MM/yyyy"), MealDate = MealDate.ToString(), UserId = UserId, MealId = GenerateMealID(),MealType = SelectedItem.Caption,Ingredients = MealIngredients,Approach = MealApproach});
 
         }
 
-        public void Init(string mealID, string userid, DateTime DateIn, string selectedItem)
+        public void Init(string mealId, string userid, DateTime DateIn, string selectedItem)
         {
-            MealID = mealID;
+            MealID = mealId;
             UserId = userid;
             SelectedItem = new Item(selectedItem);
             if (DateIn == DateTime.MinValue)
@@ -207,7 +207,11 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             {
                 if (MealID == meal.MealId)
                 {
-                    var ingredients = meal.Ingredients.Replace(", ", "\n- ").Insert(0,"- ");
+                    var ingredients = "";
+                    if (meal.Ingredients != null)
+                    {
+                        ingredients = meal.Ingredients.Replace(", ", "\n- ").Insert(0, "- ");
+                    }
 
                     MealContent = meal.MealSummary;
                     MealTitle = meal.MealTitle;

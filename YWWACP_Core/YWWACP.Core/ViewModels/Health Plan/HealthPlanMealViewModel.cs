@@ -16,7 +16,10 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         public IDatabase database;
 
         private ObservableCollection<Meal> meals = new ObservableCollection<Meal>();
+        
         public ICommand OpenNewMealCommand { get; set; }
+        public ICommand SelectMealCommand { get; set; }
+
 
         public ObservableCollection<Meal> Meals
         {
@@ -34,6 +37,13 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             this.database = database;
             OpenNewMealCommand = new MvxCommand(() => ShowViewModel<AddMealViewModel>(new { userid = UserId }));
 
+            SelectMealCommand = new MvxCommand<Meal>(meal =>
+            {
+                    if(meal.MealId != null) {
+                    ShowViewModel<ViewMealDetailsViewModel>(new { mealId = meal.MealId, userid = UserId });
+                }
+
+            });
         }
 
         public void Init(string userid)
@@ -60,16 +70,15 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             foreach (var meal in meals)
             {
 
-                if (meal.MealSummary != null && meal.UserId == UserId)
+                if (meal.MealTimestamp != null && meal.UserId == UserId && Convert.ToDateTime(meal.MealTimestamp).Date >= DateTime.Now.Date)
                 {
                     Meals.Insert(0, new Meal(meal.MealId, meal.MealTitle, meal.MealSummary, meal.Ingredients, meal.Approach, meal.MealTimestamp,meal.MealType));
                 }
             }
-
             RaisePropertyChanged(() => Meals);
             if (Meals.Count == 0)
             {
-                Meals.Insert(0, new Meal("","No meals planned", "", "", "", "",""));
+                Meals.Insert(0, new Meal(null,"No meals planned", null, null, null, null,null));
                 RaisePropertyChanged(() => Meals);
             }
         }

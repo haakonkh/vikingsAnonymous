@@ -11,123 +11,124 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            
-            >
+            android:layout_height="match_parent">
             <TextView
                 style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="30dp"
                 local:MvxBind="Text MealTitle" />
+          <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/my_purple" />
+          <TextView
+                android:text="Summary:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
             <TextView
                 style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 local:MvxBind="Text MealContent" />
-          <TextView
-            android:text="Ingredients:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-             />
+          <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/my_purple" />
+            <TextView
+                android:text="Ingredients:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
             <TextView
                 style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 local:MvxBind="Text MealIngredients" />
-          <TextView
-             android:text="Approach:"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             />
+          <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/my_purple" />
             <TextView
-                  style="@+style/textViewTheme"
-                  android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"
-                  android:textSize="20dp"
-                  local:MvxBind="Text MealApproach" />
-          <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mmmmm"
-            android:weightSum="100">
-          <TextView
-            android:text="Choose meal type:"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="40"
-             />
-          <MvxSpinner
-              android:id="@+id/spinnerMealtypes"
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-              android:layout_weight="60"
-              local:MvxBind="ItemsSource MealTypesArray; SelectedItem SelectedItem" />
-          </LinearLayout>
+                android:text="Approach:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@+style/textViewTheme"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                local:MvxBind="Text MealApproach" />
+                <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/my_purple" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mmmmm"
+                android:weightSum="100">
+                <TextView
+                    android:text="Choose meal type:"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40" />
+                <MvxSpinner
+                    android:id="@+id/spinnerMealtypes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    local:MvxBind="ItemsSource MealTypesArray; SelectedItem SelectedItem" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/my_purple" />
-          <TextView
-             android:text="Choose a date:"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="133dp"
-             />
-          <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingLeft="90px"
-            android:paddingRight="90px"
-            android:id="@+id/linearLayoutWrapTopButtons"
-            android:weightSum="100"
-            android:paddingBottom="5dp">
-            <Button
-                android:drawableStart="@drawable/Arrow_Back"
-                android:layout_width="0dp"
+            <TextView
+                android:text="Choose a date:"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="25"
-                android:id="@+id/btnPrevDay"
-                android:paddingLeft="20px"
-                local:MvxBind="Click PrevDayCommand" />
-            <Button
-                android:text="Today"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:id="@+id/btnToday"
-                local:MvxBind="Text ShowDate; Click TodayCommand" />
-            <Button
-                android:drawableStart="@drawable/Arrow_Forward"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="25"
-                android:id="@+id/btnNextDay"
-                android:paddingRight="20px"
-                local:MvxBind="Click NextDayCommand" />
-          </LinearLayout>
-          <View
+                android:layout_marginLeft="133dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="90px"
+                android:paddingRight="90px"
+                android:id="@+id/linearLayoutWrapTopButtons"
+                android:weightSum="100"
+                android:paddingBottom="5dp">
+                <Button
+                    android:drawableStart="@drawable/Arrow_Back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:id="@+id/btnPrevDay"
+                    android:paddingLeft="20px"
+                    local:MvxBind="Click PrevDayCommand" />
+                <Button
+                    android:text="Today"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:id="@+id/btnToday"
+                    local:MvxBind="Text ShowDate; Click TodayCommand" />
+                <Button
+                    android:drawableStart="@drawable/Arrow_Forward"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:id="@+id/btnNextDay"
+                    android:paddingRight="20px"
+                    local:MvxBind="Click NextDayCommand" />
+            </LinearLayout>
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/my_purple"
-                />
-            <!--<RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-              
-                <MvvmCross.Binding.Droid.Views.MvxDatePicker
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/datePicker1"
-                    android:layout_centerHorizontal="true"
-                    local:MvxBind="Value MealDate"
-                    android:layout_marginLeft="100px"
-                    android:layout_marginTop="20px" />
-            </RelativeLayout>-->
+                android:background="@color/my_purple" />
+
             <Button
                 android:text="Add meal"
                 android:layout_width="match_parent"

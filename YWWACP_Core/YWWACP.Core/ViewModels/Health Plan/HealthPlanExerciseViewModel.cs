@@ -18,7 +18,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         private ObservableCollection<Exercise> exercises = new ObservableCollection<Exercise>();
         public ICommand OpenNewExerciseCommand { get; set; }
-
+        public ICommand SelectExerciseCommand { get; set; }
         public ObservableCollection<Exercise> Exercises
         {
             get { return exercises; }
@@ -35,6 +35,13 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             this.database = database;
             testStart();
             OpenNewExerciseCommand = new MvxCommand(() => ShowViewModel<AddExerciseViewModel>(new { userid = UserId }));
+            SelectExerciseCommand = new MvxCommand<Exercise>(exercise =>
+            {
+                    if(exercise.ExerciseID != null) { 
+                    ShowViewModel<ViewExerciseDetailsViewModel>(new { exerciseId = exercise.ExerciseID, userid = UserId });
+                }
+
+            });
         }
 
 
@@ -64,7 +71,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             foreach (var exercise in exercises)
             {
 
-                if (exercise.ExerciseSummary != null && exercise.UserId == UserId)
+                if (exercise.ExerciseTimestamp != null && exercise.UserId == UserId && Convert.ToDateTime(exercise.ExerciseTimestamp).Date >= DateTime.Now.Date)
                 {
                     Exercises.Insert(0, new Exercise(exercise.ExerciseTitle, exercise.ExerciseSummary, exercise.Sets, exercise.Reps,exercise.ExerciseTimestamp,exercise.ExerciseId));
                 }
@@ -73,7 +80,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             RaisePropertyChanged(() => Exercises);
             if (Exercises.Count == 0)
             {
-                Exercises.Insert(0, new Exercise("No exercises planned", "", 0, 0, "", ""));
+                Exercises.Insert(0, new Exercise("No exercises planned", null, 0, 0, null, null));
                 RaisePropertyChanged(() => Exercises);
             }
         }

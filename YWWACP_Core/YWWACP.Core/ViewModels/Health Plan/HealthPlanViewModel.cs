@@ -24,6 +24,7 @@ namespace YWWACP.Core.ViewModels
         public ICommand OpenHomeCommand { get; set; }
         public ICommand OpenExerciseCommand { get; set; }
 
+        public ICommand SelectEntryCommand { get; set; }
         public ICommand OpenHealthPlanExerciseCommand { get; set; }
         public ICommand OpenMealCommand { get; set; }
 
@@ -46,6 +47,19 @@ namespace YWWACP.Core.ViewModels
 
             OpenHealthPlanExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userid = UserId }));
             OpenMealCommand = new MvxCommand(() => ShowViewModel<HealthPlanMealViewModel>(new { userid = UserId}));
+            SelectEntryCommand = new MvxCommand<DiaryEntry>(entry =>
+            {
+                if (entry.Exercise != null)
+                {
+                    ShowViewModel<ViewExerciseDetailsViewModel>(new { exerciseId = entry.Exercise.ExerciseID, userid = UserId });
+                }
+                else if (entry.Meal != null)
+                {
+                    ShowViewModel<ViewMealDetailsViewModel>(new { mealId = entry.Meal.MealId, userid = UserId});
+                }
+              
+               
+            });
 
             //Navigation
             OpenDiaryCommand = new MvxCommand(() =>
@@ -120,11 +134,11 @@ namespace YWWACP.Core.ViewModels
                     }
                     if (dt.Date == DateTime.Now.Date && type == "Exercise")
                     {
-                        Entries.Add(new DiaryEntry(meal, exercise, type, title));
+                        Entries.Add(new DiaryEntry(null, exercise, type, title));
                     }
                     else if(dt.Date == DateTime.Now.Date)
                     {
-                        Entries.Insert(0,new DiaryEntry(meal, exercise, type, title));
+                        Entries.Insert(0,new DiaryEntry(meal, null, type, title));
 
                     }
                 }

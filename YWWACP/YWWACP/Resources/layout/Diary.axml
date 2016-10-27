@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         layout="@layout/navbar" />
-  <LinearLayout
+    <LinearLayout
         android:layout_above="@id/navigation"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -48,84 +48,82 @@
                 android:paddingRight="20px"
                 local:MvxBind="Click NextDayCommand" />
         </LinearLayout>
-    <View
+        <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/my_purple" />
-    <LinearLayout
-      android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_weight="10"
-                android:id="@+id/mmmmm"
-                >
-      <LinearLayout
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="10"
+            android:id="@+id/mmmmm">
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="5"
                 android:id="@+id/mmmmm"
                 android:weightSum="100">
-        
-        <TextView
-            android:text="Goal:"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10" />
-        <TextView
-            style="@+style/textViewTheme"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="90"
-            android:textSize="15dp"
-            local:MvxBind="Text GoalContent" />
-      </LinearLayout>
-      <LinearLayout
+                <TextView
+                    android:text="Goal:"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10" />
+                <TextView
+                    style="@+style/textViewTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="90"
+                    android:textSize="15dp"
+                    local:MvxBind="Text GoalContent" />
+            </LinearLayout>
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="5"
                 android:id="@+id/gaollayout"
                 android:weightSum="100">
-        <TextView
-            android:text="Satisfaction:"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="23" />
-        <TextView
-            style="@+style/textViewTheme"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="77"
-            android:textSize="15dp"
-            local:MvxBind="Text GoalSatisfaction" />
-      </LinearLayout>
-    </LinearLayout>
-      <LinearLayout
-        android:orientation="horizontal"
+                <TextView
+                    android:text="Satisfaction:"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="23" />
+                <TextView
+                    style="@+style/textViewTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="77"
+                    android:textSize="15dp"
+                    local:MvxBind="Text GoalSatisfaction" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_above="@id/navigation"
             android:layout_weight="80"
             android:weightSum="100"
             android:id="@+id/sdfgfdasg">
-        <RelativeLayout
+            <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/revid1">
-          <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:id="@+id/line"
-                android:background="@color/my_purple" />
-          <Mvx.MvxListView
-              android:layout_width="match_parent"
-              android:layout_height="fill_parent"
-              local:MvxItemTemplate="@layout/diaryentryrow"
-              android:layout_below="@id/line"
-              local:MvxBind="ItemsSource Entries; ItemClick SelectEntryCommand" />
-        </RelativeLayout>
-      </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:id="@+id/line"
+                    android:background="@color/my_purple" />
+                <Mvx.MvxListView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    local:MvxItemTemplate="@layout/diaryentryrow"
+                    android:layout_below="@id/line"
+                    local:MvxBind="ItemsSource Entries; ItemClick SelectEntryCommand" />
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

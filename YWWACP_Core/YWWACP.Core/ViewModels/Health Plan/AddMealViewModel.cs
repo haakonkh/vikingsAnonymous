@@ -40,7 +40,14 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         {
             this.database = database;
             GetMeals();
-            SelectMealCommand = new MvxCommand<Meal>(meal => ShowViewModel<MealDetailsViewModel>(new { mealID = meal.MealId, userid = UserId }));
+            SelectMealCommand = new MvxCommand<Meal>(meal =>
+            {
+                if (meal.MealId != null)
+                {
+                    ShowViewModel<MealDetailsViewModel>(new { mealId = meal.MealId, userid = UserId });
+                }
+
+            });
 
         }
 
@@ -68,6 +75,11 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             }
 
             RaisePropertyChanged(() => Meals);
+            if (Meals.Count == 0)
+            {
+                Meals.Insert(0, new Meal(null, "No recipes in the database", null, null, null, null, null));
+                RaisePropertyChanged(() => Meals);
+            }
         }
     }
 }

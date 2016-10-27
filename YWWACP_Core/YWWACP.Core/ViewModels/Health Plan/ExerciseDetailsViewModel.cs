@@ -41,20 +41,6 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             get { return exerciseTitle; }
             set { SetProperty(ref exerciseTitle, value); }
         }
-        private string displayExerciseSets;
-
-        public string DisplayExerciseSets
-        {
-            get { return displayExerciseSets; }
-            set { SetProperty(ref displayExerciseSets, value); }
-        }
-        private string displayExerciseReps;
-
-        public string DisplayExerciseReps
-        {
-            get { return displayExerciseReps; }
-            set { SetProperty(ref displayExerciseReps, value); }
-        }
 
         private int exerciseSets;
 
@@ -131,7 +117,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
                 }
                 else
                 {
-                    Mvx.Resolve<IToast>().Show("You cannot plan backwards in time");
+                    Mvx.Resolve<IToast>().Show("You cannot pick dates from the past");
                 }
 
             });
@@ -197,13 +183,6 @@ namespace YWWACP.Core.ViewModels.Health_Plan
                     ExerciseTitle = exercise.ExerciseTitle;
                     ExerciseSets = exercise.Sets;
                     ExerciseReps = exercise.Reps;
-                    if(exercise.Reps > 0) {
-                    DisplayExerciseReps = "Reps: " + exercise.Reps;
-                    }
-                    if (exercise.Sets > 0)
-                    {
-                        DisplayExerciseSets = "Sets: " + exercise.Sets;
-                    }
                     
                     RaiseAllPropertiesChanged();
                     break;

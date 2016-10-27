@@ -26,6 +26,7 @@ namespace YWWACP.Core.ViewModels.Diary
         public ICommand PrevDayCommand { get; set; }
         public ICommand TodayCommand { get; set; }
         public ICommand NextDayCommand { get; set; }
+        public ICommand SelectEntryCommand { get; set; }
 
         private ObservableCollection<DiaryEntry> entries = new ObservableCollection<DiaryEntry>();
         public ObservableCollection<DiaryEntry> Entries
@@ -58,6 +59,20 @@ namespace YWWACP.Core.ViewModels.Diary
             {
                 ShowViewModel<DiaryDayViewModel>(new { userid = UserId, currentDate = Date});
                 Close(this);
+            });
+
+            SelectEntryCommand = new MvxCommand<DiaryEntry>(entry =>
+            {
+                if (entry.Exercise != null)
+                {
+                    ShowViewModel<ViewExerciseDetailsViewModel>(new { exerciseId = entry.Exercise.ExerciseID, userid = UserId });
+                }
+                else if(entry.Meal != null)
+                {
+                    ShowViewModel<ViewMealDetailsViewModel>(new { mealId = entry.Meal.MealId, userid = UserId });
+                }
+
+
             });
 
             OpenHealthPlanCommand = new MvxCommand(() =>
@@ -208,11 +223,11 @@ namespace YWWACP.Core.ViewModels.Diary
                     }
                     if (dt.Date == Date.Date && type == "Exercise")
                     {
-                        Entries.Add(new DiaryEntry(meal, exercise, type, title));
+                        Entries.Add(new DiaryEntry(null, exercise, type, title));
                     }
                     else if (dt.Date == Date.Date)
                     {
-                        Entries.Insert(0, new DiaryEntry(meal, exercise, type, title));
+                        Entries.Insert(0, new DiaryEntry(meal, null, type, title));
 
                     }
                 }

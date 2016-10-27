@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
@@ -20,8 +21,15 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             this.database = database;
             BackToMealCommand = new MvxCommand(() =>
             {
-                ShowViewModel<MealDetailsViewModel>(new { mealID = MealID, userid = UserId, DateIn = Date, selectedItem = SelectedItem });
+                if (Date.Date < DateTime.Now.Date)
+                {
+                    Mvx.Resolve<IToast>().Show("You cannot pick dates from the past");
+
+                }
+                else {
+                ShowViewModel<MealDetailsViewModel>(new { mealId = MealID, userid = UserId, DateIn = Date, selectedItem = SelectedItem });
                 Close(this);
+                }
             });
 
         }

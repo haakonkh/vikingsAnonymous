@@ -10,4 +10,10 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         local:MvxBind="Text Title" />
+    <TextView
+      style="@+style/textViewTheme"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="15dp"
+      local:MvxBind="Text ExerciseSummary" />
 </LinearLayout>

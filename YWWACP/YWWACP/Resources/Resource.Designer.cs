@@ -3363,7 +3363,13 @@ namespace YWWACP
 			public const int support_simple_spinner_dropdown_item = 2130903147;
 			
 			// aapt resource value: 0x7f03006c
-			public const int WriteComment = 2130903148;
+			public const int ViewExerciseDetails = 2130903148;
+			
+			// aapt resource value: 0x7f03006d
+			public const int ViewMealDetails = 2130903149;
+			
+			// aapt resource value: 0x7f03006e
+			public const int WriteComment = 2130903150;
 			
 			static Layout()
 			{

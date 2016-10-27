@@ -18,12 +18,24 @@
                 android:layout_height="wrap_content"
                 android:textSize="30dp"
                 local:MvxBind="Text ExerciseTitle" />
+              <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/my_purple" />
+          <TextView
+                android:text="Summary:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
             <TextView
                 style="@+style/textViewTheme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 local:MvxBind="Text ExerciseContent" />
+              <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/my_purple" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"

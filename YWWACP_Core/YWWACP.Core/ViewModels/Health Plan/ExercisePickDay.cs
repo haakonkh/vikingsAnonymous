@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using YWWACP.Core.Interfaces;
 
 namespace YWWACP.Core.ViewModels.Health_Plan
@@ -18,8 +19,15 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             this.database = database;
             BackToExerciseCommand = new MvxCommand(() =>
             {
+                if (Date.Date < DateTime.Now.Date)
+                {
+                    Mvx.Resolve<IToast>().Show("You cannot pick dates from the past");
+
+                }
+                else { 
                 ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = ExerciseID, userid = UserId, DateIn = Date});
                 Close(this);
+                }
             });
 
         }
