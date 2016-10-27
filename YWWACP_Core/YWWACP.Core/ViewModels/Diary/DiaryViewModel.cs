@@ -218,20 +218,20 @@ namespace YWWACP.Core.ViewModels.Diary
                 else if (entry.GoalId != null && Convert.ToDateTime(entry.GoalDate).Date == Date.Date)
                 {
                     GoalContent = entry.GoalContent;
-                    if (entry.GoalSatisfaction < 1)
+                    if (entry.GoalSatisfaction < 1.0)
                     {
                         GoalSatisfaction = "Not set";
                         
                     }
-                    if (entry.GoalSatisfaction <= 3)
+                    if (entry.GoalSatisfaction > 1.0 && entry.GoalSatisfaction <= 3.0)
                     {
                         GoalSatisfaction = "Bad";
                     }
-                    if (entry.GoalSatisfaction <= 6)
+                    if (entry.GoalSatisfaction > 3.0 && entry.GoalSatisfaction <= 6.0)
                     {
                         GoalSatisfaction = "Ok";
                     }
-                    if (entry.GoalSatisfaction < 11)
+                    if (entry.GoalSatisfaction > 6 && entry.GoalSatisfaction <= 10.0)
                     {
                         GoalSatisfaction = "Great!";
                     }
