@@ -27,28 +27,25 @@
                 android:layout_weight="1">
                 <TextView
                     android:text="Most successful goal this week"
-                    android:textSize="10pt"
+                    android:textSize="7pt"
                     android:id="@+id/textViewGoal"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1"/>
-              
-              <TextView
-                  android:paddingTop="15dp"
-                  android:gravity="center_horizontal"
-                  android:layout_width="wrap_content"
-                  android:layout_height="fill_parent"
-                  android:layout_weight="1"
-                  local:MvxBind="Text MSSucsessRate"/>
+                    android:layout_weight="1" />
                 <TextView
-                  
+                    android:paddingTop="15dp"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1" 
-                    local:MvxBind="Text MSGoal "/>
-              
+                    android:layout_weight="1"
+                    local:MvxBind="Text MSSucsessRate" />
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    local:MvxBind="Text MSGoal " />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -66,7 +63,7 @@
                 android:layout_weight="1">
                 <TextView
                     android:text="Your BMI"
-                    android:textSize="10pt"
+                    android:textSize="7pt"
                     android:id="@+id/textViewCalories"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
