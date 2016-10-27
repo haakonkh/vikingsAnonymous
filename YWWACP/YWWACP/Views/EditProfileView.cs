@@ -16,7 +16,7 @@ using YWWACP.Core.ViewModels.Profile;
 
 namespace YWWACP.Views
 {
-    [Activity(Label = "Edit Profile Information")]
+    [Activity(Label = "Edit Profile")]
     [MvxViewFor(typeof(EditProfileViewModel))]
     public class EditProfileView : MvxActivity
     {

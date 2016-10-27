@@ -8,9 +8,9 @@
     <string name ="Exercises">Exercise</string>
     <string name="Community">Community</string>
     <string name="Today">Today</string>
-    <string name="New_Thread">New Thread</string>
-    <string name="My_Threads">My Threads</string>
-    <string name="All_Threads">All Threads</string>
+    <string name="New_Thread">Write Post</string>
+    <string name="My_Threads">My Posts</string>
+    <string name="All_Threads">All Posts</string>
     <string name="Your_Question">Your Question</string>
     <string name="Title">Title</string>
     <string name="cancelThread">Cancel</string>

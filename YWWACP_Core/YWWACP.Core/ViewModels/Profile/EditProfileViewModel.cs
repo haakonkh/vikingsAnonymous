@@ -20,6 +20,8 @@ namespace YWWACP.Core.ViewModels.Profile
                 if (value != null)
                 {
                     SetProperty(ref name, value);
+                    RaisePropertyChanged(() => Name);
+
                 }
             }
         }
@@ -34,6 +36,8 @@ namespace YWWACP.Core.ViewModels.Profile
                 if (height != value)
                 {
                     SetProperty(ref height, value);
+                    RaisePropertyChanged(() => Height);
+
                 }
             }
         }
@@ -48,6 +52,8 @@ namespace YWWACP.Core.ViewModels.Profile
                 if (weight != value)
                 {
                     SetProperty(ref weight, value);
+                    RaisePropertyChanged(() => Weight);
+
                 }
             }
         }
@@ -62,6 +68,7 @@ namespace YWWACP.Core.ViewModels.Profile
                 if (age !=value)
                 {
                     SetProperty(ref age, value);
+                    RaisePropertyChanged(() => Age);
                 }
             }
         }
@@ -70,7 +77,7 @@ namespace YWWACP.Core.ViewModels.Profile
         public string UserId
         {
             get { return userId; }
-            set { SetProperty(ref userId, value); }
+            set { SetProperty(ref userId, value);}
         }
 
 
@@ -94,6 +101,7 @@ namespace YWWACP.Core.ViewModels.Profile
         public void Init(string userid)
         {
             UserId = userid;
+            FindCorretUser();
         }
 
         /// <summary>
@@ -115,6 +123,25 @@ namespace YWWACP.Core.ViewModels.Profile
                     await database.DeleteTableRow(user.Id);
                     var x = await database.InsertTableRow(userinfo);
                     Close(this);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Fill textfields with userdetails
+        /// </summary>
+        private async void FindCorretUser()
+        {
+            var users = await database.GetTable();
+            foreach (var user in users)
+            {
+                if (user.UserId == UserId && user.ThreadID == null && user.DiaryEntry == null && user.ExerciseId == null &&
+                    user.MealId == null && user.GoalContent == null)
+                {
+                    Name = user.Name;
+                    Height = user.Height;
+                    Weight = user.Weight;
+                    Age = user.Age;
                 }
             }
         }

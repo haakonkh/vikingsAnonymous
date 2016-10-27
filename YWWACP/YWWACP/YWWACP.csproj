@@ -231,7 +231,6 @@
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
-    <Compile Include="Views\DeleteThreadFragment.cs" />
     <Compile Include="Views\DiaryDayView.cs" />
     <Compile Include="Views\DiaryView.cs" />
     <Compile Include="Views\EditProfileView.cs" />

@@ -17,7 +17,7 @@ using YWWACP.Core.ViewModels.Community;
 namespace YWWACP.Views
 {
     [MvxViewFor(typeof(WriteCommentViewModel))]
-    [Activity(Label = "WriteCommentActivity")]
+    [Activity(Label = "Community")]
     public class WriteCommentView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
