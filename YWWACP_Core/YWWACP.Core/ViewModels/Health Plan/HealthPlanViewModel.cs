@@ -43,13 +43,13 @@ namespace YWWACP.Core.ViewModels
         {
             this.database = database;
 
-            OpenHealthPlanExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userid = UserId }));
-            OpenMealCommand = new MvxCommand(() => ShowViewModel<HealthPlanMealViewModel>());
+            OpenHealthPlanExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userId = UserId }));
+            OpenMealCommand = new MvxCommand(() => ShowViewModel<HealthPlanMealViewModel>(new { userId = UserId}));
 
             //Navigation
             OpenDiaryCommand = new MvxCommand(() =>
             {
-                ShowViewModel<DiaryViewModel>(new {userid = UserId});
+                ShowViewModel<DiaryViewModel>(new { userId = UserId});
                 Close(this);
             });
             OpenHomeCommand = new MvxCommand(() =>

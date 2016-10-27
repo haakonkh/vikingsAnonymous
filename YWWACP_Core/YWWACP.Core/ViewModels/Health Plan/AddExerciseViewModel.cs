@@ -43,9 +43,9 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             GetExercises();
             SelectExerciseCommand = new MvxCommand<Exercise>(exercise => ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = exercise.ExerciseID, userId = UserId }));
         }
-        public void Init(string userId)
+        public void Init(string userid)
         {
-            UserId = userId;
+            UserId = userid;
 
         }
         public void OnResume()

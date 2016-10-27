@@ -49,19 +49,19 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/mmmmm"
                 android:weightSum="100">
-            <TextView
-                android:text="Sets:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="10" />
-              <TextView
-                  style="@+style/textViewTheme"
-                  android:layout_width="0dp"
-                  android:layout_height="wrap_content"
-                  android:layout_weight="90"
-                  android:textSize="15dp"
-                  local:MvxBind="Text ExerciseSets" />
-          </LinearLayout>
+                <TextView
+                    android:text="Sets:"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10" />
+                <TextView
+                    style="@+style/textViewTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="90"
+                    android:textSize="15dp"
+                    local:MvxBind="Text ExerciseSets" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"

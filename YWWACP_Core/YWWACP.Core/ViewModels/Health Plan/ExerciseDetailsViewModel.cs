@@ -155,7 +155,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         }
 
-        public void Init(string exerciseID,string userId, DateTime DateIn)
+        public void Init(string exerciseID, string userId, DateTime DateIn)
         {
             ExerciseID = exerciseID;
             UserId = userId;

@@ -134,7 +134,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         }
 
-        public void Init(string mealID, string userId,DateTime DateIn, string selectedItem)
+        public void Init(string mealID, string userId, DateTime DateIn, string selectedItem)
         {
             MealID = mealID;
             UserId = userId;
