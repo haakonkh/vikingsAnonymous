@@ -55,6 +55,7 @@
     <Compile Include="Models\NewExerciseThread.cs" />
     <Compile Include="Models\NewRecipeThread.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Threading\Thread.cs" />
     <Compile Include="ViewModels\Community\CommentsViewModel.cs" />
     <Compile Include="ViewModels\Community\ComunityViewModel.cs" />
     <Compile Include="ViewModels\CreateExerciseViewModel.cs" />

@@ -150,7 +150,7 @@ namespace YWWACP.Core.ViewModels.Goal
                     }
                 }
                 else {
-                    Mvx.Resolve<IToast>().Show("Your goal satisfaction must be within 1-10");                   
+                    Mvx.Resolve<IToast>().Show("Your goal satisfaction must be within 0-10");                   
                 }
             });  
         }
@@ -198,7 +198,6 @@ namespace YWWACP.Core.ViewModels.Goal
         private async void CheckInstance()
         {
             var goals = await database.GetTable();
-         //   var selectedDate = SelectedGoal.Caption.Split('-')[1].Trim();
 
             foreach (var goal in goals)
             {

@@ -231,7 +231,7 @@ namespace YWWACP.Core.ViewModels.Profile
                 GoalSatisfaction = 2.0,
                 UserId = UserId
             });
-
+          
 
             await database.InsertTableRow(new MyTable()
             {
