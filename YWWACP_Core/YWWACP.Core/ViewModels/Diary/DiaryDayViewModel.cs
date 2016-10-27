@@ -18,14 +18,14 @@ namespace YWWACP.Core.ViewModels.Diary
             this.database = database;
             BackToDiaryCommand = new MvxCommand(() =>
             {
-                ShowViewModel<DiaryViewModel>(new {userId = UserId, DateIn = Date});
+                ShowViewModel<DiaryViewModel>(new { userid = UserId, DateIn = Date});
                 Close(this);
             });
 
         }
-        public void Init(string userId, DateTime currentDate)
+        public void Init(string userid, DateTime currentDate)
         {
-            UserId = userId;
+            UserId = userid;
             Date = currentDate;
             RaisePropertyChanged(() => Date);
 

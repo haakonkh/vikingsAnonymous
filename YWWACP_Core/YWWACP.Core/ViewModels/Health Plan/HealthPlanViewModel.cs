@@ -10,6 +10,7 @@ using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
+using YWWACP.Core.ViewModels.Goal;
 using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Core.ViewModels
@@ -43,18 +44,18 @@ namespace YWWACP.Core.ViewModels
         {
             this.database = database;
 
-            OpenHealthPlanExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userId = UserId }));
-            OpenMealCommand = new MvxCommand(() => ShowViewModel<HealthPlanMealViewModel>(new { userId = UserId}));
+            OpenHealthPlanExerciseCommand = new MvxCommand(() => ShowViewModel<HealthPlanExerciseViewModel>(new { userid = UserId }));
+            OpenMealCommand = new MvxCommand(() => ShowViewModel<HealthPlanMealViewModel>(new { userid = UserId}));
 
             //Navigation
             OpenDiaryCommand = new MvxCommand(() =>
             {
-                ShowViewModel<DiaryViewModel>(new { userId = UserId});
+                ShowViewModel<DiaryViewModel>(new { userid = UserId});
                 Close(this);
             });
             OpenHomeCommand = new MvxCommand(() =>
             {
-                ShowViewModel<FirstViewModel>(new { userid = UserId });
+                ShowViewModel<GraphViewModel>(new { userid = UserId });
                 Close(this);
             });
             OpenRecipesCommand = new MvxCommand(() =>
@@ -69,13 +70,13 @@ namespace YWWACP.Core.ViewModels
             });
             OpenCommunityCommand = new MvxCommand(() =>
             {
-                ShowViewModel<CommunityViewModel>();
+                ShowViewModel<CommunityViewModel>(new { userid = UserId});
                 Close(this);
             });
         }
-        public void Init( string userId)
+        public void Init( string userid)
         {
-            UserId = userId;
+            UserId = userid;
         }
 
         private string userId;

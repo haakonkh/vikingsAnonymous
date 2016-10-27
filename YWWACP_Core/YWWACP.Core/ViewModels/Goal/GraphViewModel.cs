@@ -78,7 +78,7 @@ namespace YWWACP.Core.ViewModels.Goal
             OpenHomeCommand = new MvxCommand(() => { ShowViewModel<FirstViewModel>(new { userid = UserId }); Close(this); });
             OpenRecipesCommand = new MvxCommand(() => { ShowViewModel<RecipeViewModel>(new { userid = UserId }); Close(this); });
             OpenExerciseCommand = new MvxCommand(() => { ShowViewModel<CreateNewGViewModel>(new { userid = UserId }); Close(this); });
-            OpenCommunityCommand = new MvxCommand(() => { ShowViewModel<CommunityViewModel>(); Close(this); });
+            OpenCommunityCommand = new MvxCommand(() => { ShowViewModel<CommunityViewModel>(new { userid = UserId}); Close(this); });
 
 
         }

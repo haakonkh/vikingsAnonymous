@@ -9,6 +9,7 @@ using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
+using YWWACP.Core.ViewModels.Goal;
 using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Core.ViewModels.Diary
@@ -55,18 +56,18 @@ namespace YWWACP.Core.ViewModels.Diary
             });
             TodayCommand = new MvxCommand(() =>
             {
-                ShowViewModel<DiaryDayViewModel>(new {userId = UserId, currentDate = Date});
+                ShowViewModel<DiaryDayViewModel>(new { userid = UserId, currentDate = Date});
                 Close(this);
             });
 
             OpenHealthPlanCommand = new MvxCommand(() =>
             {
-                ShowViewModel<HealthPlanViewModel>(new { userId = UserId });
+                ShowViewModel<HealthPlanViewModel>(new { userid = UserId });
                 Close(this);
             });
             OpenHomeCommand = new MvxCommand(() =>
             {
-                ShowViewModel<FirstViewModel>(new { userid = UserId });
+                ShowViewModel<GraphViewModel>(new { userid = UserId });
                 Close(this);
             });
             OpenRecipesCommand = new MvxCommand(() =>
@@ -81,13 +82,13 @@ namespace YWWACP.Core.ViewModels.Diary
             });
             OpenCommunityCommand = new MvxCommand(() =>
             {
-                ShowViewModel<CommunityViewModel>();
+                ShowViewModel<CommunityViewModel>(new { userid = UserId});
                 Close(this);
             });
         }
-        public void Init(string userId, DateTime DateIn)
+        public void Init(string userid, DateTime DateIn)
         {
-            UserId = userId;
+            UserId = userid;
             if (DateIn == DateTime.MinValue)
             {
                 Date = DateTime.Now.Date;

@@ -43,9 +43,9 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             
             GetExercises();
         }
-        public void Init(string userId)
+        public void Init(string userid)
         {
-            UserId = userId;
+            UserId = userid;
         }
 
         public async void DeleteEverything()

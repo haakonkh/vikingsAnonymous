@@ -18,14 +18,14 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             this.database = database;
             BackToExerciseCommand = new MvxCommand(() =>
             {
-                ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = ExerciseID, userId = UserId, DateIn = Date});
+                ShowViewModel<ExerciseDetailsViewModel>(new { exerciseID = ExerciseID, userid = UserId, DateIn = Date});
                 Close(this);
             });
 
         }
-        public void Init(string exerciseId, string userId, DateTime currentDate)
+        public void Init(string exerciseId, string userid, DateTime currentDate)
         {
-            UserId = userId;
+            UserId = userid;
             Date = currentDate;
             ExerciseID = exerciseId;
             RaisePropertyChanged(ExerciseID);

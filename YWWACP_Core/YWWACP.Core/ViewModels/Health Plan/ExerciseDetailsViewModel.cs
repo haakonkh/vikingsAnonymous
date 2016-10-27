@@ -137,7 +137,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             });
             TodayCommand = new MvxCommand(() =>
             {
-                ShowViewModel<ExercisePickDay>(new { exerciseId = ExerciseID, userId = UserId, currentDate = ExerciseDate });
+                ShowViewModel<ExercisePickDay>(new { exerciseId = ExerciseID, userid = UserId, currentDate = ExerciseDate });
                 Close(this);
             });
             AddToPlanCommand = new MvxCommand(() =>
@@ -155,10 +155,10 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         }
 
-        public void Init(string exerciseID, string userId, DateTime DateIn)
+        public void Init(string exerciseID, string userid, DateTime DateIn)
         {
             ExerciseID = exerciseID;
-            UserId = userId;
+            UserId = userid;
             if (DateIn == DateTime.MinValue)
             {
                 ExerciseDate = DateTime.Now.Date;

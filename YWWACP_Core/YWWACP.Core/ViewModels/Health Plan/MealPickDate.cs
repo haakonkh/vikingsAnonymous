@@ -20,14 +20,14 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             this.database = database;
             BackToMealCommand = new MvxCommand(() =>
             {
-                ShowViewModel<MealDetailsViewModel>(new { mealID = MealID, userId = UserId, DateIn = Date, selectedItem = SelectedItem });
+                ShowViewModel<MealDetailsViewModel>(new { mealID = MealID, userid = UserId, DateIn = Date, selectedItem = SelectedItem });
                 Close(this);
             });
 
         }
-        public void Init(string mealId,string userId, DateTime currentDate, string selectedItem)
+        public void Init(string mealId,string userid, DateTime currentDate, string selectedItem)
         {
-            UserId = userId;
+            UserId = userid;
             Date = currentDate;
             SelectedItem = selectedItem;
             MealID = mealId;

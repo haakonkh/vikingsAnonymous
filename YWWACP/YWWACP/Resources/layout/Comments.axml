@@ -52,7 +52,6 @@
         android:layout_weight="70"
         android:layout_above="@id/btnAddComment"
         android:layout_below="@id/questionwrap"
-        android:minHeight="100dp"
         android:id="@+id/listViewComments"
         local:MvxItemTemplate="@layout/commentslistviewrow"
         local:MvxBind="ItemsSource Comments" />

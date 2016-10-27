@@ -43,7 +43,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
             });
             TodayCommand = new MvxCommand(() =>
             {
-                ShowViewModel<MealPickDate>(new { mealId = MealID,userId = UserId, currentDate = MealDate,selectedItem = SelectedItem.Caption });
+                ShowViewModel<MealPickDate>(new { mealId = MealID, userid = UserId, currentDate = MealDate,selectedItem = SelectedItem.Caption });
                 Close(this);
             });
             AddToPlanCommand = new MvxCommand(() =>
@@ -134,10 +134,10 @@ namespace YWWACP.Core.ViewModels.Health_Plan
 
         }
 
-        public void Init(string mealID, string userId, DateTime DateIn, string selectedItem)
+        public void Init(string mealID, string userid, DateTime DateIn, string selectedItem)
         {
             MealID = mealID;
-            UserId = userId;
+            UserId = userid;
             SelectedItem = new Item(selectedItem);
             if (DateIn == DateTime.MinValue)
             {
