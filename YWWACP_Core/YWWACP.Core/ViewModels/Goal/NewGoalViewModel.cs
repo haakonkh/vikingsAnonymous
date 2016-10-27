@@ -198,7 +198,6 @@ namespace YWWACP.Core.ViewModels.Goal
         private async void CheckInstance()
         {
             var goals = await database.GetTable();
-         //   var selectedDate = SelectedGoal.Caption.Split('-')[1].Trim();
 
             foreach (var goal in goals)
             {

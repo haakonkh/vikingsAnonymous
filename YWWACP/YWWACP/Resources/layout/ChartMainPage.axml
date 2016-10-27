@@ -26,25 +26,29 @@
                 android:gravity="center"
                 android:layout_weight="1">
                 <TextView
-                    android:text="Goal"
+                    android:text="Most successful goal this week"
                     android:textSize="10pt"
                     android:id="@+id/textViewGoal"
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
+              
+              <TextView
+                  android:paddingTop="15dp"
+                  android:gravity="center_horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1"
+                  local:MvxBind="Text MSSucsessRate"/>
                 <TextView
-                    android:text="Achieved/No"
+                  
                     android:gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1" />
-                <TextView
-                    android:text="Left this weak?"
-                    android:gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1" 
+                    local:MvxBind="Text MSGoal "/>
+              
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -87,19 +91,17 @@
     </LinearLayout>
 <!--TopBoxes end here-->
 <!--Graph starts-->
-
-
-  <LinearLayout
-    android:orientation="vertical"
-    android:layout_below="@id/boxwrap"
-    android:layout_width="fill_parent"
-    android:layout_height="250dp">
-    <OxyPlot.Xamarin.Android.PlotView
-        android:id="@+id/plot_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        local:MvxBind="Model MyModel" />
-  </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/boxwrap"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp">
+        <OxyPlot.Xamarin.Android.PlotView
+            android:id="@+id/plot_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            local:MvxBind="Model MyModel" />
+    </LinearLayout>
 <!--Graph ends-->
 <!--navbar-->
     <include

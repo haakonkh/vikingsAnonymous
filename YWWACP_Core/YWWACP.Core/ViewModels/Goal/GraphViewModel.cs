@@ -11,11 +11,15 @@ using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
+using System.Globalization;
 
 namespace YWWACP.Core.ViewModels.Goal
 {
     public class GraphViewModel : MvxViewModel
     {
+        public DayOfWeek DayOfWeek { get; }
+
+
 
         // Everyone should include these commands on their pages
         public ICommand OpenCommunityCommand { get; set; }
@@ -24,15 +28,13 @@ namespace YWWACP.Core.ViewModels.Goal
         public ICommand OpenDiaryCommand { get; set; }
         public ICommand OpenHomeCommand { get; set; }
         public ICommand OpenExerciseCommand { get; set; }
-
-
         public ICommand OpenNewGoalCommand { get; set; }
         private readonly IDatabase database;
         public ICommand GraphShow { get; set; }
 
+
         private readonly ISharedPreferences prefUserInfo = Application.Context.GetSharedPreferences("UserInfo", FileCreationMode.Private);
         private readonly ISharedPreferences prefAppOpend = Application.Context.GetSharedPreferences("MyPrefsFile", FileCreationMode.Private);
-
 
         private ObservableCollection<Models.Goal> goals = new ObservableCollection<Models.Goal>();
         public ObservableCollection<Models.Goal> Goals
@@ -42,6 +44,8 @@ namespace YWWACP.Core.ViewModels.Goal
         }
 
         List<MyTable> onlyGoals = new List<MyTable>();
+        List<MyTable> onlySucs = new List<MyTable>();
+        List<MyTable> onlySortedThisWeek = new List<MyTable>();
 
 
         private string userId;
@@ -54,11 +58,14 @@ namespace YWWACP.Core.ViewModels.Goal
         public GraphViewModel(IDatabase database)
         {
 
+
             this.database = database;
             UserId = prefUserInfo.GetString("UserId", "");
             UpdateGraph();
             GetGoals();
             CalculateBmi();
+            CheckInstance();
+
 
             OpenNewGoalCommand = new MvxCommand(() => ShowViewModel<NewGoalViewModel>(new { userid = UserId }));
 
@@ -67,11 +74,12 @@ namespace YWWACP.Core.ViewModels.Goal
             // COMMUNITY IS COMMENTED OUT BECAUSE THIS IS THE COMMUNITY VIEW AND IT MAKES ABSOULTE NO SENS TO NAVIGATE TO THE VIEW THAT YOU ARE IN
             // MAKE SURE YOU DO THE SAME
             OpenHealthPlanCommand = new MvxCommand(() => { ShowViewModel<HealthPlanViewModel>(new { userid = UserId }); Close(this); });
-            OpenDiaryCommand = new MvxCommand(() => {ShowViewModel<DiaryViewModel>(new { userid = UserId }); Close(this); });
-            OpenHomeCommand = new MvxCommand(() => {ShowViewModel<FirstViewModel>(new { userid = UserId }); Close(this); });
+            OpenDiaryCommand = new MvxCommand(() => { ShowViewModel<DiaryViewModel>(new { userid = UserId }); Close(this); });
+            OpenHomeCommand = new MvxCommand(() => { ShowViewModel<FirstViewModel>(new { userid = UserId }); Close(this); });
             OpenRecipesCommand = new MvxCommand(() => { ShowViewModel<RecipeViewModel>(new { userid = UserId }); Close(this); });
             OpenExerciseCommand = new MvxCommand(() => { ShowViewModel<CreateNewGViewModel>(new { userid = UserId }); Close(this); });
             OpenCommunityCommand = new MvxCommand(() => { ShowViewModel<CommunityViewModel>(); Close(this); });
+
 
         }
 
@@ -85,14 +93,36 @@ namespace YWWACP.Core.ViewModels.Goal
             UpdateGraph();
             GetGoals();
             CalculateBmi();
-
+            CheckInstance();
         }
-        
+
         PlotModel _myModel;
         public PlotModel MyModel
         {
             get { return _myModel; }
-            set { SetProperty(ref _myModel, value); RaisePropertyChanged(() => MyModel);}
+            set { SetProperty(ref _myModel, value); RaisePropertyChanged(() => MyModel); }
+        }
+
+
+        private string mSSucsessRate;
+        public string MSSucsessRate
+        {
+            get { return mSSucsessRate; }
+            set
+            {
+                SetProperty(ref mSSucsessRate, value);
+                RaisePropertyChanged(() => MSSucsessRate);
+            }
+        }
+        private string mSGoal;
+        public string MSGoal
+        {
+            get { return mSGoal; }
+            set
+            {
+                SetProperty(ref mSGoal, value);
+                RaisePropertyChanged(() => MSGoal);
+            }
         }
 
         public async void GetGoals()
@@ -104,18 +134,19 @@ namespace YWWACP.Core.ViewModels.Goal
 
             foreach (var goal in goals)
             {
+
                 if (goal.UserId == UserId && goal.GoalContent != null && goal.GoalDate.Trim() == DateTime.Now.Date.ToString("dd/MM/yyyy").Trim())
                 {
-                    if (goal.GoalSatisfaction < 1 )
+                    if (goal.GoalSatisfaction < 1)
                     {
                         Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
                         break;
                     }
-                    if (goal.GoalSatisfaction <=  3){
+                    if (goal.GoalSatisfaction <= 3) {
                         Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
                         break;
                     }
-                    if (goal.GoalSatisfaction <= 6){
+                    if (goal.GoalSatisfaction <= 6) {
                         Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
                         break;
                     }
@@ -130,6 +161,7 @@ namespace YWWACP.Core.ViewModels.Goal
         }
         public async void UpdateGraph()
         {
+
             var xAxis = new DateTimeAxis
             {
                 Position = AxisPosition.Bottom,
@@ -166,25 +198,72 @@ namespace YWWACP.Core.ViewModels.Goal
             foreach (var graphDetail in graphDetails)
             {
                 if (graphDetail.UserId == UserId && graphDetail.GoalSatisfaction != 0.0)
-                {                
+                {
                     onlyGoals.Add(graphDetail);
                 }
             }
 
-            onlyGoals.Sort((x, y) => Convert.ToDateTime(x.GoalDate).CompareTo(Convert.ToDateTime(y.GoalDate)));    
+            onlyGoals.Sort((x, y) => Convert.ToDateTime(x.GoalDate).CompareTo(Convert.ToDateTime(y.GoalDate)));
+
             foreach (var goal in onlyGoals)
             {
-                if(Math.Abs(goal.GoalSatisfaction) > 0) {
+                if (Math.Abs(goal.GoalSatisfaction) > 0) {
 
                     DateTime dt = Convert.ToDateTime(goal.GoalDate);
                     series1.Points.Add(new DataPoint(DateTimeAxis.ToDouble(dt), goal.GoalSatisfaction));
-               }
+                }
             }
 
             plotModel.Series.Add(series1);
             MyModel = plotModel;
             RaisePropertyChanged(() => MyModel);
-          
+            //CheckInstance();
+
+        }
+        //List<string> SatisfactionG = new List<string>();
+        // var a = DateTime.DayOfWeek.Monday;
+
+        private async void CheckInstance()
+        {
+
+            //  DateThisWeekStuff
+            DateTime input = DateTime.Now;
+            int delta = DayOfWeek.Monday - input.DayOfWeek;
+            DateTime monday = input.AddDays(delta);
+
+            //  MyDates
+            string DateModay = DateTime.Now.Date.AddDays(delta).ToString("dd");
+            string DateLast = DateTime.Now.Date.AddDays(delta + 6).ToString("dd");
+            //Int version of myDates
+            int IntMandag = Convert.ToInt16(DateModay);
+            int IntDateLast = Convert.ToInt16(DateLast);
+
+            var table = await database.GetTable();
+            onlySucs.Clear();
+
+            foreach (var tableRow in table)
+             {
+                var blab = Convert.ToDateTime(tableRow.GoalDate);
+                string streng = blab.ToString("dd");
+                int IntGoaldaten = Convert.ToInt16(streng);
+
+                if (tableRow.UserId == UserId)
+                {
+                   if (IntMandag == IntGoaldaten || IntMandag + 1 == IntGoaldaten || IntMandag + 2 == IntGoaldaten || IntMandag + 3 == IntGoaldaten || IntMandag + 4 == IntGoaldaten || IntMandag + 5 == IntGoaldaten || IntMandag + 6 == IntGoaldaten)
+                    {
+                        onlySucs.Add(tableRow);
+                    }
+                }
+            }
+
+            onlySucs.Sort((x, y) => x.GoalSatisfaction.CompareTo(y.GoalSatisfaction));
+           
+            //Shows the last satisfaction that was added if new added value is the same as previously added value 
+            foreach (var sucs in onlySucs)
+            {              
+                MSSucsessRate = sucs.GoalContent;
+                MSGoal = sucs.GoalDate;               
+            }
         }
 
         /// ######################################################################
@@ -247,6 +326,9 @@ namespace YWWACP.Core.ViewModels.Goal
 
         }
 
+
+
+      
     }
     
 }
