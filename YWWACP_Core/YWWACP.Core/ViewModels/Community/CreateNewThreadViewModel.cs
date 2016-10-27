@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using Android.Widget;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
@@ -110,8 +112,17 @@ namespace YWWACP.Core.ViewModels.Community
 
         public async void AddThread(MyTable thread)
         {
-            // var azuredatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
-            if (!String.IsNullOrEmpty(thread.Content))
+            if (String.IsNullOrEmpty(thread.ThreadTitle))
+            {
+                Mvx.Resolve<IToast>().Show("OPS you forgot the title");
+            }
+            else if (String.IsNullOrEmpty(thread.Content))
+            {
+                Mvx.Resolve<IToast>().Show("OPS you forgot to fill out your post");
+            }
+
+
+            if (!String.IsNullOrEmpty(thread.Content) && !String.IsNullOrEmpty(thread.ThreadTitle))
             {
                 var x = await database.InsertTableRow(thread);
                 Close(this);
