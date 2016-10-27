@@ -5,62 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="35dp"
-    android:weightSum="120"
     android:background="@color/my_lightPink"
     android:id="@+id/linearLayoutButtonWrap">
-    <TextView
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:gravity="center_horizontal|top"
-        android:paddingTop="5dp"
-        android:paddingStart="5dp"
-        android:drawableStart="@drawable/web"
-        local:MvxBind="Click OpenHomeCommand" />
-    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:src="@drawable/web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="5dp"
+            local:MvxBind="Click OpenHomeCommand"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:gravity="center_vertical"
-        android:paddingTop="5dp"
-        android:paddingStart="5dp"
-        android:drawableStart="@drawable/hp"
-        local:MvxBind="Click OpenHealthPlanCommand" />
-    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:src="@drawable/hp"
+            local:MvxBind="Click OpenHealthPlanCommand"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:gravity="center_vertical"
-        android:paddingTop="5dp"
-        android:paddingStart="5dp"
-        android:drawableStart="@drawable/hc"
-        local:MvxBind="Click OpenRecipesCommand" />
-    <TextView
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:src="@drawable/hc"
+            local:MvxBind="Click OpenRecipesCommand"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:paddingTop="5dp"
-        android:paddingStart="5dp"
-        android:gravity="center_vertical"
-        local:MvxBind="Click OpenDiaryCommand"
-        android:drawableStart="@drawable/diary" />
-    <TextView
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/diary"
+            local:MvxBind="Click OpenDiaryCommand"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:paddingTop="5dp"
-        android:paddingStart="5dp"
-        android:gravity="center_vertical"
-        android:drawableStart="@drawable/chat"
-        local:MvxBind="Click OpenCommunityCommand" />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:paddingTop="5dp"
-        android:paddingStart="5dp"
-        android:gravity="center_vertical"
-        android:drawableStart="@drawable/weightlifting"
-        local:MvxBind="Click OpenExerciseCommand"
-        android:text="" />
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/chat"
+            local:MvxBind="Click OpenCommunityCommand"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
 </LinearLayout>
