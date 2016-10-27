@@ -66,8 +66,8 @@ namespace YWWACP.Core.ViewModels.Goal
             // I HAVE NOT COMMENTED OUT DIARY BECAUSE THAT DOES NOT EXIST AT THIS POINT.
             // COMMUNITY IS COMMENTED OUT BECAUSE THIS IS THE COMMUNITY VIEW AND IT MAKES ABSOULTE NO SENS TO NAVIGATE TO THE VIEW THAT YOU ARE IN
             // MAKE SURE YOU DO THE SAME
-            OpenHealthPlanCommand = new MvxCommand(() => { ShowViewModel<HealthPlanViewModel>(new { userid = UserId }); Close(this); });
-            OpenDiaryCommand = new MvxCommand(() => {ShowViewModel<DiaryViewModel>(new { userid = UserId }); Close(this); });
+            OpenHealthPlanCommand = new MvxCommand(() => { ShowViewModel<HealthPlanViewModel>(new { userId = UserId }); Close(this); });
+            OpenDiaryCommand = new MvxCommand(() => {ShowViewModel<DiaryViewModel>(new { userId = UserId }); Close(this); });
             OpenHomeCommand = new MvxCommand(() => {ShowViewModel<FirstViewModel>(new { userid = UserId }); Close(this); });
             OpenRecipesCommand = new MvxCommand(() => { ShowViewModel<RecipeViewModel>(new { userid = UserId }); Close(this); });
             OpenExerciseCommand = new MvxCommand(() => { ShowViewModel<CreateNewGViewModel>(new { userid = UserId }); Close(this); });

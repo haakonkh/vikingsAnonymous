@@ -32,7 +32,7 @@ namespace YWWACP.Core.ViewModels.Health_Plan
         public HealthPlanMealViewModel(IDatabase database)
         {
             this.database = database;
-            OpenNewMealCommand = new MvxCommand(() => ShowViewModel<AddMealViewModel>(new { userid = UserId }));
+            OpenNewMealCommand = new MvxCommand(() => ShowViewModel<AddMealViewModel>(new { userId = UserId }));
 
         }
 

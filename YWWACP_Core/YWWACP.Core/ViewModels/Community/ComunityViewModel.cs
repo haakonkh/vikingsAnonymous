@@ -60,12 +60,12 @@ namespace YWWACP.Core.ViewModels.Community
             // MAKE SURE YOU DO THE SAME
             OpenHealthPlanCommand = new MvxCommand(() =>
             {
-                ShowViewModel<HealthPlanViewModel>(new {userid = UserId});
+                ShowViewModel<HealthPlanViewModel>(new { userId = UserId});
                 Close(this);
             });
             OpenDiaryCommand = new MvxCommand(() =>
             {
-                ShowViewModel<DiaryViewModel>(new { userid = UserId });
+                ShowViewModel<DiaryViewModel>(new { userId = UserId });
                 Close(this);
             });
             OpenHomeCommand = new MvxCommand(() =>

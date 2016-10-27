@@ -26,8 +26,8 @@ namespace YWWACP.Core.ViewModels.Diary
         public ICommand TodayCommand { get; set; }
         public ICommand NextDayCommand { get; set; }
 
-        private ObservableCollection<Exercise> entries = new ObservableCollection<Exercise>();
-        public ObservableCollection<Exercise> Entries
+        private ObservableCollection<DiaryEntry> entries = new ObservableCollection<DiaryEntry>();
+        public ObservableCollection<DiaryEntry> Entries
         {
             get { return entries; }
             set
@@ -61,7 +61,7 @@ namespace YWWACP.Core.ViewModels.Diary
 
             OpenHealthPlanCommand = new MvxCommand(() =>
             {
-                ShowViewModel<HealthPlanViewModel>(new { userid = UserId });
+                ShowViewModel<HealthPlanViewModel>(new { userId = UserId });
                 Close(this);
             });
             OpenHomeCommand = new MvxCommand(() =>
@@ -139,6 +139,34 @@ namespace YWWACP.Core.ViewModels.Diary
                 }
             }
         }
+        private string goalContent;
+        public string GoalContent
+        {
+            get { return goalContent; }
+            set
+            {
+                if (value != goalContent)
+                {
+                    goalContent = value;
+                    RaisePropertyChanged(() => GoalContent);
+
+                }
+            }
+        }
+        private string goalSatisfaction;
+        public string GoalSatisfaction
+        {
+            get { return goalSatisfaction; }
+            set
+            {
+                if (value != goalSatisfaction)
+                {
+                    goalSatisfaction = value;
+                    RaisePropertyChanged(() => GoalSatisfaction);
+
+                }
+            }
+        }
         private string userId;
 
         public string UserId
@@ -151,24 +179,68 @@ namespace YWWACP.Core.ViewModels.Diary
         {
             var entriesDb = await database.GetTable();
             Entries.Clear();
+            GoalContent = "No goal for this day";
+            GoalSatisfaction = "Not set";
             foreach (var entry in entriesDb)
             {
-                
-                if (entry.ExerciseTimestamp != null && entry.UserId == UserId)
-                {
-                    DateTime dt = Convert.ToDateTime(entry.ExerciseDate);
 
-                    if (dt.Date == Date.Date)
+                if ((entry.ExerciseTimestamp != null || entry.MealTimestamp != null) && entry.UserId == UserId)
+                {
+                    var dt = new DateTime();
+                    var exercise = new Exercise();
+                    var meal = new Meal();
+                    var type = "";
+                    var title = "";
+                    if (entry.ExerciseTimestamp != null)
                     {
-                        Entries.Insert(0, new Exercise(entry.ExerciseTitle, entry.ExerciseSummary, entry.Sets, entry.Reps, entry.ExerciseTimestamp, entry.ExerciseId));
+                        dt = Convert.ToDateTime(entry.ExerciseDate);
+                        exercise = new Exercise(entry.ExerciseTitle, entry.ExerciseSummary, entry.Sets, entry.Reps, entry.ExerciseTimestamp, entry.ExerciseId);
+                        type = "Exercise";
+                        title = entry.ExerciseTitle;
+                    }
+                    else
+                    {
+                        dt = Convert.ToDateTime(entry.MealTimestamp);
+                        meal = new Meal(entry.MealId, entry.MealTitle, entry.MealSummary, entry.Ingredients, entry.Approach, entry.MealTimestamp, entry.MealType);
+                        type = "Meal - " + entry.MealType.ToLower();
+                        title = entry.MealTitle;
+                    }
+                    if (dt.Date == Date.Date && type == "Exercise")
+                    {
+                        Entries.Add(new DiaryEntry(meal, exercise, type, title));
+                    }
+                    else if (dt.Date == Date.Date)
+                    {
+                        Entries.Insert(0, new DiaryEntry(meal, exercise, type, title));
+
                     }
                 }
-
+                else if (entry.GoalId != null && Convert.ToDateTime(entry.GoalDate).Date == Date.Date)
+                {
+                    GoalContent = entry.GoalContent;
+                    if (entry.GoalSatisfaction < 1.0)
+                    {
+                        GoalSatisfaction = "Not set";
+                        
+                    }
+                    if (entry.GoalSatisfaction > 1.0 && entry.GoalSatisfaction <= 3.0)
+                    {
+                        GoalSatisfaction = "Bad";
+                    }
+                    if (entry.GoalSatisfaction > 3.0 && entry.GoalSatisfaction <= 6.0)
+                    {
+                        GoalSatisfaction = "Ok";
+                    }
+                    if (entry.GoalSatisfaction > 6 && entry.GoalSatisfaction <= 10.0)
+                    {
+                        GoalSatisfaction = "Great!";
+                    }
+                }
             }
             RaisePropertyChanged(() => Entries);
             if (Entries.Count == 0)
             {
-                Entries.Insert(0, new Exercise("No entries for this day", "", 0, 0, "", ""));
+                Entries.Insert(0, new DiaryEntry(null, null, "", "No entries for this day"));
                 RaisePropertyChanged(() => Entries);
             }
 
