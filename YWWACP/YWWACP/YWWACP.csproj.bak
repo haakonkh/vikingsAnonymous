@@ -231,7 +231,6 @@
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="NewDiscussionThread.cs" />
     <Compile Include="NewHealthPlanActivity.cs" />
-    <Compile Include="Views\DeleteThreadFragment.cs" />
     <Compile Include="Views\DiaryDayView.cs" />
     <Compile Include="Views\DiaryView.cs" />
     <Compile Include="Views\EditProfileView.cs" />
@@ -257,6 +256,8 @@
     <Compile Include="Views\RecipeActivity.cs" />
     <Compile Include="Views\SingleExerciseView.cs" />
     <Compile Include="Views\SingleRecipeView.cs" />
+    <Compile Include="Views\ViewExerciseDetailsView.cs" />
+    <Compile Include="Views\ViewMealDetailsView.cs" />
     <Compile Include="Views\WriteCommentView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -338,11 +339,15 @@
     <AndroidResource Include="Resources\layout\AddExerciseToPlanRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ExerciseAdd.axml" />
+    <AndroidResource Include="Resources\layout\ExerciseAdd.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\HealthPlanExerciseRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\HealthPlanExercises.axml" />
+    <AndroidResource Include="Resources\layout\HealthPlanExercises.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\RecipeListViewRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -397,6 +402,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ExercisePickDay.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ViewExerciseDetails.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ViewMealDetails.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

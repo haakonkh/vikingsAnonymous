@@ -23,6 +23,8 @@ namespace YWWACP.Core.ViewModels
 
         public ICommand GoBackCommand { get; set; }
 
+        public IMvxCommand GoToTakePictureScreenCommand => new MvxCommand(() => ShowViewModel<TakePictureViewModel>());
+
         private string title;
 
         public string Title

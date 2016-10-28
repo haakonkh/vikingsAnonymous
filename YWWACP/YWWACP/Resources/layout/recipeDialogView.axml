@@ -61,6 +61,12 @@
             android:gravity="top|left"
             local:MvxBind="Text Approach" />
     </LinearLayout>
+    <Button
+        android:text="Take Picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Click GoToTakePictureScreenCommand"
+        android:id="@+id/button1" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_weight="20"

@@ -2316,8 +2316,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06009c
 			public const int btnNewExercise = 2131099804;
 			
-			// aapt resource value: 0x7f060106
-			public const int btnNewRecipe = 2131099910;
+			// aapt resource value: 0x7f060107
+			public const int btnNewRecipe = 2131099911;
 			
 			// aapt resource value: 0x7f060079
 			public const int btnNewThread = 2131099769;
@@ -2354,6 +2354,9 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f0600b5
 			public const int btnsdgsdg = 2131099829;
+			
+			// aapt resource value: 0x7f060106
+			public const int button1 = 2131099910;
 			
 			// aapt resource value: 0x7f060084
 			public const int buttonDelete = 2131099780;
@@ -2436,8 +2439,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060095
 			public const int editTextName = 2131099797;
 			
-			// aapt resource value: 0x7f06010c
-			public const int editTextWriteComment = 2131099916;
+			// aapt resource value: 0x7f06010e
+			public const int editTextWriteComment = 2131099918;
 			
 			// aapt resource value: 0x7f0600c4
 			public const int editTxtGoalContent = 2131099844;
@@ -2520,6 +2523,9 @@ namespace YWWACP
 			// aapt resource value: 0x7f060070
 			public const int imageButton1 = 2131099760;
 			
+			// aapt resource value: 0x7f06010d
+			public const int imageView1 = 2131099917;
+			
 			// aapt resource value: 0x7f0600f7
 			public const int info = 2131099895;
 			
@@ -2544,8 +2550,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600c2
 			public const int linearLayoutButtonWrap = 2131099842;
 			
-			// aapt resource value: 0x7f060108
-			public const int linearLayoutQuestionWrap = 2131099912;
+			// aapt resource value: 0x7f060109
+			public const int linearLayoutQuestionWrap = 2131099913;
 			
 			// aapt resource value: 0x7f060078
 			public const int linearLayoutWrapTopButtons = 2131099768;
@@ -2568,8 +2574,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06009d
 			public const int listViewExercise = 2131099805;
 			
-			// aapt resource value: 0x7f060109
-			public const int listViewExercises = 2131099913;
+			// aapt resource value: 0x7f06010a
+			public const int listViewExercises = 2131099914;
 			
 			// aapt resource value: 0x7f06006f
 			public const int listViewGoals = 2131099759;
@@ -2577,11 +2583,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600c1
 			public const int listViewMyThreads = 2131099841;
 			
-			// aapt resource value: 0x7f060107
-			public const int listViewRecipe = 2131099911;
+			// aapt resource value: 0x7f060108
+			public const int listViewRecipe = 2131099912;
 			
-			// aapt resource value: 0x7f06010b
-			public const int listViewRecipes = 2131099915;
+			// aapt resource value: 0x7f06010c
+			public const int listViewRecipes = 2131099916;
 			
 			// aapt resource value: 0x7f0600fa
 			public const int list_container = 2131099898;
@@ -2949,8 +2955,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060048
 			public const int topPanel = 2131099720;
 			
-			// aapt resource value: 0x7f06010a
-			public const int txtRecipeViewContent = 2131099914;
+			// aapt resource value: 0x7f06010b
+			public const int txtRecipeViewContent = 2131099915;
 			
 			// aapt resource value: 0x7f06007d
 			public const int txtViewCategory = 2131099773;
@@ -3363,13 +3369,16 @@ namespace YWWACP
 			public const int support_simple_spinner_dropdown_item = 2130903147;
 			
 			// aapt resource value: 0x7f03006c
-			public const int ViewExerciseDetails = 2130903148;
+			public const int TakePictureView = 2130903148;
 			
 			// aapt resource value: 0x7f03006d
-			public const int ViewMealDetails = 2130903149;
+			public const int ViewExerciseDetails = 2130903149;
 			
 			// aapt resource value: 0x7f03006e
-			public const int WriteComment = 2130903150;
+			public const int ViewMealDetails = 2130903150;
+			
+			// aapt resource value: 0x7f03006f
+			public const int WriteComment = 2130903151;
 			
 			static Layout()
 			{
