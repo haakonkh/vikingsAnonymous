@@ -127,6 +127,8 @@ namespace YWWACP.Core.ViewModels.Goal
 
         public async void GetGoals()
         {
+            int test = 0;
+            int intUser = 0;
             var goals = await database.GetTable();
             var dateAndTime = DateTime.Now;
             var formated = dateAndTime.ToString("dd/MM/yyyy");
@@ -136,29 +138,48 @@ namespace YWWACP.Core.ViewModels.Goal
             {
 
                 if (goal.UserId == UserId && goal.GoalContent != null && goal.GoalDate.Trim() == DateTime.Now.Date.ToString("dd/MM/yyyy").Trim())
-                {
-                    if (goal.GoalSatisfaction < 1)
-                    {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
-                        break;
-                    }
-                    if (goal.GoalSatisfaction <= 3) {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
-                        break;
-                    }
-                    if (goal.GoalSatisfaction <= 6) {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
-                        break;
-                    }
-                    if (goal.GoalSatisfaction > 6 && goal.GoalSatisfaction < 11)
-                    {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
-                        break;
+                {             
+                                            
+                                if (goal.GoalSatisfaction < 1)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
+                          
+                                break;
+                                }
+                                if (goal.GoalSatisfaction <= 3)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
+                            
+                                break;
+                                }
+                                if (goal.GoalSatisfaction <= 6)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
+                             
+                                break;
+                                }
+                                if (goal.GoalSatisfaction > 6 && goal.GoalSatisfaction < 11)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
+                               
+                                break;
+                         }                                                   
+                     }
+                RaisePropertyChanged(() => Goals);
+            }
+                    if (test == 0) {
+
+                        Goals.Add(new Models.Goal(" ", "No goals today. Press +", "   ", "    "));
+
                     }
                 }
-            }
-            RaisePropertyChanged(() => Goals);
-        }
+
+
+
         public async void UpdateGraph()
         {
 
