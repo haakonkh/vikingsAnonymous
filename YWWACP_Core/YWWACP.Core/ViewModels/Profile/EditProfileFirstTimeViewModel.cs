@@ -194,15 +194,15 @@ namespace YWWACP.Core.ViewModels.Profile
                 UserId = ""
             });
 
-            await database.InsertTableRow(new MyTable() { ExerciseSummary = "Run bitch, run!", ExerciseTitle = "Running", Sets = 0, Reps = 0, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
+            await database.InsertTableRow(new MyTable() { ExerciseSummary = "Run as fast as you can", ExerciseTitle = "Running", Sets = 0, Reps = 0, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
             await database.InsertTableRow(new MyTable() { ExerciseSummary = "Bounce up and down", ExerciseTitle = "Squatting", Sets = 4, Reps = 8, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
             await database.InsertTableRow(new MyTable() { ExerciseSummary = "Kick a ball", ExerciseTitle = "Football", Sets = 0, Reps = 0, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
 
             await database.InsertTableRow(new MyTable()
             {
                 ThreadID = "YOLOSWAGLORD",
-                ThreadTitle = "YOLO, DU eier ikke meg!",
-                Content = "HAhahahah, du fikk feilmelding hvis du prøvde å slette meg! LOL",
+                ThreadTitle = "What are people doing today?",
+                Content = "I need som motivation to do something fun tonight, do anyone have any ideas?",
                 UserId = new Guid().ToString(),
                 Category = "Random"
             });
@@ -211,9 +211,18 @@ namespace YWWACP.Core.ViewModels.Profile
             {
                 ThreadID = "YOLOSWAGLORD",
                 CommentID = new Guid().ToString(),
-                CommentContent = "Faen, jeg ville slette deg",
+                CommentContent = "You can go for a run!",
                 UserId = new Guid().ToString()
             });
+
+            await database.InsertTableRow(new MyTable()
+            {
+                ThreadID = "YOLOSWAGLORD",
+                CommentID = new Guid().ToString(),
+                CommentContent = "Go out and eat dinner with your friends! That is always fun!",
+                UserId = new Guid().ToString()
+            });
+
 
             await database.InsertTableRow(new MyTable()
             {
