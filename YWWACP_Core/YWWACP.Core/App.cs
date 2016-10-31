@@ -41,7 +41,7 @@ namespace YWWACP.Core
             }
             else
             {
-                RegisterAppStart<FirstViewModel>();
+                RegisterAppStart<GraphViewModel>();
             }
 
 
