@@ -5,6 +5,7 @@ using Android.Content;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
+using YWWACP.Core.ViewModels.Goal;
 
 namespace YWWACP.Core.ViewModels.Profile
 {
@@ -106,7 +107,7 @@ namespace YWWACP.Core.ViewModels.Profile
         public async void SaveUserChanges(MyTable userinfo)
         {
             var x = await database.InsertTableRow(userinfo);
-            ShowViewModel<FirstViewModel>();
+            ShowViewModel<GraphViewModel>(new {userid = UserId});
             Close(this);
         }
 
@@ -133,19 +134,9 @@ namespace YWWACP.Core.ViewModels.Profile
             }
         }
 
-
-
         public async void InitDb()
         {
             DropDatabase();
-            //await database.InsertTableRow(new MyTable()
-            //{
-            //    Age = "Some old bitch",
-            //    Height = "184.0",
-            //    Weight = "77.0",
-            //    Name = "Some old nasty chick's name",
-            //    UserId = UserId
-            //});
             await database.InsertTableRow(new MyTable
             {
                 MealId = "1",
@@ -156,8 +147,7 @@ namespace YWWACP.Core.ViewModels.Profile
                 basic = true,
                 UserId = ""
 
-            }
-            );
+            });
 
             await database.InsertTableRow(new MyTable
             {
@@ -168,8 +158,7 @@ namespace YWWACP.Core.ViewModels.Profile
                 Approach = "Mix all ingredients in a blender",
                 basic = true,
                 UserId = ""
-            }
-             );
+            });
 
             await database.InsertTableRow(new MyTable
             {
@@ -180,8 +169,7 @@ namespace YWWACP.Core.ViewModels.Profile
                 Approach = "Remove wings from chicken and reserve. Remove skin from breast and discard. Shred the meat from the breast and break off breast bones. Heat oil in a stock pot over medium heat.Sauté the carrots, celery, onion, chicken wings and breastbones for 8 to 10 minutes, or until vegetables soften. ",
                 basic = true,
                 UserId = ""
-            }
-             );
+            });
 
             await database.InsertTableRow(new MyTable
             {
@@ -194,8 +182,9 @@ namespace YWWACP.Core.ViewModels.Profile
                 UserId = ""
             });
 
-            await database.InsertTableRow(new MyTable() { ExerciseSummary = "Run as fast as you can", ExerciseTitle = "Running", Sets = 0, Reps = 0, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
-            await database.InsertTableRow(new MyTable() { ExerciseSummary = "Bounce up and down", ExerciseTitle = "Squatting", Sets = 4, Reps = 8, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
+            await database.InsertTableRow(new MyTable() { ExerciseSummary = "Run with a stable speed for the entire workout.", ExerciseTitle = "Running", Sets = 0, Reps = 0, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
+            await database.InsertTableRow(new MyTable() { ExerciseSummary = "Sit back and down like you're sitting into an imaginary chair. Lower down so your thighs are as parallel to the floor as possible, with your knees over your ankles. Press your weight back into your heels. Keep your body tight, and push through your heels to bring yourself back to the starting position.",
+                ExerciseTitle = "Squatting", Sets = 4, Reps = 8, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
             await database.InsertTableRow(new MyTable() { ExerciseSummary = "Kick a ball", ExerciseTitle = "Football", Sets = 0, Reps = 0, ExerciseId = GetGeneratedUserId(), UserId = "", basic = true });
 
             await database.InsertTableRow(new MyTable()
@@ -237,7 +226,7 @@ namespace YWWACP.Core.ViewModels.Profile
                 GoalId = new Guid().ToString(),
                 GoalContent = "Run 5km",
                 GoalDate = DateTime.Now.Date.AddDays(-3).ToString("dd/MM/yyyy"),
-                GoalSatisfaction = 2.0,
+                GoalSatisfaction = 6,
                 UserId = UserId
             });
           
@@ -248,6 +237,26 @@ namespace YWWACP.Core.ViewModels.Profile
                 GoalContent = "Drink 10 glasses of water",
                 GoalDate = DateTime.Now.Date.AddDays(-1).ToString("dd/MM/yyyy"),
                 GoalSatisfaction = 8.0,
+                UserId = UserId
+
+            });
+
+            await database.InsertTableRow(new MyTable()
+            {
+                GoalId = new Guid().ToString(),
+                GoalContent = "Call an old friend",
+                GoalDate = DateTime.Now.Date.AddDays(-4).ToString("dd/MM/yyyy"),
+                GoalSatisfaction = 10.0,
+                UserId = UserId
+
+            });
+
+            await database.InsertTableRow(new MyTable()
+            {
+                GoalId = new Guid().ToString(),
+                GoalContent = "Workout two times!",
+                GoalDate = DateTime.Now.Date.AddDays(-2).ToString("dd/MM/yyyy"),
+                GoalSatisfaction = 5,
                 UserId = UserId
 
             });

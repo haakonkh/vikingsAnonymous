@@ -95,9 +95,9 @@ namespace YWWACP.Core.ViewModels.Community
             {
                 AddThread(new MyTable()
                 {
-                    ThreadTitle = Title,
+                    ThreadTitle = Title.Trim(),
                     Category = SelectedItem.Caption,
-                    Content = Content,
+                    Content = Content.Trim(),
                     ThreadID = GetGeneratedThreadId(),
                     UserId = UserId
 

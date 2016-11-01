@@ -28,7 +28,7 @@
         android:layout_weight="10"
         local:MvxBind="ItemsSource CategoriesArray; SelectedItem SelectedItem" />
     <EditText
-        android:inputType="textCapSentences"
+        android:inputType="textCapSentences|textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="70"

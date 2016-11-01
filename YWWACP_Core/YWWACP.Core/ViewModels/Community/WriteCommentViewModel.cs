@@ -53,7 +53,7 @@ namespace YWWACP.Core.ViewModels.Community
             {
              AddComment(new MyTable
              {
-                 CommentContent = CommentContent,
+                 CommentContent = CommentContent.Trim(),
                  CommentID = GetGeneratedCommentId(),
                  ThreadID = TId
              });
