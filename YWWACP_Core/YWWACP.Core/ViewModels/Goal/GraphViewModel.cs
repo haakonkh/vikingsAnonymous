@@ -253,40 +253,36 @@ namespace YWWACP.Core.ViewModels.Goal
             DateTime monday = input.AddDays(delta);
 
             //  MyDates
-            string DateModay = DateTime.Now.Date.AddDays(delta).ToString("dd");
+            DateTime DateModay = DateTime.Now.Date.AddDays(delta);
             string DateLast = DateTime.Now.Date.AddDays(delta + 6).ToString("dd");
-            //Int version of myDates
-            int IntMandag = Convert.ToInt16(DateModay);
-            int IntDateLast = Convert.ToInt16(DateLast);
+           
 
             var table = await database.GetTable();
+
             onlySucs.Clear();
 
             foreach (var tableRow in table)
-             {
-                var blab = Convert.ToDateTime(tableRow.GoalDate);
-                string streng = blab.ToString("dd");
-                int IntGoaldaten = Convert.ToInt16(streng);
-
+            {
+                DateTime tableDate = Convert.ToDateTime(tableRow.GoalDate);
+             
                 if (tableRow.UserId == UserId)
                 {
-                   if (IntMandag == IntGoaldaten || IntMandag + 1 == IntGoaldaten || IntMandag + 2 == IntGoaldaten || IntMandag + 3 == IntGoaldaten || IntMandag + 4 == IntGoaldaten || IntMandag + 5 == IntGoaldaten || IntMandag + 6 == IntGoaldaten)
+                    if (DateModay == tableDate || DateModay.AddDays(+1) == tableDate || DateModay.AddDays(+2) == tableDate || DateModay.AddDays(+3) == tableDate || DateModay.AddDays(+4) == tableDate || DateModay.AddDays(+5) == tableDate || DateModay.AddDays(+6) == tableDate)
                     {
                         onlySucs.Add(tableRow);
                     }
                 }
-            }
 
-            onlySucs.Sort((x, y) => x.GoalSatisfaction.CompareTo(y.GoalSatisfaction));
-           
-            //Shows the last satisfaction that was added if new added value is the same as previously added value 
-            foreach (var sucs in onlySucs)
-            {              
-                MSSucsessRate = sucs.GoalContent;
-                MSGoal = sucs.GoalDate;               
+                onlySucs.Sort((x, y) => x.GoalSatisfaction.CompareTo(y.GoalSatisfaction));
+
+                //Shows the last satisfaction that was added if new added value is the same as previously added value 
+                foreach (var sucs in onlySucs)
+                {
+                    MSSucsessRate = sucs.GoalContent;
+                    MSGoal = sucs.GoalDate;
+                }
             }
         }
-
         /// ######################################################################
 
 
