@@ -127,6 +127,8 @@ namespace YWWACP.Core.ViewModels.Goal
 
         public async void GetGoals()
         {
+            int test = 0;
+            int intUser = 0;
             var goals = await database.GetTable();
             var dateAndTime = DateTime.Now;
             var formated = dateAndTime.ToString("dd/MM/yyyy");
@@ -136,29 +138,48 @@ namespace YWWACP.Core.ViewModels.Goal
             {
 
                 if (goal.UserId == UserId && goal.GoalContent != null && goal.GoalDate.Trim() == DateTime.Now.Date.ToString("dd/MM/yyyy").Trim())
-                {
-                    if (goal.GoalSatisfaction < 1)
-                    {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
-                        break;
-                    }
-                    if (goal.GoalSatisfaction <= 3) {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
-                        break;
-                    }
-                    if (goal.GoalSatisfaction <= 6) {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
-                        break;
-                    }
-                    if (goal.GoalSatisfaction > 6 && goal.GoalSatisfaction < 11)
-                    {
-                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
-                        break;
+                {             
+                                            
+                                if (goal.GoalSatisfaction < 1)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
+                          
+                                break;
+                                }
+                                if (goal.GoalSatisfaction <= 3)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
+                            
+                                break;
+                                }
+                                if (goal.GoalSatisfaction <= 6)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
+                             
+                                break;
+                                }
+                                if (goal.GoalSatisfaction > 6 && goal.GoalSatisfaction < 11)
+                                {
+                                test = 1;
+                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
+                               
+                                break;
+                         }                                                   
+                     }
+                RaisePropertyChanged(() => Goals);
+            }
+                    if (test == 0) {
+
+                        Goals.Add(new Models.Goal(" ", "No goals today. Press +", "   ", "    "));
+
                     }
                 }
-            }
-            RaisePropertyChanged(() => Goals);
-        }
+
+
+
         public async void UpdateGraph()
         {
 
@@ -232,40 +253,36 @@ namespace YWWACP.Core.ViewModels.Goal
             DateTime monday = input.AddDays(delta);
 
             //  MyDates
-            string DateModay = DateTime.Now.Date.AddDays(delta).ToString("dd");
+            DateTime DateModay = DateTime.Now.Date.AddDays(delta);
             string DateLast = DateTime.Now.Date.AddDays(delta + 6).ToString("dd");
-            //Int version of myDates
-            int IntMandag = Convert.ToInt16(DateModay);
-            int IntDateLast = Convert.ToInt16(DateLast);
+           
 
             var table = await database.GetTable();
+
             onlySucs.Clear();
 
             foreach (var tableRow in table)
-             {
-                var blab = Convert.ToDateTime(tableRow.GoalDate);
-                string streng = blab.ToString("dd");
-                int IntGoaldaten = Convert.ToInt16(streng);
-
+            {
+                DateTime tableDate = Convert.ToDateTime(tableRow.GoalDate);
+             
                 if (tableRow.UserId == UserId)
                 {
-                   if (IntMandag == IntGoaldaten || IntMandag + 1 == IntGoaldaten || IntMandag + 2 == IntGoaldaten || IntMandag + 3 == IntGoaldaten || IntMandag + 4 == IntGoaldaten || IntMandag + 5 == IntGoaldaten || IntMandag + 6 == IntGoaldaten)
+                    if (DateModay == tableDate || DateModay.AddDays(+1) == tableDate || DateModay.AddDays(+2) == tableDate || DateModay.AddDays(+3) == tableDate || DateModay.AddDays(+4) == tableDate || DateModay.AddDays(+5) == tableDate || DateModay.AddDays(+6) == tableDate)
                     {
                         onlySucs.Add(tableRow);
                     }
                 }
-            }
 
-            onlySucs.Sort((x, y) => x.GoalSatisfaction.CompareTo(y.GoalSatisfaction));
-           
-            //Shows the last satisfaction that was added if new added value is the same as previously added value 
-            foreach (var sucs in onlySucs)
-            {              
-                MSSucsessRate = sucs.GoalContent;
-                MSGoal = sucs.GoalDate;               
+                onlySucs.Sort((x, y) => x.GoalSatisfaction.CompareTo(y.GoalSatisfaction));
+
+                //Shows the last satisfaction that was added if new added value is the same as previously added value 
+                foreach (var sucs in onlySucs)
+                {
+                    MSSucsessRate = sucs.GoalContent;
+                    MSGoal = sucs.GoalDate;
+                }
             }
         }
-
         /// ######################################################################
 
 

@@ -217,7 +217,7 @@ namespace YWWACP.Core.ViewModels.Profile
             {
                 GoalId = new Guid().ToString(),
                 GoalContent = "Run 6km",
-                GoalDate = DateTime.Now.Date.AddDays(-5).ToString("dd/MM/yyyy"),
+                GoalDate = DateTime.Now.Date.AddDays(+4).ToString("dd/MM/yyyy"),
                 GoalSatisfaction = 6.0,
                 UserId = UserId
             });
@@ -235,7 +235,7 @@ namespace YWWACP.Core.ViewModels.Profile
             {
                 GoalId = new Guid().ToString(),
                 GoalContent = "Drink 10 glasses of water",
-                GoalDate = DateTime.Now.Date.AddDays(-1).ToString("dd/MM/yyyy"),
+                GoalDate = DateTime.Now.Date.AddDays(1).ToString("dd/MM/yyyy"),
                 GoalSatisfaction = 8.0,
                 UserId = UserId
 
@@ -260,10 +260,6 @@ namespace YWWACP.Core.ViewModels.Profile
                 UserId = UserId
 
             });
-
         }
-
-
-
     }
 }
