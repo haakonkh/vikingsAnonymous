@@ -140,6 +140,8 @@ namespace YWWACP.Core.ViewModels.Goal
             var dateAndTime = DateTime.Now;
             var formated = dateAndTime.ToString("dd/MM/yyyy");
             Goals.Clear();
+            Goals.Add(new Models.Goal(" ", "No goals today. Press +", "   ", "    "));
+
 
             foreach (var goal in goals)
             {
@@ -149,29 +151,30 @@ namespace YWWACP.Core.ViewModels.Goal
                                             
                                 if (goal.GoalSatisfaction < 1)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
+                               
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
                           
                                 break;
                                 }
                                 if (goal.GoalSatisfaction <= 3)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
                             
                                 break;
                                 }
                                 if (goal.GoalSatisfaction <= 6)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
                              
                                 break;
                                 }
                                 if (goal.GoalSatisfaction > 6 && goal.GoalSatisfaction < 11)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
                               
                                 break;
                          }                                                   
