@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:weightSum="100">
     <EditText
-        android:inputType="textMultiLine"
+        android:inputType="textCapSentences"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
@@ -17,7 +17,7 @@
         android:gravity="bottom|left"
         local:MvxBind="Text Title" />
     <EditText
-        android:inputType="textMultiLine"
+        android:inputType="textCapSentences|textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"
@@ -26,41 +26,47 @@
         android:id="@+id/editTxtQuestion"
         android:gravity="top|left"
         local:MvxBind="Text Summary" />
-  <LinearLayout
+    <LinearLayout
         android:orientation="horizontal"
         android:layout_weight="20"
         android:layout_height="0dp"
         android:layout_width="match_parent"
         android:weightSum="100">
-    <EditText
-      android:inputType="textMultiLine"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="5pt"
-      android:layout_marginLeft="5pt"
-      android:layout_marginRight="5pt"
-      android:hint="Sets"
-      android:id="@+id/editTxtTitle"
-      android:textStyle="bold"
-      android:textSize="25dip"
-      android:gravity="top|left"
-      local:MvxBind="Text Sets" />
-    <EditText
-      android:inputType="textMultiLine"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="5pt"
-      android:layout_marginLeft="5pt"
-      android:layout_marginRight="5pt"
-      android:hint="Reps"
-      android:id="@+id/editTxtQuestion"
-      android:textStyle="bold"
-      android:textSize="25dip"
-      android:gravity="top|left"
-      local:MvxBind="Text Reps" />
-  </LinearLayout>
+        <EditText
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5pt"
+            android:layout_marginLeft="5pt"
+            android:layout_marginRight="5pt"
+            android:hint="Sets"
+            android:id="@+id/editTxtTitle"
+            android:textStyle="bold"
+            android:textSize="25dip"
+            android:gravity="top|left"
+            local:MvxBind="Text Sets" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5pt"
+            android:layout_marginLeft="5pt"
+            android:layout_marginRight="5pt"
+            android:hint="Reps"
+            android:id="@+id/editTxtQuestion"
+            android:textStyle="bold"
+            android:textSize="25dip"
+            android:gravity="top|left"
+            local:MvxBind="Text Reps" />
+    </LinearLayout>
+    <Button
+        android:text="Take Picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Click GoToTakePictureScreenCommand"
+        android:id="@+id/button1" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_weight="20"

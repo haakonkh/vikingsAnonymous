@@ -10,25 +10,24 @@
     android:background="@drawable/border">
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100">
         <TextView
             style="@+style/smallTextViewTheme"
             android:text="Content"
             android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
             android:id="@+id/txtRecipeViewContent"
             android:paddingTop="10dp"
-            android:paddingLeft="15dp"
             local:MvxBind="Text Ingredients " />
         <ImageView
-            android:gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_weight="1"
+            android:gravity="top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
             android:id="@+id/demoImageView"
             android:src="@drawable/recipe"
             android:layout_marginLeft="0.0dp" />
@@ -40,12 +39,6 @@
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:id="@+id/txtRecipeViewContent"
-        android:paddingTop="10dp"
         android:paddingLeft="15dp"
         local:MvxBind="Text Approach " />
-    <Button
-        android:id="@+id/btnDiary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add" />
 </LinearLayout>
