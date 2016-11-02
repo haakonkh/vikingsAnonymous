@@ -8,7 +8,7 @@ namespace YWWACP.Core.Models
 {
     public class Goal
     {
-
+        //Author: Student 9787283, Student Kristoffer Helgesen
         public string GoalId { get; set; }
         public string GoalContent { get; set; }
         public string GoalDate { get; set; }

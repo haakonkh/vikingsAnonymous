@@ -13,6 +13,8 @@ using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
 using System.Globalization;
 
+//Author: Student 9787283, Student Kristoffer Helgesen
+
 namespace YWWACP.Core.ViewModels.Goal
 {
     public class GraphViewModel : MvxViewModel
@@ -198,7 +200,7 @@ namespace YWWACP.Core.ViewModels.Goal
             {
                 Position = AxisPosition.Bottom,
                 StringFormat = "dd/MM",
-                Title = "End of week",
+                Title = "Date",
                 IntervalLength = 75,
                 MinorIntervalType = DateTimeIntervalType.Days,
                 IntervalType = DateTimeIntervalType.Days,
@@ -207,7 +209,7 @@ namespace YWWACP.Core.ViewModels.Goal
 
             };
 
-            //Author: Student 9787283, Student Kristoffer Helgesen
+          
             var plotModel = new PlotModel { Title = "Your progression" };
 
             //(new LinearAxis { Position = AxisPosition.Bottom });

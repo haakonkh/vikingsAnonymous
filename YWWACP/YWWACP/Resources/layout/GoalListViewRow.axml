@@ -8,6 +8,7 @@
     android:minHeight="25px"
     android:weightSum="100"
     android:background="@drawable/border">
+  <!--  //Author: Student 9787283, Student Kristoffer Helgesen -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

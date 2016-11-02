@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <!--TopBoxes starts here-->
+  <!--  //Author: Student 9787283, Student Kristoffer Helgesen-->
     <LinearLayout
         android:layout_alignParentTop="true"
         android:orientation="horizontal"

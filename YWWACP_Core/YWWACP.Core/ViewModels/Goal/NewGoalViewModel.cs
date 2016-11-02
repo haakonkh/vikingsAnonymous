@@ -7,6 +7,9 @@ using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 
+
+//Author: Student 9787283, Student Kristoffer Helgesen
+
 namespace YWWACP.Core.ViewModels.Goal
 {
    public class NewGoalViewModel : MvxViewModel
