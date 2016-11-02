@@ -16,6 +16,7 @@ using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Views
 {
+    //Author: Student 9792538, Eirik Baug
     [MvxViewFor(typeof(DiaryViewModel))]
     [Activity(Label = "Diary")]
     public class DiaryView: MvxActivity

@@ -12,6 +12,7 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels.Health_Plan
 {
+    //Author: Student 9792538, Eirik Baug
     public class AddExerciseViewModel: MvxViewModel
     {
         private ObservableCollection<Exercise> exercises = new ObservableCollection<Exercise>();

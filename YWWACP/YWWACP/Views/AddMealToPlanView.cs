@@ -15,6 +15,7 @@ using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Views
 {
+    //Author: Student 9792538, Eirik Baug
     [MvxViewFor(typeof(AddMealViewModel))]
     [Activity(Label = "Pick meal to add")]
     public class AddMealToPlanView: MvxActivity
