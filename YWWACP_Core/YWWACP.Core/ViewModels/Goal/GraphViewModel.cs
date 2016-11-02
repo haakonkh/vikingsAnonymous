@@ -58,9 +58,9 @@ namespace YWWACP.Core.ViewModels.Goal
         public GraphViewModel(IDatabase database)
         {
 
-
+          
             this.database = database;
-            UserId = prefUserInfo.GetString("UserId", "");
+            SetUserID();
             UpdateGraph();
             GetGoals();
             CalculateBmi();
@@ -80,7 +80,12 @@ namespace YWWACP.Core.ViewModels.Goal
             OpenExerciseCommand = new MvxCommand(() => { ShowViewModel<CreateNewGViewModel>(new { userid = UserId }); Close(this); });
             OpenCommunityCommand = new MvxCommand(() => { ShowViewModel<CommunityViewModel>(new { userid = UserId}); Close(this); });
 
+            GetGoals();
+        }
 
+        private void SetUserID()
+        {
+            UserId = prefUserInfo.GetString("UserId", "");
         }
 
         public void Init(string userid)
@@ -90,10 +95,12 @@ namespace YWWACP.Core.ViewModels.Goal
 
         public void OnResume()
         {
+            SetUserID();
             UpdateGraph();
             GetGoals();
             CalculateBmi();
             CheckInstance();
+           
         }
 
         PlotModel _myModel;
@@ -128,11 +135,13 @@ namespace YWWACP.Core.ViewModels.Goal
         public async void GetGoals()
         {
             int test = 0;
-            int intUser = 0;
+            
             var goals = await database.GetTable();
             var dateAndTime = DateTime.Now;
             var formated = dateAndTime.ToString("dd/MM/yyyy");
             Goals.Clear();
+            Goals.Add(new Models.Goal(" ", "No goals today. Press +", "   ", "    "));
+
 
             foreach (var goal in goals)
             {
@@ -142,46 +151,48 @@ namespace YWWACP.Core.ViewModels.Goal
                                             
                                 if (goal.GoalSatisfaction < 1)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
+                               
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Not set "));
                           
                                 break;
                                 }
                                 if (goal.GoalSatisfaction <= 3)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Bad"));
                             
                                 break;
                                 }
                                 if (goal.GoalSatisfaction <= 6)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "OK"));
                              
                                 break;
                                 }
                                 if (goal.GoalSatisfaction > 6 && goal.GoalSatisfaction < 11)
                                 {
-                                test = 1;
-                                Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
-                               
+                        Goals.Clear();
+                        Goals.Add(new Models.Goal(goal.GoalId, goal.GoalContent, formated.Trim(), "Satisfaction: " + "Great!"));
+                              
                                 break;
                          }                                                   
                      }
                 RaisePropertyChanged(() => Goals);
             }
-                    if (test == 0) {
+                    //if (test == 0) {
 
-                        Goals.Add(new Models.Goal(" ", "No goals today. Press +", "   ", "    "));
+                    //    Goals.Add(new Models.Goal(" ", "No goals today. Press +", "   ", "    "));
 
-                    }
+                    //}
                 }
 
 
 
         public async void UpdateGraph()
         {
+       
 
             var xAxis = new DateTimeAxis
             {
@@ -213,14 +224,15 @@ namespace YWWACP.Core.ViewModels.Goal
 
             var graphDetails = await database.GetTable();
 
-            onlyGoals.Clear();
 
+            onlyGoals.Clear();
 
             foreach (var graphDetail in graphDetails)
             {
                 if (graphDetail.UserId == UserId && graphDetail.GoalSatisfaction != 0.0)
                 {
                     onlyGoals.Add(graphDetail);
+                    var a = graphDetail.GoalSatisfaction;
                 }
             }
 
@@ -241,9 +253,6 @@ namespace YWWACP.Core.ViewModels.Goal
             //CheckInstance();
 
         }
-        //List<string> SatisfactionG = new List<string>();
-        // var a = DateTime.DayOfWeek.Monday;
-
         private async void CheckInstance()
         {
 
@@ -255,10 +264,9 @@ namespace YWWACP.Core.ViewModels.Goal
             //  MyDates
             DateTime DateModay = DateTime.Now.Date.AddDays(delta);
             string DateLast = DateTime.Now.Date.AddDays(delta + 6).ToString("dd");
-           
 
             var table = await database.GetTable();
-
+            
             onlySucs.Clear();
 
             foreach (var tableRow in table)
