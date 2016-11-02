@@ -1,17 +1,14 @@
-﻿using MvvmCross.Core.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Input;
-using Android.Content;
+using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
-namespace YWWACP.Core.ViewModels
+//Author: Student n9808205, Student Ingrid Skar
+
+namespace YWWACP.Core.ViewModels.ExerciseRecipe
 {
-    public class CreateNewRecipeViewModel : MvxViewModel
+    public class CreateExerciseViewModel : MvxViewModel
     {
         private IDatabase database;
         public ICommand SubmitCommand { get; set; }
@@ -53,31 +50,31 @@ namespace YWWACP.Core.ViewModels
             }
         }
 
-        private string ingredients;
+        private string sets;
 
-        public string Ingredients
+        public string Sets
         {
-            get { return ingredients; }
+            get { return sets; }
             set
             {
                 if (value != null)
                 {
-                    SetProperty(ref ingredients, value);
+                    SetProperty(ref sets, value);
                 }
 
             }
         }
 
-        private string approach;
+        private string reps;
 
-        public string Approach
+        public string Reps
         {
-            get { return approach; }
+            get { return reps; }
             set
             {
                 if (value != null)
                 {
-                    SetProperty(ref approach, value);
+                    SetProperty(ref reps, value);
                 }
 
             }
@@ -91,20 +88,21 @@ namespace YWWACP.Core.ViewModels
             set { SetProperty(ref userId, value); }
         }
 
-        public CreateNewRecipeViewModel(IDatabase database)
+        public CreateExerciseViewModel(IDatabase database)
         {
             this.database = database;
             var t = new MyTable();
             SubmitCommand = new MvxCommand(() =>
             {
-                
-                CreateRecipe(new MyTable()
+                int set = Int32.Parse(sets);
+                int rep = Int32.Parse(reps);
+                CreateExercise(new MyTable()
                 {
-                    MealId = GetGeneratedExerciseId(),
-                    MealTitle = Title,
-                    MealSummary = Summary,
-                    Ingredients = ingredients,
-                    Approach = approach,
+                    ExerciseId = GetGeneratedExerciseId(),
+                    ExerciseTitle = Title,
+                    ExerciseSummary = Summary,
+                    Sets = set,
+                    Reps = rep,
                     basic = true
 
                 });
@@ -116,7 +114,7 @@ namespace YWWACP.Core.ViewModels
             UserId = userid;
         }
 
-        public async void CreateRecipe(MyTable exercise)
+        public async void CreateExercise(MyTable exercise)
         {
             var x = await database.InsertTableRow(exercise);
             Close(this);

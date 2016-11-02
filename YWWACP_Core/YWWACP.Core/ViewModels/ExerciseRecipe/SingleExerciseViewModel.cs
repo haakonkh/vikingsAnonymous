@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 
-namespace YWWACP.Core.ViewModels
+//Author: Student n9808205, Student Ingrid Skar
+
+namespace YWWACP.Core.ViewModels.ExerciseRecipe
 {
     public class SingleExerciseViewModel : MvxViewModel
     {

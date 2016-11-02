@@ -1,17 +1,15 @@
 using System;
-using MvvmCross.Core.ViewModels;
 using System.Windows.Input;
 using Android.App;
 using Android.Content;
-using OxyPlot;
+using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
-using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
 using YWWACP.Core.ViewModels.Goal;
 using YWWACP.Core.ViewModels.Profile;
 
-namespace YWWACP.Core.ViewModels
+namespace YWWACP.Core.ViewModels.ExerciseRecipe
 {
     public class FirstViewModel
         : MvxViewModel

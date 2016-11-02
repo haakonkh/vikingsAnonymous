@@ -12,6 +12,7 @@ using OxyPlot.Axes;
 using OxyPlot;
 using OxyPlot.Xamarin.Android;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.ExerciseRecipe;
 
 ////, Theme="@style/MyTheme"
 namespace YWWACP.Views

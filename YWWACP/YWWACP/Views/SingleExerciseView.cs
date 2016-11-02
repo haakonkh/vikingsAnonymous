@@ -12,11 +12,14 @@ using Android.Widget;
 using MvvmCross.Droid.Views;
 using MvvmCross.Core.ViewModels;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.ExerciseRecipe;
+
+//Author: Student n9808205, Student Ingrid Skar
 
 namespace YWWACP.Views
 {
     [MvxViewFor(typeof(SingleExerciseViewModel))]
-    [Activity(Label = "SingleExerciseActigdfhjkvity")]
+    [Activity(Label = "Exercise")]
     public class SingleExerciseView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)

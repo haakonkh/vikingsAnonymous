@@ -4,6 +4,7 @@ using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Diary;
+using YWWACP.Core.ViewModels.ExerciseRecipe;
 using YWWACP.Core.ViewModels.Goal;
 
 namespace YWWACP.Core.ViewModels.Community
