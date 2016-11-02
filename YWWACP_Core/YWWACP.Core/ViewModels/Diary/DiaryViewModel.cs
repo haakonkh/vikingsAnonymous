@@ -14,6 +14,7 @@ using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Core.ViewModels.Diary
 {
+    //Author: Student 9792538, Eirik Baug
     public class DiaryViewModel:MvxViewModel
     {
         public ICommand OpenCommunityCommand { get; set; }

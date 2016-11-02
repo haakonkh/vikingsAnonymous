@@ -16,6 +16,7 @@ using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Views.Health_Plan
 {
+    //Author: Student 9792538, Eirik Baug
     [MvxViewFor(typeof(HealthPlanExerciseViewModel))]
     [Activity(Label = "Planned exercises")]
     public class HealthPlanExercisesView : MvxActivity
