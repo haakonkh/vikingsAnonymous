@@ -16,6 +16,8 @@ using YWWACP.Core.ViewModels.Profile;
 
 namespace YWWACP.Views
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     [Activity(Label = "Edit Profile")]
     [MvxViewFor(typeof(EditProfileViewModel))]
     public class EditProfileView : MvxActivity

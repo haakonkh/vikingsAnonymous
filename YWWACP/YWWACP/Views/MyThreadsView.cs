@@ -16,8 +16,10 @@ using YWWACP.Core.ViewModels.Community;
 
 namespace YWWACP.Views
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     [MvxViewFor(typeof(MyThreadsViewModel))]
-    [Activity(Label = "MyThreadsView")]
+    [Activity(Label = "My Posts")]
     public class MyThreadsView : MvxActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

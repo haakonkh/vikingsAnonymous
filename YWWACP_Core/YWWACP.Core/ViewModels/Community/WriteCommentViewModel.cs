@@ -6,6 +6,8 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels.Community
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     public class WriteCommentViewModel : MvxViewModel
     {
         private IDatabase database;

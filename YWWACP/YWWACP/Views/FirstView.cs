@@ -15,6 +15,9 @@ using YWWACP.Core.ViewModels;
 using YWWACP.Core.ViewModels.ExerciseRecipe;
 
 ////, Theme="@style/MyTheme"
+/// <summary>
+/// THIS PAGE IS NO LONGER IN USE
+/// </summary>
 namespace YWWACP.Views
 {
     [Activity(Label = "YWWACP")]

@@ -7,7 +7,9 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.Interfaces
 {
-   public interface IDatabase
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
+    public interface IDatabase
     {
 
         Task<IEnumerable<MyTable>> GetTable();

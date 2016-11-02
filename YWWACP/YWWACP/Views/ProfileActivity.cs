@@ -10,11 +10,12 @@ using YWWACP.Core.ViewModels.Profile;
 
 namespace YWWACP.Views
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     [Activity(Label = "Profile")]
     [MvxViewFor(typeof(ProfileViewModel))]
     public class ProfileActivity : MvxActivity
     {
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

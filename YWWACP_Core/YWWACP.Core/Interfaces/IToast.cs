@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace YWWACP.Core.Interfaces
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     public interface IToast
     {
         void Show(string message);

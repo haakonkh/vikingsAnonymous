@@ -9,6 +9,8 @@ using YWWACP.Core.ViewModels.Goal;
 
 namespace YWWACP.Core.ViewModels.Community
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     public class CommunityViewModel : MvxViewModel
     {
         // Everyone should include these commands on their pages
@@ -53,12 +55,7 @@ namespace YWWACP.Core.ViewModels.Community
                 ShowViewModel<MyThreadsViewModel>(new { userid = UserId });
                 Close(this);
             });
-
-
-            // THESE COMMANDS MUST EVERYONE IMPLEMENT IN THEIR CONSTRUCTORS.
-            // I HAVE NOT COMMENTED OUT DIARY BECAUSE THAT DOES NOT EXIST AT THIS POINT.
-            // COMMUNITY IS COMMENTED OUT BECAUSE THIS IS THE COMMUNITY VIEW AND IT MAKES ABSOULTE NO SENS TO NAVIGATE TO THE VIEW THAT YOU ARE IN
-            // MAKE SURE YOU DO THE SAME
+            
             OpenHealthPlanCommand = new MvxCommand(() =>
             {
                 ShowViewModel<HealthPlanViewModel>(new { userid = UserId});
@@ -84,13 +81,7 @@ namespace YWWACP.Core.ViewModels.Community
                 ShowViewModel<CreateNewGViewModel>(new {userid = UserId});
                 Close(this);
             });
-            //OpenCommunityCommand = new MvxCommand(() =>
-            //{
-            //    ShowViewModel<CommunityViewModel>();
-            //    Close(this);
-            //});
-
-
+            
         }
 
         public void Init(string userid)

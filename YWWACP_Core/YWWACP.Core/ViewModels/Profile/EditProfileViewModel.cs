@@ -5,6 +5,8 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels.Profile
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     public class EditProfileViewModel : MvxViewModel
     {
         public ICommand SaveProfileCommand { get; set; }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace YWWACP.Core.Models
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     public class Comment
     {
         public string CommentContent { get; set; }

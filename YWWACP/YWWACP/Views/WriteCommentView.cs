@@ -16,6 +16,8 @@ using YWWACP.Core.ViewModels.Community;
 
 namespace YWWACP.Views
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     [MvxViewFor(typeof(WriteCommentViewModel))]
     [Activity(Label = "Community")]
     public class WriteCommentView : MvxActivity

@@ -8,6 +8,8 @@ using YWWACP.Core.ViewModels.Community;
 
 namespace YWWACP.Views
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     [MvxViewFor(typeof(CreateNewThreadViewModel))]
     [Activity(Label = "New Post")]
     public class CreateNewThreadView : MvxActivity

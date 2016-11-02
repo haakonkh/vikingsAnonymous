@@ -4,6 +4,8 @@ using YWWACP.Core.Interfaces;
 
 namespace YWWACP.Core.ViewModels.Community
 {
+    // ## Name: Andreas Norstein | ## Student number: 9805061
+
     public class DeleteThreadViewModel : MvxViewModel
     {
         public ICommand DeleteThreadCommand { get; set; }
