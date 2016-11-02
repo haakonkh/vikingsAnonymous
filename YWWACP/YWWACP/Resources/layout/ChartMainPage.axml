@@ -63,11 +63,14 @@
                 android:layout_weight="1">
                 <TextView
                     android:text="Your BMI"
+                    android:drawableEnd="@drawable/settings2"
                     android:textSize="7pt"
+                    android:singleLine="true"
                     android:id="@+id/textViewCalories"
                     android:gravity="center_horizontal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="fill_parent"
+                    local:MvxBind="Click OpenProfileCommnad"
                     android:layout_weight="1" />
                 <TextView
                     android:text="BMI - PH"

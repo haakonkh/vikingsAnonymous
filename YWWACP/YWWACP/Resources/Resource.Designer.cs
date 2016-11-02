@@ -2138,8 +2138,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f020064
 			public const int IconFlower = 2130837604;
 			
-			// aapt resource value: 0x7f020071
-			public const int notification_template_icon_bg = 2130837617;
+			// aapt resource value: 0x7f020073
+			public const int notification_template_icon_bg = 2130837619;
 			
 			// aapt resource value: 0x7f020065
 			public const int preference_list_divider_material = 2130837605;
@@ -2163,19 +2163,25 @@ namespace YWWACP
 			public const int roundedbgdark = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int splash = 2130837612;
+			public const int settings = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int trashIcon = 2130837613;
+			public const int settings2 = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int trashsmall = 2130837614;
+			public const int splash = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int web = 2130837615;
+			public const int trashIcon = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int weightlifting = 2130837616;
+			public const int trashsmall = 2130837616;
+			
+			// aapt resource value: 0x7f020071
+			public const int web = 2130837617;
+			
+			// aapt resource value: 0x7f020072
+			public const int weightlifting = 2130837618;
 			
 			static Drawable()
 			{
