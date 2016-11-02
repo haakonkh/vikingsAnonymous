@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -20,12 +21,18 @@ namespace YWWACP.Views
     [Activity(Label = "Today's plan")]
     public class HealthPlanView : MvxActivity
     {
+        private View layout;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.HealthPlan);
 
+            layout = FindViewById<View>(Resource.Id.hpImage);
+            layout.SetBackgroundColor(Color.DeepPink);
+            layout.Visibility = ViewStates.Visible;
         }
+
         protected override void OnResume()
         {
             var vm = (HealthPlanViewModel)ViewModel;

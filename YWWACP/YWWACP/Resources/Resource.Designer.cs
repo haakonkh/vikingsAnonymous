@@ -2193,8 +2193,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06000c
 			public const int MvxBindingTagUnique = 2131099660;
 			
-			// aapt resource value: 0x7f0600c6
-			public const int action0 = 2131099846;
+			// aapt resource value: 0x7f0600cc
+			public const int action0 = 2131099852;
 			
 			// aapt resource value: 0x7f06005b
 			public const int action_bar = 2131099739;
@@ -2220,8 +2220,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06005c
 			public const int action_context_bar = 2131099740;
 			
-			// aapt resource value: 0x7f0600ca
-			public const int action_divider = 2131099850;
+			// aapt resource value: 0x7f0600d0
+			public const int action_divider = 2131099856;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -2325,8 +2325,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060099
 			public const int btnRecipes = 2131099801;
 			
-			// aapt resource value: 0x7f0600c5
-			public const int btnSubmitGoal = 2131099845;
+			// aapt resource value: 0x7f0600cb
+			public const int btnSubmitGoal = 2131099851;
 			
 			// aapt resource value: 0x7f060087
 			public const int btnSubmitThread = 2131099783;
@@ -2346,8 +2346,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060082
 			public const int buttonDelete = 2131099778;
 			
-			// aapt resource value: 0x7f0600df
-			public const int buttonEditProfileInformation = 2131099871;
+			// aapt resource value: 0x7f0600e5
+			public const int buttonEditProfileInformation = 2131099877;
 			
 			// aapt resource value: 0x7f060045
 			public const int buttonPanel = 2131099717;
@@ -2358,8 +2358,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600a1
 			public const int cancelBtnExercise = 2131099809;
 			
-			// aapt resource value: 0x7f0600c7
-			public const int cancel_action = 2131099847;
+			// aapt resource value: 0x7f0600cd
+			public const int cancel_action = 2131099853;
 			
 			// aapt resource value: 0x7f06002c
 			public const int center = 2131099692;
@@ -2373,8 +2373,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060053
 			public const int checkbox = 2131099731;
 			
-			// aapt resource value: 0x7f0600cd
-			public const int chronometer = 2131099853;
+			// aapt resource value: 0x7f0600d3
+			public const int chronometer = 2131099859;
 			
 			// aapt resource value: 0x7f060034
 			public const int clip_horizontal = 2131099700;
@@ -2384,6 +2384,12 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f060021
 			public const int collapseActionView = 2131099681;
+			
+			// aapt resource value: 0x7f0600c6
+			public const int communityImage = 2131099846;
+			
+			// aapt resource value: 0x7f0600c7
+			public const int communityImageView = 2131099847;
 			
 			// aapt resource value: 0x7f06004b
 			public const int contentPanel = 2131099723;
@@ -2406,6 +2412,9 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600a9
 			public const int demoImageView = 2131099817;
 			
+			// aapt resource value: 0x7f0600c5
+			public const int diaryImage = 2131099845;
+			
 			// aapt resource value: 0x7f060010
 			public const int disableHome = 2131099664;
 			
@@ -2424,14 +2433,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f060093
 			public const int editTextName = 2131099795;
 			
-			// aapt resource value: 0x7f0600e7
-			public const int editTextWriteComment = 2131099879;
+			// aapt resource value: 0x7f0600ed
+			public const int editTextWriteComment = 2131099885;
 			
-			// aapt resource value: 0x7f0600c3
-			public const int editTxtGoalContent = 2131099843;
+			// aapt resource value: 0x7f0600c9
+			public const int editTxtGoalContent = 2131099849;
 			
-			// aapt resource value: 0x7f0600c4
-			public const int editTxtGoalSatisFaction = 2131099844;
+			// aapt resource value: 0x7f0600ca
+			public const int editTxtGoalSatisFaction = 2131099850;
 			
 			// aapt resource value: 0x7f060085
 			public const int editTxtQuestion = 2131099781;
@@ -2445,8 +2454,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06001e
 			public const int end = 2131099678;
 			
-			// aapt resource value: 0x7f0600d2
-			public const int end_padder = 2131099858;
+			// aapt resource value: 0x7f0600d8
+			public const int end_padder = 2131099864;
 			
 			// aapt resource value: 0x7f060025
 			public const int enterAlways = 2131099685;
@@ -2493,11 +2502,17 @@ namespace YWWACP
 			// aapt resource value: 0x7f060011
 			public const int homeAsUp = 2131099665;
 			
+			// aapt resource value: 0x7f0600c2
+			public const int homeImage = 2131099842;
+			
+			// aapt resource value: 0x7f0600c3
+			public const int hpImage = 2131099843;
+			
 			// aapt resource value: 0x7f060043
 			public const int icon = 2131099715;
 			
-			// aapt resource value: 0x7f0600d3
-			public const int icon_frame = 2131099859;
+			// aapt resource value: 0x7f0600d9
+			public const int icon_frame = 2131099865;
 			
 			// aapt resource value: 0x7f060022
 			public const int ifRoom = 2131099682;
@@ -2508,11 +2523,11 @@ namespace YWWACP
 			// aapt resource value: 0x7f060070
 			public const int imageButton1 = 2131099760;
 			
-			// aapt resource value: 0x7f0600e6
-			public const int imageView1 = 2131099878;
+			// aapt resource value: 0x7f0600ec
+			public const int imageView1 = 2131099884;
 			
-			// aapt resource value: 0x7f0600d1
-			public const int info = 2131099857;
+			// aapt resource value: 0x7f0600d7
+			public const int info = 2131099863;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -2523,17 +2538,17 @@ namespace YWWACP
 			// aapt resource value: 0x7f06008f
 			public const int line = 2131099791;
 			
-			// aapt resource value: 0x7f0600cb
-			public const int line1 = 2131099851;
+			// aapt resource value: 0x7f0600d1
+			public const int line1 = 2131099857;
 			
-			// aapt resource value: 0x7f0600cf
-			public const int line3 = 2131099855;
+			// aapt resource value: 0x7f0600d5
+			public const int line3 = 2131099861;
 			
 			// aapt resource value: 0x7f0600c1
 			public const int linearLayoutButtonWrap = 2131099841;
 			
-			// aapt resource value: 0x7f0600e1
-			public const int linearLayoutQuestionWrap = 2131099873;
+			// aapt resource value: 0x7f0600e7
+			public const int linearLayoutQuestionWrap = 2131099879;
 			
 			// aapt resource value: 0x7f060078
 			public const int linearLayoutWrapTopButtons = 2131099768;
@@ -2541,8 +2556,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600bd
 			public const int linearLayoutWrapTopButtonsMY = 2131099837;
 			
-			// aapt resource value: 0x7f0600d5
-			public const int list = 2131099861;
+			// aapt resource value: 0x7f0600db
+			public const int list = 2131099867;
 			
 			// aapt resource value: 0x7f06000d
 			public const int listMode = 2131099661;
@@ -2556,8 +2571,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f06009b
 			public const int listViewExercise = 2131099803;
 			
-			// aapt resource value: 0x7f0600e2
-			public const int listViewExercises = 2131099874;
+			// aapt resource value: 0x7f0600e8
+			public const int listViewExercises = 2131099880;
 			
 			// aapt resource value: 0x7f06006f
 			public const int listViewGoals = 2131099759;
@@ -2565,14 +2580,14 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600c0
 			public const int listViewMyThreads = 2131099840;
 			
-			// aapt resource value: 0x7f0600e0
-			public const int listViewRecipe = 2131099872;
+			// aapt resource value: 0x7f0600e6
+			public const int listViewRecipe = 2131099878;
 			
-			// aapt resource value: 0x7f0600e4
-			public const int listViewRecipes = 2131099876;
+			// aapt resource value: 0x7f0600ea
+			public const int listViewRecipes = 2131099882;
 			
-			// aapt resource value: 0x7f0600d4
-			public const int list_container = 2131099860;
+			// aapt resource value: 0x7f0600da
+			public const int list_container = 2131099866;
 			
 			// aapt resource value: 0x7f060042
 			public const int list_item = 2131099714;
@@ -2586,8 +2601,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f0600ba
 			public const int loadingProgressWheel = 2131099834;
 			
-			// aapt resource value: 0x7f0600c9
-			public const int media_actions = 2131099849;
+			// aapt resource value: 0x7f0600cf
+			public const int media_actions = 2131099855;
 			
 			// aapt resource value: 0x7f06001f
 			public const int middle = 2131099679;
@@ -2639,6 +2654,9 @@ namespace YWWACP
 			
 			// aapt resource value: 0x7f060055
 			public const int radio = 2131099733;
+			
+			// aapt resource value: 0x7f0600c4
+			public const int recipesImage = 2131099844;
 			
 			// aapt resource value: 0x7f06008e
 			public const int revid1 = 2131099790;
@@ -2730,8 +2748,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060084
 			public const int spinnerCategories = 2131099780;
 			
-			// aapt resource value: 0x7f0600c2
-			public const int spinnerDates = 2131099842;
+			// aapt resource value: 0x7f0600c8
+			public const int spinnerDates = 2131099848;
 			
 			// aapt resource value: 0x7f0600bb
 			public const int spinnerMealtypes = 2131099835;
@@ -2751,35 +2769,35 @@ namespace YWWACP
 			// aapt resource value: 0x7f060032
 			public const int start = 2131099698;
 			
-			// aapt resource value: 0x7f0600c8
-			public const int status_bar_latest_event_content = 2131099848;
+			// aapt resource value: 0x7f0600ce
+			public const int status_bar_latest_event_content = 2131099854;
 			
 			// aapt resource value: 0x7f060066
 			public const int submit_area = 2131099750;
 			
-			// aapt resource value: 0x7f0600d6
-			public const int switchWidget = 2131099862;
+			// aapt resource value: 0x7f0600dc
+			public const int switchWidget = 2131099868;
 			
 			// aapt resource value: 0x7f06000f
 			public const int tabMode = 2131099663;
 			
-			// aapt resource value: 0x7f0600d0
-			public const int text = 2131099856;
+			// aapt resource value: 0x7f0600d6
+			public const int text = 2131099862;
 			
-			// aapt resource value: 0x7f0600ce
-			public const int text2 = 2131099854;
+			// aapt resource value: 0x7f0600d4
+			public const int text2 = 2131099860;
 			
 			// aapt resource value: 0x7f06004e
 			public const int textSpacerNoButtons = 2131099726;
 			
-			// aapt resource value: 0x7f0600e5
-			public const int textView1 = 2131099877;
+			// aapt resource value: 0x7f0600eb
+			public const int textView1 = 2131099883;
 			
-			// aapt resource value: 0x7f0600de
-			public const int textViewAge = 2131099870;
+			// aapt resource value: 0x7f0600e4
+			public const int textViewAge = 2131099876;
 			
-			// aapt resource value: 0x7f0600dd
-			public const int textViewAgeLabel = 2131099869;
+			// aapt resource value: 0x7f0600e3
+			public const int textViewAgeLabel = 2131099875;
 			
 			// aapt resource value: 0x7f060096
 			public const int textViewAgeLable = 2131099798;
@@ -2790,20 +2808,20 @@ namespace YWWACP
 			// aapt resource value: 0x7f06006b
 			public const int textViewGoal = 2131099755;
 			
-			// aapt resource value: 0x7f0600da
-			public const int textViewHeight = 2131099866;
+			// aapt resource value: 0x7f0600e0
+			public const int textViewHeight = 2131099872;
 			
-			// aapt resource value: 0x7f0600d9
-			public const int textViewHeightLabel = 2131099865;
+			// aapt resource value: 0x7f0600df
+			public const int textViewHeightLabel = 2131099871;
 			
 			// aapt resource value: 0x7f060094
 			public const int textViewHeightLable = 2131099796;
 			
-			// aapt resource value: 0x7f0600d8
-			public const int textViewName = 2131099864;
+			// aapt resource value: 0x7f0600de
+			public const int textViewName = 2131099870;
 			
-			// aapt resource value: 0x7f0600d7
-			public const int textViewNameLabel = 2131099863;
+			// aapt resource value: 0x7f0600dd
+			public const int textViewNameLabel = 2131099869;
 			
 			// aapt resource value: 0x7f060092
 			public const int textViewNameLable = 2131099794;
@@ -2814,17 +2832,17 @@ namespace YWWACP
 			// aapt resource value: 0x7f060074
 			public const int textViewTrash = 2131099764;
 			
-			// aapt resource value: 0x7f0600dc
-			public const int textViewWeight = 2131099868;
+			// aapt resource value: 0x7f0600e2
+			public const int textViewWeight = 2131099874;
 			
-			// aapt resource value: 0x7f0600db
-			public const int textViewWeightLabel = 2131099867;
+			// aapt resource value: 0x7f0600e1
+			public const int textViewWeightLabel = 2131099873;
 			
 			// aapt resource value: 0x7f060095
 			public const int textViewWeightLable = 2131099797;
 			
-			// aapt resource value: 0x7f0600cc
-			public const int time = 2131099852;
+			// aapt resource value: 0x7f0600d2
+			public const int time = 2131099858;
 			
 			// aapt resource value: 0x7f060044
 			public const int title = 2131099716;
@@ -2838,8 +2856,8 @@ namespace YWWACP
 			// aapt resource value: 0x7f060048
 			public const int topPanel = 2131099720;
 			
-			// aapt resource value: 0x7f0600e3
-			public const int txtRecipeViewContent = 2131099875;
+			// aapt resource value: 0x7f0600e9
+			public const int txtRecipeViewContent = 2131099881;
 			
 			// aapt resource value: 0x7f06007d
 			public const int txtViewCategory = 2131099773;

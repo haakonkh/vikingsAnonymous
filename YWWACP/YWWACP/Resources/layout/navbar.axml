@@ -8,10 +8,17 @@
     android:background="@color/my_lightPink"
     android:id="@+id/linearLayoutButtonWrap">
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1">
+      <View
+        android:id="@+id/homeImage"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:visibility="invisible"
+        />
         <ImageView
             android:src="@drawable/web"
             android:layout_width="wrap_content"
@@ -21,11 +28,18 @@
             local:MvxBind="Click OpenHomeCommand"
             android:layout_marginLeft="25dp" />
     </LinearLayout>
-    <LinearLayout
+  <LinearLayout
+        android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1">
+      <View
+        android:id="@+id/hpImage"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:visibility="invisible"
+        />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,9 +50,16 @@
             android:layout_marginLeft="25dp" />
     </LinearLayout>
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1">
+      <View
+        android:id="@+id/recipesImage"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:visibility="invisible"
+        />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,9 +70,16 @@
             android:layout_marginLeft="25dp" />
     </LinearLayout>
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1">
+      <View
+        android:id="@+id/diaryImage"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:visibility="invisible"
+        />    
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,10 +90,18 @@
             android:layout_marginLeft="25dp" />
     </LinearLayout>
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1">
-        <ImageView
+      <View
+        android:id="@+id/communityImage"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:visibility="invisible"
+        />
+      <ImageView
+            android:id="@+id/communityImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"

@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -22,10 +23,16 @@ namespace YWWACP.Views
     [Activity(Label = "My Posts")]
     public class MyThreadsView : MvxActivity
     {
+        private View layout;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.MyThreads);
+
+            layout = FindViewById<View>(Resource.Id.communityImage);
+            layout.SetBackgroundColor(Color.DeepPink);
+            layout.Visibility = ViewStates.Visible;
 
         }
 
