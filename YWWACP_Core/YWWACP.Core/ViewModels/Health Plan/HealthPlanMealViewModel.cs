@@ -11,6 +11,7 @@ using YWWACP.Core.Models;
 
 namespace YWWACP.Core.ViewModels.Health_Plan
 {
+    //Author: Student 9792538, Eirik Baug
     public class HealthPlanMealViewModel: MvxViewModel
     {
         public IDatabase database;

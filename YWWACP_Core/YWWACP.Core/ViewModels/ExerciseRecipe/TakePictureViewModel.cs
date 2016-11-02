@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MvvmCross.Core.ViewModels;
-using System.IO;
+﻿using System.IO;
 using System.Windows.Input;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.PictureChooser;
 using YWWACP.Core.Interfaces;
 
-namespace YWWACP.Core.ViewModels
+//Author: Student n9808205, Student Ingrid Skar
+
+namespace YWWACP.Core.ViewModels.ExerciseRecipe
 {
     public class TakePictureViewModel : MvxViewModel
     {

@@ -12,6 +12,7 @@ using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
 using System.Globalization;
+using YWWACP.Core.ViewModels.ExerciseRecipe;
 using YWWACP.Core.ViewModels.Profile;
 
 namespace YWWACP.Core.ViewModels.Goal

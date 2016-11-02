@@ -141,7 +141,7 @@ namespace YWWACP.Core.ViewModels.Profile
             {
                 MealId = "1",
                 MealTitle = "Stewed fruit with custard or cream",
-                MealSummary = "Godt og digg",
+                MealSummary = "Quick and easy",
                 Ingredients = "3–4 pieces seasonal fruit (e.g. pear, apple, plum) - peeled, cored, chopped, 1 cup orange juice, 1 cup full - cream custard or ice - cream(or 2 tbsp cream)",
                 Approach = "Place fruit and orange juice in a medium saucepan over low heat. Cook for about 20–30 minutes, stirring occasionally until fruit softens (the total time will depend on the hardness of the fruit). Serve with some full - cream custard, ice - cream or cream",
                 basic = true,
@@ -175,7 +175,7 @@ namespace YWWACP.Core.ViewModels.Profile
             {
                 ExerciseId = "1",
                 ExerciseTitle = "Burpess",
-                ExerciseSummary = "yeah, we all know the pain",
+                ExerciseSummary = "Begin in a squat position with hands on the floor in front of you. Kick your feet back to a pushup position. Immediately return your feet to the squat position. Leap up as high as possible from the squat position.",
                 Sets = 3,
                 Reps = 12,
                 basic = true,

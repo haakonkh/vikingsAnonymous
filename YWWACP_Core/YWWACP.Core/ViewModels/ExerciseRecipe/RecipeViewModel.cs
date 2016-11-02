@@ -1,22 +1,17 @@
-﻿using MvvmCross.Core.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Java.Lang;
-using YWWACP.Core.Database;
+using MvvmCross.Core.ViewModels;
 using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
 using YWWACP.Core.ViewModels.Goal;
 
-namespace YWWACP.Core.ViewModels
+//Author: Student n9808205, Student Ingrid Skar
+
+namespace YWWACP.Core.ViewModels.ExerciseRecipe
 {
-    public class ListExercisesViewModel : MvxViewModel
+    public class RecipeViewModel : MvxViewModel
     {
         //navbar
         public ICommand OpenCommunityCommand { get; set; }
@@ -25,18 +20,17 @@ namespace YWWACP.Core.ViewModels
         public ICommand OpenHomeCommand { get; set; }
         public ICommand OpenExerciseCommand { get; set; }
 
-        //for exercise
         private readonly IDatabase database;
-        public ICommand RecipesViewCommand { get; set; }
-        public ICommand SelectExerciseCommand { get; set; }
-        public ICommand CreateExerciseCommand { get; set; }
+        public ICommand ExerciseViewCommand { get; set; }
+        public ICommand SelectRecipeCommand { get; set; }
+        public ICommand CreateNewRecipeCommand { get; set; }
 
-        private ObservableCollection<NewExerciseThread> newExercise = new ObservableCollection<NewExerciseThread>();
+        private ObservableCollection<NewRecipeThread> newRecipes = new ObservableCollection<NewRecipeThread>();
 
-        public ObservableCollection<NewExerciseThread> NewExercise
+        public ObservableCollection<NewRecipeThread> NewRecipes
         {
-            get { return newExercise; }
-            set { SetProperty(ref newExercise, value); }
+            get { return newRecipes; }
+            set { SetProperty(ref newRecipes, value); }
         }
 
         private string _userId;
@@ -48,16 +42,16 @@ namespace YWWACP.Core.ViewModels
         }
 
 
-        public ListExercisesViewModel(IDatabase database)
+        public RecipeViewModel(IDatabase database)
         {
             this.database = database;
-            CreateExerciseCommand = new MvxCommand(() => ShowViewModel<CreateExerciseViewModel>(new { userid = UserId }));
-            SelectExerciseCommand = new MvxCommand<NewExerciseThread>(thread => ShowViewModel<SingleExerciseViewModel>(new { exerciseId = thread.ExerciseId }));
+            CreateNewRecipeCommand = new MvxCommand(() => ShowViewModel<CreateNewRecipeViewModel>(new { userid = UserId }));
+            SelectRecipeCommand = new MvxCommand<NewRecipeThread>(thread => ShowViewModel<SingleRecipeViewModel>(new { mealid = thread.MealId }));
 
 
-            RecipesViewCommand = new MvxCommand(() =>
+            ExerciseViewCommand = new MvxCommand(() =>
             {
-                ShowViewModel<RecipeViewModel>(new { userid = UserId });
+                ShowViewModel<ListExercisesViewModel>(new { userid = UserId });
                 Close(this);
             });
 
@@ -69,7 +63,7 @@ namespace YWWACP.Core.ViewModels
             });
             OpenDiaryCommand = new MvxCommand(() =>
             {
-                ShowViewModel<DiaryViewModel>(new { userid = UserId });
+                ShowViewModel<DiaryViewModel>(new { userid = UserId});
                 Close(this);
             });
             OpenHomeCommand = new MvxCommand(() =>
@@ -86,9 +80,10 @@ namespace YWWACP.Core.ViewModels
 
             OpenCommunityCommand = new MvxCommand(() =>
             {
-                ShowViewModel<CommunityViewModel>(new { userid =UserId});
+                ShowViewModel<CommunityViewModel>(new {userid = UserId});
                 Close(this);
             });
+        
         }
 
         public void Init(string userid)
@@ -98,24 +93,24 @@ namespace YWWACP.Core.ViewModels
 
         public void OnResume()
         {
-            GetExercises();
+            GetRecipes();
         }
 
-        public async void GetExercises()
+        public async void GetRecipes()
         {
             var threads = await database.GetTable();
-            NewExercise.Clear();
+            NewRecipes.Clear();
             foreach (var thread in threads)
             {
-                var c = thread.ExerciseId;
+                var c = thread.MealId;
 
                 if (c != null && thread.basic)
                 {
-                    NewExercise.Insert(0, new NewExerciseThread(thread.ExerciseId, thread.ExerciseTitle, thread.ExerciseSummary));
+                    NewRecipes.Insert(0, new NewRecipeThread(thread.MealId, thread.MealTitle, thread.MealSummary));
                 }
             }
 
-            RaisePropertyChanged(() => NewExercise);
+            RaisePropertyChanged(() => NewRecipes);
 
         }
 

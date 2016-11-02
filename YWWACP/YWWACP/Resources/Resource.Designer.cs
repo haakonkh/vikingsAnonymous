@@ -2076,112 +2076,103 @@ namespace YWWACP
 			public const int arrow_right = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int barbell = 2130837584;
+			public const int border = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int barbell_Standing = 2130837585;
+			public const int ButtonSignUpStyle = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int border = 2130837586;
+			public const int chat = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ButtonSignUpStyle = 2130837587;
+			public const int design_fab_background = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int chat = 2130837588;
+			public const int design_snackbar_background = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int design_fab_background = 2130837589;
+			public const int diary = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int design_snackbar_background = 2130837590;
+			public const int edit_text_style = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int diary = 2130837591;
+			public const int exercise = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int dumbbell_exercises_front_raise = 2130837592;
+			public const int FirstViewFrame = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int edit_text_style = 2130837593;
+			public const int FirstViewRect = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int exercise = 2130837594;
+			public const int FistViewFrame = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int FirstViewFrame = 2130837595;
+			public const int gProfilePicture = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int FirstViewRect = 2130837596;
+			public const int hc = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int FistViewFrame = 2130837597;
+			public const int hp = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int gProfilePicture = 2130837598;
+			public const int ic_errorstatus = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int hc = 2130837599;
+			public const int ic_successstatus = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int hp = 2130837600;
+			public const int Icon = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_errorstatus = 2130837601;
-			
-			// aapt resource value: 0x7f020062
-			public const int ic_successstatus = 2130837602;
-			
-			// aapt resource value: 0x7f020063
-			public const int Icon = 2130837603;
-			
-			// aapt resource value: 0x7f020064
-			public const int IconFlower = 2130837604;
-			
-			// aapt resource value: 0x7f020073
-			public const int notification_template_icon_bg = 2130837619;
-			
-			// aapt resource value: 0x7f020065
-			public const int preference_list_divider_material = 2130837605;
-			
-			// aapt resource value: 0x7f020066
-			public const int ProfilePicture = 2130837606;
-			
-			// aapt resource value: 0x7f020067
-			public const int recipe = 2130837607;
-			
-			// aapt resource value: 0x7f020068
-			public const int recipeIcon = 2130837608;
-			
-			// aapt resource value: 0x7f020069
-			public const int round_plus = 2130837609;
-			
-			// aapt resource value: 0x7f02006a
-			public const int roundedbg = 2130837610;
-			
-			// aapt resource value: 0x7f02006b
-			public const int roundedbgdark = 2130837611;
-			
-			// aapt resource value: 0x7f02006c
-			public const int settings = 2130837612;
-			
-			// aapt resource value: 0x7f02006d
-			public const int settings2 = 2130837613;
-			
-			// aapt resource value: 0x7f02006e
-			public const int splash = 2130837614;
-			
-			// aapt resource value: 0x7f02006f
-			public const int trashIcon = 2130837615;
+			public const int IconFlower = 2130837601;
 			
 			// aapt resource value: 0x7f020070
-			public const int trashsmall = 2130837616;
+			public const int notification_template_icon_bg = 2130837616;
 			
-			// aapt resource value: 0x7f020071
-			public const int web = 2130837617;
+			// aapt resource value: 0x7f020062
+			public const int preference_list_divider_material = 2130837602;
 			
-			// aapt resource value: 0x7f020072
-			public const int weightlifting = 2130837618;
+			// aapt resource value: 0x7f020063
+			public const int ProfilePicture = 2130837603;
+			
+			// aapt resource value: 0x7f020064
+			public const int recipe = 2130837604;
+			
+			// aapt resource value: 0x7f020065
+			public const int recipeIcon = 2130837605;
+			
+			// aapt resource value: 0x7f020066
+			public const int round_plus = 2130837606;
+			
+			// aapt resource value: 0x7f020067
+			public const int roundedbg = 2130837607;
+			
+			// aapt resource value: 0x7f020068
+			public const int roundedbgdark = 2130837608;
+			
+			// aapt resource value: 0x7f020069
+			public const int settings = 2130837609;
+			
+			// aapt resource value: 0x7f02006a
+			public const int settings2 = 2130837610;
+			
+			// aapt resource value: 0x7f02006b
+			public const int splash = 2130837611;
+			
+			// aapt resource value: 0x7f02006c
+			public const int trashIcon = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int trashsmall = 2130837613;
+			
+			// aapt resource value: 0x7f02006e
+			public const int web = 2130837614;
+			
+			// aapt resource value: 0x7f02006f
+			public const int weightlifting = 2130837615;
 			
 			static Drawable()
 			{

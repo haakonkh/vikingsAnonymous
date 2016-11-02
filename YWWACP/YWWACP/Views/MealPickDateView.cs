@@ -15,6 +15,7 @@ using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Views
 {
+    //Author: Student 9792538, Eirik Baug
     [MvxViewFor(typeof(MealPickDate))]
     [Activity(Label = "Choose a day")]
     public class MealPickDateView:MvxActivity

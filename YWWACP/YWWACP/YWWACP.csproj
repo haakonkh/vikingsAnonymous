@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -251,7 +251,6 @@
     <Compile Include="Views\ProfileActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GridAdapter.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Database\SQLiteDroid.cs" />
@@ -462,9 +461,6 @@
     <AndroidResource Include="Resources\values-v21\style.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\barbell.png" />
-    <AndroidResource Include="Resources\drawable\barbell_Standing.png" />
-    <AndroidResource Include="Resources\drawable\dumbbell_exercises_front_raise.gif" />
     <AndroidResource Include="Resources\drawable\gProfilePicture.jpg" />
     <AndroidResource Include="Resources\drawable\recipe.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />

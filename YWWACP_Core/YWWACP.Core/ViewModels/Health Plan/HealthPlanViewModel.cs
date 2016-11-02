@@ -10,11 +10,13 @@ using YWWACP.Core.Interfaces;
 using YWWACP.Core.Models;
 using YWWACP.Core.ViewModels.Community;
 using YWWACP.Core.ViewModels.Diary;
+using YWWACP.Core.ViewModels.ExerciseRecipe;
 using YWWACP.Core.ViewModels.Goal;
 using YWWACP.Core.ViewModels.Health_Plan;
 
 namespace YWWACP.Core.ViewModels
 {
+    //Author: Student 9792538, Eirik Baug
     public class HealthPlanViewModel : MvxViewModel
     {
         //Navigation

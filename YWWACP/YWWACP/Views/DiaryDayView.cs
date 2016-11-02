@@ -15,6 +15,7 @@ using YWWACP.Core.ViewModels.Diary;
 
 namespace YWWACP.Views
 {
+    //Author: Student 9792538, Eirik Baug
     [MvxViewFor(typeof(DiaryDayViewModel))]
     [Activity(Label = "Choose a day")]
     public class DiaryDayView: MvxActivity

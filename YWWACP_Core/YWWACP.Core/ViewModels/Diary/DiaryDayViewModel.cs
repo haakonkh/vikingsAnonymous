@@ -9,6 +9,7 @@ using YWWACP.Core.Interfaces;
 
 namespace YWWACP.Core.ViewModels.Diary
 {
+    //Author: Student 9792538, Eirik Baug
     public class DiaryDayViewModel: MvxViewModel
     {
         public IDatabase database;

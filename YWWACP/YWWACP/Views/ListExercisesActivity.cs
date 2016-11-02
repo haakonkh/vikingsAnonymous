@@ -3,11 +3,14 @@ using Android.OS;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.ExerciseRecipe;
+
+//Author: Student n9808205, Student Ingrid Skar
 
 namespace YWWACP.Views
 {
     [MvxViewFor(typeof(ListExercisesViewModel))]
-    [Activity(Label = "ExercisesActivity")]
+    [Activity(Label = "Exercises")]
     public class ListExercisesActivity : MvxActivity
     {
 

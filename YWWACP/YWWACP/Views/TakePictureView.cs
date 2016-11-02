@@ -12,11 +12,14 @@ using Android.Widget;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Views;
 using YWWACP.Core.ViewModels;
+using YWWACP.Core.ViewModels.ExerciseRecipe;
+
+//Author: Student n9808205, Student Ingrid Skar
 
 namespace YWWACP.Views
 {
     [MvxViewFor(typeof(TakePictureViewModel))]
-    [Activity(Label = "TakePicture")]
+    [Activity(Label = "Take a picture")]
     public class TakePictureView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
